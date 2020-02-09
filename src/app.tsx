@@ -1,7 +1,15 @@
 import React, {FC} from "react"
 
+import Nav from "./nav"
+import Main from "./main"
+
 const App: FC = () => {
-  return <div>app</div>
+  return (
+    <>
+      <Nav />
+      <Main>app</Main>
+    </>
+  )
 }
 
 export default App
