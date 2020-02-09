@@ -1,0 +1,47 @@
+{
+  "name": "cap-bien-etre",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "@types/classnames": "^2.2.9",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "12.12.14",
+    "@types/react": "16.9.14",
+    "@types/react-dom": "16.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-react-app": "^5.0.2",
+    "eslint-plugin-flowtype": "3",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.19.1",
+    "prettier-stylelint": "^0.4.2",
+    "react-scripts": "3.2.0",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-order": "^3.1.1",
+    "stylelint-prettier": "^1.1.1",
+    "typescript": "3.7.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.15",
+    "query-string": "^6.10.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+}
