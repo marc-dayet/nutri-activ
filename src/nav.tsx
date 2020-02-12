@@ -1,27 +1,29 @@
 import React, {FC} from "react"
 
-/* import {ReactComponent as IconModule0} from "./modules/module-0.icon.svg" */
-/* import {ReactComponent as IconModule0} from "./modules/module-1.icon.svg" */
-/* import {ReactComponent as IconModule0} from "./modules/module-2.icon.svg" */
-/* import {ReactComponent as IconModule0} from "./modules/module-3.icon.svg" */
-/* import {ReactComponent as IconModule0} from "./modules/module-4.icon.svg" */
+import logo from "./logo.svg"
+import Module0 from "./modules/0/nav-item"
+import Module1 from "./modules/1/nav-item"
+import Module2 from "./modules/2/nav-item"
+import Module3 from "./modules/3/nav-item"
+import Module4 from "./modules/4/nav-item"
+import Account from "./auth/account"
 
 import cs from "./nav.module.scss"
 
 type NavProps = {}
 
-const Nav: FC<NavProps> = props => {
+const Nav: FC<NavProps> = () => {
   return (
     <div className={cs.nav}>
-      <img className={cs.logo} src="#" alt="" />
+      <img className={cs.logo} src={logo} alt="" />
       <nav className={cs.modules}>
-        <button>module 0</button>
-        <button>module 1</button>
-        <button>module 2</button>
-        <button>module 3</button>
-        <button>module 4</button>
+        <Module0 />
+        <Module1 />
+        <Module2 />
+        <Module3 />
+        <Module4 />
       </nav>
-      <div className={cs.account} />
+      <Account />
     </div>
   )
 }

@@ -1,0 +1,26 @@
+@import "../../theme.scss";
+
+@mixin module($color) {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+  transition-duration: 150ms;
+  transition-property: background;
+
+  &:hover {
+    background: darken($white, 5%);
+  }
+
+  img {
+    height: 60px;
+    width: 60px;
+  }
+
+  span {
+    color: $color;
+    font-size: 19px;
+    font-weight: 700;
+  }
+}
