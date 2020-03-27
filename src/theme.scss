@@ -3,7 +3,13 @@ $blue: #00aec3;
 $grayC4: #c4c4c4;
 $grayC9: #c9e9e6;
 $green: #8ac75b;
-$pink: #f1677c;
-$teal: #75c4bd;
+$red: #f1677c;
+$teal: #75b7b7;
 $white: #ffffff;
 $yellow: #fdaf18;
+
+@mixin font($family, $weight) {
+  font-family: $family, sans-serif;
+  font-style: normal;
+  font-weight: $weight;
+}

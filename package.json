@@ -8,6 +8,7 @@
     "@types/node": "12.12.14",
     "@types/react": "16.9.14",
     "@types/react-dom": "16.9.4",
+    "@types/webpack-env": "^1.15.1",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "babel-eslint": "^10.0.3",
@@ -36,7 +37,8 @@
     "lodash": "^4.17.15",
     "query-string": "^6.10.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "rxjs": "^6.5.4"
   },
   "scripts": {
     "start": "react-scripts start",

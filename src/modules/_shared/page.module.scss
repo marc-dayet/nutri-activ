@@ -1,0 +1,36 @@
+@import "../../theme.scss";
+
+.pagination {
+  @include font(Museo, 300);
+  font-size: 21px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.pages {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.page {
+  background: $grayC4;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.chapters {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.chapter {
+  align-items: center;
+  background: $grayC4;
+  border-radius: 50%;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  width: 36px;
+}

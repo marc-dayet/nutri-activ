@@ -1,0 +1,12 @@
+@import "../../theme";
+
+$primary: $green;
+
+.main {
+  background: $primary;
+  color: $white;
+}
+
+.navItem {
+  color: $primary;
+}

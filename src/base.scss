@@ -2,24 +2,38 @@
 @import "./media";
 
 @font-face {
-  font-family: Orkney;
-  font-style: normal;
-  font-weight: 200;
-  src: url("/fonts/orkney-light.woff") format("woff");
-}
-
-@font-face {
-  font-family: Orkney;
+  font-family: AmaticSC;
   font-style: normal;
   font-weight: normal;
-  src: url("/fonts/orkney-regular.woff") format("woff");
+  src: url("/fonts/AmaticSC-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: Orkney;
+  font-family: AmaticSC;
   font-style: normal;
   font-weight: bold;
-  src: url("/fonts/orkney-bold.woff") format("woff");
+  src: url("/fonts/AmaticSC-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Museo;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/MuseoSans-300.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Museo;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/MuseoSans-500.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Museo;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/MuseoSans-700.otf") format("opentype");
 }
 
 * {
@@ -86,7 +100,7 @@ td {
 #root {
   align-items: stretch;
   display: grid;
-  grid-template-rows: 100px minmax(0, 1fr);
+  grid-template-rows: 110px minmax(0, 1fr);
   height: 100vh;
   max-height: 100vh;
   min-height: 100vh;
