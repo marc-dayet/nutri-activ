@@ -5,11 +5,12 @@ import {PageProps} from "./modules/_shared/page"
 import modules from "./modules/_shared/context"
 import Main from "./main"
 
+console.log(modules)
 const App: FC = () => {
   const [theme, setTheme] = useState("")
   const [module, setModule] = useState(0)
   const [chapter, setChapter] = useState(1)
-  const [page, setPage] = useState(4)
+  const [page, setPage] = useState(1)
 
   const CurrPage = React.lazy<FC<PageProps>>(() =>
     import(`./modules/module-${module}/chapter-${chapter}/page-${page}.tsx`),
@@ -58,7 +59,7 @@ const App: FC = () => {
 
     if (nextModule >= modules.length) return
     if (nextChapter >= modules[nextModule].length) return
-    if (nextPage >= modules[nextModule][nextChapter]) return
+    if (nextPage > modules[nextModule][nextChapter]) return
 
     setModule(nextModule)
     setChapter(nextChapter)
@@ -68,6 +69,10 @@ const App: FC = () => {
   function updateChapter(chapter: number) {
     setChapter(chapter)
     setPage(1)
+  }
+
+  function countPagesTill(end?: number) {
+    return modules[module].slice(0, end).reduce((sum, pages) => sum + pages, 0)
   }
 
   useEffect(() => {
@@ -82,8 +87,8 @@ const App: FC = () => {
       <Main theme={theme}>
         <Suspense fallback="Loading...">
           <CurrPage
-            currPage={page * chapter}
-            nbPages={Object.values(modules[module]).reduce((sum, pages) => sum + pages - 1, 0)}
+            currPage={countPagesTill(chapter) + page}
+            nbPages={countPagesTill()}
             prevPage={prevPage}
             nextPage={nextPage}
             currChapter={chapter}

@@ -2,7 +2,7 @@ import React, {FC} from "react"
 
 import {withPageContainer} from "../../_shared/page"
 
-import cs from "./page-3.module.scss"
+import cs from "./page-1.module.scss"
 
 const Page: FC = () => {
   return (
