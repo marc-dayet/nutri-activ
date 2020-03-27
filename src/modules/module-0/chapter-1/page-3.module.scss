@@ -1,0 +1,9 @@
+@import "../../../theme";
+
+.title {
+  @include font(AmaticSC, bold);
+  font-size: 110px;
+  line-height: 100px;
+  margin: 150px 0 200px 0;
+  text-align: center;
+}

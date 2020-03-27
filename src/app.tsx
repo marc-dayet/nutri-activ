@@ -9,7 +9,7 @@ const App: FC = () => {
   const [theme, setTheme] = useState("")
   const [module, setModule] = useState(0)
   const [chapter, setChapter] = useState(1)
-  const [page, setPage] = useState(2)
+  const [page, setPage] = useState(3)
 
   const CurrPage = React.lazy<FC<PageProps>>(() =>
     import(`./modules/module-${module}/chapter-${chapter}/page-${page}.tsx`),
