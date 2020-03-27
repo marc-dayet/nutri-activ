@@ -1,4 +1,5 @@
 import React, {FC} from "react"
+import cn from "classnames"
 import range from "lodash/fp/range"
 
 import cs from "./page.module.scss"
@@ -8,19 +9,29 @@ export type PageProps = {
   nbPages: number
   prevPage: () => void
   nextPage: () => void
+  currChapter: number
   nbChapters: number
   setChapter: (chapter: number) => void
 }
 
 const PageContainer: FC<PageProps> = props => {
-  const {currPage, nbPages, prevPage, nextPage, nbChapters, setChapter} = props
+  const {
+    currPage,
+    nbPages,
+    prevPage,
+    nextPage,
+    currChapter,
+    nbChapters,
+    setChapter,
+    children,
+  } = props
 
   return (
     <>
       <div className={cs.pagination}>
         Page {currPage}/{nbPages}
       </div>
-      {props.children}
+      {children}
       <footer>
         <div className={cs.pages}>
           <button className={cs.page} onClick={() => prevPage()}>
@@ -32,7 +43,11 @@ const PageContainer: FC<PageProps> = props => {
         </div>
         <div className={cs.chapters}>
           {range(1, nbChapters + 1).map(chapter => (
-            <button key={chapter} className={cs.chapter} onClick={() => setChapter(chapter)}>
+            <button
+              key={chapter}
+              className={cn(cs.chapter, {[cs.active]: chapter === currChapter})}
+              onClick={() => setChapter(chapter)}
+            >
               {chapter}
             </button>
           ))}

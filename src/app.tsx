@@ -9,7 +9,7 @@ const App: FC = () => {
   const [theme, setTheme] = useState("")
   const [module, setModule] = useState(0)
   const [chapter, setChapter] = useState(1)
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState(2)
 
   const CurrPage = React.lazy<FC<PageProps>>(() =>
     import(`./modules/module-${module}/chapter-${chapter}/page-${page}.tsx`),
@@ -86,6 +86,7 @@ const App: FC = () => {
             nbPages={Object.values(modules[module]).reduce((sum, pages) => sum + pages - 1, 0)}
             prevPage={prevPage}
             nextPage={nextPage}
+            currChapter={chapter}
             nbChapters={Object.values(modules[module]).length}
             setChapter={updateChapter}
           />

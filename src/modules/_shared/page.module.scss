@@ -3,7 +3,7 @@
 .pagination {
   @include font(Museo, 300);
   font-size: 21px;
-  margin-top: 10px;
+  margin: 10px 0 25px 0;
   text-align: center;
 }
 
@@ -14,8 +14,11 @@
 }
 
 .page {
-  background: $grayC4;
-  padding: 10px;
+  @include font(AmaticSC, bold);
+  background: $white;
+  border-radius: 10px;
+  font-size: 40px;
+  padding: 10px 25px;
   text-transform: uppercase;
 }
 
@@ -26,11 +29,18 @@
 }
 
 .chapter {
+  @include font(AmaticSC, bold);
   align-items: center;
-  background: $grayC4;
+  background: $white;
   border-radius: 50%;
   display: flex;
+  font-size: 26px;
   height: 36px;
   justify-content: center;
   width: 36px;
+
+  &.active {
+    background: $blue03;
+    color: $white;
+  }
 }
