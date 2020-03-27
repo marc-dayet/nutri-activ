@@ -1,0 +1,40 @@
+@import "../../../theme";
+
+.title {
+  @include font(AmaticSC, bold);
+  font-size: 60px;
+  margin: 20px 0 10px 0;
+  text-align: center;
+}
+
+.subtitle {
+  @include font(AmaticSC, bold);
+  color: $green2B;
+  font-size: 45px;
+  margin: 10px 0 50px 0;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-column-gap: 25px;
+  grid-row-gap: 50px;
+  grid-template-columns: 70px minmax(0, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  margin-bottom: 100px;
+}
+
+.image {
+  width: 70px;
+}
+
+.paragraphHeader {
+  @include font(Museo, 700);
+  font-size: 26px;
+}
+
+.paragraph {
+  @include font(Museo, 500);
+  font-size: 26px;
+}
