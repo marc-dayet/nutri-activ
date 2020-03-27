@@ -5,12 +5,11 @@ import {PageProps} from "./modules/_shared/page"
 import modules from "./modules/_shared/context"
 import Main from "./main"
 
-console.log(modules)
 const App: FC = () => {
   const [theme, setTheme] = useState("")
   const [module, setModule] = useState(0)
-  const [chapter, setChapter] = useState(1)
-  const [page, setPage] = useState(1)
+  const [chapter, setChapter] = useState(2)
+  const [page, setPage] = useState(3)
 
   const CurrPage = React.lazy<FC<PageProps>>(() =>
     import(`./modules/module-${module}/chapter-${chapter}/page-${page}.tsx`),
