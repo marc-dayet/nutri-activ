@@ -1,4 +1,4 @@
-@import "../../theme.scss";
+@import "../theme.scss";
 
 .navItem {
   @include font(Museo, 700);
@@ -20,7 +20,6 @@
   }
 
   span {
-    // color: $color;
     font-size: 19px;
     font-weight: 700;
   }

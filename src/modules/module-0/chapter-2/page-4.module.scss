@@ -1,29 +1,16 @@
 @import "../../../theme";
 
-.title {
-  @include font(AmaticSC, bold);
-  font-size: 60px;
-  margin: 20px 0 40px 0;
-  text-align: center;
-}
-
 .paragraph {
-  @include font(Museo, 500);
-  font-size: 23px;
   line-height: 32px;
   margin: 40px 0 50px 0;
-  text-align: center;
 }
 
 .paragraphAlt {
   @include font(Museo, 700);
   color: $green2B;
-  font-size: 23px;
-  margin: 70px 0 50px 0;
-  text-align: center;
+  margin: 50px 0 50px 0;
 }
 
 .image {
   height: 90px;
-  margin-bottom: 80px;
 }

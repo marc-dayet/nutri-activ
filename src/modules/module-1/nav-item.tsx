@@ -1,6 +1,6 @@
 import React from "react"
 
-import NavItem from "../_shared/nav-item"
+import NavItem from "../nav-item"
 import icon from "./nav-item.svg"
 
 import cs from "./theme.module.scss"

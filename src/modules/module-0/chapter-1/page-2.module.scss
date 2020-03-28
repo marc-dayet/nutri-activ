@@ -1,12 +1,5 @@
 @import "../../../theme";
 
-.title {
-  @include font(AmaticSC, bold);
-  font-size: 60px;
-  margin: 25px 0 50px 0;
-  text-align: center;
-}
-
 .grid {
   display: grid;
   grid-auto-flow: column;
@@ -15,16 +8,10 @@
   grid-template-columns: repeat(3, minmax(1fr, 0));
   grid-template-rows: repeat(2, min-content);
   justify-items: center;
-  margin-bottom: 125px;
+  margin-top: 60px;
 }
 
 .image {
   height: 175px;
   width: 175px;
-}
-
-.paragraph {
-  @include font(Museo, 500);
-  font-size: 23px;
-  text-align: center;
 }

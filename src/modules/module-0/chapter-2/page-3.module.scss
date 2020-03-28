@@ -1,12 +1,5 @@
 @import "../../../theme";
 
-.title {
-  @include font(AmaticSC, bold);
-  font-size: 60px;
-  margin: 20px 0;
-  text-align: center;
-}
-
 .grid {
   align-items: center;
   display: grid;
@@ -14,15 +7,9 @@
   grid-auto-rows: min-conent;
   grid-row-gap: 15px;
   justify-items: center;
-  margin-bottom: 100px;
+  margin-top: 50px;
 }
 
 .image {
   height: 60px;
-}
-
-.paragraph {
-  @include font(Museo, 500);
-  font-size: 23px;
-  text-align: center;
 }

@@ -1,15 +1,15 @@
 import React, {FC, Suspense, useEffect, useState} from "react"
 
 import Nav from "./_shared/nav"
-import {PageProps} from "./modules/_shared/page"
-import modules from "./modules/_shared/context"
+import {PageProps} from "./modules/page"
+import modules from "./modules/context"
 import Main from "./main"
 
 const App: FC = () => {
   const [theme, setTheme] = useState("")
   const [module, setModule] = useState(0)
-  const [chapter, setChapter] = useState(2)
-  const [page, setPage] = useState(4)
+  const [chapter, setChapter] = useState(1)
+  const [page, setPage] = useState(1)
 
   const CurrPage = React.lazy<FC<PageProps>>(() =>
     import(`./modules/module-${module}/chapter-${chapter}/page-${page}.tsx`),

@@ -1,7 +1,7 @@
 import React, {FC} from "react"
 
 import {ReactComponent as Logo} from "../../../_shared/logo.svg"
-import {withPageContainer} from "../../_shared/page"
+import {withPageContainer} from "../../page"
 
 import cs from "./page-1.module.scss"
 

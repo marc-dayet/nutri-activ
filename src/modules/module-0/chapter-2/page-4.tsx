@@ -1,21 +1,21 @@
 import React, {FC} from "react"
 
-import {withPageContainer} from "../../_shared/page"
+import {Title, Paragraph, withPageContainer} from "../../page"
 
 import cs from "./page-4.module.scss"
 
 const Page: FC = () => {
   return (
     <>
-      <h1 className={cs.title}>Formation distancielle</h1>
-      <div className={cs.paragraph}>
+      <Title>Formation distancielle</Title>
+      <Paragraph className={cs.paragraph}>
         Prérequis obligatoire pour participer à la formation en présentiel, la formation en
         distanciel permet de maîtriser les savoirs, connaissances, principes, messages clés sur
         lesquels vous pourrez vous baser pour animer Cap Bien-être.
-      </div>
-      <div className={cs.paragraphAlt}>
+      </Paragraph>
+      <Paragraph className={cs.paragraphAlt}>
         Vous avez à votre disposition 2 outils pour la formation à distance :
-      </div>
+      </Paragraph>
       <img className={cs.image} src="#" alt="" />
     </>
   )

@@ -1,24 +1,24 @@
 import React, {FC} from "react"
 
-import {withPageContainer} from "../../_shared/page"
+import {Title, Paragraph, withPageContainer} from "../../page"
 
 import cs from "./page-2.module.scss"
 
 const Page: FC = () => {
   return (
     <>
-      <h1 className={cs.title}>Le module introductif Cap bien-être :</h1>
+      <Title>Le module introductif Cap bien-être :</Title>
       <div className={cs.grid}>
         <img className={cs.image} src="#" alt="" />
-        <div className={cs.paragraph}>Présentation de la formation distancielle</div>
+        <Paragraph>Présentation de la formation distancielle</Paragraph>
         <img className={cs.image} src="#" alt="" />
-        <div className={cs.paragraph}>
+        <Paragraph>
           Les fondements et les contenus clés sur lesquels repose le parcours Cap Bien-être.
-        </div>
+        </Paragraph>
         <img className={cs.image} src="#" alt="" />
-        <div className={cs.paragraph}>
+        <Paragraph>
           De la formation distancielle à la formation présentielle : vos questions aux formateurs.
-        </div>
+        </Paragraph>
       </div>
     </>
   )

@@ -27,11 +27,11 @@ const PageContainer: FC<PageProps> = props => {
   } = props
 
   return (
-    <>
+    <div className={cs.container}>
       <div className={cs.pagination}>
         Page {currPage}/{nbPages}
       </div>
-      {children}
+      <div className={cs.content}>{children}</div>
       <footer>
         <div className={cs.pages}>
           <button className={cs.page} onClick={() => prevPage()}>
@@ -53,8 +53,20 @@ const PageContainer: FC<PageProps> = props => {
           ))}
         </div>
       </footer>
-    </>
+    </div>
   )
+}
+
+export const Title: FC = ({children}) => {
+  return <h1 className={cs.title}>{children}</h1>
+}
+
+export const SubTitle: FC = ({children}) => {
+  return <h2 className={cs.subtitle}>{children}</h2>
+}
+
+export const Paragraph: FC<{className?: string}> = ({children, className = ""}) => {
+  return <div className={cn(cs.paragraph, className)}>{children}</div>
 }
 
 export function withPageContainer(Page: FC): FC<PageProps> {

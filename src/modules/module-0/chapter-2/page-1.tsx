@@ -1,15 +1,10 @@
 import React, {FC} from "react"
 
-import {withPageContainer} from "../../_shared/page"
-
-import cs from "./page-1.module.scss"
+import {withPageContainer} from "../../page"
+import BigTitle from "../title"
 
 const Page: FC = () => {
-  return (
-    <>
-      <h1 className={cs.title}>Présentation de la formation distancielle Cap Bien-être</h1>
-    </>
-  )
+  return <BigTitle>Présentation de la formation distancielle Cap Bien-être</BigTitle>
 }
 
 export default withPageContainer(Page)

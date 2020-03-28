@@ -1,14 +1,25 @@
-@import "../../theme.scss";
+@import "../theme.scss";
+
+.container {
+  align-items: center;
+  display: grid;
+  grid-template-rows: 40px auto 150px;
+  height: 100%;
+}
 
 .pagination {
   @include font(Museo, 300);
   font-size: 21px;
-  margin: 10px 0 25px 0;
   text-align: center;
 }
 
+.content {
+  align-self: start;
+}
+
 .pages {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: space-between;
   padding: 0 100px;
 }
@@ -44,5 +55,30 @@
   &.active {
     background: $blue03;
     color: $white;
+  }
+}
+
+.title {
+  @include font(AmaticSC, bold);
+  font-size: 60px;
+  margin: 0;
+  text-align: center;
+}
+
+.subtitle {
+  @include font(AmaticSC, bold);
+  color: $green2B;
+  font-size: 45px;
+  margin: 0;
+  text-align: center;
+}
+
+.paragraph {
+  @include font(Museo, 500);
+  font-size: 23px;
+  text-align: center;
+
+  strong {
+    @include font(Museo, 700);
   }
 }
