@@ -79,8 +79,8 @@ export const Title: FC = ({children}) => {
   return <h1 className={cs.title}>{children}</h1>
 }
 
-export const SubTitle: FC = ({children}) => {
-  return <h2 className={cs.subtitle}>{children}</h2>
+export const SubTitle: FC<{className?: string}> = ({children, className}) => {
+  return <h2 className={cn(cs.subtitle, className)}>{children}</h2>
 }
 
 export const Paragraph: FC<{className?: string}> = ({children, className}) => {
