@@ -3,12 +3,12 @@ import React, {FC} from "react"
 import cs from "./main.module.scss"
 
 type MainProps = {
-  theme: string
+  theme: {[key: string]: string}
 }
 
 const Main: FC<MainProps> = ({theme, children}) => {
   return (
-    <div className={theme}>
+    <div className={theme.main}>
       <main className={cs.main}>{children}</main>
     </div>
   )

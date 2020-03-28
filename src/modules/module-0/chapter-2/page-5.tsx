@@ -1,6 +1,6 @@
 import React, {FC} from "react"
 
-import {Title, Paragraph, List, ListItem, withPageContainer} from "../../page"
+import {Title, Paragraph, List, ListItem} from "../../page-container"
 
 import cs from "./page-5.module.scss"
 
@@ -30,4 +30,4 @@ const Page: FC = () => {
   )
 }
 
-export default withPageContainer(Page)
+export default Page

@@ -1,11 +1,11 @@
 import React, {Suspense, FC} from "react"
 
 import logo from "./logo.svg"
-import Account from "../auth/account"
+import Account from "./auth/account"
 
 import cs from "./nav.module.scss"
 
-const req = require.context("../modules", true, /module-\d+\/nav-item.tsx$/)
+const req = require.context("./modules", true, /module-\d+\/nav-item.tsx$/)
 const modules = req
   .keys()
   .map<{default: FC}>(req)

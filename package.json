@@ -38,6 +38,7 @@
     "query-string": "^6.10.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-spring": "^8.0.27",
     "rxjs": "^6.5.4"
   },
   "scripts": {

@@ -1,6 +1,5 @@
 import React, {FC} from "react"
 
-import {withPageContainer} from "../../page"
 import BigTitle from "../title"
 
 const Page: FC = () => {
@@ -11,4 +10,4 @@ const Page: FC = () => {
   )
 }
 
-export default withPageContainer(Page)
+export default Page

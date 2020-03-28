@@ -1,10 +1,13 @@
-import React, {FC} from "react"
+import React, {FC, Suspense, useEffect, useState} from "react"
 import cn from "classnames"
 import range from "lodash/fp/range"
 
-import cs from "./page.module.scss"
+import Loader from "./page-loader"
+
+import cs from "./page-container.module.scss"
 
 export type PageProps = {
+  theme: {[key: string]: string}
   currPage: number
   nbPages: number
   prevPage: () => void
@@ -16,6 +19,7 @@ export type PageProps = {
 
 const PageContainer: FC<PageProps> = props => {
   const {
+    theme,
     currPage,
     nbPages,
     prevPage,
@@ -26,12 +30,26 @@ const PageContainer: FC<PageProps> = props => {
     children,
   } = props
 
+  const [isLoading, setLoading] = useState(false)
+
+  const LoaderFallback: FC = () => {
+    useEffect(() => {
+      setLoading(true)
+      return () => setLoading(false)
+    }, [])
+
+    return null
+  }
+
   return (
     <div className={cs.container}>
       <div className={cs.pagination}>
         Page {currPage}/{nbPages}
       </div>
-      <div className={cs.content}>{children}</div>
+      <div className={cs.content}>
+        <Suspense fallback={<LoaderFallback />}>{children}</Suspense>
+      </div>
+      <Loader className={theme.pageLoader} isVisible={isLoading} />
       <footer>
         <div className={cs.pages}>
           <button className={cs.page} onClick={() => prevPage()}>

@@ -1,7 +1,6 @@
 import React, {FC} from "react"
 
-import {ReactComponent as Logo} from "../../../_shared/logo.svg"
-import {withPageContainer} from "../../page"
+import {ReactComponent as Logo} from "../../../logo.svg"
 
 import cs from "./page-1.module.scss"
 
@@ -24,4 +23,4 @@ const Page: FC = () => {
   )
 }
 
-export default withPageContainer(Page)
+export default Page
