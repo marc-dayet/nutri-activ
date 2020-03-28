@@ -22,7 +22,12 @@ const PageSharing: FC = () => {
       </div>
       <h2 className={cs.subtitle}>Cliquez sur le lien suivant :</h2>
       <div className={cs.linkContainer}>
-        <a className={cs.link} href="https://fr.surveymonkey.com/r/M63GHMK">
+        <a
+          className={cs.link}
+          href="https://fr.surveymonkey.com/r/M63GHMK"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           https://fr.surveymonkey.com/r/M63GHMK
         </a>
       </div>

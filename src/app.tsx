@@ -7,7 +7,7 @@ import Main from "./main"
 const App: FC = () => {
   const [theme, setTheme] = useState<{[key: string]: string}>({})
   const [module, setModule] = useState(0)
-  const [chapter, setChapter] = useState(5)
+  const [chapter, setChapter] = useState(1)
   const [page, setPage] = useState(1)
   const [components, setComponents] = useState<{[key: string]: FC}>({})
   const key = encodeModuleKey(module, chapter, page)
