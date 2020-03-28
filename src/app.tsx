@@ -8,7 +8,7 @@ const App: FC = () => {
   const [theme, setTheme] = useState<{[key: string]: string}>({})
   const [module, setModule] = useState(0)
   const [chapter, setChapter] = useState(3)
-  const [page, setPage] = useState(3)
+  const [page, setPage] = useState(4)
   const [components, setComponents] = useState<{[key: string]: FC}>({})
   const key = encodeModuleKey(module, chapter, page)
   const CurrPage = components[key] || (() => null)

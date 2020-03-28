@@ -1,0 +1,29 @@
+@import "../../../theme";
+
+.paragraph {
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.grid {
+  align-items: center;
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  grid-template-rows: 200px min-content;
+  justify-items: center;
+  margin-top: 30px;
+
+  .paragraph {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-top: 0;
+  }
+}
+
+.image {
+  height: 200px;
+  width: 200px;
+}
