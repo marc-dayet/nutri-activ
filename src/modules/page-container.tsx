@@ -50,7 +50,7 @@ const PageContainer: FC<PageProps> = props => {
         <Suspense fallback={<LoaderFallback />}>{children}</Suspense>
       </div>
       <Loader className={theme.pageLoader} isVisible={isLoading} />
-      <footer>
+      <footer className={cs.navigation}>
         <div className={cs.pages}>
           <button className={cs.page} onClick={() => prevPage()}>
             Précédent

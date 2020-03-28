@@ -1,7 +1,6 @@
 @import "../theme.scss";
 
 .container {
-  align-items: center;
   display: grid;
   grid-template-rows: 40px auto 150px;
   height: 100%;
@@ -9,12 +8,12 @@
 
 .pagination {
   @include font(Museo, 300);
+  align-self: center;
   font-size: 21px;
   text-align: center;
 }
 
 .content {
-  align-self: start;
   grid-column: 1;
   grid-row: 2;
 }
@@ -23,6 +22,7 @@
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
+  margin-bottom: 20px;
   padding: 0 100px;
 }
 
