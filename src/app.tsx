@@ -8,8 +8,8 @@ import Main from "./main"
 const App: FC = () => {
   const [theme, setTheme] = useState("")
   const [module, setModule] = useState(0)
-  const [chapter, setChapter] = useState(1)
-  const [page, setPage] = useState(1)
+  const [chapter, setChapter] = useState(2)
+  const [page, setPage] = useState(5)
 
   const CurrPage = React.lazy<FC<PageProps>>(() =>
     import(`./modules/module-${module}/chapter-${chapter}/page-${page}.tsx`),

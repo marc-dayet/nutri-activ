@@ -76,9 +76,18 @@
 .paragraph {
   @include font(Museo, 500);
   font-size: 23px;
+  line-height: 32px;
   text-align: center;
 
   strong {
     @include font(Museo, 700);
   }
+}
+
+.list {
+  @include font(Museo, 500);
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 0 40px;
+  padding-left: 20px;
 }

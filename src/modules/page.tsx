@@ -65,8 +65,16 @@ export const SubTitle: FC = ({children}) => {
   return <h2 className={cs.subtitle}>{children}</h2>
 }
 
-export const Paragraph: FC<{className?: string}> = ({children, className = ""}) => {
+export const Paragraph: FC<{className?: string}> = ({children, className}) => {
   return <div className={cn(cs.paragraph, className)}>{children}</div>
+}
+
+export const List: FC<{className?: string}> = ({children, className}) => {
+  return <ul className={cn(cs.list, className)}>{children}</ul>
+}
+
+export const ListItem: FC<{className?: string}> = ({children, className}) => {
+  return <li className={cn(cs.listItem, className)}>{children}</li>
 }
 
 export function withPageContainer(Page: FC): FC<PageProps> {
