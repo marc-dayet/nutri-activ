@@ -1,0 +1,58 @@
+@import "../theme.scss";
+
+.subtitle {
+  @include font(AmaticSC, bold);
+  font-size: 60px;
+  margin: 0;
+  text-align: center;
+}
+
+.paragraphAlt {
+  @include font(Museo, 700);
+  align-items: center;
+  color: $green2B;
+  display: grid;
+  font-size: 26px;
+  grid-row-gap: 10px;
+  grid-template-columns: min-content 30px max-content;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.paragraphAltHeader {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.paragraphAltBracket {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.paragraphAltLineTop {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.paragraphAltLineBottom {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.linkContainer {
+  @include font(Museo, 700);
+  color: $green2B;
+  font-size: 36px;
+  margin: 20px 0 40px 0;
+  text-align: center;
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
+.listItem {
+  margin: 20px 0;
+}
