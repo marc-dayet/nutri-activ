@@ -1,7 +1,5 @@
 @import "../theme.scss";
 
-$transition-duration: 150ms;
-
 .background {
   height: 100%;
   left: 0;
@@ -10,7 +8,7 @@ $transition-duration: 150ms;
   width: 100%;
 
   path {
-    transition-duration: $transition-duration;
+    transition-duration: 150ms;
     transition-property: fill;
   }
 }

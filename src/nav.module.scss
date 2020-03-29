@@ -8,11 +8,13 @@
 
 .logo {
   align-self: center;
+  height: 100%;
   padding: 15px 0 15px 50px;
-  width: 100%;
 }
 
 .modules {
+  align-items: flex-start;
   display: flex;
   justify-content: space-evenly;
+  padding: 10px 0;
 }

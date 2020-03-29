@@ -100,7 +100,7 @@ td {
 #root {
   align-items: stretch;
   display: grid;
-  grid-template-rows: 110px minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
   height: 100vh;
   max-height: 100vh;
   min-height: 100vh;

@@ -10,10 +10,6 @@
   transition-duration: 150ms;
   transition-property: background;
 
-  &:hover {
-    background: darken($white, 5%);
-  }
-
   img {
     height: 60px;
     width: 60px;

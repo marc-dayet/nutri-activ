@@ -40,6 +40,14 @@
   grid-row: 2;
 }
 
+.paragraphAltBullet {
+  margin-right: 15px;
+
+  path {
+    fill: $green2B;
+  }
+}
+
 .linkContainer {
   @include font(Museo, 700);
   color: $green2B;
@@ -53,6 +61,12 @@
   }
 }
 
+.list {
+  list-style-image: none;
+  list-style-type: ">";
+}
+
 .listItem {
   margin: 20px 0;
+  padding-left: 20px;
 }

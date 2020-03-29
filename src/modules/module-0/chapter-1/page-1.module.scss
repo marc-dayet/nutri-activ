@@ -22,5 +22,13 @@
 }
 
 .logo {
-  width: 500px;
+  height: 100px;
+
+  [data-type="font"] path {
+    fill: $green1E;
+  }
+
+  [data-type="compass"] path:first-of-type {
+    fill: $white;
+  }
 }

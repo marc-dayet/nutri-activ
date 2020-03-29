@@ -1,6 +1,7 @@
 import React, {FC} from "react"
 
 import {Title, List, ListItem} from "./page-container"
+import {ReactComponent as ListItemIcon} from "./page-list-item.svg"
 
 import cs from "./page-sharing.module.scss"
 
@@ -14,9 +15,11 @@ const PageSharing: FC = () => {
           <img className={cs.paragraphAltBracketImage} src="#" alt="" />
         </div>
         <div className={cs.paragraphAltLineTop}>
+          <ListItemIcon className={cs.paragraphAltBullet} />
           faire part de vos interrogations et remarques sur chaque module
         </div>
         <div className={cs.paragraphAltLineBottom}>
+          <ListItemIcon className={cs.paragraphAltBullet} />
           demander à revenir sur certains points en formation présentielle
         </div>
       </div>
@@ -31,7 +34,7 @@ const PageSharing: FC = () => {
           https://fr.surveymonkey.com/r/M63GHMK
         </a>
       </div>
-      <List>
+      <List className={cs.list}>
         <ListItem className={cs.listItem}>
           Si vous souhaitez le faire à l’issue de chaque module : utilisez impérativement le même
           ordinateur, cliquez sur « terminer » tout en bas du questionnaire pour mémoriser vos
