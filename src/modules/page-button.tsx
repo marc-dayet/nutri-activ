@@ -4,11 +4,13 @@ import {ReactComponent as ButtonBackground} from "./page-button.svg"
 
 import cs from "./page-button.module.scss"
 
-export type PageProps = {
+export type PageButtonProps = {
   onClick: Function
 }
 
-const PageContainer: FC<PageProps> = ({onClick: handleClick, children}) => {
+const PageButton: FC<PageButtonProps> = props => {
+  const {onClick: handleClick, children} = props
+
   return (
     <button className={cs.button} onClick={() => handleClick()}>
       <span className={cs.label}>{children}</span>
@@ -17,4 +19,4 @@ const PageContainer: FC<PageProps> = ({onClick: handleClick, children}) => {
   )
 }
 
-export default PageContainer
+export default PageButton

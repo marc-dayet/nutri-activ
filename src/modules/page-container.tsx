@@ -3,7 +3,8 @@ import cn from "classnames"
 import range from "lodash/fp/range"
 
 import Loader from "./page-loader"
-import Button from "./page-button"
+import PageButton from "./page-button"
+import ChapterButton from "./chapter-button"
 
 import cs from "./page-container.module.scss"
 
@@ -53,18 +54,18 @@ const PageContainer: FC<PageProps> = props => {
       <Loader className={theme.pageLoader} isVisible={isLoading} />
       <footer className={cs.navigation}>
         <div className={cs.pages}>
-          <Button onClick={prevPage}>Précédent</Button>
-          <Button onClick={nextPage}>Suivant</Button>
+          <PageButton onClick={prevPage}>Précédent</PageButton>
+          <PageButton onClick={nextPage}>Suivant</PageButton>
         </div>
         <div className={cs.chapters}>
           {range(1, nbChapters + 1).map(chapter => (
-            <button
+            <ChapterButton
               key={chapter}
-              className={cn(cs.chapter, {[cs.active]: chapter === currChapter})}
+              isActive={chapter === currChapter}
               onClick={() => setChapter(chapter)}
             >
               {chapter}
-            </button>
+            </ChapterButton>
           ))}
         </div>
       </footer>

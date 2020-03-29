@@ -9,7 +9,7 @@ $transition-duration: 150ms;
   top: 0;
   width: 100%;
 
-  path:nth-of-type(2) {
+  path {
     transition-duration: $transition-duration;
     transition-property: fill;
   }
@@ -17,15 +17,27 @@ $transition-duration: 150ms;
 
 .button {
   @include font(AmaticSC, bold);
-  color: $gray44;
-  font-size: 40px;
-  padding: 15px 50px 20px;
+  align-items: center;
+  border-radius: 50%;
+  color: $green03;
+  display: flex;
+  font-size: 26px;
+  height: 36px;
+  justify-content: center;
   position: relative;
-  text-transform: uppercase;
+  width: 36px;
 
   &:hover {
-    path:nth-of-type(2) {
-      fill: darken($white, 10%);
+    path {
+      fill: darken($grayEE, 10%);
+    }
+  }
+
+  &.active {
+    color: $white;
+
+    path {
+      fill: $green03;
     }
   }
 }
