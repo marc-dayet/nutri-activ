@@ -3,7 +3,8 @@ import React, {FC} from "react"
 import Title from "../page-components/title"
 import List from "../page-components/list"
 import ListItem from "../page-components/list-item"
-import {ReactComponent as ListItemIcon} from "../page-components/list-item.svg"
+import {ReactComponent as IconListItem} from "../page-components/list-item.svg"
+import {ReactComponent as IconCurlyBrace} from "./curly-brace.svg"
 
 import cs from "./sharing.module.scss"
 
@@ -13,15 +14,15 @@ const PageSharing: FC = () => {
       <Title>5.Accéder au questionnaire « Retours sur le distanciel »</Title>
       <div className={cs.paragraphAlt}>
         <div className={cs.paragraphAltHeader}>Pour</div>
-        <div className={cs.paragraphAltBracket}>
-          <img className={cs.paragraphAltBracketImage} src="#" alt="" />
+        <div className={cs.paragraphAltCurlyBraceContainer}>
+          <IconCurlyBrace className={cs.paragraphAltCurlyBrace}></IconCurlyBrace>
         </div>
         <div className={cs.paragraphAltLineTop}>
-          <ListItemIcon className={cs.paragraphAltBullet} />
+          <IconListItem className={cs.paragraphAltBullet} />
           faire part de vos interrogations et remarques sur chaque module
         </div>
         <div className={cs.paragraphAltLineBottom}>
-          <ListItemIcon className={cs.paragraphAltBullet} />
+          <IconListItem className={cs.paragraphAltBullet} />
           demander à revenir sur certains points en formation présentielle
         </div>
       </div>
