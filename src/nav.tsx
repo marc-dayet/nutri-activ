@@ -3,6 +3,7 @@ import cn from "classnames"
 
 import logo from "./logo.svg"
 import Account from "./auth/account"
+import {getLastStep} from "./modules/context"
 
 import cs from "./nav.module.scss"
 
@@ -19,6 +20,7 @@ type NavProps = {
 
 const Nav: FC<NavProps> = props => {
   const {activeModule, changeModule} = props
+  const [lastModule] = getLastStep()
 
   return (
     <Suspense fallback={null}>
@@ -30,6 +32,7 @@ const Nav: FC<NavProps> = props => {
               key={module}
               className={cn(cs.module, theme, {[cs.active]: module === activeModule})}
               onClick={() => changeModule(module)}
+              disabled={lastModule < module}
             >
               <img src={icon} alt="" />
               <span>{label}</span>

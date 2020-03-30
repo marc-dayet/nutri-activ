@@ -25,18 +25,22 @@
   position: relative;
   width: 36px;
 
-  &:hover {
+  &:not([disabled]):hover {
     path {
       fill: darken($grayEE, 10%);
     }
   }
 
-  &.active {
+  &:not([disabled]).active {
     color: $white;
 
     path {
       fill: $green03;
     }
+  }
+
+  &[disabled] {
+    opacity: 0.25;
   }
 }
 

@@ -1,13 +1,31 @@
 @import "../theme";
 
-.container {
+.grid {
   @include font(Museo, 700);
+  align-items: center;
   background: $grayC9;
+  display: grid;
   font-size: 20px;
+  grid-column-gap: 10px;
+  grid-template-columns: 16px minmax(0, 1fr);
   padding: 15px 50px;
+}
+
+.header {
+  grid-column: 1 / span 2;
+  margin-bottom: 5px;
 }
 
 .icon {
   height: 16px;
   width: 16px;
+}
+
+.signOut {
+  @include font(Museo, 700);
+  font-size: 20px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

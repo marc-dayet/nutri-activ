@@ -1,14 +1,24 @@
 import React, {FC, useEffect, useState} from "react"
-import {modules, encodeModuleKey, decodeModuleKey} from "./modules/context"
+import useBehaviorSubject from "react-captain/behavior-subject"
+import {auth$} from "./auth/context"
+import Login from "./auth/login"
+import {
+  modules,
+  encodeModuleKey,
+  decodeModuleKey,
+  getLastStep,
+  setLastStep,
+} from "./modules/context"
 import PageContainer from "./modules/page"
 import Nav from "./nav"
 import Main from "./main"
 
 const App: FC = () => {
+  const [lastModule, lastChapter, lastPage] = getLastStep()
   const [theme, setTheme] = useState<{[key: string]: string}>({})
-  const [module, setModule] = useState(0)
-  const [chapter, setChapter] = useState(1)
-  const [page, setPage] = useState(1)
+  const [module, setModule] = useState(lastModule)
+  const [chapter, setChapter] = useState(lastChapter)
+  const [page, setPage] = useState(lastPage)
   const [components, setComponents] = useState<{[key: string]: FC}>({})
   const key = encodeModuleKey(module, chapter, page)
   const CurrPage = components[key] || (() => null)
@@ -80,20 +90,29 @@ const App: FC = () => {
     if (nextChapter >= modules[nextModule].length) return
     if (nextPage > modules[nextModule][nextChapter]) return
 
+    setLastStep(nextModule, nextChapter, nextPage)
     setModule(nextModule)
     setChapter(nextChapter)
     setPage(nextPage)
   }
 
-  function updateChapter(chapter: number) {
-    setChapter(chapter)
-    setPage(1)
+  function updateChapter(nextChapter: number) {
+    if (
+      module <= lastModule &&
+      (module !== lastModule || nextChapter <= lastChapter) &&
+      (module !== lastModule || nextChapter !== lastChapter || page <= lastPage)
+    ) {
+      setChapter(nextChapter)
+      setPage(1)
+    }
   }
 
-  function updateModule(module: number) {
-    setModule(module)
-    setChapter(1)
-    setPage(1)
+  function updateModule(nextModule: number) {
+    if (lastModule >= nextModule) {
+      setModule(nextModule)
+      setChapter(1)
+      setPage(1)
+    }
   }
 
   function countPagesTill(end?: number) {
@@ -106,13 +125,14 @@ const App: FC = () => {
       <Main theme={theme}>
         <PageContainer
           theme={theme}
+          currModule={module}
+          currChapter={chapter}
+          nbChapters={Object.values(modules[module]).length}
+          setChapter={updateChapter}
           currPage={countPagesTill(chapter) + page}
           nbPages={countPagesTill()}
           prevPage={prevPage}
           nextPage={nextPage}
-          currChapter={chapter}
-          nbChapters={Object.values(modules[module]).length}
-          setChapter={updateChapter}
         >
           <CurrPage />
         </PageContainer>
@@ -121,4 +141,18 @@ const App: FC = () => {
   )
 }
 
-export default App
+const AppContainer: FC = () => {
+  const [auth] = useBehaviorSubject(auth$)
+
+  if (auth.type === "not-initialized") {
+    return <div>loading</div>
+  }
+
+  if (auth.type === "not-authenticated") {
+    return <Login />
+  }
+
+  return <App />
+}
+
+export default AppContainer

@@ -29,7 +29,7 @@
   transition-duration: 150ms;
   transition-property: background;
 
-  &:not(.active) {
+  &[disabled] {
     filter: grayscale(1);
     opacity: 0.25;
   }

@@ -1,3 +1,7 @@
+import firebase from "firebase/app"
+
+import {auth$} from "../auth/context"
+
 type ModuleKey = string
 
 type Modules = number[][] & {
@@ -44,4 +48,25 @@ export function decodeModuleKey(moduleKey: ModuleKey): [number, number, number] 
   const numbers = moduleKey.split(".").map(Number)
   if (numbers.length < 2) throw new Error("Invalid module key")
   return [numbers[0], numbers[1], numbers[2]]
+}
+
+export function getLastStep() {
+  // Use photoURL to retrieve highest user's position
+  return auth$.value.type === "authenticated" ? auth$.value.lastStep : [0, 1, 1]
+}
+
+export async function setLastStep(module: number, chapter: number, page: number) {
+  const user = firebase.auth().currentUser
+  if (user && auth$.value.type === "authenticated") {
+    const [lastModule, lastChapter, lastPage] = getLastStep()
+    if (
+      module > lastModule ||
+      (module === lastModule && chapter > lastChapter) ||
+      (module === lastModule && chapter === lastChapter && page > lastPage)
+    ) {
+      const lastStep: [number, number, number] = [module, chapter, page]
+      auth$.next({...auth$.value, lastStep})
+      await user.updateProfile({photoURL: encodeModuleKey(...lastStep)})
+    }
+  }
 }
