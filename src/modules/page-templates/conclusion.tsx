@@ -1,6 +1,6 @@
 import React, {FC} from "react"
 
-import Title from "../page-components/title"
+import {Title, Paragraph} from "../page-components"
 
 import cs from "./conclusion.module.scss"
 
@@ -13,7 +13,9 @@ const PageConclusion: FC<PageConclusionProps> = ({title, image}) => {
   return (
     <>
       <Title>{title}</Title>
-      <img className={cs.image} src={image} alt="" />
+      <Paragraph>
+        <img className={cs.image} src={image} alt="" />
+      </Paragraph>
     </>
   )
 }

@@ -1,5 +1,9 @@
 @import "../../../theme";
 
+.image {
+  width: 70px;
+}
+
 .grid {
   display: grid;
   grid-auto-flow: row;
@@ -8,10 +12,10 @@
   grid-template-columns: 70px minmax(0, 1fr);
   grid-template-rows: repeat(2, min-content);
   margin-top: 50px;
-}
 
-.image {
-  width: 70px;
+  .image:first-of-type {
+    transform: translateY(-30px);
+  }
 }
 
 .paragraph {

@@ -1,6 +1,7 @@
 import React, {FC} from "react"
 
 import {Title, Paragraph} from "../../page-components"
+import image1 from "./page-4-1.png"
 
 import cs from "./page-4.module.scss"
 
@@ -16,7 +17,9 @@ const Page: FC = () => {
       <Paragraph className={cs.paragraphAlt}>
         Vous avez à votre disposition 2 outils pour la formation à distance :
       </Paragraph>
-      <img className={cs.image} src="#" alt="" />
+      <Paragraph>
+        <img className={cs.image} src={image1} alt="" />
+      </Paragraph>
     </>
   )
 }
