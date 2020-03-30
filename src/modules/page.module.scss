@@ -1,4 +1,4 @@
-@import "../theme.scss";
+@import "../theme";
 
 .container {
   display: grid;
@@ -28,7 +28,7 @@
 
 .page {
   @include font(AmaticSC, bold);
-  background-image: url(./page-button.svg);
+  background-image: url(./page-components/button.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -69,21 +69,6 @@
   }
 }
 
-.title {
-  @include font(AmaticSC, bold);
-  font-size: 60px;
-  margin: 0;
-  text-align: center;
-}
-
-.subtitle {
-  @include font(AmaticSC, bold);
-  color: $green2B;
-  font-size: 45px;
-  margin: 0;
-  text-align: center;
-}
-
 .paragraph {
   @include font(Museo, 500);
   font-size: 23px;
@@ -99,7 +84,7 @@
   @include font(Museo, 500);
   font-size: 23px;
   line-height: 32px;
-  list-style-image: url(./page-list-item.svg);
+  list-style-image: url(./page-components/list-item.svg);
   margin: 0 0 0 40px;
   padding-left: 20px;
 }

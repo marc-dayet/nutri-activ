@@ -1,4 +1,4 @@
-@import "./theme.scss";
+@import "./theme";
 
 .nav {
   border-bottom: 1px solid $grayC4;
@@ -17,4 +17,30 @@
   display: flex;
   justify-content: space-evenly;
   padding: 10px 0;
+}
+
+.module {
+  @include font(Museo, 700);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+  transition-duration: 150ms;
+  transition-property: background;
+
+  &:not(.active) {
+    filter: grayscale(1);
+    opacity: 0.25;
+  }
+
+  img {
+    height: 60px;
+    width: 60px;
+  }
+
+  span {
+    font-size: 19px;
+    font-weight: 700;
+  }
 }

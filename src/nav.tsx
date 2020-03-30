@@ -1,24 +1,39 @@
 import React, {Suspense, FC} from "react"
+import cn from "classnames"
 
 import logo from "./logo.svg"
 import Account from "./auth/account"
 
 import cs from "./nav.module.scss"
 
-const req = require.context("./modules", true, /module-\d+\/nav-item.tsx$/)
+const req = require.context("./modules", true, /module-\d+\/nav-item.ts$/)
 const modules = req
   .keys()
-  .map<{default: FC}>(req)
-  .map(module => React.lazy(() => Promise.resolve(module)))
+  .map<{default: {theme: string; icon: string; label: string}}>(req)
+  .map(module => module.default)
 
-const Nav: FC = () => {
+type NavProps = {
+  activeModule: number
+  changeModule: (module: number) => void
+}
+
+const Nav: FC<NavProps> = props => {
+  const {activeModule, changeModule} = props
+
   return (
     <Suspense fallback={null}>
       <div className={cs.nav}>
         <img className={cs.logo} src={logo} alt="" />
         <nav className={cs.modules}>
-          {modules.map((NavItem, idx) => (
-            <NavItem key={idx} />
+          {modules.map(({theme, icon, label}, module) => (
+            <button
+              key={module}
+              className={cn(cs.module, theme, {[cs.active]: module === activeModule})}
+              onClick={() => changeModule(module)}
+            >
+              <img src={icon} alt="" />
+              <span>{label}</span>
+            </button>
           ))}
         </nav>
         <Account />

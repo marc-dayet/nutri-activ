@@ -1,9 +1,11 @@
 import React, {FC} from "react"
 
-import {Title, List, ListItem} from "./page-container"
-import {ReactComponent as ListItemIcon} from "./page-list-item.svg"
+import Title from "../page-components/title"
+import List from "../page-components/list"
+import ListItem from "../page-components/list-item"
+import {ReactComponent as ListItemIcon} from "../page-components/list-item.svg"
 
-import cs from "./page-sharing.module.scss"
+import cs from "./sharing.module.scss"
 
 const PageSharing: FC = () => {
   return (

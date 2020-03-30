@@ -1,0 +1,10 @@
+@import "../../theme";
+
+.list {
+  @include font(Museo, 500);
+  font-size: 23px;
+  line-height: 32px;
+  list-style-image: url(./list-item.svg);
+  margin: 0 0 0 40px;
+  padding-left: 20px;
+}

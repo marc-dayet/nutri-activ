@@ -1,12 +1,11 @@
 import React, {FC, Suspense, useEffect, useState} from "react"
-import cn from "classnames"
 import range from "lodash/fp/range"
 
-import Loader from "./page-loader"
-import PageButton from "./page-button"
-import ChapterButton from "./chapter-button"
+import Loader from "./page-components/loader"
+import PageButton from "./page-components/button"
+import ChapterButton from "./page-components/chapter-button"
 
-import cs from "./page-container.module.scss"
+import cs from "./page.module.scss"
 
 export type PageProps = {
   theme: {[key: string]: string}
@@ -70,34 +69,6 @@ const PageContainer: FC<PageProps> = props => {
         </div>
       </footer>
     </div>
-  )
-}
-
-export const Title: FC = ({children}) => {
-  return <h1 className={cs.title}>{children}</h1>
-}
-
-export const SubTitle: FC<{className?: string}> = ({children, className}) => {
-  return <h2 className={cn(cs.subtitle, className)}>{children}</h2>
-}
-
-export const Paragraph: FC<{className?: string}> = ({children, className}) => {
-  return <div className={cn(cs.paragraph, className)}>{children}</div>
-}
-
-export const List: FC<{className?: string}> = ({children, className}) => {
-  return <ul className={cn(cs.list, className)}>{children}</ul>
-}
-
-export const ListItem: FC<{className?: string}> = ({children, className}) => {
-  return <li className={cn(cs.listItem, className)}>{children}</li>
-}
-
-export function withPageContainer(Page: FC): FC<PageProps> {
-  return props => (
-    <PageContainer {...props}>
-      <Page />
-    </PageContainer>
   )
 }
 

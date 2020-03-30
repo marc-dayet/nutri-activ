@@ -1,8 +1,8 @@
 import React, {FC} from "react"
 
-import {ReactComponent as ButtonBackground} from "./page-button.svg"
+import {ReactComponent as ButtonBackground} from "./button.svg"
 
-import cs from "./page-button.module.scss"
+import cs from "./button.module.scss"
 
 export type PageButtonProps = {
   onClick: Function

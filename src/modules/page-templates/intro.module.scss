@@ -1,0 +1,19 @@
+@import "../../theme";
+
+@mixin heading {
+  margin: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title {
+  @include heading;
+  @include font(AmaticSC, bold);
+  font-size: 80px;
+}
+
+.subtitle {
+  @include heading;
+  @include font(Museo, 500);
+  font-size: 34px;
+}

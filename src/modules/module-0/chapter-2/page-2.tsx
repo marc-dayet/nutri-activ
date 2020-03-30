@@ -1,6 +1,6 @@
 import React, {FC} from "react"
 
-import {Title, SubTitle, Paragraph} from "../../page-container"
+import {Title, Subtitle, Paragraph} from "../../page-components"
 
 import cs from "./page-2.module.scss"
 
@@ -8,7 +8,7 @@ const Page: FC = () => {
   return (
     <>
       <Title>Présentation de la formation distancielle Cap Bien-être</Title>
-      <SubTitle>Qu’est ce que le distanciel va vous apporter ?</SubTitle>
+      <Subtitle>Qu’est ce que le distanciel va vous apporter ?</Subtitle>
       <div className={cs.grid}>
         <img className={cs.image} src="#" alt="" />
         <Paragraph className={cs.paragraph}>

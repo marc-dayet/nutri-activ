@@ -1,8 +1,8 @@
 import React, {FC} from "react"
 
-import {Title} from "./page-container"
+import Title from "../page-components/title"
 
-import cs from "./page-conclusion.module.scss"
+import cs from "./conclusion.module.scss"
 
 type PageConclusionProps = {
   title: string

@@ -1,6 +1,6 @@
 import React, {FC, useEffect, useState} from "react"
 import {modules, encodeModuleKey, decodeModuleKey} from "./modules/context"
-import PageContainer from "./modules/page-container"
+import PageContainer from "./modules/page"
 import Nav from "./nav"
 import Main from "./main"
 
@@ -90,13 +90,19 @@ const App: FC = () => {
     setPage(1)
   }
 
+  function updateModule(module: number) {
+    setModule(module)
+    setChapter(1)
+    setPage(1)
+  }
+
   function countPagesTill(end?: number) {
     return modules[module].slice(0, end).reduce((sum, pages) => sum + pages, 0)
   }
 
   return (
     <>
-      <Nav />
+      <Nav activeModule={module} changeModule={updateModule} />
       <Main theme={theme}>
         <PageContainer
           theme={theme}

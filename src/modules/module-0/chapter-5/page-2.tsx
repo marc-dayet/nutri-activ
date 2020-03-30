@@ -1,6 +1,6 @@
 import React from "react"
 
-import PageConclusion from "../../page-conclusion"
+import PageConclusion from "../../page-templates/conclusion"
 
 export default () => (
   <PageConclusion

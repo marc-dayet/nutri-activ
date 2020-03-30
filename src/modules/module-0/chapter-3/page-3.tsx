@@ -1,6 +1,6 @@
 import React, {FC} from "react"
 
-import {Title, SubTitle, Paragraph} from "../../page-container"
+import {Title, Subtitle, Paragraph} from "../../page-components"
 
 import cs from "./page-3.module.scss"
 
@@ -8,9 +8,9 @@ const Page: FC = () => {
   return (
     <>
       <Title>Les contenus clés travaillés durant le parcours Cap Bien-être</Title>
-      <SubTitle className={cs.subtitle}>
+      <Subtitle className={cs.subtitle}>
         Quelles sont les disciplines concernées par le parcours ?
-      </SubTitle>
+      </Subtitle>
       <Paragraph className={cs.paragraph}>
         Le contenu du parcours provient de l’apport des 5 disciplines suivantes :
       </Paragraph>

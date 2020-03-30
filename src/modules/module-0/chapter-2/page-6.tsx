@@ -1,6 +1,6 @@
 import React, {FC} from "react"
 
-import {Title, Paragraph} from "../../page-container"
+import {Title, Paragraph} from "../../page-components"
 
 import cs from "./page-6.module.scss"
 

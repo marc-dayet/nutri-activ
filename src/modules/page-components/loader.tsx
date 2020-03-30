@@ -2,9 +2,9 @@ import React, {FC} from "react"
 import {animated, useTransition} from "react-spring"
 import cn from "classnames"
 
-import {ReactComponent as LoaderIcon} from "./page-loader.svg"
+import {ReactComponent as LoaderIcon} from "./loader.svg"
 
-import cs from "./page-loader.module.scss"
+import cs from "./loader.module.scss"
 
 type LoaderProps = {
   isVisible: boolean

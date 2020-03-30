@@ -1,9 +1,10 @@
 @import "../../theme";
 
-.title {
+.subtitle {
   @include font(AmaticSC, bold);
-  font-size: 110px;
-  line-height: 100px;
-  margin-top: 150px;
+  color: $green2B;
+  font-size: 45px;
+  margin: 0;
   text-align: center;
 }
+
