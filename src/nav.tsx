@@ -4,7 +4,7 @@ import cn from "classnames"
 
 import logo from "./logo.svg"
 import Account from "./auth/account"
-import {lastStep$} from "./modules/context"
+import {currStep$, lastStep$} from "./modules/context"
 
 import cs from "./nav.module.scss"
 
@@ -14,14 +14,15 @@ const modules = req
   .map<{default: {theme: string; icon: string; label: string}}>(req)
   .map(module => module.default)
 
-type NavProps = {
-  activeModule: number
-  changeModule: (module: number) => void
-}
-
-const Nav: FC<NavProps> = props => {
-  const {activeModule, changeModule} = props
+const Nav: FC = () => {
   const [lastStep] = useBehaviorSubject(lastStep$)
+  const [step] = useBehaviorSubject(currStep$)
+
+  function setModule(nextModule: number) {
+    if (lastStep.module >= nextModule) {
+      currStep$.next({module: nextModule, chapter: 1, page: 1})
+    }
+  }
 
   return (
     <Suspense fallback={null}>
@@ -31,8 +32,8 @@ const Nav: FC<NavProps> = props => {
           {modules.map(({theme, icon, label}, module) => (
             <button
               key={module}
-              className={cn(cs.module, theme, {[cs.active]: module === activeModule})}
-              onClick={() => changeModule(module)}
+              className={cn(cs.module, theme, {[cs.active]: module === step.module})}
+              onClick={() => setModule(module)}
               disabled={lastStep.module < module}
             >
               <img src={icon} alt="" />

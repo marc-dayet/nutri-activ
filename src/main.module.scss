@@ -1,5 +1,10 @@
 .main {
-  height: 100%;
-  margin: 0 auto;
-  max-width: 1200px;
+  transition-duration: 1000ms;
+  transition-property: background;
+
+  > main {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
 }

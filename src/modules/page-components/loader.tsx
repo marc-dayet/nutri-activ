@@ -8,10 +8,9 @@ import cs from "./loader.module.scss"
 
 type LoaderProps = {
   isVisible: boolean
-  className?: string
 }
 
-const PageLoader: FC<LoaderProps> = ({isVisible, className}) => {
+const PageLoader: FC<LoaderProps> = ({isVisible}) => {
   const transitions = useTransition(isVisible, null, {
     from: {opacity: 0},
     enter: {opacity: 1},
@@ -23,7 +22,7 @@ const PageLoader: FC<LoaderProps> = ({isVisible, className}) => {
       {transitions.map(
         ({key, item: isVisible, props: style}) =>
           isVisible && (
-            <animated.div key={key} className={cn(cs.container, className)} style={style}>
+            <animated.div key={key} className={cn(cs.container)} style={style}>
               <LoaderIcon className={cs.loader} width={100} height={100} />
             </animated.div>
           ),

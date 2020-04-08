@@ -1,0 +1,16 @@
+@import "../../theme";
+
+.title {
+  margin-bottom: 75px;
+}
+
+.list {
+  @include font(Museo, 500);
+  font-size: 26px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.listItem {
+  margin: 30px 0;
+}

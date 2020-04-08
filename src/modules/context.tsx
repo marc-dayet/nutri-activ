@@ -18,10 +18,13 @@ export type Step = {
 
 export const initialStep: Step = {module: 0, chapter: 1, page: 1}
 export const lastStep$ = new BehaviorSubject(initialStep)
+export const currStep$ = new BehaviorSubject(initialStep)
 
 auth$
   .pipe(map(auth => (auth.type === "authenticated" ? auth.lastStep : initialStep)))
   .subscribe(lastStep$)
+
+lastStep$.subscribe(currStep$)
 
 function createModulesProxy() {
   const steps: Steps = Object.assign([], {keys: []})
@@ -38,7 +41,7 @@ function createChaptersProxy() {
 
 const paths = require.context(__dirname, true, /module-\d+\/chapter-\d+\/page-\d+.tsx$/).keys()
 
-export const modules = paths.reduce((modules, path) => {
+export const steps = paths.reduce((steps, path) => {
   const match = path.match(/module-(\d+)\/chapter-(\d+)\/page-(\d+).tsx$/)
   if (!match) throw new Error("Module not found")
 
@@ -47,12 +50,12 @@ export const modules = paths.reduce((modules, path) => {
   const page = Number(match[3])
   const key: StepKey = [module, chapter, page].join(".")
 
-  Object.assign(modules, {
-    keys: [...modules.keys, key],
-    [module]: Object.assign(modules[module], {[chapter]: modules[module][chapter] + 1}),
+  Object.assign(steps, {
+    keys: [...steps.keys, key],
+    [module]: Object.assign(steps[module], {[chapter]: steps[module][chapter] + 1}),
   })
 
-  return modules
+  return steps
 }, createModulesProxy())
 
 export function encodeStep(step: Step): StepKey {
@@ -65,7 +68,7 @@ export function decodeStep(stepKey: StepKey): Step {
   return {module: numbers[0], chapter: numbers[1], page: numbers[2]}
 }
 
-export async function setLastStep(module: number, chapter: number, page: number) {
+export async function saveLastStep(module: number, chapter: number, page: number) {
   const user = firebase.auth().currentUser
 
   if (user && auth$.value.type === "authenticated") {
