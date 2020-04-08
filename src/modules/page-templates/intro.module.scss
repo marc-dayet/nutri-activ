@@ -6,14 +6,25 @@
   text-transform: uppercase;
 }
 
+.animation {
+  align-content: center;
+  display: grid;
+  height: 400px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 500px;
+}
+
 .title {
   @include heading;
   @include font(AmaticSC, bold);
   font-size: 80px;
+  margin-top: 0;
 }
 
 .subtitle {
   @include heading;
   @include font(Museo, 500);
   font-size: 34px;
+  margin: 0;
 }
