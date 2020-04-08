@@ -1,9 +1,15 @@
 import React, {FC} from "react"
+import cn from "classnames"
 
 import cs from "./title.module.scss"
 
-const PageTitle: FC = ({children}) => {
-  return <h1 className={cs.title}>{children}</h1>
+type PageTitleProps = {
+  className?: string
+}
+
+const PageTitle: FC<PageTitleProps> = props => {
+  const {className, children} = props
+  return <h1 className={cn(cs.title, className)}>{children}</h1>
 }
 
 export default PageTitle

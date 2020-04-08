@@ -1,0 +1,21 @@
+@import "../../theme";
+
+.title {
+  margin-bottom: 40px;
+}
+
+.paragraph {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 75px minmax(0, 1fr);
+
+  .paragraph {
+    margin: 0;
+  }
+}
