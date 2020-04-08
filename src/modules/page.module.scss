@@ -1,19 +1,20 @@
 @import "../theme";
 
 .container {
+  align-items: center;
   display: grid;
-  grid-template-rows: 40px auto 175px;
+  grid-template-rows: 40px auto 150px;
   height: 100%;
 }
 
 .pagination {
   @include font(Museo, 300);
-  align-self: center;
   font-size: 21px;
   text-align: center;
 }
 
 .content {
+  align-self: start;
   grid-column: 1;
   grid-row: 2;
 }
@@ -22,7 +23,7 @@
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: -15px;
   padding: 0 100px;
 }
 
@@ -67,28 +68,4 @@
     background: $blue03;
     color: $white;
   }
-}
-
-.paragraph {
-  @include font(Museo, 500);
-  font-size: 23px;
-  line-height: 32px;
-  text-align: center;
-
-  strong {
-    @include font(Museo, 700);
-  }
-}
-
-.list {
-  @include font(Museo, 500);
-  font-size: 23px;
-  line-height: 32px;
-  list-style-image: url(./page-components/list-item.svg);
-  margin: 0 0 0 40px;
-  padding-left: 20px;
-}
-
-.listItem {
-  padding-left: 10px;
 }

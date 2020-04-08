@@ -1,9 +1,10 @@
 import React, {Suspense, FC} from "react"
+import {useBehaviorSubject} from "react-captain"
 import cn from "classnames"
 
 import logo from "./logo.svg"
 import Account from "./auth/account"
-import {getLastStep} from "./modules/context"
+import {lastStep$} from "./modules/context"
 
 import cs from "./nav.module.scss"
 
@@ -20,7 +21,7 @@ type NavProps = {
 
 const Nav: FC<NavProps> = props => {
   const {activeModule, changeModule} = props
-  const [lastModule] = getLastStep()
+  const [lastStep] = useBehaviorSubject(lastStep$)
 
   return (
     <Suspense fallback={null}>
@@ -32,7 +33,7 @@ const Nav: FC<NavProps> = props => {
               key={module}
               className={cn(cs.module, theme, {[cs.active]: module === activeModule})}
               onClick={() => changeModule(module)}
-              disabled={lastModule < module}
+              disabled={lastStep.module < module}
             >
               <img src={icon} alt="" />
               <span>{label}</span>

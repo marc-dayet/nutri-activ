@@ -1,7 +1,7 @@
 import firebase from "firebase/app"
 import "firebase/auth"
 
-import {decodeModuleKey} from "../modules/context"
+import {decodeStep} from "../modules/context"
 import {auth$} from "./context"
 
 firebase.initializeApp({
@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged(user => {
       type: "authenticated",
       email: user.email || "",
       name: user.displayName || "",
-      lastStep: decodeModuleKey(user.photoURL || "0.1.1"),
+      lastStep: decodeStep(user.photoURL || "0.1.1"),
     })
   } else {
     auth$.next({type: "not-authenticated"})

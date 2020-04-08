@@ -1,6 +1,6 @@
 import React, {FC, useState} from "react"
 
-import {encodeModuleKey} from "../modules/context"
+import {encodeStep, initialStep} from "../modules/context"
 import {auth$} from "./context"
 import firebase from "./firebase"
 
@@ -31,9 +31,8 @@ const Login: FC = () => {
     evt.preventDefault()
     const {user} = await firebase.createUserWithEmailAndPassword(email, "password")
     if (!user) throw new Error("auth/user-creation-failed")
-    const lastStep: [number, number, number] = [0, 1, 1]
-    await user.updateProfile({displayName: name, photoURL: encodeModuleKey(...lastStep)})
-    auth$.next({type: "authenticated", email, name, lastStep})
+    await user.updateProfile({displayName: name, photoURL: encodeStep(initialStep)})
+    auth$.next({type: "authenticated", email, name, lastStep: initialStep})
   }
 
   return (

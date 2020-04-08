@@ -1,10 +1,11 @@
 import React, {FC, Suspense, useEffect, useState} from "react"
+import {useBehaviorSubject} from "react-captain"
 import range from "lodash/fp/range"
 
 import Loader from "./page-components/loader"
 import PageButton from "./page-components/button"
 import ChapterButton from "./page-components/chapter-button"
-import {getLastStep} from "./context"
+import {lastStep$} from "./context"
 
 import cs from "./page.module.scss"
 
@@ -34,7 +35,7 @@ const PageContainer: FC<PageProps> = props => {
     children,
   } = props
 
-  const [lastModule, lastChapter] = getLastStep()
+  const [lastStep] = useBehaviorSubject(lastStep$)
   const [isLoading, setLoading] = useState(false)
 
   const LoaderFallback: FC = () => {
@@ -66,7 +67,7 @@ const PageContainer: FC<PageProps> = props => {
               key={chapter}
               isActive={chapter === currChapter}
               onClick={() => setChapter(chapter)}
-              disabled={currModule >= lastModule && chapter > lastChapter}
+              disabled={currModule >= lastStep.module && chapter > lastStep.chapter}
             >
               {chapter}
             </ChapterButton>

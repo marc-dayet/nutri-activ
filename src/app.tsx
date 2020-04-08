@@ -1,32 +1,31 @@
 import React, {FC, useEffect, useState} from "react"
-import useBehaviorSubject from "react-captain/behavior-subject"
-import {auth$} from "./auth/context"
-import Login from "./auth/login"
-import {
-  modules,
-  encodeModuleKey,
-  decodeModuleKey,
-  getLastStep,
-  setLastStep,
-} from "./modules/context"
+import {useBehaviorSubject} from "react-captain"
+
+import AuthGuard from "./auth/guard"
+import {modules, encodeStep, decodeStep, lastStep$, setLastStep} from "./modules/context"
 import PageContainer from "./modules/page"
 import Nav from "./nav"
 import Main from "./main"
 
 const App: FC = () => {
-  const [lastModule, lastChapter, lastPage] = getLastStep()
   const [theme, setTheme] = useState<{[key: string]: string}>({})
-  const [module, setModule] = useState(lastModule)
-  const [chapter, setChapter] = useState(lastChapter)
-  const [page, setPage] = useState(lastPage)
+  const [lastStep] = useBehaviorSubject(lastStep$)
+  const [module, setModule] = useState(lastStep.module)
+  const [chapter, setChapter] = useState(lastStep.chapter)
+  const [page, setPage] = useState(lastStep.page)
   const [components, setComponents] = useState<{[key: string]: FC}>({})
-  const key = encodeModuleKey(module, chapter, page)
-  const CurrPage = components[key] || (() => null)
+  const CurrPage = components[encodeStep({module, chapter, page})] || (() => null)
+
+  useEffect(() => {
+    setModule(lastStep.module)
+    setChapter(lastStep.chapter)
+    setPage(lastStep.page)
+  }, [lastStep])
 
   useEffect(() => {
     setComponents(
       modules.keys.reduce((components, key) => {
-        const [module, chapter, page] = decodeModuleKey(key)
+        const {module, chapter, page} = decodeStep(key)
         return {
           ...components,
           [key]: React.lazy(async () => {
@@ -98,9 +97,9 @@ const App: FC = () => {
 
   function updateChapter(nextChapter: number) {
     if (
-      module <= lastModule &&
-      (module !== lastModule || nextChapter <= lastChapter) &&
-      (module !== lastModule || nextChapter !== lastChapter || page <= lastPage)
+      module <= lastStep.module &&
+      (module !== lastStep.module || nextChapter <= lastStep.chapter) &&
+      (module !== lastStep.module || nextChapter !== lastStep.chapter || page <= lastStep.page)
     ) {
       setChapter(nextChapter)
       setPage(1)
@@ -108,7 +107,7 @@ const App: FC = () => {
   }
 
   function updateModule(nextModule: number) {
-    if (lastModule >= nextModule) {
+    if (lastStep.module >= nextModule) {
       setModule(nextModule)
       setChapter(1)
       setPage(1)
@@ -120,7 +119,7 @@ const App: FC = () => {
   }
 
   return (
-    <>
+    <AuthGuard>
       <Nav activeModule={module} changeModule={updateModule} />
       <Main theme={theme}>
         <PageContainer
@@ -137,22 +136,8 @@ const App: FC = () => {
           <CurrPage />
         </PageContainer>
       </Main>
-    </>
+    </AuthGuard>
   )
 }
 
-const AppContainer: FC = () => {
-  const [auth] = useBehaviorSubject(auth$)
-
-  if (auth.type === "not-initialized") {
-    return <div>loading</div>
-  }
-
-  if (auth.type === "not-authenticated") {
-    return <Login />
-  }
-
-  return <App />
-}
-
-export default AppContainer
+export default App

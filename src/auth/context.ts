@@ -1,5 +1,7 @@
 import {BehaviorSubject} from "rxjs"
 
+import {Step} from "../modules/context"
+
 type AuthState = NonInitialized | NonAuthenticated | Authenticated
 
 type NonInitialized = {
@@ -14,7 +16,7 @@ type Authenticated = {
   type: "authenticated"
   email: string
   name: string
-  lastStep: [number, number, number]
+  lastStep: Step
 }
 
 export const auth$ = new BehaviorSubject<AuthState>({type: "not-initialized"})
