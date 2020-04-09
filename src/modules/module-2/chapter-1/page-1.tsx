@@ -1,4 +1,4 @@
-import React, {FC, useLayoutEffect} from "react"
+import React, {FC, useEffect} from "react"
 import {useToggle} from "react-captain"
 
 import {Intro} from "../../page-templates"
@@ -6,7 +6,7 @@ import {Intro} from "../../page-templates"
 const Page: FC = () => {
   const [isReady, setReady] = useToggle(false)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     import("./page-1-anim.js").then(() => setReady(true))
   })
 
@@ -15,7 +15,10 @@ const Page: FC = () => {
   }
 
   return (
-    <Intro subtitle="Emotions, bien-être et santé" animation="D5BF51ADC3CB5E4BAF06476BB5B4681B" />
+    <Intro
+      subtitle="Apprendre à gérer son stress et ses émotions"
+      animation="D5BF51ADC3CB5E4BAF06476BB5B4681C"
+    />
   )
 }
 

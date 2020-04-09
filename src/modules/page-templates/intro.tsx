@@ -1,27 +1,30 @@
 import React, {FC, useEffect, useRef} from "react"
-import {useToggle} from "react-captain"
+import {useToggle, useBehaviorSubject} from "react-captain"
+
+import {currStep$} from "../context"
 
 import cs from "./intro.module.scss"
 
 type PageIntroProps = {
-  title: string
   subtitle: string
   animation: string
 }
 
 const PageIntro: FC<PageIntroProps> = props => {
-  const {title, subtitle, animation} = props
+  const {subtitle, animation} = props
+  const [{module}] = useBehaviorSubject(currStep$)
 
   return (
     <>
-      <h1 className={cs.title}>{title}</h1>
+      <h1 className={cs.title}>Module {module}</h1>
       <h2 className={cs.subtitle}>{subtitle}</h2>
-      <Animation composition={animation} />
+      <Animation name="ANIMATION" composition={animation} />
     </>
   )
 }
 
 type AnimationProps = {
+  name: string
   composition: string
 }
 
@@ -61,7 +64,7 @@ const Animation: FC<AnimationProps> = props => {
         }
 
         stage.current = new lib.current.Stage(canvas.current)
-        const exportRoot = new lib.current.ANIMATION()
+        const exportRoot = new lib.current[props.name]()
         window.AdobeAn.compositionLoaded(lib.current.properties.id)
         stage.current.addChild(exportRoot)
         window.createjs.Ticker.framerate = lib.current.properties.fps
@@ -72,7 +75,7 @@ const Animation: FC<AnimationProps> = props => {
 
       loader.loadManifest(lib.current.properties.manifest)
     }
-  }, [isReady, props.composition, setReady])
+  }, [isReady, props.composition, props.name, setReady])
 
   useEffect(() => {
     function resize() {
