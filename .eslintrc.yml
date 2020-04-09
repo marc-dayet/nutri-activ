@@ -28,11 +28,12 @@ settings:
       extensions: [.js, .jsx, .ts, .tsx]
 
 rules:
-  prefer-const: 0
   no-console: 0
+  prefer-const: 0
   react-hooks/exhaustive-deps: warn
   react-hooks/rules-of-hooks: error
   react/display-name: off
+  react/no-unescaped-entities: off
   react/prop-types: off
   "@typescript-eslint/explicit-function-return-type": off
   "@typescript-eslint/no-non-null-assertion": off

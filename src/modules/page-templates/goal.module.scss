@@ -1,0 +1,50 @@
+@import "../../theme";
+
+.subtitle {
+  color: $white;
+  font-size: 60px;
+  position: relative;
+}
+
+.subtitleWithImage {
+  margin: 10px 0;
+  text-align: center;
+
+  .subtitle {
+    display: inline-block;
+  }
+}
+
+.chrono {
+  position: absolute;
+  right: calc(100% + 25px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 125px;
+}
+
+.goalList {
+  margin-left: 0;
+}
+
+.goalListItem {
+  color: $green03;
+  margin: 10px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contentListItem {
+  @include font(Museo, 500);
+  font-size: 26px;
+  padding-left: 10px;
+}
+
+.intersessionWork {
+  align-self: center;
+  justify-self: end;
+  width: 350px;
+}
