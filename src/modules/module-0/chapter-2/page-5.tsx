@@ -10,7 +10,7 @@ const Page: FC = () => {
     <>
       <Title>Formation distancielle</Title>
       <Paragraph>
-        <Img src={img} mode="round-lg" />
+        <Img src={img} mode="avatar" />
       </Paragraph>
       <Paragraph className={cs.paragraph}>
         <strong>1. Le distanciel informatique comprenant :</strong>

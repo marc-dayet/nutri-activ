@@ -1,7 +1,7 @@
 import React, {FC} from "react"
 
 import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components"
-import img from "./page-3-1.png"
+import img from "./page-3.png"
 
 const Page: FC = () => {
   return (
@@ -9,7 +9,7 @@ const Page: FC = () => {
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Subtitle showBook>La qualité de vie</Subtitle>
       <Grid>
-        <Img src={img} mode="round-lg" />
+        <Img src={img} mode="avatar" />
         <div>
           <Paragraph>
             Large champ conceptuel englobant la santé physique de la personne, son état

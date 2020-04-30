@@ -1,7 +1,7 @@
 import React, {FC} from "react"
 
 import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components"
-import img from "./page-2-1.png"
+import img from "./page-2.png"
 
 const Page: FC = () => {
   return (
@@ -9,7 +9,7 @@ const Page: FC = () => {
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Subtitle showBook>Le bien-être</Subtitle>
       <Grid>
-        <Img src={img} mode="round-lg" />
+        <Img src={img} mode="avatar" />
         <div>
           <Paragraph>
             Etat agréable, de durée variable, procuré par la satisfaction des besoins du corps et

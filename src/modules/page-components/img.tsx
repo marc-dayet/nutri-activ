@@ -4,7 +4,7 @@ import cs from "./img.module.scss"
 
 type ImgProps = {
   src: string
-  mode: "round-lg" | "fullscreen"
+  mode: "avatar" | "fullscreen"
   title?: string
 }
 

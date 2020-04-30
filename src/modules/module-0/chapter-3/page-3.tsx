@@ -20,17 +20,17 @@ const Page: FC = () => {
         Le contenu du parcours provient de l’apport des 5 disciplines suivantes :
       </Paragraph>
       <Grid>
-        <Img src={img1} mode="round-lg" />
+        <Img src={img1} mode="avatar" />
         <Paragraph className={cs.paragraph}>Médecine Psychologie</Paragraph>
-        <Img src={img2} mode="round-lg" />
+        <Img src={img2} mode="avatar" />
         <Paragraph className={cs.paragraph}>Psychologie</Paragraph>
-        <Img src={img3} mode="round-lg" />
+        <Img src={img3} mode="avatar" />
         <Paragraph className={cs.paragraph}>Education pour la santé</Paragraph>
-        <Img src={img4} mode="round-lg" />
+        <Img src={img4} mode="avatar" />
         <Paragraph className={cs.paragraph}>
           Activité physique adaptée et pratiques de larelaxation
         </Paragraph>
-        <Img src={img5} mode="round-lg" />
+        <Img src={img5} mode="avatar" />
         <Paragraph className={cs.paragraph}>Ethique de l’intervention</Paragraph>
       </Grid>
     </>

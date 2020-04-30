@@ -1,0 +1,15 @@
+@import "../../../theme";
+@import "../../../theme/media";
+
+.subtitle {
+  @include font(Museo, 700);
+  font-size: 26px;
+
+  @include media(md) {
+    font-size: 22px;
+  }
+
+  @include media(sm) {
+    font-size: 18px;
+  }
+}
