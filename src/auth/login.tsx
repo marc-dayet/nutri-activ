@@ -36,30 +36,41 @@ const Login: FC = () => {
   }
 
   return (
-    <>
-      <form className={cs.form} onSubmit={checkEmailAvailability}>
-        <input
-          autoFocus
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={evt => setEmail(evt.target.value)}
-        />
-        <button type="submit">LOGIN</button>
-      </form>
-      {isNameFormVisible && (
-        <form className={cs.form} onSubmit={createAccount}>
+    <div className={cs.container}>
+      <div className={cs.forms}>
+        <form className={cs.form} onSubmit={checkEmailAvailability}>
           <input
+            className={cs.input}
             autoFocus
             type="text"
-            placeholder="Nom"
-            value={name}
-            onChange={evt => setName(evt.target.value)}
+            placeholder="Mon email"
+            value={email}
+            onChange={evt => setEmail(evt.target.value)}
           />
-          <button type="submit">LOGIN</button>
+          <button className={cs.submit} type="submit">
+            OK
+          </button>
         </form>
-      )}
-    </>
+        {isNameFormVisible && (
+          <>
+            <br />
+            <form className={cs.form} onSubmit={createAccount}>
+              <input
+                className={cs.input}
+                autoFocus
+                type="text"
+                placeholder="Mon nom"
+                value={name}
+                onChange={evt => setName(evt.target.value)}
+              />
+              <button className={cs.submit} type="submit">
+                OK
+              </button>
+            </form>
+          </>
+        )}
+      </div>
+    </div>
   )
 }
 
