@@ -22,7 +22,7 @@ const App: FC = () => {
           [key]: React.lazy(async () => {
             const [importedModule] = await Promise.all([
               import(`./modules/module-${module}/chapter-${chapter}/page-${page}.tsx`),
-              new Promise<void>(resolve => setTimeout(resolve, 300)),
+              new Promise<void>(resolve => setTimeout(resolve, 150)),
             ])
             return importedModule
           }),

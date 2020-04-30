@@ -1,7 +1,7 @@
 @import "../../theme";
 @import "../../theme/media";
 
-.subtitle {
+.subtitleContainer {
   @include font(AmaticSC, bold);
   color: $green2B;
   font-size: 45px;
@@ -15,4 +15,16 @@
   @include media(sm) {
     font-size: 25px;
   }
+}
+
+.subtitle {
+  position: relative;
+}
+
+.book {
+  left: calc(100% + 10px);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
 }
