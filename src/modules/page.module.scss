@@ -1,10 +1,15 @@
 @import "../theme";
+@import "../theme/media";
 
 .container {
   align-items: center;
   display: grid;
   grid-template-rows: 40px auto 150px;
   height: 100%;
+
+  @include media(md) {
+    grid-template-rows: 40px auto 100px;
+  }
 }
 
 .pagination {
@@ -25,23 +30,9 @@
   justify-content: space-between;
   margin-bottom: -15px;
   padding: 0 100px;
-}
 
-.page {
-  @include font(AmaticSC, bold);
-  background-image: url(./page-components/button.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  font-size: 40px;
-  padding: 15px 50px;
-  text-transform: uppercase;
-  transition-duration: 300ms;
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-
-  &:hover {
-    transform: scale(1.05);
+  @include media(md) {
+    padding: 0 10px;
   }
 }
 
@@ -51,6 +42,10 @@
   grid-auto-flow: column;
   grid-column-gap: 50px;
   justify-content: center;
+
+  @include media(md) {
+    display: none;
+  }
 }
 
 .chapter {

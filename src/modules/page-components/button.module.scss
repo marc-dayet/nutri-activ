@@ -1,4 +1,5 @@
 @import "../../theme";
+@import "../../theme/media";
 
 $transition-duration: 150ms;
 
@@ -27,6 +28,15 @@ $transition-duration: 150ms;
     path:nth-of-type(2) {
       fill: darken($white, 10%);
     }
+  }
+
+  @include media(md) {
+    font-size: 30px;
+  }
+
+  @include media(sm) {
+    font-size: 25px;
+    padding: 15px 30px 20px;
   }
 }
 
