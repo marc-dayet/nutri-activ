@@ -1,10 +1,19 @@
 @import "../../theme";
+@import "../../theme/media";
 
 .subtitle {
   @include font(AmaticSC, bold);
   font-size: 60px;
   margin: 0;
   text-align: center;
+
+  @include media(md) {
+    font-size: 30px;
+  }
+
+  @include media(sm) {
+    font-size: 25px;
+  }
 }
 
 .paragraphAlt {
@@ -14,20 +23,43 @@
   display: grid;
   font-size: 26px;
   grid-column-gap: 10px;
-  grid-template-columns: min-content 30px max-content;
+  grid-template-columns: min-content 30px minmax(0, 1fr);
   grid-template-rows: repeat(2, minmax(0, 1fr));
   justify-content: center;
   margin: 20px 0;
+
+  @include media(md) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  @include media(sm) {
+    font-size: 18px;
+    grid-auto-flow: row;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
 }
 
 .paragraphAltHeader {
   grid-column: 1;
   grid-row: 1 / span 2;
+
+  @include media(sm) {
+    grid-column: inherit;
+    grid-row: inherit;
+  }
 }
 
 .paragraphAltCurlyBraceContainer {
   grid-column: 2;
   grid-row: 1 / span 2;
+
+  @include media(sm) {
+    display: none;
+    grid-column: inherit;
+    grid-row: inherit;
+  }
 }
 
 .paragraphAltCurlyBrace {
@@ -41,6 +73,11 @@
   display: flex;
   grid-column: 3;
   grid-row: 1;
+
+  @include media(sm) {
+    grid-column: inherit;
+    grid-row: inherit;
+  }
 }
 
 .paragraphAltLineBottom {
@@ -48,6 +85,11 @@
   display: flex;
   grid-column: 3;
   grid-row: 2;
+
+  @include media(sm) {
+    grid-column: inherit;
+    grid-row: inherit;
+  }
 }
 
 .paragraphAltBullet {
@@ -66,19 +108,36 @@
   margin: 20px 0 30px 0;
   text-align: center;
 
+  a {
+    word-break: break-all;
+  }
+
   a:hover,
   a:focus {
     text-decoration: underline;
+  }
+
+  @include media(md) {
+    font-size: 26px;
   }
 }
 
 .list {
   line-height: 25px;
   list-style-image: none;
-  list-style-type: ">";
 }
 
 .listItem {
   margin: 20px 0;
   padding-left: 20px;
+
+  @include media(md) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  @include media(sm) {
+    font-size: 18px;
+    padding: 0;
+  }
 }

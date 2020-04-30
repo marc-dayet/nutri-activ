@@ -1,20 +1,18 @@
 import React, {FC} from "react"
 
-import {Title, Paragraph} from "../page-components"
-
-import cs from "./conclusion.module.scss"
+import {Title, Paragraph, Img} from "../page-components"
 
 type PageConclusionProps = {
   title: string
   image: string
 }
 
-const PageConclusion: FC<PageConclusionProps> = ({title, image}) => {
+const PageConclusion: FC<PageConclusionProps> = ({title, image: img}) => {
   return (
     <>
       <Title>{title}</Title>
       <Paragraph>
-        <img className={cs.image} src={image} alt="" />
+        <Img src={img} mode="fullscreen" />
       </Paragraph>
     </>
   )

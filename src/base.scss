@@ -106,6 +106,7 @@ td {
   min-height: 100vh;
 
   @include media(sm) {
-    grid-template-rows: minmax(0, 1fr);
+    height: inherit;
+    max-height: inherit;
   }
 }

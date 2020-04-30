@@ -12,10 +12,6 @@
   @include media(md) {
     grid-template-columns: minmax(0, 1fr);
   }
-
-  @include media(sm) {
-    display: none;
-  }
 }
 
 .logo {
@@ -79,6 +75,10 @@
 
     @include media(md) {
       font-size: 15px;
+    }
+
+    @include media(sm) {
+      display: none;
     }
   }
 

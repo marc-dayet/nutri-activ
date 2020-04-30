@@ -1,7 +1,7 @@
 import React, {FC} from "react"
 
-import {Title, Paragraph} from "../../page-components"
-import image1 from "./page-6-1.png"
+import {Title, Paragraph, Img} from "../../page-components"
+import img from "./page-6-1.png"
 
 import cs from "./page-6.module.scss"
 
@@ -10,7 +10,7 @@ const Page: FC = () => {
     <>
       <Title>Formation distancielle</Title>
       <Paragraph>
-        <img className={cs.image} src={image1} alt="" />
+        <Img src={img} mode="round-lg" />
       </Paragraph>
       <Paragraph className={cs.paragraph}>
         <strong>2. Le livret ressources pour approfondir vos connaissances</strong> tout au long de

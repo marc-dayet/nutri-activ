@@ -1,7 +1,12 @@
 @import "../../../theme";
+@import "../../../theme/media";
 
 .image {
   width: 70px;
+
+  @include media(sm) {
+    margin: 0 auto;
+  }
 }
 
 .grid {
@@ -15,10 +20,19 @@
 
   .image:first-of-type {
     transform: translateY(-30px);
+
+    @include media(sm) {
+      transform: none;
+    }
+  }
+
+  @include media(sm) {
+    grid-row-gap: 25px;
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 25px;
   }
 }
 
 .paragraph {
-  font-size: 26px;
   text-align: left;
 }

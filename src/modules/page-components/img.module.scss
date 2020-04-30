@@ -1,0 +1,20 @@
+@import "../../theme";
+@import "../../theme/media";
+
+.img[data-mode="round-lg"] {
+  height: 175px;
+
+  @include media(md) {
+    height: 125px;
+  }
+}
+
+.img[data-mode="fullscreen"] {
+  height: 450px;
+  margin-top: 50px;
+
+  @include media(md) {
+    height: auto;
+    width: 100%;
+  }
+}

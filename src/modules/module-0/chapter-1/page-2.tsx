@@ -1,28 +1,26 @@
 import React, {FC} from "react"
 
-import {Title, Paragraph} from "../../page-components"
-import image1 from "./page-2-1.png"
-import image2 from "./page-2-2.png"
-import image3 from "./page-2-3.png"
-
-import cs from "./page-2.module.scss"
+import {Title, Paragraph, Grid, Img} from "../../page-components"
+import img1 from "./page-2-1.png"
+import img2 from "./page-2-2.png"
+import img3 from "./page-2-3.png"
 
 const Page: FC = () => {
   return (
     <>
       <Title>Le module introductif Cap bien-être :</Title>
-      <div className={cs.grid}>
-        <img className={cs.image} src={image1} alt="" />
+      <Grid>
+        <Img mode="round-lg" src={img1} />
         <Paragraph>Présentation de la formation distancielle</Paragraph>
-        <img className={cs.image} src={image2} alt="" />
+        <Img mode="round-lg" src={img2} />
         <Paragraph>
           Les fondements et les contenus clés sur lesquels repose le parcours Cap Bien-être.
         </Paragraph>
-        <img className={cs.image} src={image3} alt="" />
+        <Img mode="round-lg" src={img3} />
         <Paragraph>
           De la formation distancielle à la formation présentielle : vos questions aux formateurs.
         </Paragraph>
-      </div>
+      </Grid>
     </>
   )
 }
