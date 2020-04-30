@@ -10,7 +10,7 @@
   grid-row-gap: 25px;
   grid-template-rows: repeat(2, min-content);
   justify-items: center;
-  margin-top: 50px;
+  margin-top: 40px;
 
   @include media(md) {
     grid-column-gap: 25px;
