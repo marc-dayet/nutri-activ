@@ -1,12 +1,17 @@
 @import "../../../theme";
+@import "../../../theme/media";
 
-.gridItem {
+.grid {
   text-align: center;
 }
 
 @mixin gridItemContent {
   line-height: 26px;
   margin: 0 auto;
+
+  @include media(md) {
+    max-width: inherit;
+  }
 }
 
 .gridItemContentLeft {
