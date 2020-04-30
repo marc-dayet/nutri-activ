@@ -1,0 +1,29 @@
+@import "../../../theme";
+
+.gridItem {
+  text-align: center;
+}
+
+@mixin gridItemContent {
+  line-height: 26px;
+  margin: 0 auto;
+}
+
+.gridItemContentLeft {
+  @include gridItemContent;
+  max-width: 170px;
+}
+
+.gridItemContentRight {
+  @include gridItemContent;
+  max-width: 330px;
+}
+
+@mixin img {
+  margin: 30px 0 10px 0;
+}
+
+.img {
+  @include img;
+  height: 250px;
+}
