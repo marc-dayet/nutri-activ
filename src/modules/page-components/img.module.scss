@@ -19,6 +19,12 @@
 
 .img[data-mode="fullscreen"] {
   margin-top: 25px;
-  max-height: 450px;
+  max-height: 400px;
   max-width: 1024px;
+
+  @include media(sm) {
+    max-height: inherit;
+    max-width: inherit;
+    width: 100%;
+  }
 }

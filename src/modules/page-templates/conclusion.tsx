@@ -5,10 +5,10 @@ import {Title, Paragraph, Img} from "../page-components"
 
 type PageConclusionProps = {
   title: string
-  image: string
+  img: string
 }
 
-const PageConclusion: FC<PageConclusionProps> = ({title, image: img}) => {
+const PageConclusion: FC<PageConclusionProps> = ({title, img}) => {
   return (
     <PageContainer>
       <Title>{title}</Title>

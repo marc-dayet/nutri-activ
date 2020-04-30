@@ -14,7 +14,9 @@ const Page: FC = () => {
         Les éléments qui font la qualité de vie varient d’une personne à une autre mais ils peuvent
         être classés en 4 grands piliers
       </Subtitle>
-      <Img src={img} mode="fullscreen" />
+      <div className={cs.imgContainer}>
+        <Img src={img} mode="fullscreen" />
+      </div>
     </PageContainer>
   )
 }
