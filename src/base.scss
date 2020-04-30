@@ -104,4 +104,8 @@ td {
   height: 100vh;
   max-height: 100vh;
   min-height: 100vh;
+
+  @include media(sm) {
+    grid-template-rows: minmax(0, 1fr);
+  }
 }

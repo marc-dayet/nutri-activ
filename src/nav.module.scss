@@ -1,15 +1,35 @@
 @import "./theme";
+@import "./theme/media";
 
 .nav {
-  border-bottom: 1px solid $grayC4;
   display: grid;
   grid-template-columns: 400px minmax(0, 1fr) 240px;
+
+  @include media(lg) {
+    grid-template-columns: 200px minmax(0, 1fr) 150px;
+  }
+
+  @include media(md) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @include media(sm) {
+    display: none;
+  }
 }
 
 .logo {
   align-self: center;
-  height: 100%;
   padding: 15px 0 15px 50px;
+  width: 100%;
+
+  @include media(lg) {
+    padding: 10px;
+  }
+
+  @include media(md) {
+    display: none;
+  }
 }
 
 .modules {
@@ -37,10 +57,32 @@
   img {
     height: 60px;
     width: 60px;
+
+    @include media(lg) {
+      height: 50px;
+      width: 50px;
+    }
+
+    @include media(md) {
+      height: 40px;
+      width: 40px;
+    }
   }
 
   span {
     font-size: 19px;
     font-weight: 700;
+
+    @include media(lg) {
+      font-size: 17px;
+    }
+
+    @include media(md) {
+      font-size: 15px;
+    }
+  }
+
+  @include media(lg) {
+    padding: 0 5px;
   }
 }

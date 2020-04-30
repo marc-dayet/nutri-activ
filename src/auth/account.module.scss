@@ -1,4 +1,5 @@
 @import "../theme";
+@import "../theme/media";
 
 .grid {
   @include font(Museo, 700);
@@ -9,6 +10,15 @@
   grid-column-gap: 10px;
   grid-template-columns: 16px minmax(0, 1fr);
   padding: 15px 50px;
+
+  @include media(lg) {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  @include media(md) {
+    display: none;
+  }
 }
 
 .header {
@@ -27,5 +37,9 @@
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @include media(lg) {
+    font-size: 16px;
   }
 }
