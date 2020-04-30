@@ -7,7 +7,7 @@ type ImgProps = {
   className?: string
   title?: string
   src: string
-  mode: "avatar" | "fullscreen"
+  mode: "avatar-md" | "avatar-lg" | "fullscreen"
 }
 
 const Img: FC<ImgProps> = props => {

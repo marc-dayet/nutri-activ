@@ -10,7 +10,7 @@ const Page: FC = () => {
     <>
       <Title>Formation distancielle</Title>
       <Paragraph>
-        <Img src={img} mode="avatar" />
+        <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph className={cs.paragraph}>
         <strong>2. Le livret ressources pour approfondir vos connaissances</strong> tout au long de

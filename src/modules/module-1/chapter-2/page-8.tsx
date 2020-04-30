@@ -9,7 +9,7 @@ const Page: FC = () => {
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Subtitle showBook>Les émotions</Subtitle>
       <Grid>
-        <Img src={img} mode="avatar" />
+        <Img src={img} mode="avatar-lg" />
         <div>
           <Paragraph>
             Une émotion est un état affectif bref et intense. C’est une réponse psychophysiologique,

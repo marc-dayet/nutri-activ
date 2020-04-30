@@ -9,7 +9,7 @@ const Page: FC = () => {
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Subtitle showBook>La qualité de vie</Subtitle>
       <Grid>
-        <Img src={img} mode="avatar" />
+        <Img src={img} mode="avatar-lg" />
         <div>
           <Paragraph>
             Large champ conceptuel englobant la santé physique de la personne, son état

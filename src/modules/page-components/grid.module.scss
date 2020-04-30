@@ -12,6 +12,10 @@
   justify-items: center;
   margin-top: 40px;
 
+  &[data-direction="vertical"] {
+    grid-auto-flow: row;
+  }
+
   @include media(md) {
     grid-column-gap: 25px;
     grid-row-gap: 10px;

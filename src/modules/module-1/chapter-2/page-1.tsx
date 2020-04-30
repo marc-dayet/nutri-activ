@@ -11,13 +11,13 @@ const Page: FC = () => {
     <>
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Grid className={cs.grid}>
-        <Img src={img1} mode="avatar" />
+        <Img src={img1} mode="avatar-lg" />
         <div className={cs.gridItemContentLeft}>
           <strong>Les liens entre</strong>
           <br />
           le bien-être, la qualité de vie, les émotions et la santé
         </div>
-        <Img src={img2} mode="avatar" />
+        <Img src={img2} mode="avatar-lg" />
         <div className={cs.gridItemContentRight}>
           <strong>Les liens entre compétences psychosociales et ressources personnelles :</strong>
           <br />

@@ -9,7 +9,7 @@ const Page: FC = () => {
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Subtitle showBook>Les ressources personnelles</Subtitle>
       <Grid>
-        <Img src={img} mode="avatar" />
+        <Img src={img} mode="avatar-lg" />
         <div>
           <Paragraph>
             Elles englobent les compétences, les talents, la personnalité… Les ressources

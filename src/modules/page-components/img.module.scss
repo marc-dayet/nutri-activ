@@ -1,7 +1,15 @@
 @import "../../theme";
 @import "../../theme/media";
 
-.img[data-mode="avatar"] {
+.img[data-mode="avatar-md"] {
+  height: 125px;
+
+  @include media(md) {
+    height: 75px;
+  }
+}
+
+.img[data-mode="avatar-lg"] {
   height: 175px;
 
   @include media(md) {
@@ -10,7 +18,7 @@
 }
 
 .img[data-mode="fullscreen"] {
-  margin-top: 50px;
+  margin-top: 25px;
+  max-height: 450px;
   max-width: 1024px;
-  width: 100%;
 }

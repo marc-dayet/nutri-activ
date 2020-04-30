@@ -9,7 +9,7 @@ const Page: FC = () => {
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Subtitle showBook>Le bien-être</Subtitle>
       <Grid>
-        <Img src={img} mode="avatar" />
+        <Img src={img} mode="avatar-lg" />
         <div>
           <Paragraph>
             Etat agréable, de durée variable, procuré par la satisfaction des besoins du corps et
