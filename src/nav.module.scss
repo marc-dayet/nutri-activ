@@ -18,10 +18,11 @@
 .logo {
   align-self: center;
   padding: 15px 0 15px 50px;
-  width: 100%;
+  width: 80%;
 
   @include media(lg) {
     padding: 10px;
+    width: 100%;
   }
 
   @include media(md) {

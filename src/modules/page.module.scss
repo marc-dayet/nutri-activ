@@ -25,6 +25,12 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   height: 100%;
   justify-items: center;
+
+  @include media(md) {
+    grid-auto-flow: row;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+  }
 }
 
 @mixin pagination {
@@ -50,12 +56,32 @@
 .quizLeft {
   align-self: stretch;
   background: $white;
+  grid-column: 1;
+  grid-row: 1;
   justify-self: stretch;
+
+  @include media(md) {
+    grid-row: 1;
+  }
+}
+
+.quizRight {
+  grid-column: 2;
+  grid-row: 1;
+
+  @include media(md) {
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
 
 .quizTitle {
   color: $green01;
   margin-top: 30px;
+
+  @include media(md) {
+    margin-top: 10px;
+  }
 }
 
 .quizImgContainer {
@@ -66,21 +92,55 @@
   margin: 15px 0;
   max-width: 300px;
   width: 100%;
+
+  @include media(md) {
+    max-width: 150px;
+  }
 }
 
 .quizStatment {
   color: $green01;
   margin: 0 auto;
   max-width: 512px;
-  width: 100%;
+
+  @include media(md) {
+    margin-bottom: 15px;
+  }
+
+  @include media(sm) {
+    margin-bottom: 10px;
+  }
 }
 
 .quizCheck {
   height: 58px;
   width: 58px;
+
+  @include media(lg) {
+    height: 50px;
+    width: 50px;
+  }
+
+  @include media(md) {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .quizAnswerContainer {
+  height: 0;
+  transform: scaleY(0);
+  transition-duration: 500ms;
+  transition-property: transform, height;
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+
+  &.deployed {
+    height: 400px;
+    transform: scaleY(1);
+  }
+}
+
+.quizAnswerTextContainer {
   color: $white;
   display: flex;
   max-width: 675px;
@@ -88,6 +148,16 @@
   position: relative;
   transform: translateY(-20px);
   width: 100%;
+
+  @include media(lg) {
+    padding: 40px 40px 80px 40px;
+    transform: translateY(-15px);
+  }
+
+  @include media(md) {
+    padding: 30px 30px 50px 30px;
+    transform: translateY(-10px);
+  }
 }
 
 .quizAnswerBlock {
@@ -104,8 +174,44 @@
   }
 }
 
-.quizAnswer {
+.quizAnswerText {
   z-index: 1;
+}
+
+.quizRadiosContainer {
+  margin-bottom: 75px;
+}
+
+.quizRadioContainer {
+  display: flex;
+  justify-content: center;
+
+  @include media(md) {
+    margin-top: 15px;
+  }
+
+  @include media(sm) {
+    margin-top: 10px;
+  }
+}
+
+.quizCheckOverlay {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scale(1.5);
+  width: 100%;
+
+  &.success path {
+    fill: $greenB1;
+  }
+
+  &.error path {
+    fill: $redF7;
+  }
 }
 
 .quizRadio {
@@ -119,6 +225,7 @@
   grid-column-gap: 15px;
   justify-content: center;
   justify-items: center;
+  position: relative;
   transition-duration: 150ms;
   transition-property: color;
 
@@ -138,14 +245,30 @@
   input:not(:checked) + svg path:last-of-type {
     opacity: 0;
   }
+
+  @include media(md) {
+    font-size: 40px;
+  }
+
+  @include media(sm) {
+    font-size: 30px;
+  }
 }
 
 .quizSubtitle {
   @include font(AmaticSC, bold);
   color: $green01;
   font-size: 60px;
-  margin: 15px 0 0 0;
+  margin: -50px 0 0 0;
   text-align: center;
+
+  @include media(lg) {
+    font-size: 50px;
+  }
+
+  @include media(md) {
+    font-size: 40px;
+  }
 }
 
 .content {
@@ -171,12 +294,37 @@
   }
 }
 
+.quizPages {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0;
+}
+
 .chapters {
   align-items: center;
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 50px;
   justify-content: center;
+
+  @include media(md) {
+    display: none;
+  }
+}
+
+.quizChapters {
+  align-items: center;
+  align-self: end;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column: 1 / span 2;
+  grid-column-gap: 50px;
+  grid-row: 1;
+  justify-content: center;
+  margin-bottom: 30px;
 
   @include media(md) {
     display: none;

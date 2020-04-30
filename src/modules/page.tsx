@@ -1,5 +1,6 @@
-import React, {FC} from "react"
+import React, {FC, useState} from "react"
 import {useBehaviorSubject} from "react-captain"
+import cn from "classnames"
 import range from "lodash/fp/range"
 
 import {Title, Paragraph} from "./page-components"
@@ -8,6 +9,8 @@ import ChapterButton from "./page-components/chapter-button"
 import {steps, currStep$, lastStep$, saveLastStep} from "./context"
 import {ReactComponent as Check} from "./page-components/quiz-check.svg"
 import {ReactComponent as AnswerBlock} from "./page-components/quiz-answer.svg"
+import {ReactComponent as OverlayTrue} from "./page-components/quiz-check-true.svg"
+import {ReactComponent as OverlayFalse} from "./page-components/quiz-check-false.svg"
 
 import cs from "./page.module.scss"
 
@@ -30,6 +33,8 @@ const PageContainer: FC<PageContainerProps> = props => {
   const nbChapters = Object.values(steps[step.module]).length
   const nbPages = countPagesTill()
   const currPage = countPagesTill(step.chapter) + step.page
+  const [isQuizTouched, touchQuiz] = useState<boolean | undefined>(undefined)
+  const [isQuizAnswered, answerQuiz] = useState(false)
 
   function countPagesTill(end?: number) {
     return steps[step.module].slice(0, end).reduce((sum, pages) => sum + pages, 0)
@@ -80,6 +85,14 @@ const PageContainer: FC<PageContainerProps> = props => {
 
     currStep$.next({module: nextModule, chapter: nextChapter, page: nextPage})
     saveLastStep(nextModule, nextChapter, nextPage)
+  }
+
+  function quizNext() {
+    if (isQuizAnswered) {
+      nextPage()
+    } else {
+      answerQuiz(true)
+    }
   }
 
   function setChapter(nextChapter: number) {
@@ -138,23 +151,59 @@ const PageContainer: FC<PageContainerProps> = props => {
             <Paragraph className={cs.quizStatment}>{props.statment}</Paragraph>
           </div>
           <div className={cs.quizRight}>
-            <div>
-              <label className={cs.quizRadio}>
-                <input type="radio" name="quiz" value={1} />
-                <Check className={cs.quizCheck} />
-                VRAI
+            <div className={cs.quizRadiosContainer}>
+              <label className={cs.quizRadioContainer}>
+                <span className={cs.quizRadio}>
+                  <input type="radio" name="quiz" onChange={() => touchQuiz(true)} />
+                  <Check className={cs.quizCheck} />
+                  {isQuizAnswered && props.isTrue && (
+                    <OverlayTrue className={cn(cs.quizCheckOverlay, cs.success)} />
+                  )}
+                  {isQuizAnswered && !props.isTrue && (
+                    <OverlayFalse className={cn(cs.quizCheckOverlay, cs.error)} />
+                  )}
+                  VRAI
+                </span>
               </label>
-              <label className={cs.quizRadio}>
-                <input type="radio" name="quiz" value={0} />
-                <Check className={cs.quizCheck} />
-                FAUX
+              <label className={cs.quizRadioContainer}>
+                <span className={cs.quizRadio}>
+                  <input type="radio" name="quiz" onChange={() => touchQuiz(false)} />
+                  <Check className={cs.quizCheck} />
+                  {isQuizAnswered && !props.isTrue && (
+                    <OverlayTrue className={cn(cs.quizCheckOverlay, cs.success)} />
+                  )}
+                  {isQuizAnswered && props.isTrue && (
+                    <OverlayFalse className={cn(cs.quizCheckOverlay, cs.error)} />
+                  )}
+                  FAUX
+                </span>
               </label>
             </div>
-            <h2 className={cs.quizSubtitle}>Réponse</h2>
-            <Paragraph className={cs.quizAnswerContainer}>
-              <span className={cs.quizAnswer}>{props.answer}</span>
-              <AnswerBlock className={cs.quizAnswerBlock} />
-            </Paragraph>
+            <div className={cn(cs.quizAnswerContainer, {[cs.deployed]: isQuizAnswered})}>
+              <h2 className={cs.quizSubtitle}>Réponse</h2>
+              <Paragraph className={cs.quizAnswerTextContainer}>
+                <span className={cs.quizAnswerText}>{props.answer}</span>
+                <AnswerBlock className={cs.quizAnswerBlock} />
+              </Paragraph>
+            </div>
+            <div className={cs.quizPages}>
+              <PageButton onClick={prevPage}>Précédent</PageButton>
+              <PageButton onClick={quizNext} disabled={isQuizTouched === undefined}>
+                Suivant
+              </PageButton>
+            </div>
+          </div>
+          <div className={cs.quizChapters}>
+            {range(1, nbChapters + 1).map(chapter => (
+              <ChapterButton
+                key={chapter}
+                isActive={chapter === step.chapter}
+                onClick={() => setChapter(chapter)}
+                disabled={step.module >= lastStep.module && chapter > lastStep.chapter}
+              >
+                {chapter}
+              </ChapterButton>
+            ))}
           </div>
         </div>
       )

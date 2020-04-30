@@ -13,3 +13,4 @@ rules:
     - declarations
   order/properties-alphabetical-order: true
   at-rule-no-unknown: null
+  no-descending-specificity: false
