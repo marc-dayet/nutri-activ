@@ -1,12 +1,13 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import {Title, Paragraph, List, ListItem} from "../../page-components"
 
 import cs from "./page-2.module.scss"
 
 const Page: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>Les 5 modules de la formation distancielle</Title>
       <Paragraph className={cs.paragraph}>
         <strong>Quel est l’objectif du parcours ?</strong>
@@ -40,7 +41,7 @@ const Page: FC = () => {
           effets négatifs sur la santé.
         </ListItem>
       </List>
-    </>
+    </PageContainer>
   )
 }
 

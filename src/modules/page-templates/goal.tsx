@@ -1,6 +1,7 @@
 import React, {FC} from "react"
 import {useBehaviorSubject} from "react-captain"
 
+import PageContainer from "../page"
 import {currStep$} from "../context"
 import {Subtitle, List, ListItem} from "../page-components"
 import chrono from "./goal.png"
@@ -18,7 +19,7 @@ const Goal: FC<GoalProps> = props => {
   const {goals, content, intersessionWork} = props
 
   return (
-    <>
+    <PageContainer>
       <Subtitle className={cs.subtitle}>Objectifs de l'étape {module}</Subtitle>
       <List className={cs.goalList}>
         {goals.map(goal => (
@@ -43,7 +44,7 @@ const Goal: FC<GoalProps> = props => {
         </ol>
         <img className={cs.intersessionWork} src={intersessionWork} alt="Travail intersession" />
       </div>
-    </>
+    </PageContainer>
   )
 }
 

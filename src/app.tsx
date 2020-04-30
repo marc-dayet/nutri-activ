@@ -1,9 +1,9 @@
 import React, {FC, useEffect, useState} from "react"
 import {useBehaviorSubject} from "react-captain"
+import zipObject from "lodash/fp/zipObject"
 
 import AuthGuard from "./auth/guard"
 import {steps, encodeStep, decodeStep, currStep$} from "./modules/context"
-import PageContainer from "./modules/page"
 import Nav from "./nav"
 import Main from "./main"
 
@@ -13,31 +13,23 @@ const App: FC = () => {
   const CurrPage = components[encodeStep(step)] || (() => null)
 
   useEffect(() => {
-    setComponents(
-      steps.keys.reduce((components, key) => {
+    Promise.all(
+      steps.keys.map(key => {
         const {module, chapter, page} = decodeStep(key)
-
-        return {
-          ...components,
-          [key]: React.lazy(async () => {
-            const [importedModule] = await Promise.all([
-              import(`./modules/module-${module}/chapter-${chapter}/page-${page}.tsx`),
-              new Promise<void>(resolve => setTimeout(resolve, 150)),
-            ])
-            return importedModule
-          }),
-        }
-      }, {}),
+        return import(`./modules/module-${module}/chapter-${chapter}/page-${page}.tsx`).then(
+          m => m.default,
+        )
+      }),
     )
+      .then(zipObject(steps.keys))
+      .then(setComponents)
   }, [])
 
   return (
     <AuthGuard>
       <Nav />
       <Main>
-        <PageContainer>
-          <CurrPage />
-        </PageContainer>
+        <CurrPage />
       </Main>
     </AuthGuard>
   )

@@ -1,5 +1,6 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import {Title, Paragraph, List, ListItem, Img} from "../../page-components"
 import img from "./page-5-1.png"
 
@@ -7,7 +8,7 @@ import cs from "./page-5.module.scss"
 
 const Page: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>Formation distancielle</Title>
       <Paragraph>
         <Img src={img} mode="avatar-lg" />
@@ -29,7 +30,7 @@ const Page: FC = () => {
           de fin de module.
         </ListItem>
       </List>
-    </>
+    </PageContainer>
   )
 }
 

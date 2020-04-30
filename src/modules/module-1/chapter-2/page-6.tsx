@@ -1,5 +1,6 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import {Title, List, ListItem} from "../../page-components"
 import img from "./page-6.png"
 
@@ -7,7 +8,7 @@ import cs from "./page-6.module.scss"
 
 const Page: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <div className={cs.imgContainer}>
         <img className={cs.img} src={img} alt="" />
@@ -24,7 +25,7 @@ const Page: FC = () => {
           loisirs…
         </ListItem>
       </List>
-    </>
+    </PageContainer>
   )
 }
 

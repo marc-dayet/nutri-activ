@@ -1,11 +1,12 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components"
 import img from "./page-5.png"
 
 const Page: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Subtitle showBook>Les ressources personnelles</Subtitle>
       <Grid>
@@ -26,7 +27,7 @@ const Page: FC = () => {
           </Paragraph>
         </div>
       </Grid>
-    </>
+    </PageContainer>
   )
 }
 

@@ -1,9 +1,14 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import BigTitle from "../title"
 
 const Page: FC = () => {
-  return <BigTitle>Présentation de la formation distancielle Cap Bien-être</BigTitle>
+  return (
+    <PageContainer>
+      <BigTitle>Présentation de la formation distancielle Cap Bien-être</BigTitle>
+    </PageContainer>
+  )
 }
 
 export default Page

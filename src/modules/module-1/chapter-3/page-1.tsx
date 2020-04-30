@@ -1,12 +1,13 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import {Title, Paragraph, Grid, Img} from "../../page-components"
 import img1 from "./page-1-1.png"
 import img2 from "./page-1-2.png"
 
 const Page: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>3. Ce que doit transmettre l’animateur au groupe durant l’étape</Title>
       <Grid direction="vertical">
         <Img src={img1} mode="avatar-md" />
@@ -22,7 +23,7 @@ const Page: FC = () => {
           <strong>On peut apprendre à gérer ses émotions.</strong>
         </Paragraph>
       </Grid>
-    </>
+    </PageContainer>
   )
 }
 

@@ -1,5 +1,6 @@
 import React, {FC} from "react"
 
+import PageContainer from "../page"
 import {Title, Paragraph} from "../page-components"
 import image1 from "./preface-1.png"
 import image2 from "./preface-2.png"
@@ -15,7 +16,7 @@ const PrefacePage: FC<PrefacePageProps> = props => {
   const {children} = props
 
   return (
-    <>
+    <PageContainer>
       <Title className={cs.title}>Quelques conseils pour bien démarrer le module</Title>
       <Paragraph className={cs.paragraph}>{children}</Paragraph>
       <div className={cs.grid}>
@@ -37,7 +38,7 @@ const PrefacePage: FC<PrefacePageProps> = props => {
         </Paragraph>
       </div>
       <Paragraph className={cs.paragraph}>Voilà, vous êtes prêt(e), bonne formation !</Paragraph>
-    </>
+    </PageContainer>
   )
 }
 

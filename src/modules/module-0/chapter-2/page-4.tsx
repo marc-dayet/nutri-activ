@@ -1,5 +1,6 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import {Title, Paragraph} from "../../page-components"
 import img from "./page-4-1.png"
 
@@ -7,7 +8,7 @@ import cs from "./page-4.module.scss"
 
 const Page: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>Formation distancielle</Title>
       <Paragraph className={cs.paragraph}>
         Prérequis obligatoire pour participer à la formation en présentiel, la formation en
@@ -20,7 +21,7 @@ const Page: FC = () => {
       <Paragraph>
         <img className={cs.image} src={img} alt="" />
       </Paragraph>
-    </>
+    </PageContainer>
   )
 }
 

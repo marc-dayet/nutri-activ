@@ -1,5 +1,6 @@
 import React, {FC} from "react"
 
+import PageContainer from "../page"
 import Title from "../page-components/title"
 import List from "../page-components/list"
 import ListItem from "../page-components/list-item"
@@ -10,7 +11,7 @@ import cs from "./sharing.module.scss"
 
 const PageSharing: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>5.Accéder au questionnaire « Retours sur le distanciel »</Title>
       <div className={cs.paragraphAlt}>
         <div className={cs.paragraphAltHeader}>Pour</div>
@@ -48,7 +49,7 @@ const PageSharing: FC = () => {
           de cliquer tout en bas du questionnaire sur « terminer » pour mémoriser vos réponses.
         </ListItem>
       </List>
-    </>
+    </PageContainer>
   )
 }
 

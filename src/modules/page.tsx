@@ -1,33 +1,38 @@
-import React, {FC, Suspense, useEffect, useState} from "react"
+import React, {FC} from "react"
 import {useBehaviorSubject} from "react-captain"
 import range from "lodash/fp/range"
 
-import Loader from "./page-components/loader"
+import {Title, Paragraph} from "./page-components"
 import PageButton from "./page-components/button"
 import ChapterButton from "./page-components/chapter-button"
 import {steps, currStep$, lastStep$, saveLastStep} from "./context"
+import {ReactComponent as Check} from "./page-components/quiz-check.svg"
+import {ReactComponent as AnswerBlock} from "./page-components/quiz-answer.svg"
 
 import cs from "./page.module.scss"
 
-const PageContainer: FC = props => {
+type PageContainerProps =
+  | {
+      layout?: "page"
+    }
+  | {
+      layout: "quiz"
+      title: string
+      img: string
+      statment: string
+      answer: string
+      isTrue: boolean
+    }
+
+const PageContainer: FC<PageContainerProps> = props => {
   const [step] = useBehaviorSubject(currStep$)
   const [lastStep] = useBehaviorSubject(lastStep$)
-  const [isLoading, setLoading] = useState(false)
   const nbChapters = Object.values(steps[step.module]).length
   const nbPages = countPagesTill()
   const currPage = countPagesTill(step.chapter) + step.page
 
   function countPagesTill(end?: number) {
     return steps[step.module].slice(0, end).reduce((sum, pages) => sum + pages, 0)
-  }
-
-  const LoaderFallback: FC = () => {
-    useEffect(() => {
-      setLoading(true)
-      return () => setLoading(false)
-    }, [])
-
-    return null
   }
 
   function prevPage() {
@@ -89,35 +94,74 @@ const PageContainer: FC = props => {
     }
   }
 
-  return (
-    <div className={cs.container}>
-      <div className={cs.pagination}>
-        Page {currPage}/{nbPages}
-      </div>
-      <div className={cs.content}>
-        <Suspense fallback={<LoaderFallback />}>{props.children}</Suspense>
-      </div>
-      <Loader isVisible={isLoading} />
-      <footer className={cs.navigation}>
-        <div className={cs.pages}>
-          <PageButton onClick={prevPage}>Précédent</PageButton>
-          <PageButton onClick={nextPage}>Suivant</PageButton>
+  switch (props.layout) {
+    case undefined:
+    case "page":
+      return (
+        <div className={cs.pageContainer}>
+          <div className={cs.pagePagination}>
+            Page {currPage}/{nbPages}
+          </div>
+          <div className={cs.content}>{props.children}</div>
+          <footer className={cs.navigation}>
+            <div className={cs.pages}>
+              <PageButton onClick={prevPage}>Précédent</PageButton>
+              <PageButton onClick={nextPage}>Suivant</PageButton>
+            </div>
+            <div className={cs.chapters}>
+              {range(1, nbChapters + 1).map(chapter => (
+                <ChapterButton
+                  key={chapter}
+                  isActive={chapter === step.chapter}
+                  onClick={() => setChapter(chapter)}
+                  disabled={step.module >= lastStep.module && chapter > lastStep.chapter}
+                >
+                  {chapter}
+                </ChapterButton>
+              ))}
+            </div>
+          </footer>
         </div>
-        <div className={cs.chapters}>
-          {range(1, nbChapters + 1).map(chapter => (
-            <ChapterButton
-              key={chapter}
-              isActive={chapter === step.chapter}
-              onClick={() => setChapter(chapter)}
-              disabled={step.module >= lastStep.module && chapter > lastStep.chapter}
-            >
-              {chapter}
-            </ChapterButton>
-          ))}
+      )
+
+    case "quiz":
+      return (
+        <div className={cs.quizContainer}>
+          <div className={cs.quizLeft}>
+            <div className={cs.quizPagination}>
+              Page {currPage}/{nbPages}
+            </div>
+            <Title className={cs.quizTitle}>{props.title}</Title>
+            <div className={cs.quizImgContainer}>
+              <img className={cs.quizImg} src={props.img} alt="" />
+            </div>
+            <Paragraph className={cs.quizStatment}>{props.statment}</Paragraph>
+          </div>
+          <div className={cs.quizRight}>
+            <div>
+              <label className={cs.quizRadio}>
+                <input type="radio" name="quiz" value={1} />
+                <Check className={cs.quizCheck} />
+                VRAI
+              </label>
+              <label className={cs.quizRadio}>
+                <input type="radio" name="quiz" value={0} />
+                <Check className={cs.quizCheck} />
+                FAUX
+              </label>
+            </div>
+            <h2 className={cs.quizSubtitle}>Réponse</h2>
+            <Paragraph className={cs.quizAnswerContainer}>
+              <span className={cs.quizAnswer}>{props.answer}</span>
+              <AnswerBlock className={cs.quizAnswerBlock} />
+            </Paragraph>
+          </div>
         </div>
-      </footer>
-    </div>
-  )
+      )
+
+    default:
+      return null
+  }
 }
 
 export default PageContainer

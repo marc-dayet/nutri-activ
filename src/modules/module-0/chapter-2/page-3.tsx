@@ -1,5 +1,6 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import {Title, Paragraph} from "../../page-components"
 import image1 from "./page-3-1.png"
 import image2 from "./page-3-2.png"
@@ -9,7 +10,7 @@ import cs from "./page-3.module.scss"
 
 const Page: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>Comment est construit le distanciel de formation ?</Title>
       <div className={cs.grid}>
         <img className={cs.image} src={image1} alt="" />
@@ -23,7 +24,7 @@ const Page: FC = () => {
           livret ressources.
         </Paragraph>
       </div>
-    </>
+    </PageContainer>
   )
 }
 

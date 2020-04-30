@@ -1,5 +1,6 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import {Title, Paragraph, Img} from "../../page-components"
 import img from "./page-6-1.png"
 
@@ -7,7 +8,7 @@ import cs from "./page-6.module.scss"
 
 const Page: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>Formation distancielle</Title>
       <Paragraph>
         <Img src={img} mode="avatar-lg" />
@@ -23,7 +24,7 @@ const Page: FC = () => {
         ressources) et la saisie des réponses au questionnaire est évalué à environ 2h45 par module.
         Soit un total d’environ 13h30 pour réaliser la totalité du distanciel.
       </Paragraph>
-    </>
+    </PageContainer>
   )
 }
 

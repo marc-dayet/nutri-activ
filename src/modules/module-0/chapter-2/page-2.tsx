@@ -1,5 +1,6 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import {Title, Subtitle, Paragraph} from "../../page-components"
 import image1 from "./page-2-1.png"
 import image2 from "./page-2-2.png"
@@ -8,7 +9,7 @@ import cs from "./page-2.module.scss"
 
 const Page: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>Présentation de la formation distancielle Cap Bien-être</Title>
       <Subtitle>Qu’est ce que le distanciel va vous apporter ?</Subtitle>
       <div className={cs.grid}>
@@ -31,7 +32,7 @@ const Page: FC = () => {
           La présentation des messages clés à donner aux participants lors du parcours
         </Paragraph>
       </div>
-    </>
+    </PageContainer>
   )
 }
 

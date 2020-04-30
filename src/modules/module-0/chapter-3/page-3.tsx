@@ -1,5 +1,6 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components"
 import img1 from "./page-3-1.png"
 import img2 from "./page-3-2.png"
@@ -11,7 +12,7 @@ import cs from "./page-3.module.scss"
 
 const Page: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>Les contenus clés travaillés durant le parcours Cap Bien-être</Title>
       <Subtitle className={cs.subtitle}>
         Quelles sont les disciplines concernées par le parcours ?
@@ -33,7 +34,7 @@ const Page: FC = () => {
         <Img src={img5} mode="avatar-lg" />
         <Paragraph className={cs.paragraph}>Ethique de l’intervention</Paragraph>
       </Grid>
-    </>
+    </PageContainer>
   )
 }
 

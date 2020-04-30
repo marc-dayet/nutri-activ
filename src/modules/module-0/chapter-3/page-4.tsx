@@ -1,5 +1,6 @@
 import React, {FC} from "react"
 
+import PageContainer from "../../page"
 import {Title, Paragraph, Grid, Img} from "../../page-components"
 import img1 from "./page-4-1.png"
 import img2 from "./page-4-2.png"
@@ -10,7 +11,7 @@ import cs from "./page-4.module.scss"
 
 const Page: FC = () => {
   return (
-    <>
+    <PageContainer>
       <Title>Les contenus clés travaillés durant le parcours Cap Bien-être</Title>
       <Paragraph className={cs.paragraph}>
         Pourquoi connaître les contenus clés sur lesquels repose le parcours ? Connaître les
@@ -38,7 +39,7 @@ const Page: FC = () => {
         discipline et vous permettent ainsi de mieux comprendre leur apport dans la gestion du
         stress et des émotions.
       </Paragraph>
-    </>
+    </PageContainer>
   )
 }
 

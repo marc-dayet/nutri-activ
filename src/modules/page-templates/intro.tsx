@@ -1,6 +1,7 @@
 import React, {FC, useEffect, useRef} from "react"
 import {useToggle, useBehaviorSubject} from "react-captain"
 
+import PageContainer from "../page"
 import {currStep$} from "../context"
 
 import cs from "./intro.module.scss"
@@ -15,11 +16,11 @@ const PageIntro: FC<PageIntroProps> = props => {
   const [{module}] = useBehaviorSubject(currStep$)
 
   return (
-    <>
+    <PageContainer>
       <h1 className={cs.title}>Module {module}</h1>
       <h2 className={cs.subtitle}>{subtitle}</h2>
       <Animation name="ANIMATION" composition={animation} />
-    </>
+    </PageContainer>
   )
 }
 
