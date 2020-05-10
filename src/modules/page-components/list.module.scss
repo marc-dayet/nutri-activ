@@ -10,11 +10,6 @@
   padding: 0;
 
   @include media(lg) {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  @include media(xs) {
     font-size: 1rem;
     line-height: 1.25rem;
   }
@@ -25,10 +20,6 @@
     width: 1rem;
 
     @include media(lg) {
-      width: 0.9rem;
-    }
-
-    @include media(md) {
       width: 0.8rem;
     }
 
@@ -46,10 +37,6 @@
   margin-right: 1rem;
 
   @include media(lg) {
-    margin-right: 0.9rem;
-  }
-
-  @include media(md) {
     margin-right: 0.8rem;
   }
 

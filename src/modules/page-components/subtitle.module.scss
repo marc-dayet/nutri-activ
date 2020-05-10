@@ -26,13 +26,13 @@
 }
 
 .book {
-  left: calc(100% + 10px);
+  left: calc(100% + 0.5rem);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
+  width: 3rem;
 
-  @include media(md) {
+  @include media(lg) {
     width: 25px;
   }
 }

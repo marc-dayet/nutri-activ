@@ -9,7 +9,12 @@
   margin: 0 auto;
   max-width: 75rem;
 
+  @include media(lg) {
+    max-width: 55rem;
+  }
+
   @include media(md) {
+    max-width: 40rem;
     padding: 1rem;
   }
 }
@@ -93,10 +98,6 @@
   width: 100%;
 
   @include media(lg) {
-    max-width: 13.5rem;
-  }
-
-  @include media(md) {
     max-width: 9rem;
   }
 
@@ -124,11 +125,6 @@
   width: 3.5rem;
 
   @include media(lg) {
-    height: 3rem;
-    width: 3rem;
-  }
-
-  @include media(md) {
     height: 2.5rem;
     width: 2.5rem;
   }
@@ -150,7 +146,7 @@
     height: 25rem;
     transform: scaleY(1);
 
-    @include media(md) {
+    @include media(lg) {
       height: 20rem;
     }
   }
@@ -166,11 +162,6 @@
   width: 100%;
 
   @include media(lg) {
-    padding: 2.5rem 2.5rem 5rem 2.5rem;
-    transform: translateY(-1rem);
-  }
-
-  @include media(md) {
     padding: 2rem 2rem 4rem 2rem;
     transform: translateY(-0.5rem);
   }
@@ -271,10 +262,6 @@
   }
 
   @include media(lg) {
-    font-size: 3.5rem;
-  }
-
-  @include media(md) {
     font-size: 3rem;
   }
 
@@ -295,10 +282,6 @@
   text-align: center;
 
   @include media(lg) {
-    font-size: 3.5rem;
-  }
-
-  @include media(md) {
     font-size: 3rem;
   }
 
@@ -318,9 +301,7 @@
 }
 
 .navigation {
-  @include media(sm) {
-    align-self: end;
-  }
+  align-self: end;
 }
 
 .pages {
@@ -346,17 +327,18 @@
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-  margin: 0 auto 2rem 0;
-  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  max-width: 37.5rem;
   padding: 0;
 }
 
 .chapters {
-  align-items: center;
+  align-items: end;
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 3rem;
   justify-content: center;
+  margin-bottom: 1rem;
 
   @include media(md) {
     grid-column-gap: 2rem;

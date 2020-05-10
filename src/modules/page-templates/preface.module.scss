@@ -36,14 +36,6 @@
   margin: 0 auto;
 
   @include media(lg) {
-    height: 4rem;
-  }
-
-  @include media(md) {
-    height: 3rem;
-  }
-
-  @include media(xs) {
     height: inherit;
     max-width: 3rem;
     width: 100%;

@@ -4,7 +4,7 @@
 .subtitle {
   margin: 1.5rem 0 2rem 0;
 
-  @include media(md) {
+  @include media(lg) {
     margin: 1rem 0 1rem 0;
   }
 }

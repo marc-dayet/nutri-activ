@@ -9,11 +9,6 @@
   text-align: center;
 
   @include media(lg) {
-    font-size: 3rem;
-    line-height: 2.9rem;
-  }
-
-  @include media(md) {
     font-size: 2.5rem;
     line-height: 2.4rem;
   }
@@ -102,8 +97,8 @@
 .linkContainer {
   @include font(Museo, 700);
   color: $green2B;
-  font-size: 36px;
-  margin: 20px 0 30px 0;
+  font-size: 2rem;
+  margin: 1.5rem 0 2rem 0;
   text-align: center;
 
   a {
@@ -115,7 +110,12 @@
     text-decoration: underline;
   }
 
-  @include media(md) {
-    font-size: 26px;
+  @include media(lg) {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  @include media(sm) {
+    margin: 1rem 0;
   }
 }

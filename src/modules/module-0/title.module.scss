@@ -9,18 +9,6 @@
   text-align: center;
 
   @include media(lg) {
-    font-size: 5.5rem;
-    line-height: 5.4rem;
-    margin-top: 8rem;
-  }
-
-  @include media(md) {
-    font-size: 4rem;
-    line-height: 3.9rem;
-    margin-top: 6rem;
-  }
-
-  @include media(sm) {
     font-size: 3rem;
     line-height: 2.9rem;
     margin-top: 4rem;
