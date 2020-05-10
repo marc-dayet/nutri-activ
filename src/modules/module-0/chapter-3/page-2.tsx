@@ -8,7 +8,7 @@ import cs from "./page-2.module.scss"
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Les 5 modules de la formation distancielle</Title>
+      <Title>Le parcours Cap Bien-Être</Title>
       <Paragraph className={cs.paragraph}>
         <strong>Quel est l’objectif du parcours ?</strong>
       </Paragraph>

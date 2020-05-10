@@ -3,8 +3,8 @@
 
 .paragraph {
   @include font(Museo, 500);
-  font-size: 23px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   text-align: center;
 
   strong {
@@ -12,15 +12,12 @@
   }
 
   @include media(lg) {
-    font-size: 21px;
-    line-height: 25px;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
-  @include media(md) {
-    font-size: 20px;
-  }
-
-  @include media(sm) {
-    font-size: 18px;
+  @include media(xs) {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }

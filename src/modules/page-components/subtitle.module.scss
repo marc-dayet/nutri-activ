@@ -4,16 +4,20 @@
 .subtitleContainer {
   @include font(AmaticSC, bold);
   color: $green2B;
-  font-size: 45px;
+  font-size: 2.8rem;
   margin: 0;
   text-align: center;
 
+  @include media(lg) {
+    font-size: 2.5rem;
+  }
+
   @include media(md) {
-    font-size: 30px;
+    font-size: 2rem;
   }
 
   @include media(sm) {
-    font-size: 25px;
+    font-size: 1.5rem;
   }
 }
 

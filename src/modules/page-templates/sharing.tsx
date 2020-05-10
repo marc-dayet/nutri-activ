@@ -4,7 +4,6 @@ import PageContainer from "../page"
 import Title from "../page-components/title"
 import List from "../page-components/list"
 import ListItem from "../page-components/list-item"
-import {ReactComponent as IconListItem} from "../page-components/list-item.svg"
 import {ReactComponent as IconCurlyBrace} from "./curly-brace.svg"
 
 import cs from "./sharing.module.scss"
@@ -18,14 +17,12 @@ const PageSharing: FC = () => {
         <div className={cs.paragraphAltCurlyBraceContainer}>
           <IconCurlyBrace className={cs.paragraphAltCurlyBrace}></IconCurlyBrace>
         </div>
-        <div className={cs.paragraphAltLineTop}>
-          <IconListItem className={cs.paragraphAltBullet} />
-          faire part de vos interrogations et remarques sur chaque module
-        </div>
-        <div className={cs.paragraphAltLineBottom}>
-          <IconListItem className={cs.paragraphAltBullet} />
-          demander à revenir sur certains points en formation présentielle
-        </div>
+        <List className={cs.paragraphAltLineTop}>
+          <ListItem>faire part de vos interrogations et remarques sur chaque module</ListItem>
+        </List>
+        <List className={cs.paragraphAltLineBottom}>
+          <ListItem>demander à revenir sur certains points en formation présentielle</ListItem>
+        </List>
       </div>
       <h2 className={cs.subtitle}>Cliquez sur le lien suivant :</h2>
       <div className={cs.linkContainer}>

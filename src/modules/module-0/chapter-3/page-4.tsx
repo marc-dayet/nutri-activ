@@ -1,7 +1,7 @@
 import React, {FC} from "react"
 
 import PageContainer from "../../page"
-import {Title, Paragraph, Grid, Img} from "../../page-components"
+import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components"
 import img1 from "./page-4-1.png"
 import img2 from "./page-4-2.png"
 import img3 from "./page-4-3.png"
@@ -13,11 +13,11 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>Les contenus clés travaillés durant le parcours Cap Bien-être</Title>
-      <Paragraph className={cs.paragraph}>
+      <Subtitle className={cs.subtitle}>
         Pourquoi connaître les contenus clés sur lesquels repose le parcours ? Connaître les
         principaux apports des disciplines scientifiques et techniques concernées sur le sujet, vous
         permettra de :
-      </Paragraph>
+      </Subtitle>
       <Grid className={cs.grid}>
         <Img src={img1} mode="avatar-lg" />
         <Paragraph className={cs.paragraph}>

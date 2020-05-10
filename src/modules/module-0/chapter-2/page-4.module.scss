@@ -2,21 +2,32 @@
 @import "../../../theme/media";
 
 .paragraph {
-  line-height: 32px;
-  margin: 40px 0 50px 0;
+  margin: 3rem 0;
+
+  @include media(sm) {
+    margin: 2.25rem 0;
+  }
+
+  @include media(sm) {
+    margin: 1.5rem 0;
+  }
 }
 
 .paragraphAlt {
   @include font(Museo, 700);
   color: $green2B;
-  margin: 50px 0 50px 0;
-}
-
-.image {
-  height: 90px;
+  margin: 3rem 0;
 
   @include media(sm) {
-    height: auto;
-    width: 100%;
+    margin: 2.25rem 0;
   }
+
+  @include media(sm) {
+    margin: 1.5rem 0;
+  }
+}
+
+.img {
+  max-width: 12.5rem;
+  width: 100%;
 }

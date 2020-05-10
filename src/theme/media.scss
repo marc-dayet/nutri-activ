@@ -1,6 +1,8 @@
-$lg: 1450px; // Large screen / wide desktop
-$md: 900px; // Medium screen / desktop
-$sm: 550px; // Small screen / tablet
+// $lg: 110em; // Desktop
+$lg: 100em; // Desktop
+$md: 72em; // Tablet (landscape)
+$sm: 56em; // Tablet (portrait)
+$xs: 31em; // Smartphone
 
 @mixin media($size) {
   @if $size == lg {
@@ -16,7 +18,7 @@ $sm: 550px; // Small screen / tablet
       @content;
     }
   } @else if $size == xs {
-    @media screen and (min-width: $sm - 1) {
+    @media screen and (max-width: $xs) {
       @content;
     }
   }

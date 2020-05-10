@@ -21,8 +21,8 @@ const Page: FC = () => {
       <br />
       <Paragraph className={cs.paragraph}>
         Le temps de formation pour l’appropriation des connaissances (distanciel + livret
-        ressources) et la saisie des réponses au questionnaire est évalué à environ 2h45 par module.
-        Soit un total d’environ 13h30 pour réaliser la totalité du distanciel.
+        ressources) et la saisie des réponses au questionnaire est évalué à environ 2h30 par module.
+        Soit un total d’environ 12h30 pour réaliser la totalité du distanciel.
       </Paragraph>
     </PageContainer>
   )

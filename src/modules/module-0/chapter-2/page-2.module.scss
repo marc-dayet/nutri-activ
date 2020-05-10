@@ -2,7 +2,7 @@
 @import "../../../theme/media";
 
 .image {
-  width: 70px;
+  width: 4.3rem;
 
   @include media(sm) {
     margin: 0 auto;
@@ -12,11 +12,11 @@
 .grid {
   display: grid;
   grid-auto-flow: row;
-  grid-column-gap: 25px;
-  grid-row-gap: 50px;
-  grid-template-columns: 70px minmax(0, 1fr);
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 3rem;
+  grid-template-columns: 4.3rem minmax(0, 1fr);
   grid-template-rows: repeat(2, min-content);
-  margin-top: 50px;
+  margin-top: 3rem;
 
   .image:first-of-type {
     transform: translateY(-30px);
@@ -27,9 +27,9 @@
   }
 
   @include media(sm) {
-    grid-row-gap: 25px;
+    grid-row-gap: 1.5rem;
     grid-template-columns: minmax(0, 1fr);
-    margin-top: 25px;
+    margin-top: 1.5rem;
   }
 }
 

@@ -6,7 +6,6 @@
 }
 
 @mixin gridItemContent {
-  line-height: 26px;
   margin: 0 auto;
 
   @include media(md) {
@@ -16,19 +15,15 @@
 
 .gridItemContentLeft {
   @include gridItemContent;
-  max-width: 170px;
+  max-width: 11rem;
 }
 
 .gridItemContentRight {
   @include gridItemContent;
-  max-width: 330px;
-}
-
-@mixin img {
-  margin: 30px 0 10px 0;
+  max-width: 21rem;
 }
 
 .img {
-  @include img;
-  height: 250px;
+  height: 15rem;
+  margin: 2rem 0 0.5rem 0;
 }

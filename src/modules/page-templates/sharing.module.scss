@@ -3,16 +3,29 @@
 
 .subtitle {
   @include font(AmaticSC, bold);
-  font-size: 60px;
+  font-size: 3.75rem;
+  line-height: 3.5rem;
   margin: 0;
   text-align: center;
 
+  @include media(lg) {
+    font-size: 3rem;
+    line-height: 2.9rem;
+  }
+
   @include media(md) {
-    font-size: 30px;
+    font-size: 2.5rem;
+    line-height: 2.4rem;
   }
 
   @include media(sm) {
-    font-size: 25px;
+    font-size: 2.25rem;
+    line-height: 2.2rem;
+  }
+
+  @include media(xs) {
+    font-size: 2rem;
+    line-height: 1.9rem;
   }
 }
 
@@ -21,12 +34,12 @@
   align-items: center;
   color: $green2B;
   display: grid;
-  font-size: 26px;
-  grid-column-gap: 10px;
-  grid-template-columns: min-content 30px minmax(0, 1fr);
+  font-size: 1.5rem;
+  grid-column-gap: 0.75rem;
+  grid-template-columns: min-content 2rem minmax(0, 1fr);
   grid-template-rows: repeat(2, minmax(0, 1fr));
   justify-content: center;
-  margin: 20px 0;
+  margin: 1.5rem 0;
 
   @include media(md) {
     font-size: 20px;
@@ -34,21 +47,13 @@
   }
 
   @include media(sm) {
-    font-size: 18px;
-    grid-auto-flow: row;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: minmax(0, 1fr);
+    display: block;
   }
 }
 
 .paragraphAltHeader {
   grid-column: 1;
   grid-row: 1 / span 2;
-
-  @include media(sm) {
-    grid-column: inherit;
-    grid-row: inherit;
-  }
 }
 
 .paragraphAltCurlyBraceContainer {
@@ -57,39 +62,32 @@
 
   @include media(sm) {
     display: none;
-    grid-column: inherit;
-    grid-row: inherit;
   }
 }
 
 .paragraphAltCurlyBrace {
+  display: flex;
+  height: 6.8rem;
+
   path {
     fill: $green2B;
+  }
+
+  @include media(lg) {
+    height: 5rem;
   }
 }
 
 .paragraphAltLineTop {
-  align-items: center;
-  display: flex;
+  font-weight: 700;
   grid-column: 3;
   grid-row: 1;
-
-  @include media(sm) {
-    grid-column: inherit;
-    grid-row: inherit;
-  }
 }
 
 .paragraphAltLineBottom {
-  align-items: center;
-  display: flex;
+  font-weight: 700;
   grid-column: 3;
   grid-row: 2;
-
-  @include media(sm) {
-    grid-column: inherit;
-    grid-row: inherit;
-  }
 }
 
 .paragraphAltBullet {
@@ -119,25 +117,5 @@
 
   @include media(md) {
     font-size: 26px;
-  }
-}
-
-.list {
-  line-height: 25px;
-  list-style-image: none;
-}
-
-.listItem {
-  margin: 20px 0;
-  padding-left: 20px;
-
-  @include media(md) {
-    font-size: 20px;
-    line-height: 25px;
-  }
-
-  @include media(sm) {
-    font-size: 18px;
-    padding: 0;
   }
 }

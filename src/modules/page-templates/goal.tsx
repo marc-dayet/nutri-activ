@@ -35,7 +35,7 @@ const Goal: FC<GoalProps> = props => {
         </Subtitle>
       </div>
       <div className={cs.grid}>
-        <ol>
+        <ol className={cs.contentList}>
           {content.map(content => (
             <li key={content} className={cs.contentListItem}>
               {content}

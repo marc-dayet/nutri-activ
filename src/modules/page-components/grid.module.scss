@@ -6,25 +6,30 @@
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-flow: column;
   grid-auto-rows: min-content;
-  grid-column-gap: 50px;
-  grid-row-gap: 25px;
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 1.5rem;
   grid-template-rows: repeat(2, min-content);
   justify-items: center;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 
   &[data-direction="vertical"] {
     grid-auto-flow: row;
   }
 
+  @include media(lg) {
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+  }
+
   @include media(md) {
-    grid-column-gap: 25px;
-    grid-row-gap: 10px;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 0.75rem;
   }
 
   @include media(sm) {
     grid-auto-flow: row;
     grid-column-gap: 0;
-    grid-row-gap: 25px;
-    margin-top: 25px;
+    grid-row-gap: 1.5rem;
+    margin-top: 1.5rem;
   }
 }

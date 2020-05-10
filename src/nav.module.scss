@@ -4,10 +4,10 @@
 .nav {
   border-bottom: 1px solid $grayC4;
   display: grid;
-  grid-template-columns: 400px minmax(0, 1fr) 240px;
+  grid-template-columns: 25rem minmax(0, 1fr) 15rem;
 
   @include media(lg) {
-    grid-template-columns: 200px minmax(0, 1fr) 150px;
+    grid-template-columns: 12.5rem minmax(0, 1fr) 10rem;
   }
 
   @include media(md) {
@@ -17,11 +17,11 @@
 
 .logo {
   align-self: center;
-  padding: 15px 0 15px 50px;
+  padding: 1rem 0 1rem 3rem;
   width: 80%;
 
   @include media(lg) {
-    padding: 10px;
+    padding: 0.75rem;
     width: 100%;
   }
 
@@ -34,7 +34,7 @@
   align-items: flex-start;
   display: flex;
   justify-content: space-evenly;
-  padding: 10px 0;
+  padding: 0.75rem 0;
 }
 
 .module {
@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 30px;
+  padding: 0 2rem;
   transition-duration: 150ms;
   transition-property: background;
 
@@ -53,31 +53,23 @@
   }
 
   img {
-    height: 60px;
-    width: 60px;
+    height: 4rem;
+    width: 4rem;
 
     @include media(lg) {
-      height: 50px;
-      width: 50px;
+      height: 3rem;
+      width: 3rem;
     }
 
     @include media(md) {
-      height: 40px;
-      width: 40px;
+      height: 2rem;
+      width: 2rem;
     }
   }
 
   span {
-    font-size: 19px;
+    font-size: 1rem;
     font-weight: 700;
-
-    @include media(lg) {
-      font-size: 17px;
-    }
-
-    @include media(md) {
-      font-size: 15px;
-    }
 
     @include media(sm) {
       display: none;
@@ -85,6 +77,6 @@
   }
 
   @include media(lg) {
-    padding: 0 5px;
+    padding: 0 0.25rem;
   }
 }

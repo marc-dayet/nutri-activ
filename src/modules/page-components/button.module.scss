@@ -19,8 +19,8 @@ $transition-duration: 150ms;
 .button {
   @include font(AmaticSC, bold);
   color: $gray44;
-  font-size: 40px;
-  padding: 15px 50px 20px;
+  font-size: 2.5rem;
+  padding: 0.9rem 2.5rem 1rem;
   position: relative;
   text-transform: uppercase;
 
@@ -34,13 +34,22 @@ $transition-duration: 150ms;
     }
   }
 
+  @include media(lg) {
+    font-size: 2.25rem;
+  }
+
   @include media(md) {
-    font-size: 30px;
+    font-size: 2rem;
+    padding: 0.65rem 2rem 0.75rem;
   }
 
   @include media(sm) {
-    font-size: 25px;
-    padding: 15px 30px 20px;
+    font-size: 1.75rem;
+  }
+
+  @include media(xs) {
+    font-size: 1.5rem;
+    padding: 0.4rem 1.5rem 0.5rem;
   }
 }
 

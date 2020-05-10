@@ -6,14 +6,14 @@
   align-items: center;
   background: $grayC9;
   display: grid;
-  font-size: 20px;
-  grid-column-gap: 10px;
-  grid-template-columns: 16px minmax(0, 1fr);
-  padding: 15px 50px;
+  font-size: 1.25rem;
+  grid-column-gap: 0.75rem;
+  grid-template-columns: 1rem minmax(0, 1fr);
+  padding: 1rem 3rem;
 
   @include media(lg) {
-    font-size: 16px;
-    padding: 10px;
+    font-size: 1rem;
+    padding: 0.75rem;
   }
 
   @include media(md) {
@@ -23,23 +23,23 @@
 
 .header {
   grid-column: 1 / span 2;
-  margin-bottom: 5px;
+  margin-bottom: 0.25rem;
 }
 
 .icon {
-  height: 16px;
-  width: 16px;
+  height: 1rem;
+  width: 1rem;
 }
 
 .signOut {
   @include font(Museo, 700);
-  font-size: 20px;
+  font-size: 1.25rem;
+
+  @include media(lg) {
+    font-size: 1rem;
+  }
 
   &:hover {
     text-decoration: underline;
-  }
-
-  @include media(lg) {
-    font-size: 16px;
   }
 }

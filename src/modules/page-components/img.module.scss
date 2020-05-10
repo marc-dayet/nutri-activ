@@ -2,27 +2,38 @@
 @import "../../theme/media";
 
 .img[data-mode="avatar-md"] {
-  height: 125px;
+  height: 7.5rem;
 
   @include media(md) {
-    height: 75px;
+    height: 4.5rem;
+  }
+
+  @include media(xs) {
+    height: inherit;
+    max-width: 5rem;
+    width: 100%;
   }
 }
 
 .img[data-mode="avatar-lg"] {
-  height: 175px;
+  height: 10rem;
 
   @include media(md) {
-    height: 125px;
+    height: 7.5rem;
+  }
+
+  @include media(xs) {
+    height: inherit;
+    max-width: 5rem;
+    width: 100%;
   }
 }
 
 .img[data-mode="fullscreen"] {
-  margin-top: 25px;
-  max-height: 400px;
-  max-width: 1024px;
+  margin-top: 1.5rem;
+  max-width: 64rem;
 
-  @include media(sm) {
+  @include media(xs) {
     max-height: inherit;
     max-width: inherit;
     width: 100%;

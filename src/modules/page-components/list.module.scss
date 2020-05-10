@@ -3,22 +3,61 @@
 
 .list {
   @include font(Museo, 500);
-  font-size: 23px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   list-style-type: none;
   margin: 0;
   padding: 0;
 
-  @include media(md) {
-    font-size: 20px;
-    line-height: 25px;
+  @include media(lg) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
-  @include media(sm) {
-    font-size: 18px;
+  @include media(xs) {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.listItem {
+  svg {
+    width: 1rem;
+
+    @include media(lg) {
+      width: 0.9rem;
+    }
+
+    @include media(md) {
+      width: 0.8rem;
+    }
+
+    @include media(sm) {
+      width: 0.7rem;
+    }
+
+    @include media(xs) {
+      width: 0.5rem;
+    }
   }
 }
 
 .icon {
-  margin-right: 15px;
+  margin-right: 1rem;
+
+  @include media(lg) {
+    margin-right: 0.9rem;
+  }
+
+  @include media(md) {
+    margin-right: 0.8rem;
+  }
+
+  @include media(sm) {
+    margin-right: 0.7rem;
+  }
+
+  @include media(xs) {
+    margin-right: 0.5rem;
+  }
 }

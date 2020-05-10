@@ -4,15 +4,23 @@
 .title,
 .paragraph {
   @include font(Museo, 500);
-  font-size: 36px;
+  font-size: 2.25rem;
   text-align: center;
 
+  @include media(lg) {
+    font-size: 1.75rem;
+  }
+
   @include media(md) {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   @include media(sm) {
-    font-size: 20px;
+    font-size: 1.25rem;
+  }
+
+  @include media(xs) {
+    font-size: 1rem;
   }
 }
 
@@ -22,16 +30,41 @@
 }
 
 .paragraph {
-  margin: 40px 0;
+  margin: 2.5rem 0;
+
+  @include media(md) {
+    margin: 2rem 0;
+  }
+
+  @include media(sm) {
+    margin: 1.5rem 0;
+  }
+
+  @include media(xs) {
+    margin: 1rem 0;
+  }
 }
 
 .logoContainer {
-  margin: 50px 0 70px 0;
+  margin: 3rem 0;
   text-align: center;
+
+  @include media(md) {
+    margin: 2rem 0;
+  }
+
+  @include media(sm) {
+    margin: 1.5rem 0;
+  }
+
+  @include media(xs) {
+    margin: 1rem 0;
+  }
 }
 
 .logo {
-  height: 100px;
+  max-width: 21rem;
+  width: 100%;
 
   [data-type="font"] path {
     fill: $green1E;
@@ -39,10 +72,5 @@
 
   [data-type="compass"] path:first-of-type {
     fill: $white;
-  }
-
-  @include media(sm) {
-    height: auto;
-    width: 100%;
   }
 }

@@ -1,11 +1,15 @@
 @import "../../../theme";
+@import "../../../theme/media";
 
 .paragraph {
-  margin-top: 30px;
+  margin-top: 2rem;
   text-align: left;
-}
 
-.image {
-  height: 200px;
-  width: 200px;
+  strong {
+    font-size: 1.1em;
+  }
+
+  @include media(sm) {
+    margin-top: 1rem;
+  }
 }

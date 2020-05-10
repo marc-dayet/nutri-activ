@@ -2,34 +2,62 @@
 @import "../../theme/media";
 
 .subtitle {
+  @include font(AmaticSC, bold);
   color: $white;
-  font-size: 60px;
+  font-size: 3.75rem;
+  line-height: 3.5rem;
+  margin: 0;
   position: relative;
+  text-align: center;
+
+  @include media(lg) {
+    font-size: 3rem;
+    line-height: 2.9rem;
+  }
 
   @include media(md) {
-    font-size: 40px;
+    font-size: 2.5rem;
+    line-height: 2.4rem;
   }
 
   @include media(sm) {
-    font-size: 30px;
+    font-size: 2.25rem;
+    line-height: 2.2rem;
+  }
+
+  @include media(xs) {
+    font-size: 2rem;
+    line-height: 1.9rem;
   }
 }
 
 .subtitleWithImage {
-  margin: 20px 0;
+  margin: 1.5rem 0;
   text-align: center;
 
   .subtitle {
     display: inline-block;
   }
+
+  @include media(xs) {
+    margin: 1rem 0;
+  }
 }
 
 .chrono {
   position: absolute;
-  right: calc(100% + 25px);
+  right: calc(100% + 1.5rem);
   top: 50%;
   transform: translateY(-50%);
-  width: 125px;
+  width: 7.8rem;
+
+  @include media(lg) {
+    width: 6.5rem;
+  }
+
+  @include media(md) {
+    width: 5rem;
+  }
 
   @include media(sm) {
     display: none;
@@ -42,7 +70,7 @@
 
 .goalListItem {
   color: $green03;
-  margin: 10px 0;
+  margin: 0.5rem 0;
 }
 
 .grid {
@@ -55,28 +83,44 @@
   }
 }
 
+.contentList {
+  padding-left: 1rem;
+}
+
 .contentListItem {
   @include font(Museo, 500);
-  font-size: 26px;
-  padding-left: 10px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-left: 0.5rem;
 
-  @include media(md) {
-    font-size: 22px;
+  @include media(lg) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
-  @include media(sm) {
-    font-size: 18px;
+  @include media(xs) {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
 .intersessionWork {
   align-self: center;
   justify-self: end;
-  width: 350px;
+  width: 21rem;
+
+  @include media(lg) {
+    width: 17rem;
+  }
 
   @include media(md) {
     grid-row: 1;
     justify-self: center;
-    width: 250px;
+    width: 15rem;
+  }
+
+  @include media(sm) {
+    max-width: 10rem;
+    width: 100%;
   }
 }

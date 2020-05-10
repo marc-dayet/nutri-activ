@@ -4,18 +4,13 @@
 .pageContainer {
   align-items: center;
   display: grid;
-  grid-template-rows: 40px auto 150px;
+  grid-template-rows: auto minmax(0, 1fr) 9rem;
   height: 100%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 75rem;
 
   @include media(md) {
-    grid-template-rows: 40px auto 100px;
-    padding: 15px;
-  }
-
-  @include media(sm) {
-    padding: 10px;
+    padding: 1rem;
   }
 }
 
@@ -35,22 +30,24 @@
 
 @mixin pagination {
   @include font(Museo, 300);
-  font-size: 21px;
+  font-size: 1.5rem;
   text-align: center;
 
-  @include media(sm) {
-    font-size: 16px;
+  @include media(md) {
+    font-size: 1rem;
+    margin: 0;
   }
 }
 
 .pagePagination {
   @include pagination;
+  margin: 1rem;
 }
 
 .quizPagination {
   @include pagination;
   color: $green01;
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 
 .quizLeft {
@@ -59,6 +56,7 @@
   grid-column: 1;
   grid-row: 1;
   justify-self: stretch;
+  padding: 1rem;
 
   @include media(md) {
     grid-row: 1;
@@ -68,6 +66,7 @@
 .quizRight {
   grid-column: 2;
   grid-row: 1;
+  padding: 1rem;
 
   @include media(md) {
     grid-column: 1;
@@ -77,10 +76,10 @@
 
 .quizTitle {
   color: $green01;
-  margin-top: 30px;
+  margin-top: 2rem;
 
   @include media(md) {
-    margin-top: 10px;
+    margin-top: 1rem;
   }
 }
 
@@ -89,41 +88,54 @@
 }
 
 .quizImg {
-  margin: 15px 0;
-  max-width: 300px;
+  margin: 1rem 0;
+  max-width: 18rem;
   width: 100%;
 
+  @include media(lg) {
+    max-width: 13.5rem;
+  }
+
   @include media(md) {
-    max-width: 150px;
+    max-width: 9rem;
+  }
+
+  @include media(sm) {
+    max-width: 7rem;
   }
 }
 
 .quizStatment {
   color: $green01;
   margin: 0 auto;
-  max-width: 512px;
+  max-width: 32rem;
 
   @include media(md) {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
   }
 
   @include media(sm) {
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
   }
 }
 
 .quizCheck {
-  height: 58px;
-  width: 58px;
+  height: 3.5rem;
+  width: 3.5rem;
 
   @include media(lg) {
-    height: 50px;
-    width: 50px;
+    height: 3rem;
+    width: 3rem;
   }
 
   @include media(md) {
-    height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  @include media(sm) {
+    height: 2rem;
+    width: 2rem;
   }
 }
 
@@ -135,28 +147,40 @@
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 
   &.deployed {
-    height: 400px;
+    height: 25rem;
     transform: scaleY(1);
+
+    @include media(md) {
+      height: 20rem;
+    }
   }
 }
 
 .quizAnswerTextContainer {
   color: $white;
   display: flex;
-  max-width: 675px;
-  padding: 50px 50px 100px 50px;
+  max-width: 42rem;
+  padding: 3rem 3rem 6rem 3rem;
   position: relative;
-  transform: translateY(-20px);
+  transform: translateY(-1.5rem);
   width: 100%;
 
   @include media(lg) {
-    padding: 40px 40px 80px 40px;
-    transform: translateY(-15px);
+    padding: 2.5rem 2.5rem 5rem 2.5rem;
+    transform: translateY(-1rem);
   }
 
   @include media(md) {
-    padding: 30px 30px 50px 30px;
-    transform: translateY(-10px);
+    padding: 2rem 2rem 4rem 2rem;
+    transform: translateY(-0.5rem);
+  }
+
+  @include media(sm) {
+    padding: 1.75rem 1.75rem 3.25rem 1.75rem;
+  }
+
+  @include media(xs) {
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
   }
 }
 
@@ -179,7 +203,7 @@
 }
 
 .quizRadiosContainer {
-  margin-bottom: 75px;
+  margin-bottom: 5rem;
 }
 
 .quizRadioContainer {
@@ -187,11 +211,11 @@
   justify-content: center;
 
   @include media(md) {
-    margin-top: 15px;
+    margin-top: 1rem;
   }
 
   @include media(sm) {
-    margin-top: 10px;
+    margin-top: 0.5rem;
   }
 }
 
@@ -220,9 +244,9 @@
   color: $white;
   cursor: pointer;
   display: grid;
-  font-size: 60px;
+  font-size: 4rem;
   grid-auto-flow: column;
-  grid-column-gap: 15px;
+  grid-column-gap: 1rem;
   justify-content: center;
   justify-items: center;
   position: relative;
@@ -246,28 +270,44 @@
     opacity: 0;
   }
 
+  @include media(lg) {
+    font-size: 3.5rem;
+  }
+
   @include media(md) {
-    font-size: 40px;
+    font-size: 3rem;
   }
 
   @include media(sm) {
-    font-size: 30px;
+    font-size: 2.5rem;
+  }
+
+  @include media(xs) {
+    font-size: 2rem;
   }
 }
 
 .quizSubtitle {
   @include font(AmaticSC, bold);
   color: $green01;
-  font-size: 60px;
-  margin: -50px 0 0 0;
+  font-size: 4rem;
+  margin: -3rem 0 0 0;
   text-align: center;
 
   @include media(lg) {
-    font-size: 50px;
+    font-size: 3.5rem;
   }
 
   @include media(md) {
-    font-size: 40px;
+    font-size: 3rem;
+  }
+
+  @include media(sm) {
+    font-size: 2.5rem;
+  }
+
+  @include media(xs) {
+    font-size: 2rem;
   }
 }
 
@@ -287,9 +327,17 @@
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-  padding: 0 100px;
+  padding: 0 6rem;
+
+  @include media(lg) {
+    padding: 0 5rem;
+  }
 
   @include media(md) {
+    padding: 0 4rem;
+  }
+
+  @include media(sm) {
     padding: 0;
   }
 }
@@ -298,7 +346,7 @@
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 auto 2rem 0;
   max-width: 600px;
   padding: 0;
 }
@@ -307,11 +355,15 @@
   align-items: center;
   display: grid;
   grid-auto-flow: column;
-  grid-column-gap: 50px;
+  grid-column-gap: 3rem;
   justify-content: center;
 
   @include media(md) {
-    display: none;
+    grid-column-gap: 2rem;
+  }
+
+  @include media(xs) {
+    grid-column-gap: 1rem;
   }
 }
 
@@ -321,29 +373,18 @@
   display: grid;
   grid-auto-flow: column;
   grid-column: 1 / span 2;
-  grid-column-gap: 50px;
+  grid-column-gap: 3rem;
   grid-row: 1;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
 
   @include media(md) {
-    display: none;
+    grid-column: 1;
+    grid-column-gap: 2rem;
+    grid-row: 1 / span 2;
   }
-}
 
-.chapter {
-  @include font(AmaticSC, bold);
-  align-items: center;
-  background: $white;
-  border-radius: 50%;
-  display: flex;
-  font-size: 26px;
-  height: 36px;
-  justify-content: center;
-  width: 36px;
-
-  &.active {
-    background: $blue03;
-    color: $white;
+  @include media(xs) {
+    grid-column-gap: 1rem;
   }
 }

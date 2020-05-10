@@ -5,7 +5,7 @@ import img from "./page-2-1.png"
 
 export default () => (
   <PageConclusion
-    title="Vous avez terminé le module introductif : Rendez-vous pour la suite de la formation distancielle Cap Bien-être"
+    title="Vous avez terminé le module introductif ! Rendez-vous au module 1 : Bien-être & Santé"
     img={img}
   />
 )

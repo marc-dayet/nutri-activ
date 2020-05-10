@@ -19,7 +19,7 @@ const Page: FC = () => {
         Vous avez à votre disposition 2 outils pour la formation à distance :
       </Paragraph>
       <Paragraph>
-        <img className={cs.image} src={img} alt="" />
+        <img className={cs.img} src={img} alt="" />
       </Paragraph>
     </PageContainer>
   )
