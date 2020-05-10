@@ -7,30 +7,10 @@
   text-transform: uppercase;
 }
 
-.animation {
-  align-content: center;
-  display: grid;
-  height: 25rem;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 30rem;
-  width: 100%;
-
-  canvas {
-    width: 100%;
-  }
-
-  @include media(lg) {
-    font-size: 4rem;
-    height: 20rem;
-    max-width: 25rem;
-  }
-}
-
 .title {
   @include heading;
   @include font(AmaticSC, bold);
-  font-size: 5.5rem;
+  font-size: 5rem;
   margin-top: 0;
 
   @include media(lg) {
@@ -45,7 +25,7 @@
 .subtitle {
   @include heading;
   @include font(Museo, 500);
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin: 0;
 
   @include media(lg) {

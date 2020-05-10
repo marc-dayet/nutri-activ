@@ -4,7 +4,7 @@
 .title,
 .paragraph {
   @include font(Museo, 500);
-  font-size: 2.25rem;
+  font-size: 2rem;
   text-align: center;
 
   @include media(lg) {
@@ -26,7 +26,7 @@
 }
 
 .paragraph {
-  margin: 2.5rem 0;
+  margin: 2rem 0;
 
   @include media(lg) {
     margin: 2rem 0;

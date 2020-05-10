@@ -10,7 +10,11 @@ import cs from "./page-2.module.scss"
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Présentation de la formation distancielle Cap Bien-être</Title>
+      <Title>
+        Présentation de la formation
+        <br />
+        distancielle Cap Bien-être
+      </Title>
       <Subtitle>Qu’est ce que le distanciel va vous apporter ?</Subtitle>
       <div className={cs.grid}>
         <img className={cs.image} src={image1} alt="" />

@@ -1,0 +1,28 @@
+@import "./theme";
+@import "./theme/media";
+
+@mixin heading {
+  margin: 1.5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.animation {
+  align-content: center;
+  display: grid;
+  height: 25rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 30rem;
+  width: 100%;
+
+  canvas {
+    width: 100%;
+  }
+
+  @include media(lg) {
+    font-size: 4rem;
+    height: 20rem;
+    max-width: 25rem;
+  }
+}

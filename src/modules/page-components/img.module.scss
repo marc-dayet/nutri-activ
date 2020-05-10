@@ -31,8 +31,16 @@
 
 .img[data-mode="fullscreen"] {
   margin-top: 1.5rem;
-  max-height: 20rem;
+  max-height: 27rem;
   max-width: 64rem;
+
+  @include media(lg) {
+    max-height: 25rem;
+  }
+
+  @include media(md) {
+    max-height: 20rem;
+  }
 
   @include media(xs) {
     max-height: inherit;

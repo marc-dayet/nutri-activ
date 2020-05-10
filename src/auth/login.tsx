@@ -1,8 +1,10 @@
 import React, {FC, useState} from "react"
 
+import Animation from "../animation"
 import {encodeStep, initialStep} from "../modules/context"
 import {auth$} from "./context"
 import firebase from "./firebase"
+import "./login-anim"
 
 import cs from "./login.module.scss"
 
@@ -36,41 +38,44 @@ const Login: FC = () => {
   }
 
   return (
-    <div className={cs.container}>
-      <div className={cs.forms}>
-        <form className={cs.form} onSubmit={checkEmailAvailability}>
-          <input
-            className={cs.input}
-            autoFocus
-            type="text"
-            placeholder="Mon email"
-            value={email}
-            onChange={evt => setEmail(evt.target.value)}
-          />
-          <button className={cs.submit} type="submit">
-            OK
-          </button>
-        </form>
-        {isNameFormVisible && (
-          <>
-            <br />
-            <form className={cs.form} onSubmit={createAccount}>
-              <input
-                className={cs.input}
-                autoFocus
-                type="text"
-                placeholder="Mon nom"
-                value={name}
-                onChange={evt => setName(evt.target.value)}
-              />
-              <button className={cs.submit} type="submit">
-                OK
-              </button>
-            </form>
-          </>
-        )}
+    <>
+      <Animation name="home1" composition="734EB31CE8A9084FB0FF77AFEBD5E96A" />
+      <div className={cs.container}>
+        <div className={cs.forms}>
+          <form className={cs.form} onSubmit={checkEmailAvailability}>
+            <input
+              className={cs.input}
+              autoFocus
+              type="text"
+              placeholder="Mon email"
+              value={email}
+              onChange={evt => setEmail(evt.target.value)}
+            />
+            <button className={cs.submit} type="submit">
+              OK
+            </button>
+          </form>
+          {isNameFormVisible && (
+            <>
+              <br />
+              <form className={cs.form} onSubmit={createAccount}>
+                <input
+                  className={cs.input}
+                  autoFocus
+                  type="text"
+                  placeholder="Mon nom"
+                  value={name}
+                  onChange={evt => setName(evt.target.value)}
+                />
+                <button className={cs.submit} type="submit">
+                  OK
+                </button>
+              </form>
+            </>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
