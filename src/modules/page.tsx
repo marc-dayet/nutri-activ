@@ -213,6 +213,18 @@ const PageContainer: FC<PageContainerProps> = props => {
               </div>
             </footer>
           </div>
+          <div className={cs.quizChapters}>
+            {range(1, nbChapters + 1).map(chapter => (
+              <ChapterButton
+                key={chapter}
+                isActive={chapter === step.chapter}
+                onClick={() => setChapter(chapter)}
+                disabled={step.module >= lastStep.module && chapter > lastStep.chapter}
+              >
+                {chapter}
+              </ChapterButton>
+            ))}
+          </div>
         </div>
       )
 
