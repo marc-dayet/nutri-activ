@@ -8,18 +8,16 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Subtitle showBook>Le bien-être</Subtitle>
+      <Subtitle showBook>Le stress</Subtitle>
       <Grid>
         <Img src={img} mode="avatar-lg" />
-        <div>
-          <Paragraph>
-            Etat agréable, de durée variable, procuré par la satisfaction des besoins du corps et
-            par la tranquillité de l’esprit. Selon l’Organisation Mondiale de la Santé, pour être en
-            parfaite santé, il faut pouvoir ressentir du bien-être.
-          </Paragraph>
-          <br />
-          <Paragraph>Le bien-être est partie prenante de la santé.</Paragraph>
-        </div>
+        <Paragraph>
+          Il est la réponse naturelle de notre corps à une situation qui nous agresse ou qui nous
+          met au défi. Il entraîne des sensations souvent désagréables, voire douloureuses sur le
+          plan physique et psychologique. Il existe différents types de stress selon son degré de
+          gravité, d’intensité (drame, tracas), sa fréquence (aigu ou chronique). Le stress n’est
+          cependant pas toujours négatif.
+        </Paragraph>
       </Grid>
     </PageContainer>
   )

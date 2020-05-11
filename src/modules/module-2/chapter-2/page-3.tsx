@@ -8,19 +8,22 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Subtitle showBook>La qualité de vie</Subtitle>
+      <Subtitle showBook>Les principales sources de stress</Subtitle>
       <Grid>
         <Img src={img} mode="avatar-lg" />
         <div>
           <Paragraph>
-            Large champ conceptuel englobant la santé physique de la personne, son état
-            psychologique, son niveau d’indépendance, ses relations sociales, ses croyances
-            personnelles et sa relation avec son environnement. Etre en bonne santé et vivre
-            longtemps ne suffit pas ; encore faut-il vivre « bien ».
+            Certaines situations peuvent être des freins à la qualité de vie, influencer
+            négativement un ou plusieurs piliers de la qualité de vie : des problèmes de voisinage
+            impactent sur mon cadre de vie, la perte d’un proche impacte sur mes relations sociales…
+            <br />
+            Les seniors sont soumis aux tracas de la vie quotidienne mais certaines sources de
+            stress sont spécifiques à l’avancée en âge : diminution de la force physique, perte de
+            contrôle sur sa vie…
           </Paragraph>
           <br />
           <Paragraph>
-            Améliorer la qualité de vie est un des bénéfices attendus de la promotion de la santé.
+            Le stress peut agir sur un ou plusieurs piliers de la qualité de la vie
           </Paragraph>
         </div>
       </Grid>

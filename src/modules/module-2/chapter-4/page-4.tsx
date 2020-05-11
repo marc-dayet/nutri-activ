@@ -9,9 +9,9 @@ const Page: FC = () => {
       layout="quiz"
       title="Affirmation n°4"
       img={img}
-      statment="Les émotions agréables peuvent se développer et les émotions désagréables peuvent se réguler."
-      isTrue
-      answer="VRAI : Au fil d'un travail personnel, on peut développer ses émotions positives et apprendre à mieux gérer les émotions désagréables. Nous verrons dans les prochaines étapes les techniques les plus efficaces."
+      statment="En cas de stress, Il faut éviter les réactions centrées sur les émotions, l’évitement."
+      isTrue={false}
+      answer="FAUX : Se centrer sur les émotions et l’évitement ne permettent pas de régler la situation mais peut être utile provisoirement quand il n’y a pas de solution."
     />
   )
 }

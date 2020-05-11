@@ -4,15 +4,42 @@
 .paragraph {
   @include font(Museo, 500);
   font-size: 1.4rem;
-  line-height: 2rem;
-  text-align: center;
+  line-height: 1.75rem;
 
   strong {
     @include font(Museo, 700);
+  }
+
+  h3 {
+    @include font(AmaticSC, bold);
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+
+    @include media(lg) {
+      font-size: 2rem;
+      line-height: 1.9rem;
+    }
+
+    @include media(lg) {
+      font-size: 1.5rem;
+      line-height: 1.4rem;
+    }
   }
 
   @include media(lg) {
     font-size: 1rem;
     line-height: 1.25rem;
   }
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.padder {
+  margin-bottom: 1rem;
 }

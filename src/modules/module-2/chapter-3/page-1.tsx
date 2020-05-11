@@ -9,18 +9,17 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>3. Ce que doit transmettre l’animateur au groupe durant l’étape</Title>
-      <Grid direction="vertical">
-        <Img src={img1} mode="avatar-md" />
+      <Grid>
+        <Img src={img1} mode="avatar-lg" />
         <Paragraph>
-          La santé est un des piliers de la qualité de vie, aux côtés de la sécurité, des relations
-          affectives et des ressources personnelles. <br />
-          Développer ses ressources personnelles, c’est améliorer sa santé.
+          Le stress chronique est impliqué dans de nombreuses pathologies. On peut apprendre à le
+          repérer, l’accepter, le comprendre, le prévenir
         </Paragraph>
-        <Img src={img2} mode="avatar-md" />
+        <Img src={img2} mode="avatar-lg" />
         <Paragraph>
-          Les émotions peuvent avoir des effets positifs ou négatifs sur la santé.
-          <br />
-          <strong>On peut apprendre à gérer ses émotions.</strong>
+          On peut apprendre à gérer son stress. <br />
+          L’analyse et l’anticipation, le retour au calme et la recherche de soutien sont des
+          techniques efficaces, à la portée de chacun
         </Paragraph>
       </Grid>
     </PageContainer>

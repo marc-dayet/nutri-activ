@@ -9,9 +9,9 @@ const Page: FC = () => {
       layout="quiz"
       title="Affirmation n°3"
       img={img}
-      statment="Les émotions sont toujours agréables ou désagréables."
-      isTrue={false}
-      answer="FAUX : Certaines émotions sont ambigües et peuvent être les deux à la fois. Recevoir un compliment peut vous rendre fier mais vous pouvez ressentir une certaine gêne également."
+      statment="Le stress peut être responsable du mal de dos."
+      isTrue
+      answer="VRAI : Il existe une liste importante de maux pouvant être causés ou renforcés par le stress en particulier en cas de stress chronique : insomnies, eczéma, douleurs musculaires…"
     />
   )
 }

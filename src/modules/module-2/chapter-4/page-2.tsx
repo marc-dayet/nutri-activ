@@ -9,9 +9,9 @@ const Page: FC = () => {
       layout="quiz"
       title="Affirmation n°2"
       img={img}
-      statment="Pour maintenir une bonne qualité de vie, il vaut mieux s’appuyer sur les 4 piliers que sont la santé et l’autonomie, la sécurité et le cadre de vie, les relations sociales, les ressources financières."
-      isTrue={false}
-      answer="FAUX : Les ressources financières font partie du pilier de la sécurité et du cadre de vie. Le pilier manquant est celui des ressources personnelles."
+      statment="Le stress est un mécanisme naturel."
+      isTrue
+      answer="VRAI : Le stress est une réponse d’adaptation de notre organisme face aux évènements extérieurs."
     />
   )
 }

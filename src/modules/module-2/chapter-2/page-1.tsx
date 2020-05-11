@@ -2,27 +2,29 @@ import React, {FC} from "react"
 
 import PageContainer from "../../page"
 import {Title, Paragraph, Grid, Img} from "../../page-components"
-import img1 from "./page-1-1.png"
-import img2 from "./page-1-2.png"
-
-import cs from "./page-1.module.scss"
+import img from "./page-1.png"
 
 const Page: FC = () => {
   return (
     <PageContainer>
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Grid className={cs.grid}>
-        <Img src={img1} mode="avatar-lg" />
-        <Paragraph className={cs.gridItemContentLeft}>
-          <strong>Les liens entre</strong>
+      <Grid>
+        <Img src={img} mode="avatar-lg" />
+        <Paragraph>
+          La définition du stress et les différents types de stress
           <br />
-          le bien-être, la qualité de vie, les émotions et la santé
-        </Paragraph>
-        <Img src={img2} mode="avatar-lg" />
-        <Paragraph className={cs.gridItemContentRight}>
-          <strong>Les liens entre compétences psychosociales et ressources personnelles :</strong>
+          Les principales sources de stress
           <br />
-          savoir les identifier et prendre conscience de leur importance dans le Bien Vieillir
+          Les mécanismes du stress
+          <br />
+          Les effets du stress sur la santé et plus particulièrement les effets du stress chronique
+          <br />
+          Les émotions associées au stress
+          <br />
+          Les façons de se comporter face aux situations stressantes
+          <br />
+          Comment gérer son stress et revenir au calme
+          <br />
         </Paragraph>
       </Grid>
     </PageContainer>
