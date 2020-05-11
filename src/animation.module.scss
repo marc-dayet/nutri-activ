@@ -17,11 +17,23 @@
   width: 100%;
 
   canvas {
+    grid-column: 1;
+    grid-row: 1;
     width: 100%;
   }
 
+  &.fullscreen {
+    align-content: start;
+    height: 100vh;
+    max-width: inherit;
+    overflow: hidden;
+
+    canvas {
+      width: auto;
+    }
+  }
+
   @include media(lg) {
-    font-size: 4rem;
     height: 20rem;
     max-width: 25rem;
   }

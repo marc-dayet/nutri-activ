@@ -4,7 +4,6 @@ import PageContainer from "../page"
 import {Title, Paragraph, Img} from "../page-components"
 
 import cs from "./conclusion.module.scss"
-console.log(cs)
 
 type PageConclusionProps = {
   title: string

@@ -41,7 +41,7 @@
               var targetPosition = Math.abs(
                 ((targetFrame - sound.startFrame) / lib.properties.fps) * 1000,
               )
-              var instance = cjs.playSound(sound.id)
+              var instance = this.playSound(sound.id)
               var remainingLoop = 0
               if (sound.offset) {
                 targetPosition = targetPosition + sound.offset

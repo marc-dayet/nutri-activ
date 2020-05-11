@@ -1,11 +1,13 @@
 import React, {FC, useEffect, useRef} from "react"
 import {useToggle} from "react-captain"
+import cn from "classnames"
 
 import cs from "./animation.module.scss"
 
 type AnimationProps = {
   name: string
   composition: string
+  fullscreen?: boolean
 }
 
 const Animation: FC<AnimationProps> = props => {
@@ -68,13 +70,23 @@ const Animation: FC<AnimationProps> = props => {
         const containerR = containerW / containerH
 
         if (animR >= containerR) {
-          canvas.current.width = containerW
-          canvas.current.height = containerW / animR
+          if (props.fullscreen) {
+            canvas.current.width = containerH * animR
+            canvas.current.height = containerH
+          } else {
+            canvas.current.width = containerW
+            canvas.current.height = containerW / animR
+          }
           stage.current.scaleX = canvas.current.height / animH
           stage.current.scaleY = canvas.current.height / animH
         } else {
-          canvas.current.height = containerH
-          canvas.current.width = containerH / animR
+          if (props.fullscreen) {
+            canvas.current.width = containerW
+            canvas.current.height = containerW * animR
+          } else {
+            canvas.current.height = containerH
+            canvas.current.width = containerH / animR
+          }
           stage.current.scaleX = canvas.current.width / animW
           stage.current.scaleY = canvas.current.width / animW
         }
@@ -95,11 +107,12 @@ const Animation: FC<AnimationProps> = props => {
         window.createjs.Ticker.reset()
       }
     }
-  }, [isReady])
+  }, [isReady, props.fullscreen])
 
   return (
-    <div ref={container} className={cs.animation}>
+    <div ref={container} className={cn(cs.animation, {[cs.fullscreen]: props.fullscreen})}>
       <canvas ref={canvas} />
+      {props.children}
     </div>
   )
 }

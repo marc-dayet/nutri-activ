@@ -1,37 +1,98 @@
 @import "../theme";
+@import "../theme/media";
 
 .container {
-  align-items: center;
-  background: url(./login.gif);
-  background-position: top center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 100px;
-  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  margin-top: 8%;
+  z-index: 1;
+
+  @include media(md) {
+    max-width: 30rem;
+  }
+
+  @include media(sm) {
+    max-width: 25rem;
+  }
+
+  @include media(xs) {
+    max-width: 15rem;
+  }
 }
 
-.forms {
-  position: absolute;
-  right: 15px;
-  top: 15px;
+.label {
+  @include font(Museo, 700);
+  color: $white;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .form {
   display: grid;
+  grid-gap: 0.5rem;
   grid-template-columns: auto 50px;
+
+  @include media(xs) {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .input {
-  padding: 6px 12px;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0.15rem 0.15rem 0 rgba($black, 0.2);
+  font-size: 1rem;
+  padding: 1rem;
+  transition-duration: 150ms;
+  transition-property: opacity;
+
+  &::placeholder {
+    @include font(Museo, 700);
+    color: $grayC4;
+    font-size: 1rem;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 .submit {
-  background: $black;
+  @include font(AmaticSC, bold);
+  background: $green1E;
+  border-radius: 0.5rem;
+  box-shadow: 0.15rem 0.15rem 0 rgba($black, 0.2);
   color: $white;
   display: flex;
+  font-size: 2.5rem;
   justify-content: center;
-  padding: 6px 12px;
+  line-height: 1rem;
+  padding: 1.5rem 2rem;
   text-align: center;
+  transition-duration: 150ms;
+  transition-property: background, opacity;
+
+  &:not(:disabled):hover {
+    background: darken($green1E, 5%);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @include media(xs) {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
+.error {
+  @include font(Museo, 700);
+  background: $redF7;
+  border-radius: 0.5rem;
+  color: $white;
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
 }
