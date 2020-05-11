@@ -28,7 +28,7 @@ type PageContainerProps =
     }
 
 const PageContainer: FC<PageContainerProps> = props => {
-  const [step] = useBehaviorSubject(currStep$)
+  const [step] = useBehaviorSubject(currStep$, () => window.scrollTo({top: 0}))
   const [lastStep] = useBehaviorSubject(lastStep$)
   const nbChapters = Object.values(steps[step.module]).length
   const nbPages = countPagesTill()
@@ -116,7 +116,7 @@ const PageContainer: FC<PageContainerProps> = props => {
             Page {currPage}/{nbPages}
           </div>
           <div className={cs.content}>{props.children}</div>
-          <footer className={cs.navigation}>
+          <footer className={cs.pageNavigation}>
             <div className={cs.pages}>
               <PageButton onClick={prevPage}>Précédent</PageButton>
               <PageButton onClick={nextPage}>Suivant</PageButton>
@@ -192,18 +192,26 @@ const PageContainer: FC<PageContainerProps> = props => {
                 Suivant
               </PageButton>
             </div>
-          </div>
-          <div className={cs.quizChapters}>
-            {range(1, nbChapters + 1).map(chapter => (
-              <ChapterButton
-                key={chapter}
-                isActive={chapter === step.chapter}
-                onClick={() => setChapter(chapter)}
-                disabled={step.module >= lastStep.module && chapter > lastStep.chapter}
-              >
-                {chapter}
-              </ChapterButton>
-            ))}
+            <footer className={cs.quizNavigation}>
+              <div className={cs.pages}>
+                <PageButton onClick={prevPage}>Précédent</PageButton>
+                <PageButton onClick={quizNext} disabled={isQuizTouched === undefined}>
+                  Suivant
+                </PageButton>
+              </div>
+              <div className={cs.chapters}>
+                {range(1, nbChapters + 1).map(chapter => (
+                  <ChapterButton
+                    key={chapter}
+                    isActive={chapter === step.chapter}
+                    onClick={() => setChapter(chapter)}
+                    disabled={step.module >= lastStep.module && chapter > lastStep.chapter}
+                  >
+                    {chapter}
+                  </ChapterButton>
+                ))}
+              </div>
+            </footer>
           </div>
         </div>
       )

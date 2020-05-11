@@ -7,9 +7,8 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <BigTitle>
-        Présentation de la formation
-        <br />
-        distancielle Cap Bien-être
+        Présentation de la formation distancielle <br />
+        Cap Bien-être
       </BigTitle>
     </PageContainer>
   )

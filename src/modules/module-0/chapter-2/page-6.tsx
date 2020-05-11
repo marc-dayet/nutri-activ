@@ -11,7 +11,8 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Formation distancielle</Title>
       <Paragraph>
-        <Img src={img} mode="avatar-lg" />
+        <Img className={cs.img} src={img} mode="avatar-lg" />
+        <br />
       </Paragraph>
       <Paragraph className={cs.paragraph}>
         <strong>2. Le livret ressources pour approfondir vos connaissances</strong> tout au long de

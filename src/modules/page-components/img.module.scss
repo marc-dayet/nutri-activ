@@ -5,12 +5,12 @@
   height: 7.5rem;
 
   @include media(lg) {
-    height: 4.5rem;
+    height: 5rem;
   }
 
   @include media(xs) {
     height: inherit;
-    max-width: 5rem;
+    max-width: 6rem;
     width: 100%;
   }
 }
@@ -30,21 +30,5 @@
 }
 
 .img[data-mode="fullscreen"] {
-  margin-top: 1.5rem;
-  max-height: 27rem;
-  max-width: 64rem;
-
-  @include media(lg) {
-    max-height: 25rem;
-  }
-
-  @include media(md) {
-    max-height: 20rem;
-  }
-
-  @include media(xs) {
-    max-height: inherit;
-    max-width: inherit;
-    width: 100%;
-  }
+  width: 100%;
 }

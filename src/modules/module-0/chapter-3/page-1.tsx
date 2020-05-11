@@ -7,7 +7,8 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <BigTitle>
-        Les fondements et les contenus clés sur lesquels repose le parcours Cap Bien-être
+        Les fondements et les contenus clés sur lesquels repose le parcours <br />
+        Cap Bien-être
       </BigTitle>
     </PageContainer>
   )

@@ -1,12 +1,7 @@
 @import "../theme";
 @import "../theme/media";
 
-.pageContainer {
-  align-items: center;
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr) 9rem;
-  height: 100%;
-  margin: 0 auto;
+@mixin container {
   max-width: 75rem;
 
   @include media(lg) {
@@ -15,7 +10,18 @@
 
   @include media(md) {
     max-width: 40rem;
-    padding: 1rem;
+  }
+}
+
+.pageContainer {
+  @include container;
+  align-items: center;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 1rem 7.5rem 1rem;
+
+  @include media(sm) {
+    padding-bottom: 1rem;
   }
 }
 
@@ -35,24 +41,30 @@
 
 @mixin pagination {
   @include font(Museo, 300);
-  font-size: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 3rem;
   text-align: center;
 
+  @include media(lg) {
+    margin-bottom: 2rem;
+  }
+
   @include media(md) {
-    font-size: 1rem;
-    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  @include media(xs) {
+    font-size: 0.75rem;
   }
 }
 
 .pagePagination {
   @include pagination;
-  margin: 1rem;
 }
 
 .quizPagination {
   @include pagination;
   color: $green01;
-  margin-top: 1rem;
 }
 
 .quizLeft {
@@ -148,6 +160,14 @@
 
     @include media(lg) {
       height: 20rem;
+    }
+
+    @include media(sm) {
+      height: 15rem;
+    }
+
+    @include media(xs) {
+      height: 100%;
     }
   }
 }
@@ -300,8 +320,39 @@
   grid-row: 2;
 }
 
-.navigation {
+@mixin navigation {
+  @include container;
   align-self: end;
+  bottom: 1rem;
+  left: 50%;
+  max-width: 75rem;
+  position: fixed;
+  transform: translateX(-50%);
+  width: 100%;
+
+  @include media(sm) {
+    bottom: inherit;
+    left: inherit;
+    margin-top: 1rem;
+    position: relative;
+    transform: none;
+  }
+}
+
+.pageNavigation {
+  @include navigation;
+}
+
+.quizNavigation {
+  @include navigation;
+
+  .pages {
+    display: none;
+
+    @include media(md) {
+      display: grid;
+    }
+  }
 }
 
 .pages {
@@ -319,7 +370,8 @@
   }
 
   @include media(sm) {
-    padding: 0;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
   }
 }
 
@@ -330,6 +382,10 @@
   margin: 0 auto 2rem auto;
   max-width: 37.5rem;
   padding: 0;
+
+  @include media(md) {
+    display: none;
+  }
 }
 
 .chapters {
@@ -338,7 +394,6 @@
   grid-auto-flow: column;
   grid-column-gap: 3rem;
   justify-content: center;
-  margin-bottom: 1rem;
 
   @include media(md) {
     grid-column-gap: 2rem;

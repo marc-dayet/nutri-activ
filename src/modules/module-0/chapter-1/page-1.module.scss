@@ -5,14 +5,21 @@
 .paragraph {
   @include font(Museo, 500);
   font-size: 2rem;
+  margin: 0 0 2rem 0;
   text-align: center;
 
   @include media(lg) {
     font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @include media(md) {
+    font-size: 1.5rem;
   }
 
   @include media(sm) {
     font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
 
   @include media(xs) {
@@ -21,24 +28,7 @@
 }
 
 .title {
-  margin: 0;
   text-transform: uppercase;
-}
-
-.paragraph {
-  margin: 2rem 0;
-
-  @include media(lg) {
-    margin: 2rem 0;
-  }
-
-  @include media(sm) {
-    margin: 1.5rem 0;
-  }
-
-  @include media(xs) {
-    margin: 1rem 0;
-  }
 }
 
 .logoContainer {

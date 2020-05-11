@@ -1,14 +1,11 @@
 @import "../../../theme";
 @import "../../../theme/media";
 
-.subtitle {
-  margin: 1.5rem 0 2rem 0;
-
-  @include media(lg) {
-    margin: 1rem 0 1rem 0;
-  }
-}
-
 .paragraph {
   font-weight: 700;
+  margin-bottom: 2rem;
+
+  @include media(md) {
+    margin-bottom: 1rem;
+  }
 }
