@@ -34,7 +34,7 @@
     }
     this.startStreamSoundsForTargetedFrame = function(targetFrame) {
       for (var index = 0; index < this.streamSoundSymbolsList.length; index++) {
-        if (index <= targetFrame && this.streamSoundSymbolsList[index] != undefined) {
+        if (index <= targetFrame && this.streamSoundSymbolsList[index] !== undefined) {
           for (var i = 0; i < this.streamSoundSymbolsList[index].length; i++) {
             var sound = this.streamSoundSymbolsList[index][i]
             if (sound.endFrame > targetFrame) {
@@ -48,7 +48,7 @@
               } else if (sound.loop > 1) {
                 var loop = targetPosition / instance.duration
                 remainingLoop = Math.floor(sound.loop - loop)
-                if (targetPosition == 0) {
+                if (targetPosition === 0) {
                   remainingLoop -= 1
                 }
                 targetPosition = targetPosition % instance.duration
@@ -94,9 +94,9 @@
         for (var i = 0; i < this.soundStreamDuration.size; i++) {
           var key = keys.next().value
           var value = this.soundStreamDuration.get(key)
-          if (value.end == currentFrame) {
+          if (value.end === currentFrame) {
             key.instance.stop()
-            if (this.currentSoundStreamInMovieclip == key) {
+            if (this.currentSoundStreamInMovieclip === key) {
               this.currentSoundStreamInMovieclip = undefined
             }
             this.soundStreamDuration.delete(key)
@@ -106,7 +106,7 @@
     }
 
     this.computeCurrentSoundStreamInstance = function(currentFrame) {
-      if (this.currentSoundStreamInMovieclip == undefined) {
+      if (this.currentSoundStreamInMovieclip === undefined) {
         if (this.soundStreamDuration.size > 0) {
           var keys = this.soundStreamDuration.keys()
           var maxDuration = 0
@@ -133,9 +133,9 @@
     this.syncStreamSounds = function() {
       this.stopSoundStreams(this.currentFrame)
       this.computeCurrentSoundStreamInstance(this.currentFrame)
-      if (this.currentSoundStreamInMovieclip != undefined) {
+      if (this.currentSoundStreamInMovieclip !== undefined) {
         var soundInstance = this.currentSoundStreamInMovieclip.instance
-        if (soundInstance.position != 0) {
+        if (soundInstance.position !== 0) {
           var soundValue = this.soundStreamDuration.get(this.currentSoundStreamInMovieclip)
           var soundPosition = soundValue.offset
             ? soundInstance.position - soundValue.offset
@@ -10327,7 +10327,7 @@
       if (this.isSingleFrame) {
         return
       }
-      if (this.totalFrames == 1) {
+      if (this.totalFrames === 1) {
         this.isSingleFrame = true
       }
       this.clearAllSoundStreams()

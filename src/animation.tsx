@@ -50,7 +50,10 @@ const Animation: FC<AnimationProps> = props => {
         window.AdobeAn.compositionLoaded(lib.current.properties.id)
         stage.current.addChild(exportRoot)
         window.createjs.Ticker.framerate = lib.current.properties.fps
-        window.createjs.Ticker.addEventListener("tick", stage.current)
+
+        if (!matchMedia("screen and (max-width: 31em)").matches) {
+          window.createjs.Ticker.addEventListener("tick", stage.current)
+        }
 
         setReady(true)
       })
