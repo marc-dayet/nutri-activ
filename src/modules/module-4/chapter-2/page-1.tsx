@@ -1,30 +1,21 @@
 import React, {FC} from "react"
 
 import PageContainer from "../../page"
-import {Title, Paragraph, Grid, Img} from "../../page-components"
-import img1 from "./page-1-1.png"
-import img2 from "./page-1-2.png"
-
-import cs from "./page-1.module.scss"
+import {Title, Paragraph, Img} from "../../page-components"
+import img from "./page-1.png"
 
 const Page: FC = () => {
   return (
     <PageContainer>
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Grid className={cs.grid}>
-        <Img src={img1} mode="avatar-lg" />
-        <Paragraph className={cs.gridItemContentLeft}>
-          <strong>Les liens entre</strong>
-          <br />
-          le bien-être, la qualité de vie, les émotions et la santé
-        </Paragraph>
-        <Img src={img2} mode="avatar-lg" />
-        <Paragraph className={cs.gridItemContentRight}>
-          <strong>Les liens entre compétences psychosociales et ressources personnelles :</strong>
-          <br />
-          savoir les identifier et prendre conscience de leur importance dans le Bien Vieillir
-        </Paragraph>
-      </Grid>
+      <Paragraph padder>
+        <Img src={img} mode="avatar-lg" />
+      </Paragraph>
+      <Paragraph>
+        En quoi bien vivre avec les autres est important pour la santé ?<br />
+        Comment développer des relations positives avec les autres ?<br />
+        Comment maintenir le cap vers le bien-être ?<br />
+      </Paragraph>
     </PageContainer>
   )
 }

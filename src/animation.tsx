@@ -23,24 +23,16 @@ const Animation: FC<AnimationProps> = props => {
       const comp = AdobeAn.getComposition(props.composition)
       lib.current = comp.getLibrary()
       createjs.MotionGuidePlugin.install()
-      const loader = new createjs.LoadQueue(false)
 
-      loader.addEventListener("fileload", (evt: any) => {
-        let images = comp.getImages()
-        if (evt && evt.item.type === "image") {
-          images[evt.item.id] = evt.result
-        }
-      })
-
-      loader.addEventListener("complete", (evt: any) => {
+      const buildStage = (evt?: any) => {
         lib.current = comp.getLibrary()
         const ss = comp.getSpriteSheet()
-        const queue = evt.target
+        const queue = evt ? evt.target : null
         const ssMetadata = lib.current.ssMetadata
 
         for (let i = 0; i < ssMetadata.length; i++) {
           ss[ssMetadata[i].name] = new createjs.SpriteSheet({
-            images: [queue.getResult(ssMetadata[i].name)],
+            images: queue ? [queue.getResult(ssMetadata[i].name)] : [],
             frames: ssMetadata[i].frames,
           })
         }
@@ -56,9 +48,21 @@ const Animation: FC<AnimationProps> = props => {
         }
 
         setReady(true)
-      })
+      }
 
-      loader.loadManifest(lib.current.properties.manifest)
+      if (lib.current.properties.manifest.length > 0) {
+        const loader = new createjs.LoadQueue(false)
+        loader.addEventListener("fileload", (evt: any) => {
+          let images = comp.getImages()
+          if (evt && evt.item.type === "image") {
+            images[evt.item.id] = evt.result
+          }
+        })
+        loader.addEventListener("complete", buildStage)
+        loader.loadManifest(lib.current.properties.manifest)
+      } else {
+        buildStage()
+      }
     }
   }, [isReady, props.composition, props.name, setReady])
 

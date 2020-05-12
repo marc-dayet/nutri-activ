@@ -10,10 +10,13 @@ import cs from "./preface.module.scss"
 
 type PrefacePageProps = {
   children: string
+  img1: string
+  img2: string
+  img3: string
 }
 
 const PrefacePage: FC<PrefacePageProps> = props => {
-  const {children} = props
+  const {img1, img2, img3, children} = props
 
   return (
     <PageContainer>
