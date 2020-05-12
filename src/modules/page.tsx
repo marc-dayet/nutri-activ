@@ -7,7 +7,7 @@ import {theme$} from "../theme"
 import {Title, Paragraph} from "./page-components"
 import PageButton from "./page-components/button"
 import ChapterButton from "./page-components/chapter-button"
-import {steps, currStep$, lastStep$, saveLastStep} from "./context"
+import {steps, currStep$, lastStep$, saveLastStep, isFirstStep, isLastStep} from "./context"
 import {ReactComponent as Check} from "./page-components/quiz-check.svg"
 import {ReactComponent as AnswerBlock} from "./page-components/quiz-answer.svg"
 import {ReactComponent as OverlayTrue} from "./page-components/quiz-check-true.svg"
@@ -120,8 +120,12 @@ const PageContainer: FC<PageContainerProps> = props => {
           <div className={cs.content}>{props.children}</div>
           <footer className={cs.pageNavigation}>
             <div className={cs.pages}>
-              <PageButton onClick={prevPage}>Précédent</PageButton>
-              <PageButton onClick={nextPage}>Suivant</PageButton>
+              <PageButton onClick={prevPage} disabled={isFirstStep(step)}>
+                Précédent
+              </PageButton>
+              <PageButton onClick={nextPage} disabled={isLastStep(step)}>
+                Suivant
+              </PageButton>
             </div>
             <div className={cs.chapters}>
               {range(1, nbChapters + 1).map(chapter => (

@@ -85,3 +85,11 @@ export async function saveLastStep(module: number, chapter: number, page: number
     }
   }
 }
+
+export function isFirstStep(step: Step) {
+  return step.module === 0 && step.chapter === 1 && step.page === 1
+}
+
+export function isLastStep(step: Step) {
+  return step.module === 4 && step.chapter === 5 && step.page === 3
+}

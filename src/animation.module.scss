@@ -33,7 +33,7 @@
     }
   }
 
-  @include media(lg) {
+  @include media(sm) {
     height: 20rem;
     max-width: 25rem;
   }

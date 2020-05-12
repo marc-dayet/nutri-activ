@@ -2,9 +2,6 @@ import React, {FC} from "react"
 
 import PageContainer from "../page"
 import {Title, Paragraph} from "../page-components"
-import img1 from "./preface-1.png"
-import img2 from "./preface-2.png"
-import img3 from "./preface-3.png"
 
 import cs from "./preface.module.scss"
 

@@ -1,7 +1,7 @@
 import {from, BehaviorSubject} from "rxjs"
 import {map, mergeMap, distinctUntilChanged} from "rxjs/operators"
 
-import {currStep$} from "../modules/context"
+import {currStep$, isLastStep} from "../modules/context"
 
 type Theme = {
   [key: string]: string
@@ -11,7 +11,7 @@ export const theme$ = new BehaviorSubject<Theme>({})
 
 currStep$
   .pipe(
-    map(step => step.module),
+    map(step => (isLastStep(step) ? 0 : step.module)),
     distinctUntilChanged(),
     mergeMap(module => from(importTheme(module))),
     map(module => module.default),
