@@ -1,0 +1,20 @@
+@import "../../../theme";
+@import "../../../theme/media";
+
+.book {
+  margin-top: -1rem;
+  transform: translate(0.5rem, 50%);
+  width: 3rem;
+
+  @include media(lg) {
+    width: 1.5rem;
+  }
+}
+
+.list {
+  margin-bottom: 2rem;
+}
+
+.listItem {
+  margin: 1rem;
+}

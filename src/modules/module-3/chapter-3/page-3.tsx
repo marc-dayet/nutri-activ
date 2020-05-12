@@ -9,9 +9,9 @@ const Page: FC = () => {
       layout="quiz"
       title="Affirmation n°3"
       img={img}
-      statment="Les émotions sont toujours agréables ou désagréables."
+      statment="Dopamine, ocytocine et endorphine sont les hormones sécrétées lors des émotions positives."
       isTrue={false}
-      answer="FAUX : Certaines émotions sont ambigües et peuvent être les deux à la fois. Recevoir un compliment peut vous rendre fier mais vous pouvez ressentir une certaine gêne également."
+      answer="FAUX : La dopamine, l’ocytocine et l’endorphine sont bien des hormones sécrétées lors des émotions positives mais il manque la sérotonine !"
     />
   )
 }

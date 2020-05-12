@@ -14,12 +14,7 @@ const Page: FC = () => {
     return null
   }
 
-  return (
-    <Intro
-      subtitle="Apprendre à gérer son stress et ses émotions"
-      animation="D5BF51ADC3CB5E4BAF06476BB5B4681C"
-    />
-  )
+  return <Intro subtitle="Bien vivre avec soi" animation="D5BF51ADC3CB5E4BAF06476BB5B4681D" />
 }
 
 export default Page

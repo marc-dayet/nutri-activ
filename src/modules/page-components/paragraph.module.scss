@@ -5,6 +5,7 @@
   @include font(Museo, 500);
   font-size: 1.4rem;
   line-height: 1.75rem;
+  position: relative;
 
   strong {
     @include font(Museo, 700);
@@ -42,4 +43,16 @@
 
 .padder {
   margin-bottom: 1rem;
+}
+
+.book {
+  left: calc(100% + 0.5rem);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+
+  @include media(lg) {
+    width: 1.5rem;
+  }
 }
