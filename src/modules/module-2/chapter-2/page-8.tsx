@@ -12,17 +12,17 @@ const Page: FC = () => {
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Subtitle showBook>Les façons de se comporter face au stress </Subtitle>
       <Grid padder>
-        <Img src={img1} mode="avatar-lg" />
+        <Img src={img1} mode="avatar-md" />
         <Paragraph>
           <strong>Réactions centrées sur le problème</strong>, qui visent la recherche de solutions
           pour transformer la situation.
         </Paragraph>
-        <Img src={img2} mode="avatar-lg" />
+        <Img src={img2} mode="avatar-md" />
         <Paragraph>
           <strong>Réactions centrées sur l’émotion</strong>, qui permettent l’expression du
           ressenti, et parfois l’évitement provisoire de la situation.
         </Paragraph>
-        <Img src={img3} mode="avatar-lg" />
+        <Img src={img3} mode="avatar-md" />
         <Paragraph>
           <strong>Recherche de soutien</strong>, que ce soit pour tenter de régler le problème ou
           trouver du réconfort.

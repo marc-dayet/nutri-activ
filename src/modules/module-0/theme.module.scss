@@ -1,16 +1,17 @@
 @import "../../theme";
 
 $primary: $teal;
+$secondary: $green2B;
 
 .main {
   background: $primary;
   color: $white;
 }
 
-.pageLoader {
-  background: $primary;
-}
-
 .navItem {
   color: $primary;
+}
+
+.secondary {
+  color: $secondary;
 }

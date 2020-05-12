@@ -19,17 +19,17 @@ const Page: FC = () => {
         permettra de :
       </Subtitle>
       <Grid className={cs.grid}>
-        <Img src={img1} mode="avatar-lg" />
+        <Img src={img1} mode="avatar-md" />
         <Paragraph className={cs.paragraph}>
           Mieux comprendre la philosophie générale du parcours
         </Paragraph>
-        <Img src={img2} mode="avatar-lg" />
+        <Img src={img2} mode="avatar-md" />
         <Paragraph className={cs.paragraph}>
           Comprendre l’aspect pluridisciplinaire de la gestion du stress
         </Paragraph>
-        <Img src={img3} mode="avatar-lg" />
+        <Img src={img3} mode="avatar-md" />
         <Paragraph className={cs.paragraph}>Vous apporter les connaissances nécessaires</Paragraph>
-        <Img src={img4} mode="avatar-lg" />
+        <Img src={img4} mode="avatar-md" />
         <Paragraph className={cs.paragraph}>
           Être à l’aise avec la transmission de connaissances aux participants
         </Paragraph>

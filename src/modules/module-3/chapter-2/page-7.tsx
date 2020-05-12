@@ -11,13 +11,13 @@ const Page: FC = () => {
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Paragraph padder>On peut considérer le vieillissement sous 2 angles :</Paragraph>
       <Grid padder>
-        <Img src={img1} mode="avatar-lg" />
+        <Img src={img1} mode="avatar-md" />
         <Paragraph>
           <strong>Celui de la perte et du déclin</strong>
           <br />
           (fragilité, vulnérabilité)
         </Paragraph>
-        <Img src={img2} mode="avatar-lg" />
+        <Img src={img2} mode="avatar-md" />
         <Paragraph showBook>
           <strong>Celui du développement</strong>
           <br />

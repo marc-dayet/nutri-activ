@@ -14,19 +14,11 @@ const Page: FC = () => {
       </Paragraph>
       <Grid padder>
         <List>
-          <ListItem>Avoir une pensée critique</ListItem>
-          <ListItem>Se connaître soi-même</ListItem>
-          <ListItem>Savoir se faire comprendre</ListItem>
-          <ListItem>Savoir résoudre les problèmes</ListItem>
-          <ListItem>Savoir gérer le stress</ListItem>
-        </List>
-        <br />
-        <List>
-          <ListItem>Avoir une pensée créative</ListItem>
-          <ListItem>Etre bienveillant avec les autres</ListItem>
-          <ListItem>Savoir créer des relations</ListItem>
-          <ListItem>Savoir prendre des décisions</ListItem>
-          <ListItem>Savoir gérer les émotions</ListItem>
+          <ListItem>Avoir une pensée critique / Avoir une pensée créative</ListItem>
+          <ListItem>Se connaître soi-même / Etre bienveillant avec les autres</ListItem>
+          <ListItem>Savoir se faire comprendre / Savoir créer des relations</ListItem>
+          <ListItem>Savoir résoudre les problèmes / Savoir prendre des décisions</ListItem>
+          <ListItem>Savoir gérer le stress / Savoir gérer les émotions</ListItem>
         </List>
         <br />
       </Grid>

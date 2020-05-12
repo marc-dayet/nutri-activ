@@ -6,14 +6,13 @@ import {Title, Paragraph, Img} from "../page-components"
 import cs from "./conclusion.module.scss"
 
 type PageConclusionProps = {
-  title: string
   img: string
 }
 
-const PageConclusion: FC<PageConclusionProps> = ({title, img}) => {
+const PageConclusion: FC<PageConclusionProps> = ({img, children}) => {
   return (
     <PageContainer>
-      <Title>{title}</Title>
+      <Title>{children}</Title>
       <Paragraph>
         <Img src={img} className={cs.img} mode="fullscreen" />
       </Paragraph>

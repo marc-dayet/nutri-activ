@@ -15,7 +15,6 @@
 
 .paragraphAlt {
   @include font(Museo, 700);
-  color: $green2B;
   margin: 3rem 0;
 
   @include media(sm) {

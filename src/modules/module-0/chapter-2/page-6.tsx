@@ -11,7 +11,7 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Formation distancielle</Title>
       <Paragraph>
-        <Img className={cs.img} src={img} mode="avatar-lg" />
+        <Img className={cs.img} src={img} mode="avatar-md" />
         <br />
       </Paragraph>
       <Paragraph className={cs.paragraph}>

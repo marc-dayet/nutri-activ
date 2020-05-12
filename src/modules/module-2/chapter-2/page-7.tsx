@@ -15,15 +15,15 @@ const Page: FC = () => {
         Face à une situation stressante, 3 types d’émotion peuvent être ressenties{" "}
       </Paragraph>
       <Grid padder>
-        <Img src={img1} mode="avatar-lg" />
+        <Img src={img1} mode="avatar-md" />
         <Paragraph>
           <strong>La peur</strong> qui peut déclencher la fuite
         </Paragraph>
-        <Img src={img2} mode="avatar-lg" />
+        <Img src={img2} mode="avatar-md" />
         <Paragraph>
           <strong>La colère</strong> qui peut conduire à la lutte
         </Paragraph>
-        <Img src={img3} mode="avatar-lg" />
+        <Img src={img3} mode="avatar-md" />
         <Paragraph>
           <strong>La tristesse</strong> qui peut se transformer en inhibition
         </Paragraph>

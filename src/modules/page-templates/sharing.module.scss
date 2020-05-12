@@ -27,7 +27,6 @@
 .paragraphAlt {
   @include font(Museo, 700);
   align-items: center;
-  color: $green2B;
   display: grid;
   font-size: 1.5rem;
   grid-column-gap: 0.75rem;
@@ -64,10 +63,6 @@
   display: flex;
   height: 6.8rem;
 
-  path {
-    fill: $green2B;
-  }
-
   @include media(lg) {
     height: 5rem;
   }
@@ -88,15 +83,10 @@
 .paragraphAltBullet {
   margin-right: 15px;
   width: 19px;
-
-  path {
-    fill: $green2B;
-  }
 }
 
 .linkContainer {
   @include font(Museo, 700);
-  color: $green2B;
   font-size: 2rem;
   margin: 1.5rem 0 2rem 0;
   text-align: center;

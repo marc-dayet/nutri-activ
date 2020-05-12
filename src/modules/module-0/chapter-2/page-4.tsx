@@ -1,5 +1,8 @@
 import React, {FC} from "react"
+import {useBehaviorSubject} from "react-captain"
+import cn from "classnames"
 
+import {theme$} from "../../../theme"
 import PageContainer from "../../page"
 import {Title, Paragraph} from "../../page-components"
 import img from "./page-4-1.png"
@@ -7,6 +10,8 @@ import img from "./page-4-1.png"
 import cs from "./page-4.module.scss"
 
 const Page: FC = () => {
+  const [theme] = useBehaviorSubject(theme$)
+
   return (
     <PageContainer>
       <Title>Formation distancielle</Title>
@@ -16,7 +21,7 @@ const Page: FC = () => {
         lesquels vous pourrez vous baser pour animer <br />
         Cap Bien-Être.
       </Paragraph>
-      <Paragraph className={cs.paragraphAlt}>
+      <Paragraph className={cn(cs.paragraphAlt, theme.secondary)}>
         Vous avez à votre disposition 2 outils pour la formation à distance :
       </Paragraph>
       <Paragraph>

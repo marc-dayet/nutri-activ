@@ -4,8 +4,8 @@ import PageConclusion from "../../page-templates/conclusion"
 import img from "./page-2.png"
 
 export default () => (
-  <PageConclusion
-    title="Merci d’avoir suivi ce module préparatoire à la formation des animateurs de Cap Bien-être !"
-    img={img}
-  />
+  <PageConclusion img={img}>
+    Vous avez terminé le module 4 !<br />
+    Rendez-vous à présent à la formation présentielle !
+  </PageConclusion>
 )

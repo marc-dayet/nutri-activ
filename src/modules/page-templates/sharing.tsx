@@ -1,5 +1,8 @@
 import React, {FC} from "react"
+import {useBehaviorSubject} from "react-captain"
+import cn from "classnames"
 
+import {theme$} from "../../theme"
 import PageContainer from "../page"
 import Title from "../page-components/title"
 import List from "../page-components/list"
@@ -9,10 +12,12 @@ import {ReactComponent as IconCurlyBrace} from "./curly-brace.svg"
 import cs from "./sharing.module.scss"
 
 const PageSharing: FC = () => {
+  const [theme] = useBehaviorSubject(theme$)
+
   return (
     <PageContainer>
       <Title>5.Accéder au questionnaire « Retours sur le distanciel »</Title>
-      <div className={cs.paragraphAlt}>
+      <div className={cn(cs.paragraphAlt, theme.secondary)}>
         <div className={cs.paragraphAltHeader}>Pour</div>
         <div className={cs.paragraphAltCurlyBraceContainer}>
           <IconCurlyBrace className={cs.paragraphAltCurlyBrace}></IconCurlyBrace>
@@ -27,7 +32,7 @@ const PageSharing: FC = () => {
       <h2 className={cs.subtitle}>Cliquez sur le lien suivant :</h2>
       <div className={cs.linkContainer}>
         <a
-          className={cs.link}
+          className={cn(cs.link, theme.secondary)}
           href="https://fr.surveymonkey.com/r/M63GHMK"
           target="_blank"
           rel="noopener noreferrer"

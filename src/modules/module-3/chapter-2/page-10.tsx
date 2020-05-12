@@ -37,8 +37,8 @@ const Page: FC = () => {
       </List>
       <Paragraph>
         <strong>
-          Les réactions centrées sur le problème et la recherche de soutien sont plus efficaces, et
-          renforcent la capacité à résister malgré les difficultés.
+          Chaque individu est différent, c’est à chacun de trouver les activités qui lui procurent
+          des émotions positives.
         </strong>
       </Paragraph>
     </PageContainer>

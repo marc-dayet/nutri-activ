@@ -12,21 +12,21 @@ const Page: FC = () => {
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Subtitle showBook>Comment gérer son stress</Subtitle>
       <Grid padder>
-        <Img src={img1} mode="avatar-lg" />
+        <Img src={img1} mode="avatar-md" />
         <Paragraph>
           <strong>Se faire aider, s’entourer</strong>
           <br />
           Demander de l’aide, raconter ce qui nous arrive, dire ce qu’on ressent… permet de diminuer
           le stress.
         </Paragraph>
-        <Img src={img2} mode="avatar-lg" />
+        <Img src={img2} mode="avatar-md" />
         <Paragraph>
           <strong>Revenir au calme</strong>
           <br />
           Pratiquer une activité physique, occuper son esprit à autre chose, se concentrer sur sa
           respiration… permet d’apaiser les tensions.
         </Paragraph>
-        <Img src={img3} mode="avatar-lg" />
+        <Img src={img3} mode="avatar-md" />
         <Paragraph>
           <strong>Analyser et anticiper</strong>
           <br />

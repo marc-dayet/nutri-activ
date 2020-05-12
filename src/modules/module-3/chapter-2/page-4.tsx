@@ -21,7 +21,7 @@ const Page: FC = () => {
         </ListItem>
         <ListItem>facilitent le changement de comportement</ListItem>
       </List>
-      <Paragraph align="left">
+      <Paragraph>
         <strong>
           Indispensables à notre bien-être et à notre survie, les émotions positives nous rendent
           plus ouverts au possible et aux autres.

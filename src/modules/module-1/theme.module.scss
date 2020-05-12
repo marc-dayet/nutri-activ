@@ -1,6 +1,7 @@
 @import "../../theme";
 
 $primary: $blue00;
+$secondary: $blue03;
 
 .main {
   background: $primary;
@@ -9,4 +10,8 @@ $primary: $blue00;
 
 .navItem {
   color: $primary;
+}
+
+.secondary {
+  color: $secondary;
 }

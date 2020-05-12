@@ -13,7 +13,7 @@ const Page: FC = () => {
       <div className={cs.imgContainer}>
         <img className={cs.img} src={img} alt="" />
       </div>
-      <List>
+      <List padder>
         <ListItem className={cs.listItem}>
           Identifier ses forces et ses fragilités permet de se fixer des objectifs d’amélioration
         </ListItem>
@@ -21,6 +21,8 @@ const Page: FC = () => {
           Penser sa qualité de vie permet à chacun d’envisager les moyens d’actions pour l’améliorer
         </ListItem>
       </List>
+      <br />
+
       <Paragraph className={cs.paragraph}>
         Lors de la formation présentielle, vous apprendrez à interroger les participants sur leur
         qualité de vie à l’aide d’un outil spécifique, le baromètre de la qualité de vie.

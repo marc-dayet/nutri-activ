@@ -16,7 +16,7 @@ const Page: FC = () => {
         choix, d’être mieux intégré et d’avoir une meilleure santé. Elles permettent une meilleure
         résistance au stress.
       </Paragraph>
-      <Paragraph align="left">
+      <Paragraph>
         <strong>
           On peut apprendre à cultiver les émotions positives, en augmentant leur fréquence, leur
           intensité et leur durée.

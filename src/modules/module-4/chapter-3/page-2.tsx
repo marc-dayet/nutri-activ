@@ -7,7 +7,7 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title> 3. Ce que doit transmettre l’animateur au groupe durant l’étape </Title>
-      <Subtitle>Les bénéfices des activités collectives</Subtitle>
+      <Subtitle>Pour maintenir le cap vers le bien-être</Subtitle>
       <List padder>
         <ListItem>Développer ses ressources personnelles, c’est améliorer sa santé.</ListItem>
         <ListItem>On peut apprendre à gérer ses émotions</ListItem>

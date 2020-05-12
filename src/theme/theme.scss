@@ -9,14 +9,16 @@ $green01: #013a41;
 $green03: #034148;
 $green1E: #1e8840;
 $green2B: #2b5c5b;
+$green35: #354f1b;
 $green8A: #8ac75b;
 $greenB1: #b1f56e;
+$red70: #701328;
 $red: #f1677c;
 $redF7: #f75507;
 $teal: #75b7b7;
 $white: #ffffff;
-$yellow: #fdaf18;
 $yellow59: #594312;
+$yellowFD: #fdaf18;
 
 @mixin font($family, $weight) {
   font-family: $family, sans-serif;
