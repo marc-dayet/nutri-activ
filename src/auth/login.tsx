@@ -4,6 +4,7 @@ import Animation from "../animation"
 import {encodeStep, initialStep} from "../modules/context"
 import {auth$} from "./context"
 import firebase from "./firebase"
+import logo from "./login-anim-1.png"
 import "./login-anim"
 
 import cs from "./login.module.scss"
@@ -102,6 +103,7 @@ const Login: FC = () => {
           {error && <span className={cs.error}>{error}</span>}
         </div>
       </Animation>
+      <img className={cs.logo} src={logo} alt="" />
     </>
   )
 }

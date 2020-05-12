@@ -4,9 +4,7 @@
   var ss = {}
   var img = {}
   lib.ssMetadata = []
-
   ;(lib.AnMovieClip = function() {
-    this.currentSoundStreamInMovieclip = undefined
     this.actionFrames = []
     this.soundStreamDuration = new Map()
     this.streamSoundSymbolsList = []
@@ -159,12 +157,6 @@
     }
   }).prototype = p = new cjs.MovieClip()
   // symbols:
-
-  ;(lib._1200pxMutualite_sociale_agricole_logosvg = function() {
-    this.initialize(img._1200pxMutualite_sociale_agricole_logosvg)
-  }).prototype = p = new cjs.Bitmap()
-  p.nominalBounds = new cjs.Rectangle(0, 0, 1200, 558)
-
   ;(lib.home1 = function() {
     this.initialize(img.home1)
   }).prototype = p = new cjs.Bitmap()
@@ -203,7 +195,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.tronc, new cjs.Rectangle(0, 0, 35.2, 56.5), null)
-
   ;(lib.tetepeintre = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -241,7 +232,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.tetepeintre, new cjs.Rectangle(0.1, 0, 23.2, 32.7), null)
-
   ;(lib.teteoldy = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -369,7 +359,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.teteoldy, new cjs.Rectangle(0, 0, 26.7, 34.7), null)
-
   ;(lib.teteetclarinette = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -601,7 +590,6 @@
     new cjs.Rectangle(0, 0, 66.6, 98.9),
     null,
   )
-
   ;(lib.ronde = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -619,7 +607,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.ronde, new cjs.Rectangle(0, 0, 10.9, 6.5), null)
-
   ;(lib.roii = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -637,7 +624,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.roii, new cjs.Rectangle(0, 0, 4.5, 8.5), null)
-
   ;(lib.pull = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -677,7 +663,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.pull, new cjs.Rectangle(0, 0, 28.2, 40), null)
-
   ;(lib.mainmain = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -758,8 +743,7 @@
     )
 
     this._renderFirstFrame()
-  }).prototype = getMCSymbolPrototype(lib.mainmain, new cjs.Rectangle(0, 0, 12.8, 22.3), null)
-
+  }).prototype = getMCSymbolPrototype(lib.mainmain, new cjs.Rectangle(-0.1, 0, 12.9, 22.3), null)
   ;(lib.mainnoire = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -798,30 +782,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.mainnoire, new cjs.Rectangle(0, 0, 17.9, 40), null)
-
-  ;(lib.logomsa = function(mode, startPosition, loop) {
-    this.initialize(mode, startPosition, loop, {})
-
-    // Calque_1
-    this.instance = new lib._1200pxMutualite_sociale_agricole_logosvg()
-    this.instance.setTransform(52.05, 53.95)
-
-    this.shape = new cjs.Shape()
-    this.shape.graphics
-      .f("#FFFFFF")
-      .s()
-      .p("Ehn7Az5MAAAhnxMDP3AAAMAAABnxg")
-    this.shape.setTransform(665.175, 332.075)
-
-    this.timeline.addTween(
-      cjs.Tween.get({})
-        .to({state: [{t: this.shape}, {t: this.instance}]})
-        .wait(1),
-    )
-
-    this._renderFirstFrame()
-  }).prototype = getMCSymbolPrototype(lib.logomsa, new cjs.Rectangle(0, 0, 1330.4, 664.2), null)
-
   ;(lib.jambettasses = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -899,7 +859,6 @@
     new cjs.Rectangle(2.8, 31, 103.3, 31.4),
     null,
   )
-
   ;(lib.Path = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -917,7 +876,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.Path, new cjs.Rectangle(0, 0, 666.2, 78.1), null)
-
   ;(lib.Path_1 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -935,7 +893,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.Path_1, new cjs.Rectangle(0.1, 0.1, 247.3, 16.5), null)
-
   ;(lib.Path_2 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -957,7 +914,6 @@
     new cjs.Rectangle(0, -0.1, 151.5, 16.900000000000002),
     null,
   )
-
   ;(lib.Path_84 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -979,7 +935,6 @@
     new cjs.Rectangle(0, 0.1, 176.2, 18.799999999999997),
     null,
   )
-
   ;(lib.Path_26 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -995,7 +950,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.Path_26, new cjs.Rectangle(0, 0, 60, 11.1), null)
-
   ;(lib.Path_23 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -1017,7 +971,6 @@
     new cjs.Rectangle(0.1, -0.1, 93.80000000000001, 16.900000000000002),
     null,
   )
-
   ;(lib.eaueau = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -1118,7 +1071,6 @@
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
   p.nominalBounds = new cjs.Rectangle(-272.2, -246, 154.2, 215.6)
-
   ;(lib.crochedouble = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -1136,7 +1088,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.crochedouble, new cjs.Rectangle(0, 0, 11.2, 10.5), null)
-
   ;(lib.croche = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -1154,7 +1105,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.croche, new cjs.Rectangle(0, 0, 6.7, 13.7), null)
-
   ;(lib.bulle3 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -1434,7 +1384,6 @@
     new cjs.Rectangle(24.5, -68.4, 176.4, 181.3),
     null,
   )
-
   ;(lib.bulle2 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -1680,16 +1629,16 @@
       .p(
         "AgLBZQgDAAgDgDQgCgCgBgEIAAgGIAAgGIAAgFIgBgRIAAgRIAAglIACgnIgBgLIgBgLQAAgTALAAQAJAAAKAEQAMADAAAFQAAACgDADIgFADQgLgEgIgBIAAALIAAATIgBATIABAFIAEgBIAEAAQANAAAAAHQAAADgCACQgDACgDAAIgHAAIgGAAIAAATIAAAXIgBAYIABAPIAHAAIALAAQAKAAAAAGQAAAEgDACQgDACgFAAg",
       )
-    this.shape_26.setTransform(71.875, 1.925)
+    this.shape_26.setTransform(71.825, 1.925)
 
     this.shape_27 = new cjs.Shape()
     this.shape_27.graphics
       .f("#FFFFFF")
       .s()
       .p(
-        "AgeBfIAAgCIAAgCQAAAAABgBQAAAAAAAAQABgBABAAQABAAABgBQAMgEAFgEQAHgJAAgVIgChDIgBhDIAAgBIgCAAIgEgBIgIgBIgGgDIAAgCQAAAAAAgBQAAAAABgBQAAAAAAgBQABAAAAgBQAEgCACAAQAOAAAPACQASACgBACQAAABAAAAQAAABAAABQAAAAgBABQAAAAgBABQgBABgEAAIgNAAIABA4IABA2IAAAdQABAJgCAGQgCAKgGAHQgEAIgMAEQgGACgHAAQgBAAgBAAQAAgBgBAAQAAgBAAAAQgBgBAAgBg",
+        "AgdBfIAAgCIAAgCQAAAAAAgBQAAAAABAAQAAgBABAAQAAAAABgBQANgEAEgEQAIgJAAgVIgBhDIgChDIAAgBIgDAAIgEgBIgHgBIgFgDIgBgCQAAAAAAgBQAAAAABgBQAAAAAAgBQABAAABgBQACgCADAAQAOAAAQACQARACAAACQAAABgBAAQAAABAAABQAAAAgBABQAAAAgBABQgCABgCAAIgOAAIABA4IACA2IAAAdQAAAJgCAGQgCAKgFAHQgFAIgLAEQgHACgIAAQAAAAgBAAQAAgBgBAAQAAgBAAAAQAAgBAAgBg",
       )
-    this.shape_27.setTransform(64.2, 3.075)
+    this.shape_27.setTransform(64.15, 3.075)
 
     this.shape_28 = new cjs.Shape()
     this.shape_28.graphics
@@ -1698,7 +1647,7 @@
       .p(
         "AgXBQQAAgGAIAAIADAAIADAAIADgBIAAgGIAAgNIgCgXQgCgnAAgVIAAgOIAAgMIgBgPIgGAAQgGABAAgHQAAgDAEgCQAEgDAGgBQAKgCAIAAQADAAACACQACADAAADQAAACgBACQgCADgDAAIgCAAIgCAAQgBAAgBAAQAAAAgBAAQAAAAgBAAQAAABAAAAIgBAEQAAAaADAyIACAcQABAMAAANIAAAKIAGAAQALAAAAAJIAAABIgHAFIgCAAIgFAAIgKABQgXAAAAgIg",
       )
-    this.shape_28.setTransform(53.475, 1.65)
+    this.shape_28.setTransform(53.425, 1.65)
 
     this.shape_29 = new cjs.Shape()
     this.shape_29.graphics
@@ -1707,34 +1656,34 @@
       .p(
         "AgMBXQgGgEgEgIQgIgQgBgTQgDgSAAgQIAAgGIAAgEIAAgBIAAgFIAAgSIADgbQABgNAFgLQABgGADgCQADgDAEAAQALAAAHAEQAIADAGAHQAFAHAEAJQAEAKABALQACALAAAMIAAADIAAANIABAPQAABMgjAAQgHAAgFgEgAgQhCQgDAIAAANIABAIIAAAIIgBAMIAAAMIAAAbQABAUAFATQAEATAIAAQAEAAAEgEQAEgDACgHQAFgNABgQIABgXQAAgMgCgSIgBgfIAAgEQgBgKgGgIQgGgHgIAAQgJAAgDAKg",
       )
-    this.shape_29.setTransform(45.725, 1.825)
+    this.shape_29.setTransform(45.675, 1.825)
 
     this.shape_30 = new cjs.Shape()
     this.shape_30.graphics
       .f("#FFFFFF")
       .s()
       .p(
-        "AAoBNIAAgRIAAgQIgBgjIgCggIAAgRIABgQIgJAlQgHAfgJAbQgHAagFAAQgFAAgCgDQgEgDAAgFQAAgMgJgmQgJgkgIgYIgCAeIgDA+IAAAgIAAAFIAAADQAAAFgCACQgCADgFgBQgCAAgCgBQgDgDAAgCQAAgbAEg1QAEg1AAgbIgBgGQgBgCADgDQAEgBADAAQAEAAAKAYQAIAZAKAgQAJAeACAOIADgNIABgGQAJgkAIgeQAGgSAEgKQAFgMAEAAQADAAADADQAEACAAACIACA5IABA3IAAANIAAAPIAAAJIABAJIAAAEIAAABIACAGQAAAEgDAEQgDADgDAAQgJAAAAgRg",
+        "AApBNIAAgRIAAgQIgCgjIgDggIABgRIABgQIgJAlQgIAfgHAbQgIAagGAAQgDAAgEgDQgDgDAAgFQAAgMgJgmQgJgkgIgYIgBAeIgDA+IgBAgIAAAFIAAADQAAAFgCACQgBADgFgBQgDAAgDgBQgCgDAAgCQAAgbAEg1QAEg1AAgbIgCgGQABgCADgDQACgBAFAAQADAAAKAYQAJAZAJAgQAJAeABAOIAEgNIACgGQAIgkAJgeQAFgSAFgKQAEgMAEAAQAEAAADADQADACAAACIABA5IACA3IAAANIgBAPIABAJIABAJIAAAEIAAABIACAGQAAAEgDAEQgDADgDAAQgJAAABgRg",
       )
-    this.shape_30.setTransform(33.5, 2.45)
+    this.shape_30.setTransform(33.45, 2.45)
 
     this.shape_31 = new cjs.Shape()
     this.shape_31.graphics
       .f("#FFFFFF")
       .s()
       .p(
-        "AgMBXQgGgEgEgIQgIgQgBgTQgDgSAAgQIAAgGIAAgEIAAgBIAAgFIAAgSIADgbQABgNAFgLQABgGADgCQADgDAEAAQALAAAHAEQAIADAGAHQAFAHAEAJQAEAKABALQACALAAAMIAAADIAAANIABAPQAABMgjAAQgHAAgFgEgAgQhCQgDAIAAANIABAIIAAAIIgBAMIAAAMIAAAbQABAUAFATQAEATAIAAQAEAAAEgEQAEgDACgHQAFgNABgQIABgXQAAgMgCgSIgBgfIAAgEQgBgKgGgIQgGgHgIAAQgJAAgDAKg",
+        "AAKAtIAAgPIAAgMIAAgBIAAgCIABgGIgBgBIgBgBIgEAAIgIgBIgIgBIAAAeIABAWIAAAVQAAAEgCADQgCADgEAAQgEAAgDgKQgCgKAAgQIABgVIAAgTIAAgFIAAgDIAAgFIAAgBIAAgQIAAgdIgBgeQAAgDACgDQADgCACAAQAJAAAAAPIAAAhIgBAiIANABIAKAAIABgDIgCgmQgCgXAAgPQAAgCACgCQADgCACgBIAGACIACABQAAAmADA9IACBCQAAAFgDACQgDABgDAAQgJAAAAgrg",
       )
-    this.shape_31.setTransform(16.575, 1.825)
+    this.shape_31.setTransform(16.9, 1.6)
 
     this.shape_32 = new cjs.Shape()
     this.shape_32.graphics
       .f("#FFFFFF")
       .s()
       .p(
-        "AAQBjQgCgCAAgEQAAg3gCgmIgJAAQgKAAgEABQAAAOACAeIACAtIgBAFQgBABAAAAQgBAAAAABQgBAAAAAAQgBAAAAAAQgEAAgDgMQgEgSgCg5QgCgmAAgsIgBgYQAAgEAFAAIAFABIAEADIgBAUIABAbIABAbIAAAFIAAAFIAAAHIAGgBIAHAAIAMgBIAAgrIgBgsIAAgHIAGABQABABAAAAQABAAAAABQABAAAAAAQABABAAAAQACADABAHIAAAGIACBWQADA6AAAdQAAAEgCADQgDADgDAAQgDAAgCgDg",
+        "AgHBlQgGgFgEgIQgIgOgDgZQgDgRgCgXIAAgNIAAgOIAAgQQAAgQABgMQACgNADgMQAFgLAIgFQAEgCAFAAQANAAAJALQAJANACAPQAFASAAARIABAjIAAAPIgBARIgBAQIAAABQgCAIAAAKQAAAHgDAIQgDAIgGAFQgFAHgIAAQgGAAgGgFgAgNhRQgEALgBANIgCAbIAAAIIgBALIAAABQAAAQAEAaQAEAjAIAPQAFAJAGAAQAEAAAFgKQADgIABgNIACgcIABgSIgBgXIgDgkQgBgSgHgOQgCgGgEgEQgEgEgDAAQgHAAgDAKg",
       )
-    this.shape_32.setTransform(7.175, 0.675)
+    this.shape_32.setTransform(7.7, 0.625)
 
     this.shape_33 = new cjs.Shape()
     this.shape_33.graphics
@@ -1794,7 +1743,6 @@
     new cjs.Rectangle(-55.4, -36.3, 193.6, 180.10000000000002),
     null,
   )
-
   ;(lib.bulle1 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2050,7 +1998,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.bulle1, new cjs.Rectangle(0, 0, 158.6, 120.2), null)
-
   ;(lib.bribripianiste = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2085,7 +2032,6 @@
     new cjs.Rectangle(-8.1, -0.4, 33, 21.099999999999998),
     null,
   )
-
   ;(lib.bribri = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2173,7 +2119,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.bribri, new cjs.Rectangle(-8.9, -5.2, 41.8, 30.7), null)
-
   ;(lib.bri = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2251,7 +2196,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.bri, new cjs.Rectangle(0, 0, 36.4, 20.5), null)
-
   ;(lib.brassssss = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2269,7 +2213,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.brassssss, new cjs.Rectangle(-3.4, 0, 12.6, 11.9), null)
-
   ;(lib.brasechec2 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2291,7 +2234,6 @@
     new cjs.Rectangle(-7.6, -0.1, 42.7, 20.200000000000003),
     null,
   )
-
   ;(lib.brasechec1copy = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2309,7 +2251,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.brasechec1copy, new cjs.Rectangle(0, 6, 16.8, 5.1), null)
-
   ;(lib.brasechec1 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2331,7 +2272,6 @@
     new cjs.Rectangle(15.7, 0, 31.400000000000002, 12.9),
     null,
   )
-
   ;(lib.brasbleus2 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2360,7 +2300,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.brasbleus2, new cjs.Rectangle(0, -0.1, 71.7, 28.6), null)
-
   ;(lib.brasbleus = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2407,7 +2346,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.brasbleus, new cjs.Rectangle(0, 0, 83.4, 27.6), null)
-
   ;(lib.brasgtricot = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2469,7 +2407,6 @@
     new cjs.Rectangle(-0.1, 0, 21.700000000000003, 22.3),
     null,
   )
-
   ;(lib.brasdtricot = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2531,7 +2468,6 @@
     new cjs.Rectangle(-0.1, 0, 22.200000000000003, 24.3),
     null,
   )
-
   ;(lib.bicepspians = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2547,7 +2483,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.bicepspians, new cjs.Rectangle(0, -3.3, 13.3, 31.1), null)
-
   ;(lib.bicepspeintre = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2569,7 +2504,6 @@
     new cjs.Rectangle(0.1, 0.1, 24.9, 32.9),
     null,
   )
-
   ;(lib.bicepsosses = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2596,7 +2530,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.bicepsosses, new cjs.Rectangle(-2.4, 0, 11.8, 17.2), null)
-
   ;(lib.bicepsguitare = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2616,7 +2549,6 @@
     new cjs.Rectangle(0, -4.2, 17.5, 29.099999999999998),
     null,
   )
-
   ;(lib.bicepspians_1 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2636,7 +2568,6 @@
     new cjs.Rectangle(0, -3.2, 17.2, 25.9),
     null,
   )
-
   ;(lib.avtbrassosseseuse = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2658,7 +2589,6 @@
     new cjs.Rectangle(0, 0, 29.7, 15.3),
     null,
   )
-
   ;(lib.avtbrasechec3 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2676,7 +2606,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.avtbrasechec3, new cjs.Rectangle(0, 0, 15.1, 33.2), null)
-
   ;(lib.avbrass = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2705,7 +2634,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.avbrass, new cjs.Rectangle(0, 0, 26.7, 27.2), null)
-
   ;(lib.avbraspians = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2738,7 +2666,6 @@
     new cjs.Rectangle(0, -3.4, 26.2, 25.799999999999997),
     null,
   )
-
   ;(lib.avbrasguitare = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2769,7 +2696,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.avbrasguitare, new cjs.Rectangle(0, 0, 34, 10.4), null)
-
   ;(lib.avantbras = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2814,7 +2740,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.avantbras, new cjs.Rectangle(-1, 6.2, 32.4, 15), null)
-
   ;(lib.avantbras_1 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -2906,7 +2831,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.avantbras_1, new cjs.Rectangle(0, 0, 26.5, 31.5), null)
-
   ;(lib.pianiste = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -3171,7 +3095,6 @@
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
   p.nominalBounds = new cjs.Rectangle(-9.8, 0, 78.6, 100.8)
-
   ;(lib.peintre = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -3679,7 +3602,6 @@
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
   p.nominalBounds = new cjs.Rectangle(0, -0.2, 142.1, 166.29999999999998)
-
   ;(lib.ombrageee = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -3692,7 +3614,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.ombrageee, new cjs.Rectangle(0, 0, 112.7, 20.3), null)
-
   ;(lib.notemusiquecopy = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -4323,7 +4244,6 @@
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
   p.nominalBounds = new cjs.Rectangle(0, -316.9, 169.2, 374.09999999999997)
-
   ;(lib.notemusique = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -4951,7 +4871,6 @@
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
   p.nominalBounds = new cjs.Rectangle(51.3, -316.9, 117.89999999999999, 374.09999999999997)
-
   ;(lib.Interpoler3 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -4977,7 +4896,6 @@
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
   p.nominalBounds = new cjs.Rectangle(-23.8, -17.5, 47.6, 35)
-
   ;(lib.Interpoler2 = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -5003,7 +4921,6 @@
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
   p.nominalBounds = new cjs.Rectangle(-23.8, -17.5, 47.6, 35)
-
   ;(lib.gymnastes = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -5398,7 +5315,6 @@
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
   p.nominalBounds = new cjs.Rectangle(-14.1, 0, 252.1, 169.2)
-
   ;(lib.fontaine = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -5681,7 +5597,6 @@
     new cjs.Rectangle(172.4, -126.9, 157.9, 280.1),
     null,
   )
-
   ;(lib.echecs = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -6257,7 +6172,6 @@
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
   p.nominalBounds = new cjs.Rectangle(0, 0, 164.8, 129.8)
-
   ;(lib.couplebras = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -6276,7 +6190,6 @@
 
     this._renderFirstFrame()
   }).prototype = getMCSymbolPrototype(lib.couplebras, new cjs.Rectangle(-3.4, 0, 35.8, 18.2), null)
-
   ;(lib.clarinettiste = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -6582,8 +6495,7 @@
 
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
-  p.nominalBounds = new cjs.Rectangle(-13.8, -3.4, 97.39999999999999, 185.8)
-
+  p.nominalBounds = new cjs.Rectangle(-13.8, -3.4, 97.39999999999999, 185.70000000000002)
   ;(lib.bulles = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -6743,7 +6655,6 @@
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
   p.nominalBounds = new cjs.Rectangle(-445.4, -120, 445.4, 240.2)
-
   ;(lib._3femmmes = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -7719,8 +7630,7 @@
 
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
-  p.nominalBounds = new cjs.Rectangle(0, 0, 148.3, 108.6)
-
+  p.nominalBounds = new cjs.Rectangle(-0.1, -0.1, 148.4, 108.69999999999999)
   ;(lib._3femmes = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -7742,7 +7652,6 @@
     new cjs.Rectangle(-7.5, -8.5, 163.1, 119.5),
     null,
   )
-
   ;(lib.musiciens = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -8838,7 +8747,6 @@
     this._renderFirstFrame()
   }).prototype = p = new cjs.MovieClip()
   p.nominalBounds = new cjs.Rectangle(0, 0, 284.4, 186.8)
-
   ;(lib.jeucarte = function(mode, startPosition, loop) {
     this.initialize(mode, startPosition, loop, {})
 
@@ -10340,61 +10248,55 @@
         .wait(1),
     )
 
-    // Calque_1
-    this.instance = new lib.logomsa()
-    this.instance.setTransform(1711.35, 930.2, 0.1406, 0.1406, 0, 0, 0, 665.6, 332.4)
-
-    this.timeline.addTween(cjs.Tween.get(this.instance).wait(1))
-
     // Calque_20
-    this.instance_1 = new lib.echecs()
-    this.instance_1.setTransform(1399.55, 755.25, 1.05, 1.05, 0, 0, 0, 82.4, 64.8)
+    this.instance = new lib.echecs()
+    this.instance.setTransform(1399.55, 755.25, 1.05, 1.05, 0, 0, 0, 82.4, 64.8)
 
-    this.instance_2 = new lib.Path_2()
-    this.instance_2.setTransform(1398.55, 815.95, 1.25, 1.25, 0, 0, 0, 75.7, 8.4)
-    this.instance_2.alpha = 0.1992
+    this.instance_1 = new lib.Path_2()
+    this.instance_1.setTransform(1398.55, 815.95, 1.25, 1.25, 0, 0, 0, 75.7, 8.4)
+    this.instance_1.alpha = 0.1992
 
     this.timeline.addTween(
       cjs.Tween.get({})
-        .to({state: [{t: this.instance_2}, {t: this.instance_1}]})
+        .to({state: [{t: this.instance_1}, {t: this.instance}]})
         .wait(1),
     )
 
     // MUSICIENS
-    this.instance_3 = new lib.musiciens()
-    this.instance_3.setTransform(628.6, 764.9, 1.05, 1.05, 0, 0, 0, 142.2, 93.5)
+    this.instance_2 = new lib.musiciens()
+    this.instance_2.setTransform(628.6, 764.9, 1.05, 1.05, 0, 0, 0, 142.2, 93.5)
+
+    this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1))
+
+    // Calque_20
+    this.instance_3 = new lib.jeucarte()
+    this.instance_3.setTransform(455.3, 669.1, 1, 1, 0, 0, 0, 110.1, 70.6)
 
     this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1))
 
-    // Calque_20
-    this.instance_4 = new lib.jeucarte()
-    this.instance_4.setTransform(455.3, 669.1, 1, 1, 0, 0, 0, 110.1, 70.6)
+    // gymnastes
+    this.instance_4 = new lib.gymnastes()
+    this.instance_4.setTransform(1152.45, 745.5, 1, 1, 0, 0, 0, 77.3, 83.7)
 
     this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(1))
 
-    // gymnastes
-    this.instance_5 = new lib.gymnastes()
-    this.instance_5.setTransform(1152.45, 745.5, 1, 1, 0, 0, 0, 77.3, 83.7)
+    // FONTAINE
+    this.instance_5 = new lib.fontaine()
+    this.instance_5.setTransform(996.15, 586.7, 1, 1, 0, 0, 0, 251.3, -2.7)
 
     this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(1))
 
-    // FONTAINE
-    this.instance_6 = new lib.fontaine()
-    this.instance_6.setTransform(996.15, 586.7, 1, 1, 0, 0, 0, 251.3, -2.7)
+    // _femmes_bulles
+    this.instance_6 = new lib._3femmes()
+    this.instance_6.setTransform(818.95, 643.8, 1, 1, 0, 0, 0, 74.1, 54.4)
 
     this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(1))
 
-    // _femmes_bulles
-    this.instance_7 = new lib._3femmes()
-    this.instance_7.setTransform(818.95, 643.8, 1, 1, 0, 0, 0, 74.1, 54.4)
+    // PEINTRE
+    this.instance_7 = new lib.peintre()
+    this.instance_7.setTransform(879.1, 810.5, 1.155, 1.155, 0, 0, 0, 71.3, 84.5)
 
     this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(1))
-
-    // PEINTRE
-    this.instance_8 = new lib.peintre()
-    this.instance_8.setTransform(879.1, 810.5, 1.155, 1.155, 0, 0, 0, 71.3, 84.5)
-
-    this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(1))
 
     // LOGO
     this.shape = new cjs.Shape()
@@ -10575,9 +10477,9 @@
     )
 
     // Calque_10
-    this.instance_9 = new lib.home1()
+    this.instance_8 = new lib.home1()
 
-    this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(1))
+    this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(1))
 
     this._renderFirstFrame()
   }).prototype = p = new lib.AnMovieClip()
@@ -10590,18 +10492,11 @@
     fps: 24,
     color: "#283D69",
     opacity: 1.0,
-    manifest: [
-      {
-        src: require("./login-anim-1.png"),
-        id: "_1200pxMutualite_sociale_agricole_logosvg",
-      },
-      {src: require("./login-anim-2.png"), id: "home1"},
-    ],
+    manifest: [{src: require("./login-anim-2.png"), id: "home1"}],
     preloads: [],
   }
 
   // bootstrap callback support:
-
   ;(lib.Stage = function(canvas) {
     cjs.Stage.call(this, canvas)
   }).prototype = p = new cjs.Stage()
@@ -10671,3 +10566,5 @@
   }
 })(window.createjs, (window.AdobeAn = window.AdobeAn || {}))
 var exportRoot
+export default null
+

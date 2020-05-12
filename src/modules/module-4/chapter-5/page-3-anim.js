@@ -617,7 +617,7 @@
     width: 550,
     height: 550,
     fps: 24,
-    color: "#283D69",
+    color: "#009999",
     opacity: 0.0,
     manifest: [{src: require("./page-3-anim.png"), id: "animationfin_atlas_1"}],
     preloads: [],
