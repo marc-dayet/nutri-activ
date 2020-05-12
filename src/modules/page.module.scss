@@ -205,13 +205,10 @@
   right: 0;
   top: 0;
   width: 100%;
-
-  path {
-    fill: $green01;
-  }
 }
 
 .quizAnswerText {
+  color: $white;
   z-index: 1;
 }
 
@@ -298,7 +295,6 @@
 
 .quizSubtitle {
   @include font(AmaticSC, bold);
-  color: $green01;
   font-size: 4rem;
   margin: -3rem 0 0 0;
   text-align: center;

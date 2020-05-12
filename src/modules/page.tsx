@@ -3,6 +3,7 @@ import {useBehaviorSubject} from "react-captain"
 import cn from "classnames"
 import range from "lodash/fp/range"
 
+import {theme$} from "../theme"
 import {Title, Paragraph} from "./page-components"
 import PageButton from "./page-components/button"
 import ChapterButton from "./page-components/chapter-button"
@@ -30,6 +31,7 @@ type PageContainerProps =
 const PageContainer: FC<PageContainerProps> = props => {
   const [step] = useBehaviorSubject(currStep$, () => window.scrollTo({top: 0}))
   const [lastStep] = useBehaviorSubject(lastStep$)
+  const [theme] = useBehaviorSubject(theme$)
   const nbChapters = Object.values(steps[step.module]).length
   const nbPages = countPagesTill()
   const currPage = countPagesTill(step.chapter) + step.page
@@ -180,10 +182,10 @@ const PageContainer: FC<PageContainerProps> = props => {
               </label>
             </div>
             <div className={cn(cs.quizAnswerContainer, {[cs.deployed]: isQuizAnswered})}>
-              <h2 className={cs.quizSubtitle}>Réponse</h2>
+              <h2 className={cn(cs.quizSubtitle, theme.secondary)}>Réponse</h2>
               <Paragraph className={cs.quizAnswerTextContainer}>
                 <span className={cs.quizAnswerText}>{props.answer}</span>
-                <AnswerBlock className={cs.quizAnswerBlock} />
+                <AnswerBlock className={cn(cs.quizAnswerBlock, theme.secondary)} />
               </Paragraph>
             </div>
             <div className={cs.quizPages}>
