@@ -9,9 +9,9 @@ const Page: FC = () => {
       layout="quiz"
       title="Affirmation n°1"
       img={img}
-      statment="Le bien-être et la qualité de vie sont 2 notions subjectives."
+      statment="Les liens sociaux sont aussi importants que l’exercice ou l’équilibre alimentaire."
       isTrue
-      answer="VRAI : La qualité de vie est définie par l’OMS comme la perception qu’a un individu de sa place dans l’existence : Qui d’autre que moi est le mieux placer pour estimer ce qui est important pour ma qualité de vie et mon bien-être ?"
+      answer="VRAI : Les liens sociaux sont importants sur toute la durée de notre vie et tendent à réduire les risques pour la santé dans chaque étape de la vie. Les relations sociales multiples aident les seniors à rester physiquement actifs et participent à leur bien-être émotionnel."
     />
   )
 }

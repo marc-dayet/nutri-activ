@@ -2,10 +2,10 @@
 @import "../../theme/media";
 
 .img[data-mode="avatar-md"] {
-  height: 7.5rem;
+  height: 10rem;
 
   @include media(lg) {
-    height: 5rem;
+    height: 7.5rem;
   }
 
   @include media(xs) {
@@ -16,15 +16,15 @@
 }
 
 .img[data-mode="avatar-lg"] {
-  height: 10rem;
+  height: 15rem;
 
   @include media(lg) {
-    height: 7.5rem;
+    height: 10rem;
   }
 
   @include media(xs) {
     height: inherit;
-    max-width: 5rem;
+    max-width: 6rem;
     width: 100%;
   }
 }

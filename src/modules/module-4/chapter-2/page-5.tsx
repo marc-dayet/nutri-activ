@@ -1,32 +1,32 @@
 import React, {FC} from "react"
 
 import PageContainer from "../../page"
-import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components"
-import img from "./page-5.png"
+import {Title, Paragraph, Grid, Img} from "../../page-components"
+import img1 from "./page-5-1.png"
+import img2 from "./page-5-2.png"
+import img3 from "./page-5-3.png"
+import img4 from "./page-5-4.png"
 
 const Page: FC = () => {
   return (
     <PageContainer>
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Subtitle showBook>Les ressources personnelles</Subtitle>
-      <Grid>
-        <Img src={img} mode="avatar-lg" />
-        <div>
-          <Paragraph>
-            Elles englobent les compétences, les talents, la personnalité… Les ressources
-            personnelles désignent la faculté de réfléchir à ses émotions, ses cognitions et son
-            identité individuelle.
-            <br />
-            Développer ses ressources personnelles permet de mieux gérer les situations difficiles
-            au quotidien, de mieux gérer les changements, d’oser de nouvelles expériences, de mieux
-            gérer son stress…
-          </Paragraph>
-          <br />
-          <Paragraph>
-            Les ressources personnelles sont un atout précieux pour mieux gérer son bien-être.
-          </Paragraph>
-        </div>
+      <Paragraph padder>Pour développer des relations positives, il est nécessaire de :</Paragraph>
+      <Grid padder>
+        <Img src={img1} mode="avatar-lg" />
+        <br />
+        <Img src={img2} mode="avatar-lg" />
+        <br />
+        <Img src={img3} mode="avatar-lg" />
+        <br />
+        <Img src={img4} mode="avatar-lg" />
+        <br />
       </Grid>
+      <Paragraph>
+        <strong>
+          Etre ouvert et créatif permet de développer des relations sociales positives.
+        </strong>
+      </Paragraph>
     </PageContainer>
   )
 }

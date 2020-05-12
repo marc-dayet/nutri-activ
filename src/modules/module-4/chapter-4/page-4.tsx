@@ -9,9 +9,9 @@ const Page: FC = () => {
       layout="quiz"
       title="Affirmation n°4"
       img={img}
-      statment="Les émotions agréables peuvent se développer et les émotions désagréables peuvent se réguler."
-      isTrue
-      answer="VRAI : Au fil d'un travail personnel, on peut développer ses émotions positives et apprendre à mieux gérer les émotions désagréables. Nous verrons dans les prochaines étapes les techniques les plus efficaces."
+      statment="Etre intégré socialement, c’est avoir trouvé sa place dans son environnement familial."
+      isTrue={false}
+      answer="FAUX : Etre intégré socialement, c’est aller plus loin que les relations familiales avec son conjoint, ses enfants, ses petits-enfants. C’est aller vers des actions collectives de proximité (clubs, loisirs), des groupes d’entraide, des lieux de participation sociale et citoyenne…"
     />
   )
 }
