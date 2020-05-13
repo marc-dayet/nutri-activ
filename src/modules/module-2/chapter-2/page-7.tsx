@@ -10,7 +10,7 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Subtitle showBook>Les émotions associées au stress :</Subtitle>
+      <Subtitle showBook>Les émotions associées au stress</Subtitle>
       <Paragraph padder>
         Face à une situation stressante, 3 types d’émotion peuvent être ressenties{" "}
       </Paragraph>
