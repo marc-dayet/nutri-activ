@@ -23,7 +23,9 @@ const Page: FC = () => {
           </Paragraph>
           <br />
           <Paragraph>
-            Les ressources personnelles sont un atout précieux pour mieux gérer son bien-être.
+            <strong>
+              Les ressources personnelles sont un atout précieux pour mieux gérer son bien-être.
+            </strong>
           </Paragraph>
         </div>
       </Grid>

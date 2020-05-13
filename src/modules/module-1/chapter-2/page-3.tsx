@@ -20,7 +20,9 @@ const Page: FC = () => {
           </Paragraph>
           <br />
           <Paragraph>
-            Améliorer la qualité de vie est un des bénéfices attendus de la promotion de la santé.
+            <strong>
+              Améliorer la qualité de vie est un des bénéfices attendus de la promotion de la santé.
+            </strong>
           </Paragraph>
         </div>
       </Grid>

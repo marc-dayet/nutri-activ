@@ -12,7 +12,7 @@ const Page: FC = () => {
       <Paragraph padder>
         <Img src={img} mode="avatar-md" />
       </Paragraph>
-      <Grid padder>
+      <Grid>
         <List>
           <ListItem>Remonter à la source pour identifier la structure ou la personne</ListItem>
           <ListItem>En parler à son entourage, ses proches, son médecin…</ListItem>
@@ -22,7 +22,6 @@ const Page: FC = () => {
             : Info Escroqueries au 0 805 817 817 (numéro gratuit)
           </ListItem>
         </List>
-        <br />
       </Grid>
       <Paragraph>
         <strong>Garder l’esprit critique face aux méthodes et produits miracles.</strong>

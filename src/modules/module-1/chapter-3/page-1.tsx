@@ -14,7 +14,7 @@ const Page: FC = () => {
         <Paragraph>
           La santé est un des piliers de la qualité de vie, aux côtés de la sécurité, des relations
           affectives et des ressources personnelles. <br />
-          Développer ses ressources personnelles, c’est améliorer sa santé.
+          <strong>Développer ses ressources personnelles, c’est améliorer sa santé.</strong>
         </Paragraph>
         <Img src={img2} mode="avatar-md" />
         <Paragraph>

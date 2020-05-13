@@ -18,7 +18,11 @@ const Page: FC = () => {
 
   return (
     <PageContainer>
-      <Title>Bravo, vous avez terminé le distanciel !</Title>
+      <Title>
+        Bravo, vous avez terminé le distanciel.
+        <br />
+        Rendez-vous à présent à la formation présentielle !{" "}
+      </Title>
       <Animation name="ANIMATION" composition="8766DDC0BF41F64CB993783BB32571B1" />
     </PageContainer>
   )

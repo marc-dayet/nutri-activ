@@ -10,14 +10,14 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Subtitle showBook>Les mécanismes du stress (source de stress : stimuli)</Subtitle>
+      <Subtitle showBook>Les mécanismes du stress (stimuli)</Subtitle>
       <Grid>
         <Img src={img1} mode="avatar-md" />
         <Paragraph>
           <h3>1.Phase d’alerte</h3>
-          L’adrénaline augmente le rythme cardiaque et la pression artérielle, accélère la
-          respiration, dilate les bronches et les pupilles; elle prépare l’organisme à un effort
-          physique, en fournissant l’énergie nécessaire.
+          Avec une source de stress, l’adrénaline augmente le rythme cardiaque et la pression
+          artérielle, accélère la respiration, dilate les bronches et les pupilles; elle prépare
+          l’organisme à un effort physique, en fournissant l’énergie nécessaire.
         </Paragraph>
         <Img src={img2} mode="avatar-md" />
         <Paragraph>

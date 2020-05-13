@@ -21,8 +21,10 @@ const Page: FC = () => {
           </Paragraph>
           <br />
           <Paragraph>
-            Les émotions peuvent influencer nos systèmes biologiques, nos organes, les fonctions de
-            notre corps.
+            <strong>
+              Les émotions peuvent influencer nos systèmes biologiques, nos organes, les fonctions
+              de notre corps.
+            </strong>
           </Paragraph>
         </div>
       </Grid>

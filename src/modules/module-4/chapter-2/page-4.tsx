@@ -36,8 +36,9 @@ const Page: FC = () => {
       </Grid>
       <Paragraph>
         <strong>
-          Les relations sociales ont un impact positif sur la santé. Le fait de bien vivre avec les
-          autres participe au bien-être personnel et
+          Les relations sociales ont un impact positif sur la santé.
+          <br />
+          Le fait de bien vivre avec les autres participe au bien-être personnel et vice versa.
         </strong>
       </Paragraph>
     </PageContainer>

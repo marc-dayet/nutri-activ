@@ -19,12 +19,9 @@ const Page: FC = () => {
         Vivre et partager des expériences positives, <br />
         Continuer à avoir des projets, rester actif, curieux
         <br />
-      </Paragraph>
-      <Paragraph>
-        <strong>
-          sont des facteurs de protection qui favorisent le bien-vieillir.
-          <img className={cs.book} src={book} alt="" />
-        </strong>
+        sont des facteurs de protection qui favorisent le bien-vieillir.
+        <br />
+        <img className={cs.book} src={book} alt="" />
       </Paragraph>
     </PageContainer>
   )

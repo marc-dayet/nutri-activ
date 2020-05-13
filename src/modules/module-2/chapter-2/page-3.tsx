@@ -23,7 +23,7 @@ const Page: FC = () => {
           </Paragraph>
           <br />
           <Paragraph>
-            Le stress peut agir sur un ou plusieurs piliers de la qualité de la vie
+            <strong>Le stress peut agir sur un ou plusieurs piliers de la qualité de la vie</strong>
           </Paragraph>
         </div>
       </Grid>

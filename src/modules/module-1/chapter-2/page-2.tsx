@@ -18,7 +18,9 @@ const Page: FC = () => {
             parfaite santé, il faut pouvoir ressentir du bien-être.
           </Paragraph>
           <br />
-          <Paragraph>Le bien-être est partie prenante de la santé.</Paragraph>
+          <Paragraph>
+            <strong>Le bien-être est partie prenante de la santé.</strong>
+          </Paragraph>
         </div>
       </Grid>
     </PageContainer>

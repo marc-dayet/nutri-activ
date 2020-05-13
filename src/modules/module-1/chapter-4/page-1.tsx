@@ -11,7 +11,7 @@ const Page: FC = () => {
       img={img}
       statment="Le bien-être et la qualité de vie sont 2 notions subjectives."
       isTrue
-      answer="VRAI : La qualité de vie est définie par l’OMS comme la perception qu’a un individu de sa place dans l’existence : Qui d’autre que moi est le mieux placer pour estimer ce qui est important pour ma qualité de vie et mon bien-être ?"
+      answer="VRAI : La qualité de vie est définie par l’OMS comme la perception qu’a un individu de sa place dans l’existence: Qui d’autre que moi est le mieux placer pour estimer ce qui est important pour ma qualité de vie et mon bien-être ?"
     />
   )
 }

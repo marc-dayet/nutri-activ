@@ -14,13 +14,13 @@ const Page: FC = () => {
       <Grid className={cs.grid}>
         <Img src={img1} mode="avatar-lg" />
         <Paragraph className={cs.gridItemContentLeft}>
-          <strong>Les liens entre</strong>
+          Les liens entre
           <br />
           le bien-être, la qualité de vie, les émotions et la santé
         </Paragraph>
         <Img src={img2} mode="avatar-lg" />
         <Paragraph className={cs.gridItemContentRight}>
-          <strong>Les liens entre compétences psychosociales et ressources personnelles :</strong>
+          Les liens entre compétences psychosociales et ressources personnelles :
           <br />
           savoir les identifier et prendre conscience de leur importance dans le Bien Vieillir
         </Paragraph>

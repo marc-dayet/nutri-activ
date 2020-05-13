@@ -14,10 +14,12 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Les contenus clés travaillés durant le parcours Cap Bien-être</Title>
       <Subtitle className={cs.subtitle}>
-        Pourquoi connaître les contenus clés sur lesquels repose le parcours ? Connaître les
-        principaux apports des disciplines scientifiques et techniques concernées sur le sujet, vous
-        permettra de :
+        Pourquoi connaître les contenus clés du parcours ?
       </Subtitle>
+      <Paragraph>
+        Connaître les principaux apports des disciplines scientifiques et techniques concernées sur
+        le sujet, vous permettra de :
+      </Paragraph>
       <Grid className={cs.grid}>
         <Img src={img1} mode="avatar-md" />
         <Paragraph className={cs.paragraph}>
