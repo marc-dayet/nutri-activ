@@ -22,10 +22,11 @@ export type ChapterButtonProps = {
   onClick: Function
   children: number
   disabled: boolean
+  title: string
 }
 
 const ChapterButton: FC<ChapterButtonProps> = props => {
-  const {onClick: handleClick, isActive, disabled, children} = props
+  const {onClick: handleClick, isActive, disabled, title, children} = props
   const ButtonBackground = backgrounds[(children - 1) % 5]
 
   return (
@@ -33,6 +34,7 @@ const ChapterButton: FC<ChapterButtonProps> = props => {
       className={cn(cs.button, {[cs.active]: isActive})}
       onClick={() => handleClick()}
       disabled={!isActive && disabled}
+      title={title}
     >
       <span className={cs.label}>{children}</span>
       <ButtonBackground className={cs.background} />

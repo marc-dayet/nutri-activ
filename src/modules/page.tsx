@@ -7,7 +7,15 @@ import {theme$} from "../theme"
 import {Title, Paragraph} from "./page-components"
 import PageButton from "./page-components/button"
 import ChapterButton from "./page-components/chapter-button"
-import {steps, currStep$, lastStep$, saveLastStep, isFirstStep, isLastStep} from "./context"
+import {
+  steps,
+  currStep$,
+  lastStep$,
+  saveLastStep,
+  isFirstStep,
+  isLastStep,
+  getTitle,
+} from "./context"
 import {ReactComponent as Check} from "./page-components/quiz-check.svg"
 import {ReactComponent as AnswerBlock} from "./page-components/quiz-answer.svg"
 import {ReactComponent as OverlayTrue} from "./page-components/quiz-check-true.svg"
@@ -134,6 +142,7 @@ const PageContainer: FC<PageContainerProps> = props => {
                   isActive={chapter === step.chapter}
                   onClick={() => setChapter(chapter)}
                   disabled={step.module >= lastStep.module && chapter > lastStep.chapter}
+                  title={getTitle(step, chapter)}
                 >
                   {chapter}
                 </ChapterButton>
@@ -212,6 +221,7 @@ const PageContainer: FC<PageContainerProps> = props => {
                     isActive={chapter === step.chapter}
                     onClick={() => setChapter(chapter)}
                     disabled={step.module >= lastStep.module && chapter > lastStep.chapter}
+                    title={getTitle(step, chapter)}
                   >
                     {chapter}
                   </ChapterButton>
@@ -226,6 +236,7 @@ const PageContainer: FC<PageContainerProps> = props => {
                 isActive={chapter === step.chapter}
                 onClick={() => setChapter(chapter)}
                 disabled={step.module >= lastStep.module && chapter > lastStep.chapter}
+                title={getTitle(step, chapter)}
               >
                 {chapter}
               </ChapterButton>

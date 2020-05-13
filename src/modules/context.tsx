@@ -93,3 +93,15 @@ export function isFirstStep(step: Step) {
 export function isLastStep(step: Step) {
   return step.module === 4 && step.chapter === 5 && step.page === 3
 }
+
+const otherTitles = ["Introduction", "À savoir", "À transmettre", "Quiz", "Questionnaire"]
+const introTitles = [
+  "Introduction",
+  "Présentation",
+  "Fondements et contenus",
+  "Accès questionnaire",
+]
+
+export function getTitle(step: Step, chapter: number) {
+  return isFirstStep(step) ? introTitles[chapter - 1] || "" : otherTitles[chapter - 1] || ""
+}
