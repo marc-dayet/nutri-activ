@@ -1,17 +1,19 @@
-import React from "react"
-import {useBehaviorSubject} from "react-captain"
+import React, {FC} from "react"
 
-import {theme$} from "../../../theme"
-import PageConclusion from "../../page-templates/conclusion"
+import PageContainer from "../../page"
 import img from "./page-2.png"
 
-export default () => {
-  const [theme] = useBehaviorSubject(theme$)
-
+const Page: FC = () => {
   return (
-    <PageConclusion img={img}>
-      Vous avez terminé le module 3 !<br />
-      Rendez-vous au module 4 : <strong className={theme.secondary}>Vivre avec les autres</strong>
-    </PageConclusion>
+    <PageContainer
+      layout="quiz"
+      title="Affirmation n°2"
+      img={img}
+      statment="Vivre des émotions positives peut permettre d’annuler les effets des émotions désagréables."
+      isTrue
+      answer="VRAI : Cependant ce n’est pas la seule raison pour laquelle il est nécessaire de vivre des émotions positives. Elles permettent aussi d’enrichir nos ressources propres (connaissances, compétences, santé) et d’obtenir une meilleure satisfaction de la vie."
+    />
   )
 }
+
+export default Page
