@@ -10,6 +10,9 @@ const Page: FC = () => {
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
       <Paragraph>
         <Img src={img} mode="fullscreen" />
+        <div style={{fontSize: ".8em", textAlign: "right"}}>
+          <em>Source : Docteur Jordi Quoidbach</em>
+        </div>
         <div>
           <strong>
             Les émotions positives permettent d’enrichir nos ressources propres (connaissances,

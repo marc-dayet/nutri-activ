@@ -5,6 +5,7 @@ import {Title, Paragraph, Img} from "../../page-components"
 import img from "./page-2.png"
 
 import cs from "./page-2.module.scss"
+import book from "../../page-components/subtitle-book.png"
 
 const Page: FC = () => {
   return (
@@ -16,6 +17,7 @@ const Page: FC = () => {
           <strong>
             Une émotion est dite positive quand le ressenti est agréable. Il en existe une large
             diversité
+            <img className={cs.book} src={book} alt="" />
           </strong>
         </div>
       </Paragraph>
