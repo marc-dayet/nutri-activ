@@ -12,8 +12,8 @@ const Page: FC = () => {
       content={[
         "Retour d’expérience (activité de groupe préparée)",
         "Pourquoi et comment bien vivre avec les autres ?",
-        "Points d’étape 4",
-        "Les essentiels de Cap bien-être",
+        "Point d’étape 4",
+        "Les essentiels de Cap Bien-être",
         "Vos engagements pour mieux gérer le stress et les émotions",
         "Evaluation : piliers de la qualité de vie",
         "Préparation de l’étape 5 (planification des entretiens téléphoniques)",

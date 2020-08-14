@@ -11,7 +11,7 @@ const Page: FC = () => {
         "Retour d’expérience (travaux sur les moments de bien-être)",
         "Pourquoi et comment développer les émotions positives ?",
         "Quelques précautions à prendre",
-        "Points d’étape 3",
+        "Point d’étape 3",
         "Préparation de l’étape 4 en lien avec le travail collectif intersession",
         "Collation (à adapter)",
       ]}

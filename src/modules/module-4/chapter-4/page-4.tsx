@@ -10,8 +10,8 @@ const Page: FC = () => {
       title="Affirmation n°4"
       img={img}
       statment="Etre intégré socialement, c’est avoir trouvé sa place dans son environnement familial."
-      isTrue
-      answer="VRAI : Etre intégré socialement, c’est aller plus loin que les relations familiales avec son conjoint, ses enfants, ses petits-enfants. C’est aller vers des actions collectives de proximité (clubs, loisirs), des groupes d’entraide, des lieux de participation sociale et citoyenne…"
+      isTrue={false}
+      answer="FAUX : Etre intégré socialement, c’est aller plus loin que les relations familiales avec son conjoint, ses enfants, ses petits-enfants. C’est aller vers des actions collectives de proximité (clubs, loisirs), des groupes d’entraide, des lieux de participation sociale et citoyenne…"
     />
   )
 }

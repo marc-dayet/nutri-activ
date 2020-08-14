@@ -17,8 +17,8 @@ const Page: FC = () => {
         <img className={cs.img2} src={img2} alt="" />
         <Paragraph>
           Dans les modules du distanciel, certaines notions ou concepts comportent une icône
-          «livret» : ce visuel illustré ci-dessus indique que les notions sont développées dans le
-          livret ressources.
+          «livret» : ce visuel illustré ci-dessus indique que les notions sont développées dans les
+          livrets ressources.
         </Paragraph>
       </div>
     </PageContainer>

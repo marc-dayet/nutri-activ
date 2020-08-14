@@ -22,7 +22,7 @@ const PrefacePage: FC<PrefacePageProps> = props => {
       <div className={cs.grid}>
         <img className={cs.img} src={img1} alt="" />
         <Paragraph className={cs.paragraph}>
-          Avant de commencer, assurez-vous d’avoir avec vous le livret ressources à consulter
+          Avant de commencer, assurez-vous d’avoir avec vous les livrets ressources à consulter
           régulièrement en complément du distanciel.
         </Paragraph>
         <img className={cs.img} src={img2} alt="" />

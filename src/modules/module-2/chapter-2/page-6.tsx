@@ -24,11 +24,12 @@ const Page: FC = () => {
         <ListItem>
           Il peut atteindre le système digestif, provoquer de nombreux troubles gastro-intestinaux.
         </ListItem>
-        <ListItem>Il affaiblit l’immunité et nous rend plus fragiles face aux infections…</ListItem>
+        <ListItem>Il affaiblit l’immunité et nous rend plus fragile face aux infections…</ListItem>
       </List>
       <Paragraph align="left">
         <strong>
-          Le stress chronique peut générer des répercussions organiques et psychiques.
+          Le stress chronique est un facteur favorisant l’apparition ou l’aggravation de nombreuses
+          maladies
         </strong>
       </Paragraph>
     </PageContainer>

@@ -10,7 +10,7 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Subtitle className={cs.subtitle}>
+      <Subtitle className={cs.subtitle} showBook>
         Les éléments qui font la qualité de vie varient d’une personne à une autre mais ils peuvent
         être classés en 4 grands piliers
       </Subtitle>

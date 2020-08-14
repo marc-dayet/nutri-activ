@@ -20,11 +20,12 @@ const Page: FC = () => {
         <Paragraph className={cs.paragraph}>
           <strong>Objectifs du distanciel :</strong>
           <br />
-          Vous aider à acquérir un socle commun de connaissances sur la gestion du stress et des
-          émotions vous préparer au mieux à la formation présentielle
+          - Vous aider à acquérir un socle commun de connaissances sur la gestion du stress et des
+          émotions
           <br />
-          Vous amener à engager une première réflexion sur les fondements du parcours concernant
-          notamment la gestion du stress et des émotions
+          - Vous préparer au mieux à la formation présentielle
+          <br />- Vous amener à engager une première réflexion sur les fondements du parcours
+          concernant notamment la gestion du stress et des émotions
         </Paragraph>
         <img className={cs.image} src={image2} alt="" />
         <Paragraph className={cs.paragraph}>

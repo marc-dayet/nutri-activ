@@ -33,13 +33,13 @@ const Page: FC = () => {
         <Paragraph className={cs.paragraph}>Vous apporter les connaissances nécessaires</Paragraph>
         <Img src={img4} mode="avatar-md" />
         <Paragraph className={cs.paragraph}>
-          Être à l’aise avec la transmission de connaissances aux participants
+          Être à l’aise avec la transmission de ces connaissances aux participants
         </Paragraph>
       </Grid>
       <Paragraph className={cs.paragraph}>
-        Le distanciel et le livret ressources vous présentent les connaissances validées pour chaque
-        discipline et vous permettent ainsi de mieux comprendre leur apport dans la gestion du
-        stress et des émotions.
+        Le distanciel et les livrets ressources vous présentent les connaissances validées pour
+        chaque discipline et vous permettent ainsi de mieux comprendre leur apport dans la gestion
+        du stress et des émotions.
       </Paragraph>
     </PageContainer>
   )

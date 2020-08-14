@@ -9,7 +9,7 @@ const Page: FC = () => {
   return (
     <Preface img1={img1} img2={img2} img3={img3}>
       Bienvenue dans le premier module du distanciel en lien avec la première étape du parcours Cap
-      Bien-être : Apprendre à gérer son stress et ses émotions.
+      Bien-être : Émotion, Bien-être et Santé.
     </Preface>
   )
 }

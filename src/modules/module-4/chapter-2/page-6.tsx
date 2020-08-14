@@ -19,9 +19,9 @@ const Page: FC = () => {
         </Paragraph>
         <Img src={img2} mode="avatar-md" />
         <Paragraph>
-          Activité manuelle ou artistique à plusieurs permet de renforcer les liens, de produire
-          quelque chose de collectif qui peut être utile et/ou faire plaisir à d’autres, de se
-          réaliser ensemble.
+          Faire une activité manuelle ou artistique à plusieurs permet de renforcer les liens, de
+          produire quelque chose de collectif qui peut être utile et/ou faire plaisir à d’autres, de
+          se réaliser ensemble.
         </Paragraph>
         <Img src={img3} mode="avatar-md" />
         <Paragraph>

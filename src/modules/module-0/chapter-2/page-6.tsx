@@ -15,13 +15,13 @@ const Page: FC = () => {
         <br />
       </Paragraph>
       <Paragraph className={cs.paragraph}>
-        <strong>2. Le livret ressources pour approfondir vos connaissances</strong> tout au long de
-        la lecture du distanciel informatique. Le livret vous permet de trouver des éléments
-        complémentaires au distanciel et de vous aider à répondre aux quizz du distanciel.
+        <strong>2. Les livrets ressources pour approfondir vos connaissances</strong> tout au long
+        de la lecture du distanciel informatique. Les livrets vous permettent de trouver des
+        éléments complémentaires au distanciel et de vous aider à répondre aux quizz du distanciel.
       </Paragraph>
       <br />
       <Paragraph className={cs.paragraph}>
-        Le temps de formation pour l’appropriation des connaissances (distanciel + livret
+        Le temps de formation pour l’appropriation des connaissances (distanciel + livrets
         ressources) et la saisie des réponses au questionnaire est évalué à environ 2h30 par module.
         Soit un total d’environ 12h30 pour réaliser la totalité du distanciel.
       </Paragraph>

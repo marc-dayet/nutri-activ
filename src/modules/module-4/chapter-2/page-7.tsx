@@ -12,8 +12,8 @@ const Page: FC = () => {
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder>
-        De nombreuses activités permettent de : calmer les effets du stress favoriser un état de
-        bien-être physique et mental favoriser un état de bien-être social
+        De nombreuses activités permettent de calmer les effets du stress, favoriser un état de
+        bien-être physique et mental, favoriser un état de bien-être social
       </Paragraph>
       <Paragraph>
         <strong>

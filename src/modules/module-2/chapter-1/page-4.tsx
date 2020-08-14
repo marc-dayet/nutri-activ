@@ -14,7 +14,7 @@ const Page: FC = () => {
         "Effets du stress sur la santé",
         "Faire face aux situations stressantes",
         "Retour au calme",
-        "Points d’étape 2",
+        "Point d’étape 2",
         "Préparation de l’étape 3 en lien avec le travail intersession",
         "Collation (à adapter)",
       ]}

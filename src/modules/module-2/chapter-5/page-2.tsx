@@ -11,7 +11,7 @@ export default () => {
   return (
     <PageConclusion img={img}>
       Vous avez terminé le module 2 !<br />
-      Rendez-vous au module 3 : <strong className={theme.secondary}>Vivre avec Soi</strong>
+      Rendez-vous au module 3 : <strong className={theme.secondary}>Bien vivre avec Soi</strong>
     </PageConclusion>
   )
 }

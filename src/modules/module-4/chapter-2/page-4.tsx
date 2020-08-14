@@ -31,7 +31,7 @@ const Page: FC = () => {
         <Paragraph className={cs.paragraph} showBook>
           <strong>L’utilité sociale</strong>
           <br />
-          Vivre un sentiment d’utilisé sociale, c’est avoir un rôle, être et se sentir utile.
+          Vivre un sentiment d’utilité sociale, c’est avoir un rôle, être et se sentir utile.
         </Paragraph>
       </Grid>
       <Paragraph>
