@@ -33,7 +33,7 @@ const PageSharing: FC = () => {
       <div className={cs.linkContainer}>
         <a
           className={cn(cs.link, theme.secondary)}
-          href="https://fr.surveymonkey.com/r/M63GHMK"
+          href="https://fr.surveymonkey.com/r/LNS639Z"
           target="_blank"
           rel="noopener noreferrer"
         >
