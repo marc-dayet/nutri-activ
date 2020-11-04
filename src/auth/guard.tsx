@@ -1,21 +1,21 @@
-import React, {FC} from "react"
-import {useBehaviorSubject} from "react-captain"
+import React, {FC} from "react";
+import {useObservable} from "@soywod/react-use-observable";
 
-import {auth$} from "./context"
-import Login from "./login"
+import {auth$} from "./context";
+import Login from "./login";
 
 const AuthGuard: FC = ({children}) => {
-  const [auth] = useBehaviorSubject(auth$)
+  const [auth] = useObservable(auth$, auth$.value);
 
   if (auth.type === "not-initialized") {
-    return <div>loading</div>
+    return <div>loading</div>;
   }
 
   if (auth.type === "not-authenticated") {
-    return <Login />
+    return <Login />;
   }
 
-  return <>{children}</>
-}
+  return <>{children}</>;
+};
 
-export default AuthGuard
+export default AuthGuard;

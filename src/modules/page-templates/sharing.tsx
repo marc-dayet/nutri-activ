@@ -1,18 +1,18 @@
-import React, {FC} from "react"
-import {useBehaviorSubject} from "react-captain"
-import cn from "classnames"
+import React, {FC} from "react";
+import {useObservable} from "@soywod/react-use-observable";
+import cn from "classnames";
 
-import {theme$} from "../../theme"
-import PageContainer from "../page"
-import Title from "../page-components/title"
-import List from "../page-components/list"
-import ListItem from "../page-components/list-item"
-import {ReactComponent as IconCurlyBrace} from "./curly-brace.svg"
+import {theme$} from "../../theme";
+import PageContainer from "../page";
+import Title from "../page-components/title";
+import List from "../page-components/list";
+import ListItem from "../page-components/list-item";
+import {ReactComponent as IconCurlyBrace} from "./curly-brace.svg";
 
-import cs from "./sharing.module.scss"
+import cs from "./sharing.module.scss";
 
 const PageSharing: FC = () => {
-  const [theme] = useBehaviorSubject(theme$)
+  const [theme] = useObservable(theme$, theme$.value);
 
   return (
     <PageContainer>
@@ -52,7 +52,7 @@ const PageSharing: FC = () => {
         </ListItem>
       </List>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default PageSharing
+export default PageSharing;

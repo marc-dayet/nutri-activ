@@ -1,22 +1,22 @@
-import React, {FC} from "react"
-import {useBehaviorSubject} from "react-captain"
+import React, {FC} from "react";
+import {useObservable} from "@soywod/react-use-observable";
 
-import PageContainer from "../page"
-import {currStep$} from "../context"
-import {Subtitle, List, ListItem} from "../page-components"
-import chrono from "./goal.png"
+import PageContainer from "../page";
+import {currStep$} from "../context";
+import {Subtitle, List, ListItem} from "../page-components";
+import chrono from "./goal.png";
 
-import cs from "./goal.module.scss"
+import cs from "./goal.module.scss";
 
 type GoalProps = {
-  goals: string[]
-  content: string[]
-  intersessionWork: string
-}
+  goals: string[];
+  content: string[];
+  intersessionWork: string;
+};
 
 const Goal: FC<GoalProps> = props => {
-  const [{module}] = useBehaviorSubject(currStep$)
-  const {goals, content, intersessionWork} = props
+  const [{module}] = useObservable(currStep$, currStep$.value);
+  const {goals, content, intersessionWork} = props;
 
   return (
     <PageContainer>
@@ -45,7 +45,7 @@ const Goal: FC<GoalProps> = props => {
         <img className={cs.intersessionWork} src={intersessionWork} alt="Travail intersession" />
       </div>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Goal
+export default Goal;

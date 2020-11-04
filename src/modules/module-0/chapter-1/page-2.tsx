@@ -1,15 +1,15 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../../page"
-import {Title, Paragraph, Grid, Img} from "../../page-components"
-import img1 from "./page-2-1.png"
-import img2 from "./page-2-2.png"
-import img3 from "./page-2-3.png"
+import PageContainer from "../../page";
+import {Title, Paragraph, Grid, Img} from "../../page-components";
+import img1 from "./page-2-1.png";
+import img2 from "./page-2-2.png";
+import img3 from "./page-2-3.png";
 
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Le module introductif Cap bien-être :</Title>
+      <Title>Le module introductif Nutri Activ' :</Title>
       <Grid>
         <Img mode="avatar-lg" src={img1} />
         <Paragraph>Présentation de la formation distancielle</Paragraph>
@@ -23,7 +23,7 @@ const Page: FC = () => {
         </Paragraph>
       </Grid>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

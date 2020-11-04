@@ -1,14 +1,14 @@
-import React, {FC} from "react"
-import {useBehaviorSubject} from "react-captain"
+import React, {FC} from "react";
+import {useObservable} from "@soywod/react-use-observable";
 
-import PageContainer from "../page"
-import {currStep$} from "../context"
-import {Title} from "../page-components"
+import PageContainer from "../page";
+import {currStep$} from "../context";
+import {Title} from "../page-components";
 
-import cs from "./toc.module.scss"
+import cs from "./toc.module.scss";
 
 const TableOfContent: FC = () => {
-  const [step] = useBehaviorSubject(currStep$)
+  const [step] = useObservable(currStep$, currStep$.value);
 
   return (
     <PageContainer>
@@ -23,7 +23,7 @@ const TableOfContent: FC = () => {
         <li className={cs.listItem}>Accéder au questionnaire « Retours sur le distanciel »</li>
       </ol>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default TableOfContent
+export default TableOfContent;

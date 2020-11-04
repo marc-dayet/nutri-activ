@@ -1,12 +1,12 @@
-import React, {FC, useState} from "react"
-import {useBehaviorSubject} from "react-captain"
-import cn from "classnames"
-import range from "lodash/fp/range"
+import React, {FC, useState} from "react";
+import {useObservable} from "@soywod/react-use-observable";
+import cn from "classnames";
+import range from "lodash/fp/range";
 
-import {theme$} from "../theme"
-import {Title, Paragraph} from "./page-components"
-import PageButton from "./page-components/button"
-import ChapterButton from "./page-components/chapter-button"
+import {theme$} from "../theme";
+import {Title, Paragraph} from "./page-components";
+import PageButton from "./page-components/button";
+import ChapterButton from "./page-components/chapter-button";
 import {
   steps,
   currStep$,
@@ -15,93 +15,93 @@ import {
   isFirstStep,
   isLastStep,
   getTitle,
-} from "./context"
-import {ReactComponent as Check} from "./page-components/quiz-check.svg"
-import {ReactComponent as AnswerBlock} from "./page-components/quiz-answer.svg"
-import {ReactComponent as OverlayTrue} from "./page-components/quiz-check-true.svg"
-import {ReactComponent as OverlayFalse} from "./page-components/quiz-check-false.svg"
+} from "./context";
+import {ReactComponent as Check} from "./page-components/quiz-check.svg";
+import {ReactComponent as AnswerBlock} from "./page-components/quiz-answer.svg";
+import {ReactComponent as OverlayTrue} from "./page-components/quiz-check-true.svg";
+import {ReactComponent as OverlayFalse} from "./page-components/quiz-check-false.svg";
 
-import cs from "./page.module.scss"
+import cs from "./page.module.scss";
 
 type PageContainerProps =
   | {
-      layout?: "page"
+      layout?: "page";
     }
   | {
-      layout: "quiz"
-      title: string
-      img: string
-      statment: string
-      answer: string
-      isTrue: boolean
-    }
+      layout: "quiz";
+      title: string;
+      img: string;
+      statment: string;
+      answer: string;
+      isTrue: boolean;
+    };
 
 const PageContainer: FC<PageContainerProps> = props => {
-  const [step] = useBehaviorSubject(currStep$, () => window.scrollTo({top: 0}))
-  const [lastStep] = useBehaviorSubject(lastStep$)
-  const [theme] = useBehaviorSubject(theme$)
-  const nbChapters = Object.values(steps[step.module]).length
-  const nbPages = countPagesTill()
-  const currPage = countPagesTill(step.chapter) + step.page
-  const [isQuizTouched, touchQuiz] = useState<boolean | undefined>(undefined)
-  const [isQuizAnswered, answerQuiz] = useState(false)
+  const [step] = useObservable(currStep$, currStep$.value, () => window.scrollTo({top: 0}));
+  const [lastStep] = useObservable(lastStep$, lastStep$.value);
+  const [theme] = useObservable(theme$, theme$.value);
+  const nbChapters = Object.values(steps[step.module]).length;
+  const nbPages = countPagesTill();
+  const currPage = countPagesTill(step.chapter) + step.page;
+  const [isQuizTouched, touchQuiz] = useState<boolean | undefined>(undefined);
+  const [isQuizAnswered, answerQuiz] = useState(false);
 
   function countPagesTill(end?: number) {
-    return steps[step.module].slice(0, end).reduce((sum, pages) => sum + pages, 0)
+    return steps[step.module].slice(0, end).reduce((sum, pages) => sum + pages, 0);
   }
 
   function prevPage() {
-    let prevModule = step.module
-    let prevChapter = step.chapter
-    let prevPage = step.page - 1
+    let prevModule = step.module;
+    let prevChapter = step.chapter;
+    let prevPage = step.page - 1;
 
     if (prevPage < 1) {
-      prevChapter -= 1
-      prevPage = steps[step.module][prevChapter]
+      prevChapter -= 1;
+      prevPage = steps[step.module][prevChapter];
     }
 
     if (prevChapter < 1) {
-      prevModule -= 1
-      prevChapter = steps[prevModule].length - 1
-      prevPage = steps[prevModule][prevChapter]
+      prevModule -= 1;
+      prevChapter = steps[prevModule].length - 1;
+      prevPage = steps[prevModule][prevChapter];
     }
 
     if (prevModule < 0) {
-      return
+      return;
     }
 
-    currStep$.next({module: prevModule, chapter: prevChapter, page: prevPage})
+    currStep$.next({module: prevModule, chapter: prevChapter, page: prevPage});
   }
 
   function nextPage() {
-    let nextModule = step.module
-    let nextChapter = step.chapter
-    let nextPage = step.page + 1
+    let nextModule = step.module;
+    let nextChapter = step.chapter;
+    let nextPage = step.page + 1;
 
     if (nextPage > steps[step.module][step.chapter]) {
-      nextChapter += 1
-      nextPage = 1
+      nextChapter += 1;
+      nextPage = 1;
     }
 
     if (nextChapter >= steps[step.module].length) {
-      nextModule += 1
-      nextChapter = 1
-      nextPage = 1
+      nextModule += 1;
+      nextChapter = 1;
+      nextPage = 1;
     }
 
-    if (nextModule >= steps.length) return
-    if (nextChapter >= steps[nextModule].length) return
-    if (nextPage > steps[nextModule][nextChapter]) return
+    if (nextModule >= steps.length) return;
+    if (nextChapter >= steps[nextModule].length) return;
+    if (nextPage > steps[nextModule][nextChapter]) return;
 
-    currStep$.next({module: nextModule, chapter: nextChapter, page: nextPage})
-    saveLastStep(nextModule, nextChapter, nextPage)
+    currStep$.next({module: nextModule, chapter: nextChapter, page: nextPage});
+    saveLastStep(nextModule, nextChapter, nextPage);
   }
 
   function quizNext() {
     if (isQuizAnswered) {
-      nextPage()
+      nextPage();
     } else {
-      answerQuiz(true)
+      answerQuiz(true);
     }
   }
 
@@ -113,7 +113,7 @@ const PageContainer: FC<PageContainerProps> = props => {
         nextChapter !== lastStep.chapter ||
         step.page <= lastStep.page)
     ) {
-      currStep$.next({...step, chapter: nextChapter, page: 1})
+      currStep$.next({...step, chapter: nextChapter, page: 1});
     }
   }
 
@@ -150,7 +150,7 @@ const PageContainer: FC<PageContainerProps> = props => {
             </div>
           </footer>
         </div>
-      )
+      );
 
     case "quiz":
       return (
@@ -243,11 +243,11 @@ const PageContainer: FC<PageContainerProps> = props => {
             ))}
           </div>
         </div>
-      )
+      );
 
     default:
-      return null
+      return null;
   }
-}
+};
 
-export default PageContainer
+export default PageContainer;

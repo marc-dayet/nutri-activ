@@ -1,17 +1,17 @@
-import React, {FC} from "react"
-import useBehaviorSubject from "react-captain/behavior-subject"
+import React, {FC} from "react";
+import useObservable from "@soywod/react-use-observable";
 
-import firebase from "./firebase"
-import {auth$} from "./context"
-import iconName from "./name.icon.svg"
-import iconLogout from "./logout.icon.svg"
+import firebase from "./firebase";
+import {auth$} from "./context";
+import iconName from "./name.icon.svg";
+import iconLogout from "./logout.icon.svg";
 
-import cs from "./account.module.scss"
+import cs from "./account.module.scss";
 
-type AccountProps = {}
+type AccountProps = {};
 
 const Account: FC<AccountProps> = () => {
-  const [auth] = useBehaviorSubject(auth$)
+  const [auth] = useObservable(auth$, auth$.value);
 
   return (
     <div className={cs.grid}>
@@ -23,7 +23,7 @@ const Account: FC<AccountProps> = () => {
         Quitter
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Account
+export default Account;

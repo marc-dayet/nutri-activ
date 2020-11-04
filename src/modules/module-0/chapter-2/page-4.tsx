@@ -1,16 +1,16 @@
-import React, {FC} from "react"
-import {useBehaviorSubject} from "react-captain"
-import cn from "classnames"
+import React, {FC} from "react";
+import {useObservable} from "@soywod/react-use-observable";
+import cn from "classnames";
 
-import {theme$} from "../../../theme"
-import PageContainer from "../../page"
-import {Title, Paragraph} from "../../page-components"
-import img from "./page-4-1.png"
+import {theme$} from "../../../theme";
+import PageContainer from "../../page";
+import {Title, Paragraph} from "../../page-components";
+import img from "./page-4-1.png";
 
-import cs from "./page-4.module.scss"
+import cs from "./page-4.module.scss";
 
 const Page: FC = () => {
-  const [theme] = useBehaviorSubject(theme$)
+  const [theme] = useObservable(theme$, theme$.value);
 
   return (
     <PageContainer>
@@ -28,7 +28,7 @@ const Page: FC = () => {
         <img className={cs.img} src={img} alt="" />
       </Paragraph>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
