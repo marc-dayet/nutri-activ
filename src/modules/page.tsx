@@ -5,7 +5,7 @@ import range from "lodash/fp/range";
 
 import {theme$} from "../theme";
 import {Title, Paragraph} from "./page-components";
-import PageButton from "./page-components/button";
+import {PageButtonLeft, PageButtonRight} from "./page-components/button";
 import ChapterButton from "./page-components/chapter-button";
 import {
   steps,
@@ -128,12 +128,8 @@ const PageContainer: FC<PageContainerProps> = props => {
           <div className={cs.content}>{props.children}</div>
           <footer className={cs.pageNavigation}>
             <div className={cs.pages}>
-              <PageButton onClick={prevPage} disabled={isFirstStep(step)}>
-                Précédent
-              </PageButton>
-              <PageButton onClick={nextPage} disabled={isLastStep(step)}>
-                Suivant
-              </PageButton>
+              <PageButtonLeft onClick={prevPage} disabled={isFirstStep(step)} />
+              <PageButtonRight onClick={nextPage} disabled={isLastStep(step)} />
             </div>
             <div className={cs.chapters}>
               {range(1, nbChapters + 1).map(chapter => (
@@ -202,17 +198,13 @@ const PageContainer: FC<PageContainerProps> = props => {
               </Paragraph>
             </div>
             <div className={cs.quizPages}>
-              <PageButton onClick={prevPage}>Précédent</PageButton>
-              <PageButton onClick={quizNext} disabled={isQuizTouched === undefined}>
-                Suivant
-              </PageButton>
+              <PageButtonLeft onClick={prevPage} />
+              <PageButtonRight onClick={quizNext} disabled={isQuizTouched === undefined} />
             </div>
             <footer className={cs.quizNavigation}>
               <div className={cs.pages}>
-                <PageButton onClick={prevPage}>Précédent</PageButton>
-                <PageButton onClick={quizNext} disabled={isQuizTouched === undefined}>
-                  Suivant
-                </PageButton>
+                <PageButtonLeft onClick={prevPage} />
+                <PageButtonRight onClick={quizNext} disabled={isQuizTouched === undefined} />
               </div>
               <div className={cs.chapters}>
                 {range(1, nbChapters + 1).map(chapter => (

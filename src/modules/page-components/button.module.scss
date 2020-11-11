@@ -19,10 +19,9 @@ $transition-duration: 150ms;
 .button {
   @include font(AmaticSC, bold);
   color: $gray44;
-  font-size: 2.5rem;
-  padding: 0.9rem 2.5rem 1rem;
+  font-size: 2rem;
+  padding: 1.5rem 2.5rem 2.5rem;
   position: relative;
-  text-transform: uppercase;
 
   &[disabled] {
     opacity: 0.5;
