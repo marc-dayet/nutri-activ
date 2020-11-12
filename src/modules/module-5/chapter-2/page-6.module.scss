@@ -1,0 +1,19 @@
+@import "../../../theme";
+@import "../../../theme/media";
+
+.imgContainer {
+  text-align: center;
+}
+
+.img {
+  max-width: 15rem;
+}
+
+.listItem {
+  margin: 1rem 0;
+}
+
+.paragraph {
+  color: $blue03;
+  text-align: left;
+}

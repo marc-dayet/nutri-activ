@@ -1,0 +1,17 @@
+@import "../../theme";
+
+$primary: $brownCF;
+$secondary: $green35;
+
+.main {
+  background: $primary;
+  color: $white;
+}
+
+.navItem {
+  color: $primary;
+}
+
+.secondary {
+  color: $secondary;
+}

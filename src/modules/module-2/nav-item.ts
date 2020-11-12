@@ -1,8 +1,8 @@
-import icon from "./nav-item.svg"
+import icon from "./nav-item.svg";
 
-import cs from "./theme.module.scss"
+import cs from "./theme.module.scss";
 
-const label = "Gestion du Stress"
-const theme = cs.navItem
+const label = "Mon assiette";
+const theme = cs.navItem;
 
-export default {theme, icon, label}
+export default {theme, icon, label};

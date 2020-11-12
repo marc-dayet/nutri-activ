@@ -21,8 +21,16 @@ $white: #ffffff;
 $yellow59: #594312;
 $yellowFD: #fdaf18;
 
+$brown92: #926225;
+$brownCF: #cf7e14;
+$pinkEA: #ea4d6f;
+$pinkB2: #b27b97;
+$yellowE3: #e3ab1f;
+$teal5A: #5abebf;
+$green79: #79a42d;
+
 @mixin font($family, $weight) {
-  font-family: $family, sans-serif;
+  font-family: $family;
   font-style: normal;
   font-weight: $weight;
 }

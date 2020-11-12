@@ -39,7 +39,7 @@
 }
 
 .module {
-  @include font(Museo, 700);
+  @include font("Chelsea Market", 400);
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -70,7 +70,6 @@
 
   span {
     font-size: 1rem;
-    font-weight: 700;
 
     @include media(sm) {
       display: none;
