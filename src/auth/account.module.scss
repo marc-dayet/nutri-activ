@@ -2,7 +2,7 @@
 @import "../theme/media";
 
 .grid {
-  @include font(Museo, 700);
+  @include font("Poppins", 600);
   align-items: center;
   color: $gray44;
   display: grid;
@@ -41,7 +41,7 @@
 }
 
 .signOut {
-  @include font(Museo, 700);
+  @include font("Poppins", 600);
   color: $gray44;
   font-size: 1.25rem;
 

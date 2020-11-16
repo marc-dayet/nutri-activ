@@ -17,7 +17,7 @@ $transition-duration: 150ms;
 }
 
 .button {
-  @include font(AmaticSC, bold);
+  @include font("Chelsea Market", 400);
   color: $gray44;
   font-size: 2rem;
   padding: 1.5rem 2.5rem 2.5rem;

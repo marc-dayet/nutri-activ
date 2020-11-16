@@ -2,17 +2,17 @@
 @import "../../theme/media";
 
 .paragraph {
-  @include font(Museo, 500);
+  @include font("Poppins", 400);
   font-size: 1.4rem;
   line-height: 1.75rem;
   position: relative;
 
   strong {
-    @include font(Museo, 700);
+    @include font("Poppins", 600);
   }
 
   h3 {
-    @include font(AmaticSC, bold);
+    @include font("Chelsea Market", 400);
     font-size: 3rem;
     margin: 0 0 1rem 0;
 

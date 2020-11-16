@@ -14,7 +14,7 @@
 }
 
 .paragraphAlt {
-  @include font(Museo, 700);
+  @include font("Poppins", 600);
   margin: 3rem 0;
 
   @include media(sm) {

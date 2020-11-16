@@ -42,7 +42,7 @@
 }
 
 @mixin pagination {
-  @include font(Museo, 300);
+  @include font("Poppins", 400);
   font-size: 1rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -258,7 +258,7 @@
 }
 
 .quizRadio {
-  @include font(AmaticSC, bold);
+  @include font("Chelsea Market", 400);
   align-items: center;
   color: $white;
   cursor: pointer;
@@ -303,7 +303,7 @@
 }
 
 .quizSubtitle {
-  @include font(AmaticSC, bold);
+  @include font("Chelsea Market", 400);
   font-size: 4rem;
   margin: -3rem 0 0 0;
   text-align: center;

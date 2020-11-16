@@ -2,7 +2,7 @@
 @import "../../../theme/media";
 
 .subtitle {
-  @include font(Museo, 500);
+  @include font("Poppins", 400);
   font-size: 1.5rem;
   line-height: 2rem;
 

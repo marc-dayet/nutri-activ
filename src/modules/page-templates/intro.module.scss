@@ -9,7 +9,7 @@
 
 .title {
   @include heading;
-  @include font(AmaticSC, bold);
+  @include font("Chelsea Market", 400);
   font-size: 5rem;
   margin-top: 0;
 
@@ -24,7 +24,7 @@
 
 .subtitle {
   @include heading;
-  @include font(Museo, 500);
+  @include font("Poppins", 400);
   font-size: 1.75rem;
   margin: 0;
 

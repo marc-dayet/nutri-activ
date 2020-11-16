@@ -18,7 +18,7 @@
 }
 
 .list {
-  @include font(Museo, 500);
+  @include font("Poppins", 400);
   font-size: 1.5rem;
   line-height: 2rem;
   margin: 0 auto;

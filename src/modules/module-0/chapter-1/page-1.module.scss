@@ -3,7 +3,7 @@
 
 .title,
 .paragraph {
-  @include font(Museo, 500);
+  @include font("Poppins", 400);
   font-size: 2rem;
   margin: 0 0 2rem 0;
   text-align: center;

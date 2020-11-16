@@ -2,7 +2,7 @@
 @import "../../theme/media";
 
 .title {
-  @include font(AmaticSC, bold);
+  @include font("Chelsea Market", 400);
   font-size: 4.7rem;
   line-height: 4.6rem;
   margin-top: 6rem;

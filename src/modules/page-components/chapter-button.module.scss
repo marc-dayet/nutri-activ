@@ -15,7 +15,7 @@
 }
 
 .button {
-  @include font(AmaticSC, bold);
+  @include font("Chelsea Market", 400);
   align-items: center;
   border-radius: 50%;
   color: $green03;

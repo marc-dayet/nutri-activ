@@ -22,7 +22,7 @@
 }
 
 .label {
-  @include font(Museo, 700);
+  @include font("Poppins", 600);
   color: $white;
   font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -48,7 +48,7 @@
   transition-property: opacity;
 
   &::placeholder {
-    @include font(Museo, 700);
+    @include font("Poppins", 600);
     color: $grayC4;
     font-size: 1rem;
   }
@@ -59,7 +59,7 @@
 }
 
 .submit {
-  @include font(AmaticSC, bold);
+  @include font("Chelsea Market", 400);
   background: $green1E;
   border-radius: 0.5rem;
   box-shadow: 0.15rem 0.15rem 0 rgba($black, 0.2);
@@ -88,7 +88,7 @@
 }
 
 .error {
-  @include font(Museo, 700);
+  @include font("Poppins", 600);
   background: $redF7;
   border-radius: 0.5rem;
   color: $white;
