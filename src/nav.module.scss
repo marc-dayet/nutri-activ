@@ -17,14 +17,12 @@
 
 .logo {
   align-self: center;
+  filter: drop-shadow(0 0.4rem 0.05rem rgba(0, 0, 0, 0.1));
   height: 100%;
-  padding: 1rem 0 1rem 3rem;
+  margin-top: -15%;
+  position: relative;
   transform: scale(1.5);
-  transform-origin: center top;
-
-  @include media(lg) {
-    padding: 0.75rem;
-  }
+  transform-origin: top left;
 
   @include media(md) {
     display: none;
