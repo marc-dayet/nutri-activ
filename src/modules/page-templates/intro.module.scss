@@ -2,16 +2,15 @@
 @import "../../theme/media";
 
 @mixin heading {
-  margin: 1.5rem 0;
+  @include font("Chelsea Market", 400);
+  margin: 0;
   text-align: center;
   text-transform: uppercase;
 }
 
 .title {
   @include heading;
-  @include font("Chelsea Market", 400);
-  font-size: 5rem;
-  margin-top: 0;
+  font-size: 4rem;
 
   @include media(lg) {
     font-size: 3rem;
@@ -24,9 +23,8 @@
 
 .subtitle {
   @include heading;
-  @include font("Poppins", 400);
   font-size: 1.75rem;
-  margin: 0;
+  opacity: 0.75;
 
   @include media(lg) {
     font-size: 1.5rem;

@@ -15,7 +15,7 @@ const Page: FC = () => {
 
   return (
     <Intro
-      subtitle="Apprendre à gérer son stress et ses émotions"
+      subtitle="Dans mon assiette, du bon et du beau"
       animation="D5BF51ADC3CB5E4BAF06476BB5B4681C"
     />
   );

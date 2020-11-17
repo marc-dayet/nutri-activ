@@ -14,7 +14,7 @@ export const PageButtonLeft: FC<PageButtonProps> = props => {
   const {onClick: handleClick, disabled = false} = props;
 
   return (
-    <button className={cs.button} onClick={() => handleClick()} disabled={disabled}>
+    <button className={cs.buttonLeft} onClick={() => handleClick()} disabled={disabled}>
       <span className={cs.label}>Précédent</span>
       <ButtonBackgroundLeft className={cs.background} />
     </button>
@@ -25,7 +25,7 @@ export const PageButtonRight: FC<PageButtonProps> = props => {
   const {onClick: handleClick, disabled = false} = props;
 
   return (
-    <button className={cs.button} onClick={() => handleClick()} disabled={disabled}>
+    <button className={cs.buttonRight} onClick={() => handleClick()} disabled={disabled}>
       <span className={cs.label}>Suivant</span>
       <ButtonBackgroundRight className={cs.background} />
     </button>
