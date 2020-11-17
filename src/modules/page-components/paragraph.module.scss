@@ -41,6 +41,10 @@
   text-align: left;
 }
 
+.right {
+  text-align: right;
+}
+
 .padder {
   margin-bottom: 1rem;
 }
@@ -55,4 +59,8 @@
   @include media(lg) {
     width: 1.5rem;
   }
+}
+
+.bold {
+  font-weight: bold;
 }

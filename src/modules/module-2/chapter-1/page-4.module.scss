@@ -1,0 +1,18 @@
+@import "../../../theme";
+@import "../../../theme/media";
+
+.legend {
+  font-size: 1.15rem;
+}
+
+.icon {
+  height: 5.5rem;
+  margin-right: 1rem;
+  width: 5.5rem;
+}
+
+.grid {
+  align-items: center;
+  display: flex;
+  margin-bottom: 1rem;
+}
