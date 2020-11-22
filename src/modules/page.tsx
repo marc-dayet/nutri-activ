@@ -4,7 +4,7 @@ import cn from "classnames";
 import range from "lodash/fp/range";
 
 import {theme$} from "../theme";
-import {Title, Paragraph} from "./page-components";
+import {Title, Subtitle, Paragraph} from "./page-components";
 import {PageButtonLeft, PageButtonRight} from "./page-components/button";
 import ChapterButton from "./page-components/chapter-button";
 import {
@@ -23,6 +23,11 @@ import {ReactComponent as OverlayFalse} from "./page-components/quiz-check-false
 
 import cs from "./page.module.scss";
 
+type Choice = {
+  isTrue: boolean;
+  label: string;
+};
+
 type PageContainerProps =
   | {
       layout?: "page";
@@ -32,18 +37,20 @@ type PageContainerProps =
       title: string;
       img: string;
       statment: string;
+      choices: Choice[];
       answer: string;
-      isTrue: boolean;
+      hasMultipleChoices?: boolean;
     };
 
 const PageContainer: FC<PageContainerProps> = props => {
+  const hasMultipleChoices = (props.layout === "quiz" && props.hasMultipleChoices) || false;
   const [step] = useObservable(currStep$, currStep$.value, () => window.scrollTo({top: 0}));
   const [lastStep] = useObservable(lastStep$, lastStep$.value);
   const [theme] = useObservable(theme$, theme$.value);
   const nbChapters = Object.values(steps[step.module]).length;
   const nbPages = countPagesTill();
   const currPage = countPagesTill(step.chapter) + step.page;
-  const [isQuizTouched, touchQuiz] = useState<boolean | undefined>(undefined);
+  const [choicesIndex, setChoicesIndex] = useState<number[]>([]);
   const [isQuizAnswered, answerQuiz] = useState(false);
 
   function countPagesTill(end?: number) {
@@ -117,6 +124,20 @@ const PageContainer: FC<PageContainerProps> = props => {
     }
   }
 
+  function selectChoice(nextIndex: number) {
+    return (evt: React.ChangeEvent<HTMLInputElement>) => {
+      if (props.layout === "quiz") {
+        setChoicesIndex(prevIndexes =>
+          evt.target.checked
+            ? hasMultipleChoices
+              ? [nextIndex, ...prevIndexes]
+              : [nextIndex]
+            : prevIndexes.filter(index => index !== nextIndex),
+        );
+      }
+    };
+  }
+
   switch (props.layout) {
     case undefined:
     case "page":
@@ -152,9 +173,6 @@ const PageContainer: FC<PageContainerProps> = props => {
       return (
         <div className={cs.quizContainer}>
           <div className={cs.quizLeft}>
-            <div className={cs.quizPagination}>
-              Page {currPage}/{nbPages}
-            </div>
             <Title className={cs.quizTitle}>{props.title}</Title>
             <div className={cs.quizImgContainer}>
               <img className={cs.quizImg} src={props.img} alt="" />
@@ -163,32 +181,34 @@ const PageContainer: FC<PageContainerProps> = props => {
           </div>
           <div className={cs.quizRight}>
             <div className={cs.quizRadiosContainer}>
-              <label className={cs.quizRadioContainer}>
-                <span className={cs.quizRadio}>
-                  <input type="radio" name="quiz" onChange={() => touchQuiz(true)} />
-                  <Check className={cs.quizCheck} />
-                  {isQuizAnswered && props.isTrue && (
-                    <OverlayTrue className={cn(cs.quizCheckOverlay, cs.success)} />
-                  )}
-                  {isQuizAnswered && !props.isTrue && (
-                    <OverlayFalse className={cn(cs.quizCheckOverlay, cs.error)} />
-                  )}
-                  VRAI
-                </span>
-              </label>
-              <label className={cs.quizRadioContainer}>
-                <span className={cs.quizRadio}>
-                  <input type="radio" name="quiz" onChange={() => touchQuiz(false)} />
-                  <Check className={cs.quizCheck} />
-                  {isQuizAnswered && !props.isTrue && (
-                    <OverlayTrue className={cn(cs.quizCheckOverlay, cs.success)} />
-                  )}
-                  {isQuizAnswered && props.isTrue && (
-                    <OverlayFalse className={cn(cs.quizCheckOverlay, cs.error)} />
-                  )}
-                  FAUX
-                </span>
-              </label>
+              <div className={cs.quizPagination}>
+                Page {currPage}/{nbPages}
+              </div>
+              {hasMultipleChoices && (
+                <Subtitle className={cs.quizMultipleTitle}>
+                  Choisissez la ou les bonnes réponses
+                </Subtitle>
+              )}
+              {props.choices.map((choice, index) => (
+                <label key={index} className={cs.quizRadioContainer}>
+                  <span className={cs.quizRadio}>
+                    <input
+                      type="checkbox"
+                      name="quiz"
+                      onChange={selectChoice(index)}
+                      checked={choicesIndex.includes(index)}
+                    />
+                    <Check className={cs.quizCheck} />
+                    {isQuizAnswered && choice.isTrue && (
+                      <OverlayTrue className={cn(cs.quizCheckOverlay, cs.success)} />
+                    )}
+                    {isQuizAnswered && !choice.isTrue && (
+                      <OverlayFalse className={cn(cs.quizCheckOverlay, cs.error)} />
+                    )}
+                    {choice.label}
+                  </span>
+                </label>
+              ))}
             </div>
             <div className={cn(cs.quizAnswerContainer, {[cs.deployed]: isQuizAnswered})}>
               <h2 className={cn(cs.quizSubtitle, theme.secondary)}>Réponse</h2>
@@ -199,12 +219,12 @@ const PageContainer: FC<PageContainerProps> = props => {
             </div>
             <div className={cs.quizPages}>
               <PageButtonLeft onClick={prevPage} />
-              <PageButtonRight onClick={quizNext} disabled={isQuizTouched === undefined} />
+              <PageButtonRight onClick={quizNext} disabled={choicesIndex.length === 0} />
             </div>
             <footer className={cs.quizNavigation}>
               <div className={cs.pages}>
                 <PageButtonLeft onClick={prevPage} />
-                <PageButtonRight onClick={quizNext} disabled={isQuizTouched === undefined} />
+                <PageButtonRight onClick={quizNext} disabled={choicesIndex.length === 0} />
               </div>
               <div className={cs.chapters}>
                 {range(1, nbChapters + 1).map(chapter => (

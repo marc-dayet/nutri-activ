@@ -67,7 +67,7 @@
 
 .quizPagination {
   @include pagination;
-  color: $green01;
+  color: $white;
 }
 
 .quizLeft {
@@ -84,6 +84,7 @@
 }
 
 .quizRight {
+  align-self: start;
   grid-column: 2;
   grid-row: 1;
   padding: 1rem;
@@ -101,6 +102,11 @@
   @include media(md) {
     margin-top: 1rem;
   }
+}
+
+.quizMultipleTitle {
+  font-size: 1.5rem;
+  opacity: 1;
 }
 
 .quizImgContainer {
@@ -130,7 +136,7 @@
 }
 
 .quizStatment {
-  color: $gray22;
+  color: $green01;
   font-weight: bold;
   margin: 0 auto;
   max-width: 32rem;
@@ -167,15 +173,15 @@
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 
   &.deployed {
-    height: 25rem;
+    height: 15rem;
     transform: scaleY(1);
 
     @include media(lg) {
-      height: 20rem;
+      height: 12.5rem;
     }
 
     @include media(sm) {
-      height: 15rem;
+      height: 10rem;
     }
 
     @include media(xs) {
@@ -229,6 +235,11 @@
 .quizRadioContainer {
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
+
+  &:first-of-type {
+    margin-top: 2rem;
+  }
 
   @include media(md) {
     margin-top: 1rem;
@@ -264,9 +275,9 @@
   color: $white;
   cursor: pointer;
   display: grid;
-  font-size: 4rem;
+  font-size: 3rem;
   grid-auto-flow: column;
-  grid-column-gap: 1rem;
+  grid-column-gap: 1.5rem;
   justify-content: center;
   justify-items: center;
   position: relative;
@@ -305,20 +316,21 @@
 
 .quizSubtitle {
   @include font("Chelsea Market", 400);
-  font-size: 4rem;
-  margin: -3rem 0 0 0;
+  font-size: 3rem;
+  margin: -3rem 0 1rem 0;
   text-align: center;
 
   @include media(lg) {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin: -3rem 0 0 0;
   }
 
   @include media(sm) {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   @include media(xs) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 

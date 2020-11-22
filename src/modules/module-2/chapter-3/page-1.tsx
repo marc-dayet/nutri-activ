@@ -1,29 +1,32 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../../page"
-import {Title, Paragraph, Grid, Img} from "../../page-components"
-import img1 from "./page-1-1.png"
-import img2 from "./page-1-2.png"
+import PageContainer from "../../page";
+import img from "./page-1.png";
 
 const Page: FC = () => {
   return (
-    <PageContainer>
-      <Title>3. Ce que doit transmettre l’animateur au groupe durant l’étape</Title>
-      <Grid>
-        <Img src={img1} mode="avatar-lg" />
-        <Paragraph>
-          Le stress chronique est impliqué dans de nombreuses pathologies. On peut apprendre à le
-          repérer, l’accepter, le comprendre, le prévenir
-        </Paragraph>
-        <Img src={img2} mode="avatar-lg" />
-        <Paragraph>
-          On peut apprendre à gérer son stress. <br />
-          L’analyse et l’anticipation, le retour au calme et la recherche de soutien sont des
-          techniques efficaces, à la portée de chacun
-        </Paragraph>
-      </Grid>
-    </PageContainer>
-  )
-}
+    <PageContainer
+      layout="quiz"
+      title="Quiz n°1"
+      img={img}
+      statment="Quelle est la part d’énergie dépensée par le fonctionnement de notre corps?"
+      choices={[
+        {
+          label: "10%",
+          isTrue: false,
+        },
+        {
+          label: "20%",
+          isTrue: false,
+        },
+        {
+          label: "70%",
+          isTrue: true,
+        },
+      ]}
+      answer="70% : Au repos notre corps utilise 70% d’énergie pour fonctionner."
+    />
+  );
+};
 
-export default Page
+export default Page;
