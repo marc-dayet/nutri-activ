@@ -1,26 +1,34 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../../page"
-import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components"
-import img from "./page-2.png"
+import PageContainer from "../../page";
+import {Title, Paragraph, Img} from "../../page-components";
+import img1 from "./page-2-1.png";
+import img2 from "./page-2-2.png";
+import cs from "./page-2.module.scss";
 
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Subtitle showBook>Le stress</Subtitle>
-      <Grid>
-        <Img src={img} mode="avatar-lg" />
-        <Paragraph>
-          Il est la réponse naturelle de notre corps à une situation qui nous agresse ou qui nous
-          met au défi. Il entraîne des sensations souvent désagréables, voire douloureuses sur le
-          plan physique et psychologique. Il existe différents types de stress selon son degré de
-          gravité, d’intensité (drame, tracas), sa fréquence (aigu ou chronique). Le stress n’est
-          cependant pas toujours négatif.
+      <Title>La dénutrition chez les séniors</Title>
+      <Paragraph padder>
+        <Img src={img1} mode="avatar-lg" />
+      </Paragraph>
+      <Paragraph bold padder align="left">
+        C’est le déséquilibre entre les besoins de l’organisme et des apports nutritionnels
+        insuffisants (en quantité ou en qualité).
+      </Paragraph>
+      <div className={cs.grid}>
+        <img className={cs.icon} src={img2} />
+        <Paragraph align="left">
+          Pour les personnes de plus de 60 ans, il est important de vérifier son poids une fois par
+          mois. Toute perte de poids supérieure à 2 kg par mois incite à consulter un médecin.
         </Paragraph>
-      </Grid>
+      </div>
+      <Paragraph align="right" className={cs.legend}>
+        Source : PNNS, « Livret PNNS séniors pour les professionnels », INPES, Septembre 2006
+      </Paragraph>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

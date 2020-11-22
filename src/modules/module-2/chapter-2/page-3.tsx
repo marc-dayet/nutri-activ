@@ -1,34 +1,27 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../../page"
-import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components"
-import img from "./page-3.png"
+import PageContainer from "../../page";
+import {Title, List, ListItem, Paragraph, Img} from "../../page-components";
+import img from "./page-3.png";
+import cs from "./page-3.module.scss";
 
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Subtitle showBook>Les principales sources de stress</Subtitle>
-      <Grid>
+      <Title>Les principes du rythme alimentaire</Title>
+      <Paragraph>
         <Img src={img} mode="avatar-lg" />
-        <div>
-          <Paragraph>
-            Certaines situations peuvent être des freins à la qualité de vie, influencer
-            négativement un ou plusieurs piliers de la qualité de vie : des problèmes de voisinage
-            impactent sur mon cadre de vie, la perte d’un proche impacte sur mes relations sociales…
-            <br />
-            Les seniors sont soumis aux tracas de la vie quotidienne mais certaines sources de
-            stress sont spécifiques à l’avancée en âge : diminution de la force physique, perte de
-            contrôle sur sa vie…
-          </Paragraph>
-          <br />
-          <Paragraph>
-            <strong>Le stress peut agir sur un ou plusieurs piliers de la qualité de la vie</strong>
-          </Paragraph>
-        </div>
-      </Grid>
+      </Paragraph>
+      <Paragraph className={cs.paragraph} align="left">
+        <List className={cs.list}>
+          <ListItem>Faire 3 repas</ListItem>
+          <ListItem>Eviter le grignotage</ListItem>
+          <ListItem>Possibilité de prendre une collation le matin ou l’après-midi</ListItem>
+          <ListItem>Respecter des horaires de repas fixes</ListItem>
+        </List>
+      </Paragraph>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
