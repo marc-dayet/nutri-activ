@@ -18,7 +18,7 @@ const Page: FC = () => {
         insuffisants (en quantité ou en qualité).
       </Paragraph>
       <div className={cs.grid}>
-        <img className={cs.icon} src={img2} />
+        <img className={cs.icon} src={img2} alt="" />
         <Paragraph align="left">
           Pour les personnes de plus de 60 ans, il est important de vérifier son poids une fois par
           mois. Toute perte de poids supérieure à 2 kg par mois incite à consulter un médecin.

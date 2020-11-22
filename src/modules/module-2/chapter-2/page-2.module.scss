@@ -9,6 +9,11 @@
   height: 5rem;
   margin-right: 1rem;
   width: 5rem;
+
+  @include media(sm) {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 .grid {

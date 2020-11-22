@@ -12,6 +12,10 @@
 @mixin img {
   pointer-events: none;
   position: absolute;
+
+  @include media(sm) {
+    display: none;
+  }
 }
 
 .img1 {
