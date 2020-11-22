@@ -15,6 +15,21 @@
     grid-auto-flow: row;
   }
 
+  &[data-position="center center"] {
+    align-items: center;
+    justify-items: center;
+  }
+
+  &[data-position="left center"] {
+    align-items: center;
+    justify-items: start;
+  }
+
+  &[data-position="left top"] {
+    align-items: start;
+    justify-items: start;
+  }
+
   @include media(lg) {
     grid-column-gap: 1.5rem;
     grid-row-gap: 0.75rem;
