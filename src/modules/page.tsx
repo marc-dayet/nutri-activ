@@ -25,7 +25,7 @@ import cs from "./page.module.scss";
 
 type Choice = {
   isTrue: boolean;
-  label: string;
+  label: JSX.Element | string;
 };
 
 type PageContainerProps =
@@ -189,26 +189,28 @@ const PageContainer: FC<PageContainerProps> = props => {
                   Choisissez la ou les bonnes réponses
                 </Subtitle>
               )}
-              {props.choices.map((choice, index) => (
-                <label key={index} className={cs.quizRadioContainer}>
-                  <span className={cs.quizRadio}>
-                    <input
-                      type="checkbox"
-                      name="quiz"
-                      onChange={selectChoice(index)}
-                      checked={choicesIndex.includes(index)}
-                    />
-                    <Check className={cs.quizCheck} />
-                    {isQuizAnswered && choice.isTrue && (
-                      <OverlayTrue className={cn(cs.quizCheckOverlay, cs.success)} />
-                    )}
-                    {isQuizAnswered && !choice.isTrue && (
-                      <OverlayFalse className={cn(cs.quizCheckOverlay, cs.error)} />
-                    )}
-                    {choice.label}
-                  </span>
-                </label>
-              ))}
+              <div className={cs.quizRadiosSubcontainer}>
+                {props.choices.map((choice, index) => (
+                  <label key={index} className={cs.quizRadioContainer}>
+                    <span className={cs.quizRadio}>
+                      <input
+                        type="checkbox"
+                        name="quiz"
+                        onChange={selectChoice(index)}
+                        checked={choicesIndex.includes(index)}
+                      />
+                      <Check className={cs.quizCheck} />
+                      {isQuizAnswered && choice.isTrue && (
+                        <OverlayTrue className={cn(cs.quizCheckOverlay, cs.success)} />
+                      )}
+                      {isQuizAnswered && !choice.isTrue && (
+                        <OverlayFalse className={cn(cs.quizCheckOverlay, cs.error)} />
+                      )}
+                      {choice.label}
+                    </span>
+                  </label>
+                ))}
+              </div>
             </div>
             <div className={cn(cs.quizAnswerContainer, {[cs.deployed]: isQuizAnswered})}>
               <h2 className={cn(cs.quizSubtitle, theme.secondary)}>Réponse</h2>
