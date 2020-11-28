@@ -9,7 +9,7 @@ const Page: FC = () => {
     <PageContainer>
       <Title>PNNS – Programme National Nutrition Santé</Title>
       <Paragraph padder>
-        <Img src={img} mode="fullscreen" />
+        <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder>
         La santé est un des piliers de la qualité de vie, aux côtés de la sécurité, <br /> des

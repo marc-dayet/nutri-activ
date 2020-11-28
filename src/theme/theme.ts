@@ -1,23 +1,25 @@
-import {from, BehaviorSubject} from "rxjs"
-import {map, mergeMap, distinctUntilChanged} from "rxjs/operators"
+import {from, BehaviorSubject} from "rxjs";
+import {map, mergeMap, distinctUntilChanged} from "rxjs/operators";
+import {useObservable} from "@soywod/react-use-observable";
 
-import {currStep$, isLastStep} from "../modules/context"
+import {currStep$, isLastStep} from "../modules/context";
 
 type Theme = {
-  [key: string]: string
-}
+  [key: string]: string;
+};
 
-export const theme$ = new BehaviorSubject<Theme>({})
+export const theme$ = new BehaviorSubject<Theme>({});
+export const useTheme = () => useObservable(theme$, theme$.value);
 
 currStep$
   .pipe(
-    map(step => (isLastStep(step) ? 0 : step.module)),
+    map((step) => (isLastStep(step) ? 0 : step.module)),
     distinctUntilChanged(),
-    mergeMap(module => from(importTheme(module))),
-    map(module => module.default),
+    mergeMap((module) => from(importTheme(module))),
+    map((module) => module.default),
   )
-  .subscribe(theme$)
+  .subscribe(theme$);
 
 function importTheme(module: number): Promise<{[key: string]: Theme}> {
-  return import(`../modules/module-${module}/theme.module.scss`)
+  return import(`../modules/module-${module}/theme.module.scss`);
 }

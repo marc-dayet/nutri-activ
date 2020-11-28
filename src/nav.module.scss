@@ -2,7 +2,6 @@
 @import "./theme/media";
 
 .nav {
-  border-bottom: 1px solid $grayC4;
   display: grid;
   grid-template-columns: 25rem minmax(0, 1fr) 15rem;
 
