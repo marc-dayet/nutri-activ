@@ -1,24 +1,24 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../../page"
-import {Title, Subtitle, Paragraph, Img} from "../../page-components"
-import img from "./page-3.png"
-
-import cs from "./page-2.module.scss"
+import PageContainer from "../../page";
+import {Title, Paragraph, Img} from "../../page-components";
+import img from "./page-3.png";
 
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Subtitle className={cs.subtitle} showBook>
-        La recherche sur le bien vieillir met en avant six critères communs au bien-être
-        psychologique et au vieillissement réussi
-      </Subtitle>
-      <Paragraph>
+      <Title>Sens et alimentation</Title>
+      <Paragraph padder>
         <Img src={img} mode="fullscreen" />
       </Paragraph>
+      <Paragraph padder>
+        Pour percevoir le goût d’un aliment, nous mobilisons plusieurs sens en même temps. <br />
+        <strong>
+          Le goût est le seul sens qui ne peut fonctionner pleinement sans tous les autres.
+        </strong>
+      </Paragraph>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

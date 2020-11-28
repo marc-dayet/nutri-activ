@@ -1,15 +1,15 @@
 import React, {FC} from "react";
 
 import PageContainer from "../../page";
-import img from "./page-2.png";
+import img from "./page-3.png";
 
 const Page: FC = () => {
   return (
     <PageContainer
       layout="quiz"
-      title="Quiz n°2"
+      title="Quiz n°3"
       img={img}
-      statment="L’eau est la seule boisson qu’il est recommandé de boire pour s’hydrater ?"
+      statment="Au total notre langue peut percevoir 6 saveurs."
       choices={[
         {
           label: "Vrai",

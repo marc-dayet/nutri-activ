@@ -6,11 +6,11 @@ import cs from "./grid.module.scss";
 type GridProps = {
   className?: string;
   direction?: "vertical" | "horizontal";
-  position?: "center center" | "left center" | "left top";
+  position?: "center center" | "left center" | "left top" | "center top";
   padder?: boolean;
 };
 
-const Grid: FC<GridProps> = props => {
+const Grid: FC<GridProps> = (props) => {
   const {className, direction = "horizontal", position = "center center", padder, children} = props;
 
   return (
