@@ -1,31 +1,32 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../../page"
-import {Title, Paragraph, Grid, Img} from "../../page-components"
-import img from "./page-1.png"
+import PageContainer from "../../page";
+import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components";
+import cs from "./page-1.module.scss";
+import img1 from "./page-1-1.png";
+import img2 from "./page-1-2.png";
 
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
+      <Title>Les différents types d’activité physique</Title>
       <Grid>
-        <Img src={img} mode="avatar-lg" />
-        <Paragraph>
-          Connaître les émotions positives, leur utilité et leur cycle
-          <br />
-          Le rôle des hormones dans les émotions positives
-          <br />
-          Les compétences et facteurs de protecteurs favorisant le vieillissement en bonne santé
-          <br />
-          Les techniques et activités permettant de favoriser les émotions positives et cultiver le
-          bien-être
-          <br />
-          Les précautions à prendre pour éviter les pièges autour du bien-être
-          <br />
+        <Img src={img1} mode="avatar-lg" />
+        <Paragraph className={cs.paragraph}>
+          <Subtitle className={cs.subtitle}>Endurance</Subtitle>
+          Marche rapide, montée d’escalier, travaux ménagers, bricolage, jardinage, vélo, natation,
+          course à pied, gymnastique…
+        </Paragraph>
+        <Img src={img2} mode="avatar-lg" />
+        <Paragraph className={cs.paragraph}>
+          <Subtitle className={cs.subtitle}>Renforcement musculaire</Subtitle>
+          Marche rapide, montée d’escalier, bricolage avec travaux de force, jardinage : creuser,
+          bêcher, pelleter, port de charges lourdes, vélo, danse, natation, gymnastique, yoga,
+          Pilate, utilisation d’appareil de renforcement musculaire…
         </Paragraph>
       </Grid>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

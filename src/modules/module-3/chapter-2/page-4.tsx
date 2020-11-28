@@ -1,34 +1,32 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../../page"
-import {Title, Paragraph, List, ListItem, Img} from "../../page-components"
-import img from "./page-4.png"
+import PageContainer from "../../page";
+import {Title, Paragraph, Grid, List, ListItem, Img} from "../../page-components";
+import img from "./page-4.png";
 
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
+      <Title>Les bienfaits de l’activité physique</Title>
       <Paragraph padder>
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
-      <Paragraph padder align="left">
-        Les émotions positives :
-      </Paragraph>
-      <List padder>
-        <ListItem>annulent les effets des émotions négatives.</ListItem>
-        <ListItem>
-          élargissent la façon de regarder les choses, diversifient les idées et les activités.
-        </ListItem>
-        <ListItem>facilitent le changement de comportement</ListItem>
-      </List>
-      <Paragraph>
-        <strong>
-          Indispensables à notre bien-être et à notre survie, les émotions positives nous rendent
-          plus ouverts au possible et aux autres.
-        </strong>
-      </Paragraph>
+      <Grid>
+        <div></div>
+        <List>
+          <ListItem>Réduit les risques d’apparition de certaines maladies</ListItem>
+          <ListItem>Améliore le sommeil</ListItem>
+          <ListItem>Réduit le stress</ListItem>
+        </List>
+        <div></div>
+        <List>
+          <ListItem>Améliore la qualité de vie des personnes malades</ListItem>
+          <ListItem>Retarde la perte d’autonomie</ListItem>
+          <ListItem>Permet le maintien de la masse musculaire</ListItem>
+        </List>
+      </Grid>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

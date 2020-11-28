@@ -14,10 +14,10 @@ const App: FC = () => {
 
   useEffect(() => {
     Promise.all(
-      steps.keys.map(async key => {
+      steps.keys.map(async (key) => {
         const {module, chapter, page} = decodeStep(key);
         return import(`./modules/module-${module}/chapter-${chapter}/page-${page}.tsx`).then(
-          m => m.default,
+          (m) => m.default,
         );
       }),
     )

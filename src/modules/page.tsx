@@ -42,7 +42,7 @@ type PageContainerProps =
       hasMultipleChoices?: boolean;
     };
 
-const PageContainer: FC<PageContainerProps> = props => {
+const PageContainer: FC<PageContainerProps> = (props) => {
   const hasMultipleChoices = (props.layout === "quiz" && props.hasMultipleChoices) || false;
   const [step] = useObservable(currStep$, currStep$.value, () => window.scrollTo({top: 0}));
   const [lastStep] = useObservable(lastStep$, lastStep$.value);
@@ -127,12 +127,12 @@ const PageContainer: FC<PageContainerProps> = props => {
   function selectChoice(nextIndex: number) {
     return (evt: React.ChangeEvent<HTMLInputElement>) => {
       if (props.layout === "quiz") {
-        setChoicesIndex(prevIndexes =>
+        setChoicesIndex((prevIndexes) =>
           evt.target.checked
             ? hasMultipleChoices
               ? [nextIndex, ...prevIndexes]
               : [nextIndex]
-            : prevIndexes.filter(index => index !== nextIndex),
+            : prevIndexes.filter((index) => index !== nextIndex),
         );
       }
     };
@@ -153,7 +153,7 @@ const PageContainer: FC<PageContainerProps> = props => {
               <PageButtonRight onClick={nextPage} disabled={isLastStep(step)} />
             </div>
             <div className={cs.chapters}>
-              {range(1, nbChapters + 1).map(chapter => (
+              {range(1, nbChapters + 1).map((chapter) => (
                 <ChapterButton
                   key={chapter}
                   isActive={chapter === step.chapter}
@@ -229,7 +229,7 @@ const PageContainer: FC<PageContainerProps> = props => {
                 <PageButtonRight onClick={quizNext} disabled={choicesIndex.length === 0} />
               </div>
               <div className={cs.chapters}>
-                {range(1, nbChapters + 1).map(chapter => (
+                {range(1, nbChapters + 1).map((chapter) => (
                   <ChapterButton
                     key={chapter}
                     isActive={chapter === step.chapter}
@@ -244,7 +244,7 @@ const PageContainer: FC<PageContainerProps> = props => {
             </footer>
           </div>
           <div className={cs.quizChapters}>
-            {range(1, nbChapters + 1).map(chapter => (
+            {range(1, nbChapters + 1).map((chapter) => (
               <ChapterButton
                 key={chapter}
                 isActive={chapter === step.chapter}

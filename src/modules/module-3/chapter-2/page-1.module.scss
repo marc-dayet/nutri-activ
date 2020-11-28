@@ -5,17 +5,8 @@
   align-self: flex-start;
 }
 
-@mixin subtitle {
+.subtitle {
+  color: $yellowC2;
   font-size: 2rem;
   margin: 1rem 0;
-}
-
-.subtitleLeft {
-  @include subtitle;
-  color: $pinkF4;
-}
-
-.subtitleRight {
-  @include subtitle;
-  color: $tealB0;
 }

@@ -1,6 +1,7 @@
 import React, {FC, useEffect, useState} from "react";
 
 import {Intro} from "../../page-templates";
+import navItem from "../nav-item";
 
 const Page: FC = () => {
   const [isReady, setReady] = useState(false);
@@ -13,7 +14,7 @@ const Page: FC = () => {
     return null;
   }
 
-  return <Intro subtitle="Bien vivre avec soi" animation="D5BF51ADC3CB5E4BAF06476BB5B4681D" />;
+  return <Intro subtitle={navItem.label} animation="D5BF51ADC3CB5E4BAF06476BB5B4681D" />;
 };
 
 export default Page;

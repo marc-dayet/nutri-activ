@@ -1,28 +1,31 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../../page"
-import {Title, Paragraph, Img} from "../../page-components"
-import img from "./page-2.png"
-
-import cs from "./page-2.module.scss"
-import book from "../../page-components/subtitle-book.png"
+import PageContainer from "../../page";
+import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components";
+import cs from "./page-2.module.scss";
+import img1 from "./page-2-1.png";
+import img2 from "./page-2-2.png";
 
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Paragraph>
-        <Img className={cs.img} src={img} mode="fullscreen" />
-        <div>
-          <strong>
-            Une émotion est dite positive quand le ressenti est agréable. Il en existe une large
-            diversité
-            <img className={cs.book} src={book} alt="" />
-          </strong>
-        </div>
-      </Paragraph>
+      <Title>Les différents types d’activité physique</Title>
+      <Grid>
+        <Img src={img1} mode="avatar-lg" />
+        <Paragraph className={cs.paragraph}>
+          <Subtitle className={cs.subtitleLeft}>Souplesse</Subtitle>
+          Travaux ménagers, tai chi, yoga, Pilate, exercices d’assouplissement (étirements)
+        </Paragraph>
+        <Img src={img2} mode="avatar-lg" />
+        <Paragraph className={cs.paragraph}>
+          <Subtitle className={cs.subtitleRight}>Équilibre</Subtitle>
+          Se tenir debout sur une jambe puis en fermant les yeux, marcher en suivant une ligne,
+          vélo, trottinette, danse, pétanque, yoga, tai-chi, marche en arrière, sur les côtés, sur
+          les talons, sur les pointes de pieds, exercices d’équilibre sur sols instables…
+        </Paragraph>
+      </Grid>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
