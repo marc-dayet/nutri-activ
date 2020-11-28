@@ -1,17 +1,24 @@
 import React, {FC} from "react";
 
 import PageContainer from "../../page";
-import {Title, Subtitle, Paragraph, Img} from "../../page-components";
-import img from "./page-1.png";
+import {Title, Paragraph, Img} from "../../page-components";
+import img from "./page-2.png";
 
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Les grands déterminants du comportement alimentaire</Title>
-      <Subtitle>Une multitude de facteurs viennent impacter nos choix alimentaires.</Subtitle>
-      <Paragraph>
+      <Title>PNNS – Programme National Nutrition Santé</Title>
+      <Paragraph padder>
         <Img src={img} mode="fullscreen" />
       </Paragraph>
+      <Paragraph padder>
+        La santé est un des piliers de la qualité de vie, aux côtés de la sécurité, <br /> des
+        relations affectives et des ressources personnelles. <br /> Développer ses ressources
+        personnelles, c’est améliorer sa santé.
+      </Paragraph>
+      <br />
+
+      <Paragraph bold>Lancé en janvier 2001, il est reconduit tous les 5 ans.</Paragraph>
     </PageContainer>
   );
 };
