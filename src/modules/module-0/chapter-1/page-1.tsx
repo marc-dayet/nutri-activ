@@ -1,6 +1,7 @@
 import React, {FC} from "react"
 
 import PageContainer from "../../page"
+import {Title, Paragraph} from "../../page-components"
 import {ReactComponent as Logo} from "../../../logo.svg"
 
 import cs from "./page-1.module.scss"
@@ -8,18 +9,15 @@ import cs from "./page-1.module.scss"
 const Page: FC = () => {
   return (
     <PageContainer>
-      <h1 className={cs.title}>Bonjour et bienvenue !</h1>
-      <p className={cs.paragraph}>
-        Nous sommes heureux de vous accueillir parmi les animateurs souhaitant animer et participer
-        au développement de l’action sur le territoire
-      </p>
-      <div className={cs.logoContainer}>
+      <Title className={cs.title}>Nous vous souhaitons la bienvenue <br />à la formation pour animer <br />Les ateliers Nutri Activ'</Title>
+      <Paragraph align="center">
         <Logo className={cs.logo} />
-      </div>
-      <p className={cs.paragraph}>
-        Pour tout complément d’information, n’hésitez pas à contacter le coordonnateur de l’action
-        pour votre territoire d’intervention.
-      </p>
+      </Paragraph>
+      <Paragraph bold>
+        La première séquence présentera les objectifs et votre parcours de formation. <br />
+        Vous approfondirez ensuite vos connaissances en lien avec les modules d’animation
+        pour animer Les ateliers Nutri Activ'.
+      </Paragraph>
     </PageContainer>
   )
 }

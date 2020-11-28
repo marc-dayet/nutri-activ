@@ -1,11 +1,13 @@
 @import "../../../theme";
 @import "../../../theme/media";
 
-.title,
-.paragraph {
-  @include font("Poppins", 400);
-  font-size: 2rem;
-  margin: 0 0 2rem 0;
+.title {
+  @include font("Chelsea Market", 400);
+  color: $brownFF;
+  font-size: 3rem;
+  line-height: 3.2rem;
+  margin: 0;
+  opacity: 1;
   text-align: center;
 
   @include media(lg) {
@@ -24,27 +26,6 @@
 
   @include media(xs) {
     font-size: 1rem;
-  }
-}
-
-.title {
-  text-transform: uppercase;
-}
-
-.logoContainer {
-  margin: 3rem 0;
-  text-align: center;
-
-  @include media(lg) {
-    margin: 2rem 0;
-  }
-
-  @include media(sm) {
-    margin: 1.5rem 0;
-  }
-
-  @include media(xs) {
-    margin: 1rem 0;
   }
 }
 
