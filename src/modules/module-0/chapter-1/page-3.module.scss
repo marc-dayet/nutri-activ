@@ -1,0 +1,19 @@
+@import "../../../theme";
+@import "../../../theme/media";
+
+.grid {
+  align-items: center;
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1rem;
+  grid-template-columns: min-content max-content;
+  justify-content: center;
+}
+
+.img {
+  width: 5rem;
+}
+
+.subparagraph {
+  font-size: 1.2rem;
+}

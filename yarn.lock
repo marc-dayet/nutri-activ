@@ -1971,6 +1971,11 @@
   dependencies:
     "@types/yargs-parser" "*"
 
+"@types/youtube@^0.0.40":
+  version "0.0.40"
+  resolved "https://registry.yarnpkg.com/@types/youtube/-/youtube-0.0.40.tgz#93502cc42e4ce06a59db1e2d6fd986260dca31d3"
+  integrity sha512-gMiHfad1VGQ7CoXkhrjWiROPpLTSJydvBO73Z9JIIZ+FpZ2BX9q9Zf/tanP+KUTFoKUqHVv6+xt7sF2gztQ4Og==
+
 "@typescript-eslint/eslint-plugin@^2.10.0", "@typescript-eslint/eslint-plugin@^2.2.0":
   version "2.34.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.34.0.tgz#6f8ce8a46c7dea4a6f1d171d2bb8fbae6dac2be9"
@@ -10067,10 +10072,15 @@ prettier-stylelint@^0.4.2:
     tempy "^0.2.1"
     update-notifier "^2.2.0"
 
-prettier@^1.19.1, prettier@^1.7.0:
+prettier@^1.7.0:
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
   integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
+
+prettier@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
+  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
 pretty-bytes@^5.1.0:
   version "5.4.1"
