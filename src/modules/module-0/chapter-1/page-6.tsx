@@ -9,7 +9,7 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>Présentation des ateliers Nutri Activ'</Title>
-      <Paragraph className={cs.paragraph} bold padder>
+      <Paragraph bold padder>
         Les ateliers sont composés de 6 modules :
       </Paragraph>
       <Paragraph padder>
