@@ -1,42 +1,29 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../../page"
-import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components"
-import img1 from "./page-6-1.png"
-import img2 from "./page-6-2.png"
-import img3 from "./page-6-3.png"
+import PageContainer from "../../page";
+import {Title, Paragraph, Img, Grid} from "../../page-components";
+import img1 from "./page-6-1.png";
+import img2 from "./page-6-2.png";
 
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Subtitle showBook>Les bénéfices des activités collectives</Subtitle>
-      <Grid padder>
-        <Img src={img1} mode="avatar-md" />
+      <Title>Préserver nos aliments du panier à l’assiette</Title>
+      <Grid position="center top">
+        <Img src={img1} mode="avatar-lg" />
         <Paragraph>
-          Faire une activité physique à plusieurs renforce la motivation et la régularité de
-          l’activité
+          <strong>Pendant et après la consommation</strong> <br />
+          cuire les viandes hachées, les poissons, les saucisses, les boulettes à cœur, respecter
+          les DLC et mettre les produits non consommés dans une boîte hermétique.
         </Paragraph>
-        <Img src={img2} mode="avatar-md" />
+        <Img src={img2} mode="avatar-lg" />
         <Paragraph>
-          Faire une activité manuelle ou artistique à plusieurs permet de renforcer les liens, de
-          produire quelque chose de collectif qui peut être utile et/ou faire plaisir à d’autres, de
-          se réaliser ensemble.
-        </Paragraph>
-        <Img src={img3} mode="avatar-md" />
-        <Paragraph>
-          Faire un jeu collectif renforce la cohésion du groupe. Rire ensemble renforce le système
-          immunitaire.
+          <strong>Nettoyage</strong> <br />
+          laver régulièrement le réfrigérateur, les éponges, les torchons …
         </Paragraph>
       </Grid>
-      <Paragraph>
-        <strong>
-          Entretenir sa vie sociale, vivre des émotions positives avec d’autres permet de garder le
-          moral et la forme.
-        </strong>
-      </Paragraph>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

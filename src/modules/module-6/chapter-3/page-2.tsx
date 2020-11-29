@@ -1,19 +1,36 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../../page"
-import {Title, Subtitle, Paragraph, Img} from "../../page-components"
-import img from "./page-2.png"
+import PageContainer from "../../page";
+import img from "./page-2.png";
 
 const Page: FC = () => {
   return (
-    <PageContainer>
-      <Title>3. Ce que doit transmettre l’animateur au groupe durant l’étape</Title>
-      <Subtitle>Pour maintenir le cap vers le bien-être</Subtitle>
-      <Paragraph>
-        <Img src={img} mode="fullscreen" />
-      </Paragraph>
-    </PageContainer>
-  )
-}
+    <PageContainer
+      layout="quiz"
+      title="Quiz n°2"
+      img={img}
+      statment="7 g de lipides sont équivalent à combien de cuillères à café d’huile ?"
+      choices={[
+        {
+          label: "1 cuillère d’huile",
+          isTrue: false,
+        },
+        {
+          label: "2 cuillères d’huile",
+          isTrue: true,
+        },
+        {
+          label: "3 cuillères d’huile",
+          isTrue: false,
+        },
+        {
+          label: "4 cuillères d’huile",
+          isTrue: false,
+        },
+      ]}
+      answer="2 cuillères d’huile"
+    />
+  );
+};
 
-export default Page
+export default Page;

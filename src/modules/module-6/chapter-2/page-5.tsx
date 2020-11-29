@@ -1,34 +1,35 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../../page"
-import {Title, Paragraph, Grid, Img} from "../../page-components"
-import img1 from "./page-5-1.png"
-import img2 from "./page-5-2.png"
-import img3 from "./page-5-3.png"
-import img4 from "./page-5-4.png"
+import PageContainer from "../../page";
+import {Title, Paragraph, Img, Grid} from "../../page-components";
+import img1 from "./page-5-1.png";
+import img2 from "./page-5-2.png";
+import img3 from "./page-5-3.png";
 
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>2. Ce que doit savoir l’animateur pour préparer le voyage</Title>
-      <Paragraph padder>Pour développer des relations positives, il est nécessaire de :</Paragraph>
-      <Grid padder>
+      <Title>Préserver nos aliments du panier à l’assiette</Title>
+      <Grid position="center top">
         <Img src={img1} mode="avatar-lg" />
-        <br />
+        <Paragraph>
+          <strong>Pendant les courses</strong> acheter les produits frais en dernier, vérifier
+          l’origine des produits crus (viande, poisson, fruits de mer …).
+        </Paragraph>
         <Img src={img2} mode="avatar-lg" />
-        <br />
+        <Paragraph>
+          <strong>Rangement et conservation</strong> garder la température du réfrigérateur entre
+          0°C et 4°C, du congélateur à -18°C, ôter les emballages, organiser son frigo par catégorie
+          d’aliments.
+        </Paragraph>
         <Img src={img3} mode="avatar-lg" />
-        <br />
-        <Img src={img4} mode="avatar-lg" />
-        <br />
+        <Paragraph>
+          <strong>Pendant la préparation</strong> se laver les mains, laver les fruits et les
+          légumes, utiliser un ustensile par aliment.
+        </Paragraph>
       </Grid>
-      <Paragraph>
-        <strong>
-          Etre ouvert et créatif permet de développer des relations sociales positives.
-        </strong>
-      </Paragraph>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
