@@ -1,15 +1,15 @@
 import React, {FC} from "react";
 
 import PageContainer from "../../page";
-import img from "./page-1.png";
+import img from "./page-4.png";
 
 const Page: FC = () => {
   return (
     <PageContainer
       layout="quiz"
-      title="Quiz n°1"
+      title="Quiz n°4"
       img={img}
-      statment="Plus un produit est cuit, plus sa valeur nutritionnelle augmente."
+      statment="L’équilibre alimentaire se construit sur un seul repas."
       choices={[
         {
           label: "Vrai",

@@ -2,7 +2,7 @@ import React, {FC} from "react";
 
 import PageContainer from "../../page";
 import {Title, Paragraph, Img} from "../../page-components";
-import img from "./page-7.png";
+import img from "./page-9.png";
 
 const Page: FC = () => {
   return (
@@ -12,14 +12,18 @@ const Page: FC = () => {
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder bold>
-        1 à 2 fois par jour
+        À volonté
       </Paragraph>
-      <Paragraph padder>Pour la viande : 100 à 150 g de viande suffisent par jour</Paragraph>
       <Paragraph padder>
-        Pour les poissons : au moins 2 fois par semaine, dont une fois des poissons gras (maquereau,
-        hareng, sardine, saumon) pour environ 100 à 150 g.
+        <strong>1 à 1,5 litre par jour</strong>, pendant et en dehors des repas.
       </Paragraph>
-      <Paragraph>Pour les œufs : 6 œufs maximum par semaine</Paragraph>
+      <Paragraph padder>
+        <strong>Le café, le thé, la tisane, la soupe et autres boissons sans sucres</strong> peuvent
+        aussi être pris en compte.
+      </Paragraph>
+      <Paragraph>
+        <strong>Limiter</strong> les boissons sucrées.{" "}
+      </Paragraph>
     </PageContainer>
   );
 };

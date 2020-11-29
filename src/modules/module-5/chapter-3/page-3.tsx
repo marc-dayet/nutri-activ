@@ -1,35 +1,41 @@
 import React, {FC} from "react";
 
 import PageContainer from "../../page";
-import img from "./page-2.png";
+import img from "./page-3.png";
 
 const Page: FC = () => {
   return (
     <PageContainer
       layout="quiz"
-      title="Quiz n°2"
+      title="Quiz n°3"
       img={img}
-      statment="Il faut consommer des féculents (pains, céréales, légumineuses…)."
+      statment="Une portion de fruits ou légumes équivaut à …"
       hasMultipleChoices
       choices={[
         {
-          label: "1 fois par jour",
+          label: "80 à 100 g",
           isTrue: false,
         },
         {
-          label: "5 fois par semaine",
+          label: "100 à 150 g",
           isTrue: true,
         },
         {
-          label: "À tous les repas",
+          label: "1 fruit/légume entier",
           isTrue: false,
         },
         {
-          label: "Seulement le midi",
+          label: (
+            <>
+              1 fruit/légume de
+              <br />
+              la taille d’un poing
+            </>
+          ),
           isTrue: false,
         },
       ]}
-      answer="5 fois par semaine"
+      answer="100 à 150 g"
     />
   );
 };
