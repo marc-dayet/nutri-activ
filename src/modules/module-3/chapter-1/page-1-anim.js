@@ -49,7 +49,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -205,7 +205,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -233,7 +233,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -425,7 +425,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -453,7 +453,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -478,7 +478,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -506,7 +506,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -534,7 +534,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -703,7 +703,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -872,7 +872,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -995,7 +995,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -1118,7 +1118,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -1652,7 +1652,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -2184,7 +2184,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -2515,7 +2515,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -2846,7 +2846,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -3176,7 +3176,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -3508,7 +3508,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -3815,7 +3815,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -4122,7 +4122,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -4343,7 +4343,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -4564,7 +4564,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -4740,7 +4740,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -4765,7 +4765,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -4881,7 +4881,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -4906,7 +4906,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};
@@ -5951,7 +5951,7 @@
     if (reversed == null) {
       reversed = false;
     }
-    let props = new Object();
+    let props = {};
     props.mode = mode;
     props.startPosition = startPosition;
     props.labels = {};

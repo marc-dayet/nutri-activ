@@ -30,6 +30,7 @@ settings:
 rules:
   no-console: 0
   prefer-const: 0
+  no-new-object: 0
   react-hooks/exhaustive-deps: warn
   react-hooks/rules-of-hooks: error
   react/display-name: off
