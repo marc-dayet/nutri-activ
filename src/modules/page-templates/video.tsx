@@ -1,5 +1,4 @@
 import React, {FC} from "react";
-import YouTubeVideo from "react-youtube";
 
 import PageContainer from "../page";
 import {Title} from "../page-components";
@@ -16,19 +15,25 @@ type PageVideoProps = {
   id: string;
 };
 
-const PageVideo: FC<PageVideoProps> = props => {
+const PageVideo: FC<PageVideoProps> = (props) => {
   const {id} = props;
 
   return (
     <PageContainer>
       <Title>Vidéo d'introduction</Title>
       <div className={cs.frame}>
-        <YouTubeVideo
-          containerClassName={cs.container}
-          className={cs.video}
-          videoId={id}
-          opts={{playerVars: {autoplay: 1}}}
-        />
+        <div className={cs.container}>
+          <iframe
+            className={cs.video}
+            title="Vidéo"
+            src={`https://www.dailymotion.com/embed/video/${id}?autoplay=1`}
+            frameBorder="0"
+            width="100%"
+            height="100%"
+            allow="autoplay"
+            allowFullScreen
+          ></iframe>
+        </div>
         <img className={cs.img1} src={img1} alt="" />
         <img className={cs.img2} src={img2} alt="" />
         <img className={cs.img3} src={img3} alt="" />
