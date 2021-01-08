@@ -6,7 +6,7 @@
   display: grid;
   grid-auto-flow: row;
   grid-gap: 1rem;
-  grid-template-columns: min-content max-content;
+  grid-template-columns: min-content auto;
   justify-content: center;
 }
 

@@ -4,7 +4,7 @@
 .title {
   @include font("Chelsea Market", 400);
   color: $brownFF;
-  font-size: 3rem;
+  font-size: 2.75rem;
   line-height: 3.2rem;
   margin: 0 0 1rem 0;
   opacity: 1;
@@ -12,15 +12,18 @@
 
   @include media(lg) {
     font-size: 1.75rem;
+    line-height: 2rem;
     margin-bottom: 1.5rem;
   }
 
   @include media(md) {
     font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 
   @include media(sm) {
     font-size: 1.25rem;
+    line-height: 1.5rem;
     margin-bottom: 1rem;
   }
 

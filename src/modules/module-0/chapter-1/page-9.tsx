@@ -15,7 +15,7 @@ const Page: FC = () => {
         vous pouvez les inscrire via un lien dédié. Deux options sont possibles :
       </Paragraph>
       <div className={cs.grid}>
-        <Img src={img1} mode="avatar-lg" />
+        <Img className={cs.img1} src={img1} mode="avatar-lg" />
         <List>
           <ListItem>
             <strong>Vous souhaitez le faire à la fin de chaque module</strong> : utilisez
@@ -32,7 +32,7 @@ const Page: FC = () => {
         </List>
       </div>
       <div className={cs.subgrid}>
-        <img className={cs.img} src={img2} alt="" />
+        <img className={cs.img2} src={img2} alt="" />
         <Paragraph align="left">
           Tous les commentaires saisis et enregistrés seront envoyés au formateur <br />
           pour l’étape suivante : la web-conférence.

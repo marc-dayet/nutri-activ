@@ -15,11 +15,24 @@
   display: grid;
   grid-auto-flow: row;
   grid-gap: 1rem;
-  grid-template-columns: min-content max-content;
+  grid-template-columns: min-content auto;
   justify-content: center;
   margin-bottom: 1rem;
 }
 
-.img {
+.img1[data-mode="avatar-lg"] {
+  align-self: center;
+  height: 17.5rem;
+
+  @include media(lg) {
+    height: 15rem;
+  }
+
+  @include media(md) {
+    height: 10rem;
+  }
+}
+
+.img2 {
   width: 4rem;
 }

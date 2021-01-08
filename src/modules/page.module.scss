@@ -47,18 +47,6 @@
   font-size: 1rem;
   opacity: 0.75;
   text-align: center;
-
-  @include media(lg) {
-    margin-bottom: 2rem;
-  }
-
-  @include media(md) {
-    margin-bottom: 1rem;
-  }
-
-  @include media(xs) {
-    font-size: 0.75rem;
-  }
 }
 
 .pagePagination {
@@ -426,7 +414,7 @@
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-  margin: 0 auto 2rem auto;
+  margin: 2rem auto 2rem auto;
   max-width: 37.5rem;
   padding: 0;
 
