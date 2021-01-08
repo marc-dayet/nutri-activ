@@ -20,7 +20,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Faux"
+      answer="FAUX : Notre langue perçoit jusqu’à 4 saveurs : salé, sucré, amer et acide"
     />
   );
 };

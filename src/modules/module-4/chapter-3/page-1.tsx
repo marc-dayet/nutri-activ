@@ -20,7 +20,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Faux"
+      answer="FAUX : Pendant l’ingestion on parle de rassasiement alors que l’état de satiété intervient après le repas."
     />
   );
 };

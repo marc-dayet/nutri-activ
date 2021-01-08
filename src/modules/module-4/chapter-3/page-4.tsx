@@ -13,14 +13,14 @@ const Page: FC = () => {
       choices={[
         {
           label: "Vrai",
-          isTrue: false,
+          isTrue: true,
         },
         {
           label: "Faux",
-          isTrue: true,
+          isTrue: false,
         },
       ]}
-      answer="Faux"
+      answer="VRAI : Plus on vieillit plus le risque augmente car la perception de soif s’atténue à partir de 55 ans."
     />
   );
 };

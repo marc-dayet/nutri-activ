@@ -20,7 +20,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Faux"
+      answer="FAUX : Il se construit sur plusieurs repas dans la journée voire dans la semaine et rime avec activité physique régulière."
     />
   );
 };

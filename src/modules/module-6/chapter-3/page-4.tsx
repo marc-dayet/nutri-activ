@@ -20,7 +20,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Faux"
+      answer="FAUX : Consommer un produit dont la DLC (Date Limite de Consommation) est dépassée comporte toujours un risque car la charge bactérienne peut être importante. A contrario, un produit dont la DDM (Date de Durabilité Minimale) est dépassée peut être consommé sans danger."
     />
   );
 };

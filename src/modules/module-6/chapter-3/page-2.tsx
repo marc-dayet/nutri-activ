@@ -13,11 +13,11 @@ const Page: FC = () => {
       choices={[
         {
           label: "1 cuillère d’huile",
-          isTrue: false,
+          isTrue: true,
         },
         {
           label: "2 cuillères d’huile",
-          isTrue: true,
+          isTrue: false,
         },
         {
           label: "3 cuillères d’huile",
@@ -28,7 +28,7 @@ const Page: FC = () => {
           isTrue: false,
         },
       ]}
-      answer="2 cuillères d’huile"
+      answer="1 cuillère d’huile. Pour rappel 5 g de lipides correspondent à une cuillère à soupe d’huile."
     />
   );
 };

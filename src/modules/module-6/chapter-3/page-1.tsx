@@ -17,7 +17,7 @@ const Page: FC = () => {
         },
         {
           label: "2 morceaux de sucre",
-          isTrue: true,
+          isTrue: false,
         },
         {
           label: "3 morceaux de sucre",
@@ -25,10 +25,10 @@ const Page: FC = () => {
         },
         {
           label: "4 morceaux de sucre",
-          isTrue: false,
+          isTrue: true,
         },
       ]}
-      answer="2 morceaux de sucre"
+      answer="4 morceaux de sucre. Pour rappel, 5 g de sucres correspondent à un morceau de sucre."
     />
   );
 };

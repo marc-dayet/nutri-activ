@@ -14,11 +14,11 @@ const Page: FC = () => {
       choices={[
         {
           label: "80 à 100 g",
-          isTrue: false,
+          isTrue: true,
         },
         {
           label: "100 à 150 g",
-          isTrue: true,
+          isTrue: false,
         },
         {
           label: "1 fruit/légume entier",
@@ -32,10 +32,10 @@ const Page: FC = () => {
               la taille d’un poing
             </>
           ),
-          isTrue: false,
+          isTrue: true,
         },
       ]}
-      answer="100 à 150 g"
+      answer="Les fruits de petite taille sont à consommés en plus grande quantité pour obtenir une portion (cerises, framboises, raisin…)."
     />
   );
 };

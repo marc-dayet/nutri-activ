@@ -20,7 +20,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Faux"
+      answer="FAUX : Les boissons comme le thé, le café, la tisane, la soupe… peuvent également compter dans la dose quotidienne recommandée (1 à 1,5 litre)."
     />
   );
 };

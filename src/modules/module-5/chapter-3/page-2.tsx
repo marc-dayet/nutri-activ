@@ -18,18 +18,18 @@ const Page: FC = () => {
         },
         {
           label: "5 fois par semaine",
-          isTrue: true,
+          isTrue: false,
         },
         {
           label: "À tous les repas",
-          isTrue: false,
+          isTrue: true,
         },
         {
           label: "Seulement le midi",
           isTrue: false,
         },
       ]}
-      answer="5 fois par semaine"
+      answer="À tous les repas car ils fournissent de l’énergie à notre corps tout au long de la journée."
     />
   );
 };
