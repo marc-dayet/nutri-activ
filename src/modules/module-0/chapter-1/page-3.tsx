@@ -4,11 +4,11 @@ import PageContainer from "../../page";
 import {Title, Paragraph} from "../../page-components";
 import cs from "./page-3.module.scss";
 import img1 from "./page-3-1.png";
-import img2 from "./page-3-1.png";
-import img3 from "./page-3-1.png";
-import img4 from "./page-3-1.png";
-import img5 from "./page-3-1.png";
-import img6 from "./page-3-1.png";
+import img2 from "./page-3-2.png";
+import img3 from "./page-3-3.png";
+import img4 from "./page-3-4.png";
+import img5 from "./page-3-5.png";
+import img6 from "./page-3-6.png";
 
 const Page: FC = () => {
   return (
