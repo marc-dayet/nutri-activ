@@ -5,7 +5,7 @@
   grid-column: 1;
   grid-row: 1;
   justify-self: center;
-  margin-top: 8%;
+  margin: 2rem 0 0 10rem;
   z-index: 1;
 
   @include media(md) {
@@ -22,9 +22,9 @@
 }
 
 .label {
-  @include font("Poppins", 600);
-  color: $white;
-  font-size: 1rem;
+  @include font("Chelsea Market", 400);
+  color: $gray44;
+  font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
 

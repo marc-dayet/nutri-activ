@@ -62,7 +62,8 @@ const Login: FC = () => {
       <Animation name="ANIMHOME" composition="734EB31CE8A9084FB0FF77AFEBD5E96A" fullscreen>
         <div className={cs.container}>
           <div className={cs.label}>
-            Saisissez votre e-mail. Il vous servira d'identifiant tout au long du parcours.
+            Saisissez votre e-mail. Il vous servira <br />
+            d'identifiant tout au long du parcours.
           </div>
           <div className={cs.forms}>
             <form className={cs.form} onSubmit={checkEmailAvailability}>
