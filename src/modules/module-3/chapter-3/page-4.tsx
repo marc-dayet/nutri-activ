@@ -20,7 +20,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Faux"
+      answer="FAUX : Les 30 min d’activité recommandées peuvent être fractionnées en 3 x 10 min ou 2 x 15 min selon les capacités de chacun."
     />
   );
 };

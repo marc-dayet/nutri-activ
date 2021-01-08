@@ -12,16 +12,13 @@ const Page: FC = () => {
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder bold>
-        Limiter la consommation <br />À consommer surtout au cours des repas et des collations.
+        Limiter la consommation
       </Paragraph>
       <Paragraph padder>
-        - les boissons sucrées (sirops, sodas, boissons sucrées à base de fruits, nectars…) et aux
-        bonbons.
+        Privilégier les matières grasses végétales : l'huile d'olive, de colza, de noix…
       </Paragraph>
-      <Paragraph>
-        - les aliments gras et sucrés à la fois (pâtisseries, viennoiseries, crèmes desserts,
-        chocolat, glaces, barres chocolatées…).
-      </Paragraph>
+      <Paragraph padder>Favoriser la variété</Paragraph>
+      <Paragraph>Limiter les graisses d’origine animale (beurre, crème,…)</Paragraph>
     </PageContainer>
   );
 };

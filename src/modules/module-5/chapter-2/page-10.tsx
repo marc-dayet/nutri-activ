@@ -12,18 +12,17 @@ const Page: FC = () => {
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder bold>
-        Limiter la consommation
+        À volonté
       </Paragraph>
-      <Paragraph>Préférer le sel iodé.</Paragraph>
-      <Paragraph>Saler sans excès, ne pas resaler avant de goûter.</Paragraph>
-      <Paragraph>
-        Réduire l'ajout de sel dans la confection des plats, eau de cuisson comprise.
+      <Paragraph padder>
+        <strong>1 à 1,5 litre par jour</strong>, pendant et en dehors des repas.
+      </Paragraph>
+      <Paragraph padder>
+        <strong>Le café, le thé, la tisane, la soupe et autres boissons sans sucres</strong> peuvent
+        aussi être pris en compte.
       </Paragraph>
       <Paragraph>
-        Limiter la consommation de produits gras et salés : charcuterie, produits apéritifs salés …
-      </Paragraph>
-      <Paragraph>
-        Une alimentation sans sel doit être encadrée par une prescription médicale.
+        <strong>Limiter</strong> les boissons sucrées.{" "}
       </Paragraph>
     </PageContainer>
   );

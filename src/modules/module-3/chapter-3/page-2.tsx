@@ -13,14 +13,14 @@ const Page: FC = () => {
       choices={[
         {
           label: "Vrai",
-          isTrue: false,
+          isTrue: true,
         },
         {
           label: "Faux",
-          isTrue: true,
+          isTrue: false,
         },
       ]}
-      answer="Faux"
+      answer="VRAI : Il y a une dépense énergétique plus importante que le repos ou la position sédentaire."
     />
   );
 };

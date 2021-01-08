@@ -44,6 +44,11 @@ type PageContainerProps =
 
 const PageContainer: FC<PageContainerProps> = (props) => {
   const hasMultipleChoices = (props.layout === "quiz" && props.hasMultipleChoices) || false;
+  const hasOneValidAnswer =
+    props.layout === "quiz" &&
+    !hasMultipleChoices &&
+    props.choices.length > 2 &&
+    props.choices.filter((c) => c.isTrue).length === 1;
   const [step] = useObservable(currStep$, currStep$.value, () => window.scrollTo({top: 0}));
   const [lastStep] = useObservable(lastStep$, lastStep$.value);
   const [theme] = useObservable(theme$, theme$.value);
@@ -188,6 +193,9 @@ const PageContainer: FC<PageContainerProps> = (props) => {
                 <Subtitle className={cs.quizMultipleTitle}>
                   Choisissez la ou les bonnes réponses
                 </Subtitle>
+              )}
+              {hasOneValidAnswer && (
+                <Subtitle className={cs.quizMultipleTitle}>Choisissez la bonne réponse</Subtitle>
               )}
               <div className={cs.quizRadiosSubcontainer}>
                 {props.choices.map((choice, index) => (

@@ -20,7 +20,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Faux"
+      answer="FAUX : Le PNNS recommande de limiter la consommation de sel."
     />
   );
 };

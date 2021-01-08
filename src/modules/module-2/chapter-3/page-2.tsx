@@ -20,7 +20,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Faux"
+      answer="FAUX : Les nutriments énergétiques sont les lipides, les glucides, les protéines et l’alcool."
     />
   );
 };

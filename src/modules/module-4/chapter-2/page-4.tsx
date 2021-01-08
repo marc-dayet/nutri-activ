@@ -27,8 +27,8 @@ const Page: FC = () => {
         <Img src={img3} mode="avatar-md" />
         <Paragraph>
           <strong>Alcool</strong>
-          <br />3 verres - 2 verres par jour et maximum 10 verres par semaine avec des jours sans
-          consommations
+          <br />♂ 3 verres - ♀ 2 verres par jour et maximum 10 verres par semaine avec des jours
+          sans consommations
         </Paragraph>
       </Grid>
     </PageContainer>

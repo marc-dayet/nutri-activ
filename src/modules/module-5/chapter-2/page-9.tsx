@@ -12,17 +12,15 @@ const Page: FC = () => {
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder bold>
-        À volonté
+        Limiter la consommation <br />À consommer surtout au cours des repas et des collations.
       </Paragraph>
       <Paragraph padder>
-        <strong>1 à 1,5 litre par jour</strong>, pendant et en dehors des repas.
-      </Paragraph>
-      <Paragraph padder>
-        <strong>Le café, le thé, la tisane, la soupe et autres boissons sans sucres</strong> peuvent
-        aussi être pris en compte.
+        - les boissons sucrées (sirops, sodas, boissons sucrées à base de fruits, nectars…) et aux
+        bonbons.
       </Paragraph>
       <Paragraph>
-        <strong>Limiter</strong> les boissons sucrées.{" "}
+        - les aliments gras et sucrés à la fois (pâtisseries, viennoiseries, crèmes desserts,
+        chocolat, glaces, barres chocolatées…).
       </Paragraph>
     </PageContainer>
   );

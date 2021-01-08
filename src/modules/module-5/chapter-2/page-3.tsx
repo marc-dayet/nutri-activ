@@ -7,7 +7,7 @@ import img from "./page-3.png";
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>La cuisson des aliments</Title>
+      <Title>Les 9 repères du Programme National Nutrition Santé</Title>
       <Paragraph>
         <Img src={img} mode="fullscreen" />
       </Paragraph>

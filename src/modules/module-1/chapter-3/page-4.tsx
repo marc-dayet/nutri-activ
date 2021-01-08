@@ -20,7 +20,7 @@ const Page: FC = () => {
           isTrue: false,
         },
       ]}
-      answer="Vrai"
+      answer="VRAI : Nos choix alimentaires sont influencés par une multitude de facteurs (lien social, aspects individuels, facteurs socio-culturels, environnement alimentaire…)."
     />
   );
 };

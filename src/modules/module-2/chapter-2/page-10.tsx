@@ -15,9 +15,6 @@ const Page: FC = () => {
       </Paragraph>
       <Grid position="left top">
         <div className={cs.grid}>
-          <Paragraph padder bold align="left">
-            Acides gras saturés
-          </Paragraph>
           <List>
             <ListItem>Fruits</ListItem>
             <ListItem>Légumes</ListItem>

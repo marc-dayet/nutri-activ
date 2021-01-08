@@ -20,7 +20,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Faux"
+      answer="FAUX : Il est essentiel d’aborder ensemble les notions d’équilibre alimentaire et d’activité physique car nos besoins varient en fonction de ces deux éléments."
     />
   );
 };

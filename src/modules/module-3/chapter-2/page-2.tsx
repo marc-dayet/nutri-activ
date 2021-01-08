@@ -14,7 +14,7 @@ const Page: FC = () => {
         <Img src={img1} mode="avatar-lg" />
         <Paragraph className={cs.paragraph}>
           <Subtitle className={cs.subtitleLeft}>Souplesse</Subtitle>
-          Travaux ménagers, tai chi, yoga, Pilate, exercices d’assouplissement (étirements)
+          Travaux ménagers, tai chi, yoga, Pilate, exercices d’assouplissement (étirements)…
         </Paragraph>
         <Img src={img2} mode="avatar-lg" />
         <Paragraph className={cs.paragraph}>

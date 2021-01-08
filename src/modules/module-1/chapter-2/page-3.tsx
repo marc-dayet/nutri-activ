@@ -8,7 +8,7 @@ import img from "./page-3.png";
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Les grands déterminants du comportement alimentaire</Title>
+      <Title>Équilibre alimentaire et activité physique</Title>
       <Paragraph padder>
         <Img src={img} mode="avatar-lg" />
       </Paragraph>

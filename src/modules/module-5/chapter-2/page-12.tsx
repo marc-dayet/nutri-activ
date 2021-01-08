@@ -2,7 +2,7 @@ import React, {FC} from "react";
 
 import PageContainer from "../../page";
 import {Title, Paragraph, Img} from "../../page-components";
-import img from "./page-11.png";
+import img from "./page-12.png";
 
 const Page: FC = () => {
   return (
@@ -12,18 +12,18 @@ const Page: FC = () => {
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder bold>
-        Limiter la consommation
-      </Paragraph>
-      <Paragraph>Préférer le sel iodé.</Paragraph>
-      <Paragraph>Saler sans excès, ne pas resaler avant de goûter.</Paragraph>
-      <Paragraph>
-        Réduire l'ajout de sel dans la confection des plats, eau de cuisson comprise.
+        Au moins 30 minutes d’activité physique 5 jours par semaine ou plus.
       </Paragraph>
       <Paragraph>
-        Limiter la consommation de produits gras et salés : charcuterie, produits apéritifs salés …
+        Intégrer dans la vie quotidienne, l'activité sous toutes ses formes : marche, vélo,
+        jardinage …
       </Paragraph>
       <Paragraph>
-        Une alimentation sans sel doit être encadrée par une prescription médicale.
+        Privilégier une diversité d’activités physiques : endurance, renforcement musculaire,
+        souplesse, équilibre.
+      </Paragraph>
+      <Paragraph>
+        Pour qu'elle soit profitable, elle doit être réalisée par période d’au moins 10 minutes.
       </Paragraph>
     </PageContainer>
   );

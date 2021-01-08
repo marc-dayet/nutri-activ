@@ -20,7 +20,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Faux"
+      answer="FAUX : Pour tous les âges il est nécessaire d’adopter un mode de vie actif."
     />
   );
 };

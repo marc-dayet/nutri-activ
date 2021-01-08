@@ -24,7 +24,7 @@ const Page: FC = () => {
           isTrue: false,
         },
       ]}
-      answer="20% : L’activité physique représente 20% de nos dépenses énergétiques."
+      answer="L'activité physique représente 20% de nos dépenses énergétiques."
     />
   );
 };

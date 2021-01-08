@@ -7,7 +7,7 @@ import img from "./page-3.png";
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>La cuisson des aliments</Title>
+      <Title>La lecture des étiquettes</Title>
       <Subtitle>Comprendre les valeurs nutritionnelles - Etiquette du saucisson</Subtitle>
       <Paragraph>
         <Img src={img} mode="fullscreen" />

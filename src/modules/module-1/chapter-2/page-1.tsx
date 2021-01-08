@@ -12,9 +12,8 @@ const Page: FC = () => {
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder>
-        La santé est un des piliers de la qualité de vie, aux côtés de la sécurité, <br /> des
-        relations affectives et des ressources personnelles. <br /> Développer ses ressources
-        personnelles, c’est améliorer sa santé.
+        Le PNNS (Programme National Nutrition Santé) a pour objectif d’améliorer l’état de santé de
+        l’ensemble de la population en agissant sur l’un de ses déterminants majeurs : la nutrition.
       </Paragraph>
       <br />
 

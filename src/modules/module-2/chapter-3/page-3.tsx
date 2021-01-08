@@ -14,7 +14,7 @@ const Page: FC = () => {
       choices={[
         {
           label: "Du poisson",
-          isTrue: false,
+          isTrue: true,
         },
         {
           label: "Des œufs",
@@ -36,10 +36,10 @@ const Page: FC = () => {
               laitiers
             </>
           ),
-          isTrue: false,
+          isTrue: true,
         },
       ]}
-      answer="Faux"
+      answer="Du poisson, des œufs et des produits laitiers"
     />
   );
 };
