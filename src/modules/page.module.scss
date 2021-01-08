@@ -236,6 +236,24 @@
 .quizRadiosSubcontainer {
   display: grid;
   justify-content: center;
+  position: relative;
+}
+
+.quizNote {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-50%, 50%) scale(2) rotateZ(-45deg);
+  transition-duration: 500ms;
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0, 1, 0.25, 1);
+  width: 10rem;
+}
+
+.quizNoteVisible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1) rotateZ(0deg);
 }
 
 .quizRadioContainer {

@@ -18,8 +18,8 @@ import {
 } from "./context";
 import {ReactComponent as Check} from "./page-components/quiz-check.svg";
 import {ReactComponent as AnswerBlock} from "./page-components/quiz-answer.svg";
-import {ReactComponent as OverlayTrue} from "./page-components/quiz-check-true.svg";
-import {ReactComponent as OverlayFalse} from "./page-components/quiz-check-false.svg";
+import quizNoteTrue from "./page-components/quiz-note-true.png";
+import quizNoteFalse from "./page-components/quiz-note-false.png";
 
 import cs from "./page.module.scss";
 
@@ -57,6 +57,11 @@ const PageContainer: FC<PageContainerProps> = (props) => {
   const currPage = countPagesTill(step.chapter) + step.page;
   const [choicesIndex, setChoicesIndex] = useState<number[]>([]);
   const [isQuizAnswered, answerQuiz] = useState(false);
+
+  function isQuizCorrectlyAnswered() {
+    const choices = props.layout === "quiz" ? props.choices : [];
+    return choices.every((choice, idx) => choice.isTrue === choicesIndex.includes(idx));
+  }
 
   function countPagesTill(end?: number) {
     return steps[step.module].slice(0, end).reduce((sum, pages) => sum + pages, 0);
@@ -198,6 +203,11 @@ const PageContainer: FC<PageContainerProps> = (props) => {
                 <Subtitle className={cs.quizMultipleTitle}>Choisissez la bonne réponse</Subtitle>
               )}
               <div className={cs.quizRadiosSubcontainer}>
+                <img
+                  className={cn(cs.quizNote, {[cs.quizNoteVisible]: isQuizAnswered})}
+                  src={isQuizCorrectlyAnswered() ? quizNoteTrue : quizNoteFalse}
+                  alt=""
+                />
                 {props.choices.map((choice, index) => (
                   <label key={index} className={cs.quizRadioContainer}>
                     <span className={cs.quizRadio}>
@@ -206,14 +216,9 @@ const PageContainer: FC<PageContainerProps> = (props) => {
                         name="quiz"
                         onChange={selectChoice(index)}
                         checked={choicesIndex.includes(index)}
+                        disabled={isQuizAnswered}
                       />
                       <Check className={cs.quizCheck} />
-                      {isQuizAnswered && choice.isTrue && (
-                        <OverlayTrue className={cn(cs.quizCheckOverlay, cs.success)} />
-                      )}
-                      {isQuizAnswered && !choice.isTrue && (
-                        <OverlayFalse className={cn(cs.quizCheckOverlay, cs.error)} />
-                      )}
                       {choice.label}
                     </span>
                   </label>
