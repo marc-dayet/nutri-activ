@@ -9,7 +9,7 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>Comment limiter le gaspillage ?</Title>
-      <Paragraph>
+      <Paragraph padder>
         <Img src={img} mode="avatar-md" />
       </Paragraph>
       <List>
