@@ -9,6 +9,7 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>Préserver nos aliments du panier à l’assiette</Title>
+      <br />
       <Grid position="center top">
         <Img src={img1} mode="avatar-lg" />
         <Paragraph>

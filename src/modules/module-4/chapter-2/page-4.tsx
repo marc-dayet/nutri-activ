@@ -10,9 +10,7 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>Hydratation</Title>
-      <Subtitle>
-        <strong>Recommandations du Programme National Nutrition Santé</strong>
-      </Subtitle>
+      <Subtitle>Recommandations du Programme National Nutrition Santé</Subtitle>
       <Grid position="center top" padder>
         <Img src={img1} mode="avatar-md" />
         <Paragraph>

@@ -12,6 +12,8 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Les modes de consommation de nos aliments</Title>
       <Subtitle>Nos aliments peuvent êtres consommés sous différentes formes !</Subtitle>
+      <br />
+      <br />
       <Grid>
         <Img src={img1} mode="avatar-md" />
         <Paragraph>Il est important d’alterner légumes/fruits crus et cuits.</Paragraph>

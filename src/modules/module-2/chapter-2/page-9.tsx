@@ -9,7 +9,7 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Les nutriments énergétiques</Title>
       <Paragraph padder>
-        <Img src={img} mode="avatar-lg" />
+        <Img src={img} mode="avatar-xl" />
       </Paragraph>
       <Paragraph padder bold align="left">
         Sa valeur énergétique est liée au degré d’alcool. Plus il est élevé, plus le nombre de

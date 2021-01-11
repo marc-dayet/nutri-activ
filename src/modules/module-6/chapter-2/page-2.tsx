@@ -16,9 +16,9 @@ const Page: FC = () => {
         Pour faciliter la lecture des étiquettes nous utiliserons le code suivant :
       </Paragraph>
       <Grid>
-        <Img src={img1} mode="avatar-md" />
+        <Img src={img1} mode="avatar-lg" />
         <Paragraph bold>5 g de sucres = 1 morceau de sucre</Paragraph>
-        <Img src={img2} mode="avatar-md" />
+        <Img src={img2} mode="avatar-lg" />
         <Paragraph bold>
           5 g de lipide (AGS*) = 1 cuillère à café d’huile <br />
           <em className={cs.subparagraph}>*Acide Gras Saturé</em>

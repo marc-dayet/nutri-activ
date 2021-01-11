@@ -8,7 +8,7 @@ export default () => {
   return (
     <PageContainer>
       <Paragraph padder>
-        <Img src={img} mode="avatar-lg" />
+        <Img src={img} mode="halfscreen" />
       </Paragraph>
       <Paragraph>Merci de votre participation active et bravo pour votre assiduité.</Paragraph>
       <Paragraph>

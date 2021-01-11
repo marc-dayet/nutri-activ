@@ -11,7 +11,7 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Les nutriments non énergétiques</Title>
       <Paragraph padder>
-        <Img src={img} mode="avatar-lg" />
+        <Img src={img} mode="avatar-xl" />
       </Paragraph>
       <Grid position="left top">
         <div className={cs.grid}>

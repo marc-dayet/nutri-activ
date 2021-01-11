@@ -10,7 +10,7 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Équilibre alimentaire et activité physique</Title>
       <Paragraph padder>
-        <Img src={img} mode="avatar-lg" />
+        <Img src={img} mode="halfscreen" />
       </Paragraph>
       <Paragraph align="left">
         Equilibre alimentaire et activité physique sont indissociables. <br />

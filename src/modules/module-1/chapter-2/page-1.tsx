@@ -9,7 +9,7 @@ const Page: FC = () => {
     <PageContainer>
       <Title>PNNS – Programme National Nutrition Santé</Title>
       <Paragraph padder>
-        <Img src={img} mode="avatar-lg" />
+        <Img src={img} mode="halfscreen" />
       </Paragraph>
       <Paragraph padder>
         Le PNNS (Programme National Nutrition Santé) a pour objectif d’améliorer l’état de santé de

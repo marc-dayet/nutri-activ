@@ -9,22 +9,22 @@ const Page: FC = () => {
       layout="quiz"
       title="Quiz n°1"
       img={img}
-      statment="21 g de sucres sont équivalent à :"
+      statment="21 g de sucres sont équivalent à combien de morceaux de sucre ?"
       choices={[
         {
-          label: "1 morceau de sucre",
+          label: "1 morceau",
           isTrue: false,
         },
         {
-          label: "2 morceaux de sucre",
+          label: "2 morceaux",
           isTrue: false,
         },
         {
-          label: "3 morceaux de sucre",
+          label: "3 morceaux",
           isTrue: false,
         },
         {
-          label: "4 morceaux de sucre",
+          label: "4 morceaux",
           isTrue: true,
         },
       ]}

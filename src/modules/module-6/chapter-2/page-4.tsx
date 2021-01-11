@@ -9,8 +9,9 @@ const Page: FC = () => {
     <PageContainer>
       <Title>La lecture des étiquettes</Title>
       <Subtitle>Le Nutriscore</Subtitle>
+      <br />
       <Paragraph>
-        <Img src={img} mode="fullscreen" />
+        <Img src={img} mode="halfscreen" />
       </Paragraph>
     </PageContainer>
   );

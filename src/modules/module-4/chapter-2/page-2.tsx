@@ -9,7 +9,7 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Sens et alimentation</Title>
       <Paragraph>
-        <Img src={img} mode="fullscreen" />
+        <Img src={img} mode="halfscreen" />
       </Paragraph>
     </PageContainer>
   );

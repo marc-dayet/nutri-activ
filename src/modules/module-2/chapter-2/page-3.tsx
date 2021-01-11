@@ -10,14 +10,16 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Les principes du rythme alimentaire</Title>
       <Paragraph>
-        <Img src={img} mode="avatar-lg" />
+        <Img src={img} mode="fullscreen" />
       </Paragraph>
       <Paragraph className={cs.paragraph} align="left">
         <List className={cs.list}>
-          <ListItem>Faire 3 repas</ListItem>
-          <ListItem>Eviter le grignotage</ListItem>
-          <ListItem>Possibilité de prendre une collation le matin ou l’après-midi</ListItem>
-          <ListItem>Respecter des horaires de repas fixes</ListItem>
+          <ListItem className={cs.listItem}>Faire 3 repas</ListItem>
+          <ListItem className={cs.listItem}>Eviter le grignotage</ListItem>
+          <ListItem className={cs.listItem}>
+            Possibilité de prendre une collation le matin ou l’après-midi
+          </ListItem>
+          <ListItem className={cs.listItem}>Respecter des horaires de repas fixes</ListItem>
         </List>
       </Paragraph>
     </PageContainer>

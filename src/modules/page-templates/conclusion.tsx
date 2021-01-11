@@ -1,23 +1,21 @@
-import React, {FC} from "react"
+import React, {FC} from "react";
 
-import PageContainer from "../page"
-import {Title, Paragraph, Img} from "../page-components"
-
-import cs from "./conclusion.module.scss"
+import PageContainer from "../page";
+import {Title, Paragraph, Img} from "../page-components";
 
 type PageConclusionProps = {
-  img: string
-}
+  img: string;
+};
 
 const PageConclusion: FC<PageConclusionProps> = ({img, children}) => {
   return (
     <PageContainer>
       <Title>{children}</Title>
       <Paragraph>
-        <Img src={img} className={cs.img} mode="fullscreen" />
+        <Img src={img} mode="fullscreen" />
       </Paragraph>
     </PageContainer>
-  )
-}
+  );
+};
 
-export default PageConclusion
+export default PageConclusion;

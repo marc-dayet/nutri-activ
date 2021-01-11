@@ -12,19 +12,19 @@ const Page: FC = () => {
       statment="7 g de lipides sont équivalent à combien de cuillères à café d’huile ?"
       choices={[
         {
-          label: "1 cuillère d’huile",
+          label: "1 cuillère",
           isTrue: true,
         },
         {
-          label: "2 cuillères d’huile",
+          label: "2 cuillères",
           isTrue: false,
         },
         {
-          label: "3 cuillères d’huile",
+          label: "3 cuillères",
           isTrue: false,
         },
         {
-          label: "4 cuillères d’huile",
+          label: "4 cuillères",
           isTrue: false,
         },
       ]}

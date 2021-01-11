@@ -9,7 +9,7 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Les freins à l’activité physique</Title>
       <Paragraph>
-        <Img src={img} mode="fullscreen" />
+        <Img src={img} mode="halfscreen" />
       </Paragraph>
     </PageContainer>
   );

@@ -9,7 +9,7 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Sens et alimentation</Title>
       <Paragraph padder>
-        <Img src={img} mode="fullscreen" />
+        <Img src={img} mode="halfscreen" />
       </Paragraph>
       <Paragraph padder>
         Pour percevoir le goût d’un aliment, nous mobilisons plusieurs sens en même temps. <br />

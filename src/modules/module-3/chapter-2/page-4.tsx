@@ -9,7 +9,7 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Les bienfaits de l’activité physique</Title>
       <Paragraph padder>
-        <Img src={img} mode="avatar-lg" />
+        <Img src={img} mode="avatar-xl" />
       </Paragraph>
       <Grid>
         <div></div>

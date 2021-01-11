@@ -29,6 +29,25 @@
   }
 }
 
+.img[data-mode="avatar-xl"] {
+  height: 17.5rem;
+
+  @include media(lg) {
+    height: 15rem;
+  }
+
+  @include media(xs) {
+    height: inherit;
+    max-width: 10rem;
+    width: 100%;
+  }
+}
+
+.img[data-mode="halfscreen"] {
+  max-width: 40rem;
+  width: 100%;
+}
+
 .img[data-mode="fullscreen"] {
   max-width: 56rem;
   width: 100%;
