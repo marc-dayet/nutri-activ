@@ -14,9 +14,6 @@ export default () => {
       <Paragraph>
         Vous avez terminé l’ensemble des modules liés à la formation distancielle.
       </Paragraph>
-      <Paragraph>
-        Si vous avez des questions, n’hésitez pas à vous référer au FAQ (mettre le lien).
-      </Paragraph>
     </PageContainer>
   );
 };

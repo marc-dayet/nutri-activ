@@ -3,6 +3,7 @@ import React, {FC} from "react";
 import {ReactComponent as ButtonBackgroundLeft} from "./button-left.svg";
 import {ReactComponent as ButtonBackgroundRight} from "./button-right.svg";
 
+import {useCurrStep, isLastStep} from "../context";
 import cs from "./button.module.scss";
 
 export type PageButtonProps = {
@@ -10,7 +11,7 @@ export type PageButtonProps = {
   disabled?: boolean;
 };
 
-export const PageButtonLeft: FC<PageButtonProps> = props => {
+export const PageButtonLeft: FC<PageButtonProps> = (props) => {
   const {onClick: handleClick, disabled = false} = props;
 
   return (
@@ -21,8 +22,14 @@ export const PageButtonLeft: FC<PageButtonProps> = props => {
   );
 };
 
-export const PageButtonRight: FC<PageButtonProps> = props => {
+export const PageButtonRight: FC<PageButtonProps> = (props) => {
   const {onClick: handleClick, disabled = false} = props;
+  const [currStep] = useCurrStep();
+
+  console.log(currStep);
+  if (isLastStep(currStep)) {
+    return null;
+  }
 
   return (
     <button className={cs.buttonRight} onClick={() => handleClick()} disabled={disabled}>

@@ -2,7 +2,7 @@ import {from, BehaviorSubject} from "rxjs";
 import {map, mergeMap, distinctUntilChanged} from "rxjs/operators";
 import {useObservable} from "@soywod/react-use-observable";
 
-import {currStep$, isLastStep} from "../modules/context";
+import {currStep$} from "../modules/context";
 
 type Theme = {
   [key: string]: string;
@@ -13,7 +13,7 @@ export const useTheme = () => useObservable(theme$, theme$.value);
 
 currStep$
   .pipe(
-    map((step) => (isLastStep(step) ? 0 : step.module)),
+    map((step) => step.module),
     distinctUntilChanged(),
     mergeMap((module) => from(importTheme(module))),
     map((module) => module.default),

@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import {BehaviorSubject} from "rxjs";
 import {map} from "rxjs/operators";
+import {useObservable} from "@soywod/react-use-observable";
 
 import {auth$} from "../auth/context";
 
@@ -18,7 +19,9 @@ export type Step = {
 
 export const initialStep: Step = {module: 0, chapter: 1, page: 1};
 export const lastStep$ = new BehaviorSubject(initialStep);
+
 export const currStep$ = new BehaviorSubject(initialStep);
+export const useCurrStep = () => useObservable(currStep$, currStep$.value);
 
 auth$
   .pipe(map((auth) => (auth.type === "authenticated" ? auth.lastStep : initialStep)))
@@ -91,7 +94,7 @@ export function isFirstStep(step: Step) {
 }
 
 export function isLastStep(step: Step) {
-  return step.module === 4 && step.chapter === 5 && step.page === 3;
+  return step.module === 6 && step.chapter === 4 && step.page === 5;
 }
 
 const otherTitles = ["Introduction", "À savoir", "Quiz", "Conclusion"];
