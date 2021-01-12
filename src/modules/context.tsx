@@ -94,13 +94,8 @@ export function isLastStep(step: Step) {
   return step.module === 4 && step.chapter === 5 && step.page === 3;
 }
 
-const otherTitles = ["Introduction", "À savoir", "À transmettre", "Quiz", "Questionnaire"];
-const introTitles = [
-  "Introduction",
-  "Présentation",
-  "Fondements et contenus",
-  "Accès questionnaire",
-];
+const otherTitles = ["Introduction", "À savoir", "Quiz", "Conclusion"];
+const introTitles = ["Introduction", "À savoir", "Quiz", "Conclusion"];
 
 export function getTitle(step: Step, chapter: number) {
   return isFirstStep(step) ? introTitles[chapter - 1] || "" : otherTitles[chapter - 1] || "";

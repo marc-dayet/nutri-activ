@@ -35,7 +35,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Les fruits de petite taille sont à consommés en plus grande quantité pour obtenir une portion (cerises, framboises, raisin…)."
+      answer="Les fruits de petite taille sont à consommer en plus grande quantité pour obtenir une portion (cerises, framboises, raisin…)."
     />
   );
 };

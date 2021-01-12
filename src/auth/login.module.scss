@@ -5,7 +5,7 @@
   grid-column: 1;
   grid-row: 1;
   justify-self: center;
-  margin: 2rem 0 0 10rem;
+  margin: 2.5rem 0 0 10rem;
   z-index: 1;
 
   @include media(md) {
@@ -25,13 +25,20 @@
   @include font("Chelsea Market", 400);
   color: $gray44;
   font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.forms {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1rem;
 }
 
 .form {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-columns: auto 50px;
+  grid-template-columns: 15rem 4rem;
+  grid-template-rows: 3rem;
 
   @include media(xs) {
     grid-template-columns: minmax(0, 1fr);
@@ -65,7 +72,7 @@
   box-shadow: 0.15rem 0.15rem 0 rgba($black, 0.2);
   color: $white;
   display: flex;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   justify-content: center;
   line-height: 1rem;
   padding: 1.5rem 2rem;
