@@ -16,7 +16,7 @@ const Page: FC = () => {
       <Grid position="left top">
         <div className={cs.grid}>
           <Paragraph padder bold align="left">
-            Acides gras simples
+            Simples
           </Paragraph>
           <List>
             <ListItem>Glucose (fruits, miel, produits industriels)</ListItem>
@@ -35,7 +35,6 @@ const Page: FC = () => {
             <ListItem>Céréales et produits céréaliers</ListItem>
             <ListItem>Légumineuses</ListItem>
             <ListItem>Tubercules</ListItem>
-            <ListItem>Lactose et galactose (produits laitiers)</ListItem>
           </List>
         </div>
         <div></div>

@@ -16,7 +16,7 @@ const PageSharing: FC = () => {
 
   return (
     <PageContainer>
-      <Title>5.Accéder au questionnaire « Retours sur le distanciel »</Title>
+      <Title>Accéder au questionnaire « retour sur le distanciel »</Title>
       <div className={cn(cs.paragraphAlt, theme.secondary)}>
         <div className={cs.paragraphAltHeader}>Pour</div>
         <div className={cs.paragraphAltCurlyBraceContainer}>
@@ -33,11 +33,11 @@ const PageSharing: FC = () => {
       <div className={cs.linkContainer}>
         <a
           className={cn(cs.link, theme.secondary)}
-          href="https://fr.surveymonkey.com/r/H3JKK99"
+          href="https://fr.surveymonkey.com/r/questionnaire-distanciel-nutri-activ"
           target="_blank"
           rel="noopener noreferrer"
         >
-          https://fr.surveymonkey.com/r/H3JKK99
+          https://fr.surveymonkey.com
         </a>
       </div>
       <List className={cs.list}>

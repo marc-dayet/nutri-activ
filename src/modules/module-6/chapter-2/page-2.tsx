@@ -17,7 +17,7 @@ const Page: FC = () => {
       </Paragraph>
       <Grid>
         <Img src={img1} mode="avatar-lg" />
-        <Paragraph bold>5 g de sucres = 1 morceau de sucre</Paragraph>
+        <Paragraph bold>5 g de sucre = 1 morceau de sucre</Paragraph>
         <Img src={img2} mode="avatar-lg" />
         <Paragraph bold>
           5 g de lipide (AGS*) = 1 cuillère à café d’huile <br />

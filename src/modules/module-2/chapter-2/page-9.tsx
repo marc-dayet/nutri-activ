@@ -17,8 +17,7 @@ const Page: FC = () => {
       </Paragraph>
       <Paragraph align="left">
         Contrairement aux autres nutriments il n’apporte aucun élément essentiel à notre organisme
-        et, consommé excessivement, impacte négativement notre santé Lactose et galactose (produits
-        laitiers)
+        et, consommé excessivement, impacte négativement notre santé.
       </Paragraph>
     </PageContainer>
   );

@@ -10,8 +10,8 @@ const Page: FC = () => {
     <PageContainer>
       <Title>Le parcours de formation</Title>
       <Paragraph className={cs.paragraph} bold align="left" padder>
-        Le Schéma ci-dessous présente votre parcours pour la totalité de la <br />
-        formation Nutri Activ'.
+        Le schéma ci-dessous présente votre parcours pour la totalité de la <br />
+        formation des Ateliers Nutri Activ'.
       </Paragraph>
       <Paragraph>
         <Img src={img} mode="fullscreen" />

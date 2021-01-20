@@ -21,7 +21,7 @@ const Page: FC = () => {
           <Subtitle className={cs.subtitleRight}>Équilibre</Subtitle>
           Se tenir debout sur une jambe puis en fermant les yeux, marcher en suivant une ligne,
           vélo, trottinette, danse, pétanque, yoga, tai-chi, marche en arrière, sur les côtés, sur
-          les talons, sur les pointes de pieds, exercices d’équilibre sur sols instables…
+          les talons, sur les pointes de pieds, exercices d’équilibre sur sol instable…
         </Paragraph>
       </Grid>
     </PageContainer>

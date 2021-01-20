@@ -18,8 +18,8 @@ const Page: FC = () => {
         <div></div>
         <List>
           <ListItem>
-            <strong>Durée</strong> : 150 minutes d’exercice modéré ou 75 minutes d’exercice soutenu
-            par semaine, par périodes d’au moins 10 minutes
+            <strong>Durée</strong> : 150 minutes d’exercice modéré (par ex 5 jours &times; 30
+            minutes) ou 75 minutes d’exercice soutenu par semaine
           </ListItem>
         </List>
         <div></div>

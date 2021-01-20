@@ -35,7 +35,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="Les fruits de petite taille sont à consommer en plus grande quantité pour obtenir une portion (cerises, framboises, raisin…)."
+      answer="Une portion équivaut à 80 à 100 g ou à un fruit/ légume de la taille d’un poing. Les fruits de petite taille sont à consommer en plus grande quantité pour obtenir une portion."
     />
   );
 };

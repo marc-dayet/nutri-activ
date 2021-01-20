@@ -7,12 +7,12 @@ import img from "./page-5.png";
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Présentation des ateliers Nutri Activ'</Title>
+      <Title>Présentation des Ateliers Nutri Activ'</Title>
       <Paragraph padder>
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph align="left">
-        Ils ont pour objectif de permettre aux participants de prendre conscience de leurs
+        Ils ont pour objectifs de permettre aux participants de prendre conscience de leurs
         comportements en matière d’alimentation et d’activité physique et d’échanger sur les
         comportements favorables à la santé pour les adopter.
       </Paragraph>

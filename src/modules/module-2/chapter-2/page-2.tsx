@@ -24,9 +24,6 @@ const Page: FC = () => {
           mois. Toute perte de poids supérieure à 2 kg par mois incite à consulter un médecin.
         </Paragraph>
       </div>
-      <Paragraph align="right" className={cs.legend}>
-        Source : PNNS, « Livret PNNS séniors pour les professionnels », INPES, Septembre 2006
-      </Paragraph>
     </PageContainer>
   );
 };

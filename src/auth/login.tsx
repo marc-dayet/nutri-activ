@@ -89,7 +89,7 @@ const Login: FC = () => {
                     className={cs.input}
                     autoFocus
                     type="text"
-                    placeholder="mon nom"
+                    placeholder="mon prénom"
                     value={name}
                     onChange={(evt) => setName(evt.target.value)}
                     disabled={isLoading}

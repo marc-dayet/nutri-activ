@@ -41,7 +41,7 @@ const Page: FC = () => {
         <div></div>
         <div className={cs.grid}>
           <Paragraph padder bold align="left">
-            Vitamine B12
+            Vitamine C
           </Paragraph>
           <List>
             <ListItem>Fruits et légumes crus</ListItem>

@@ -9,7 +9,12 @@ const Page: FC = () => {
       layout="quiz"
       title="Quiz n°1"
       img={img}
-      statment="La satiété intervient pendant que l’on mange (appelé l’ingestion)"
+      statment={
+        <>
+          La satiété intervient pendant que l’on mange <br />
+          (appelé l’ingestion)
+        </>
+      }
       choices={[
         {
           label: "Vrai",

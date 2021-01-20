@@ -36,9 +36,9 @@ type PageContainerProps =
       layout: "quiz";
       title: string;
       img: string;
-      statment: string;
+      statment: JSX.Element | string;
       choices: Choice[];
-      answer: string;
+      answer: JSX.Element | string;
       hasMultipleChoices?: boolean;
     };
 

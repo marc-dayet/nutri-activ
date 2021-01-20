@@ -31,9 +31,7 @@ const Page: FC = () => {
       </Grid>
       <div className={cs.grid}>
         <img className={cs.img} src={img3} alt="" />
-        <Paragraph>
-          Pour information, la formation en distanciel va suivre le même déroulé.
-        </Paragraph>
+        <Paragraph>Lors du test, ne gardez pas le livret ressource sous les yeux</Paragraph>
       </div>
     </PageContainer>
   );

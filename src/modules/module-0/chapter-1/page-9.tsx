@@ -27,7 +27,7 @@ const Page: FC = () => {
           <ListItem>
             <strong>Vous souhaitez le faire à la fin du distanciel</strong> : notez vos questions
             tout au long du distanciel puis une fois les modules terminés, suivez le lien pour
-            envoyer vos questions. Cliquez ensuite sur « terminer » pour les enregistrer.
+            envoyer vos questions. Cliquez ensuite sur «terminer» pour les enregistrer.
           </ListItem>
         </List>
       </div>

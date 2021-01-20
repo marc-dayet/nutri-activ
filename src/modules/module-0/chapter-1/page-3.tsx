@@ -36,7 +36,7 @@ const Page: FC = () => {
         <img className={cs.img} src={img5} alt="" />
         <Paragraph align="left" bold>
           Pour terminer, vous participerez à la formation présentielle pour <br />
-          s'approprier les techniques d’animation sur 3 jours.
+          vous approprier les techniques d’animation sur 3 jours.
         </Paragraph>
       </div>
       <br />

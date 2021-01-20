@@ -26,7 +26,7 @@ const Page: FC = () => {
         <Paragraph>
           <strong>Alcool</strong>
           <br />♂ 3 verres - ♀ 2 verres par jour et maximum 10 verres par semaine avec des jours
-          sans consommations
+          sans consommation
         </Paragraph>
       </Grid>
     </PageContainer>

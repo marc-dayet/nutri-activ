@@ -181,6 +181,7 @@
 .quizAnswerTextContainer {
   color: $white;
   display: flex;
+  font-size: 1.2rem;
   max-width: 42rem;
   padding: 3rem 3rem 5rem 3rem;
   position: relative;
@@ -282,7 +283,7 @@
 
 .quizRadio {
   @include font("Chelsea Market", 400);
-  align-items: center;
+  align-items: start;
   color: $white;
   cursor: pointer;
   display: grid;
