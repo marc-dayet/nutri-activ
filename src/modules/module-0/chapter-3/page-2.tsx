@@ -2,8 +2,8 @@ import React, {FC} from "react";
 
 import PageContainer from "../../page";
 import {Title, Paragraph, Img} from "../../page-components";
-import cs from "./page-4.module.scss";
-import img from "./page-4.png";
+import cs from "./page-2.module.scss";
+import img from "./page-2.png";
 
 const Page: FC = () => {
   return (
