@@ -26,7 +26,6 @@ export const PageButtonRight: FC<PageButtonProps> = (props) => {
   const {onClick: handleClick, disabled = false} = props;
   const [currStep] = useCurrStep();
 
-  console.log(currStep);
   if (isLastStep(currStep)) {
     return null;
   }
