@@ -15,7 +15,7 @@ const Page: FC = () => {
         <Img src={img1} mode="avatar-md" />
         <Paragraph>
           <strong>Boissons non sucrées</strong>
-          <br />1 à 1,5 litre par jour pendant et hors repas individus.
+          <br />1 à 1,5 litre par jour pendant et hors repas.
         </Paragraph>
         <Img src={img2} mode="avatar-md" />
         <Paragraph>
