@@ -28,7 +28,7 @@ const Page: FC = () => {
           isTrue: false,
         },
       ]}
-      answer="1 cuillère d’huile. Pour rappel 5 g de lipides correspondent à une cuillère à soupe d’huile."
+      answer="1 cuillère d’huile. Pour rappel 5 g de lipides correspondent à une cuillère à café d’huile."
     />
   );
 };
