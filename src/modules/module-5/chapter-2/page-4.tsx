@@ -7,7 +7,7 @@ import img from "./page-4.png";
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Les 9 repères du PNNS</Title>
+      <Title>Les recommandations pour une alimentation équilibrée</Title>
       <Paragraph padder>
         <Img src={img} mode="avatar-lg" />
       </Paragraph>

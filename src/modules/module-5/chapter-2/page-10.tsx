@@ -7,23 +7,16 @@ import img from "./page-10.png";
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Les 9 repères du PNNS</Title>
+      <Title>Les recommandations pour une alimentation équilibrée</Title>
       <Paragraph padder>
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder bold>
-        À volonté
+        À limiter
       </Paragraph>
-      <Paragraph padder>
-        <strong>1 à 1,5 litre par jour</strong>, pendant et en dehors des repas.
-      </Paragraph>
-      <Paragraph padder>
-        <strong>Le café, le thé, la tisane, la soupe et autres boissons sans sucres</strong> peuvent
-        aussi être pris en compte.
-      </Paragraph>
-      <Paragraph>
-        <strong>Limiter</strong> les boissons sucrées.{" "}
-      </Paragraph>
+      <Paragraph padder>Avant 75 ans : limiter à 150 g/semaine</Paragraph>
+      <Paragraph padder>Après 75 ans : pas tous les jours, en quantités modérées</Paragraph>
+      <Paragraph>Privilégier le jambon blanc et le jambon de volaille</Paragraph>
     </PageContainer>
   );
 };

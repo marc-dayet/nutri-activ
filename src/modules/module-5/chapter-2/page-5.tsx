@@ -7,12 +7,12 @@ import img from "./page-5.png";
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Les 9 repères du PNNS</Title>
+      <Title>Les recommandations pour une alimentation équilibrée</Title>
       <Paragraph padder>
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder bold>
-        A chaque repas selon l’appétit
+        Tous les jours, complets de préférence
       </Paragraph>
       <Paragraph>
         Contrairement à une idée reçue, les féculents ne font pas grossir en quantité raisonnable.

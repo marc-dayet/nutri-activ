@@ -28,11 +28,10 @@ const Page: FC = () => {
         <div></div>
         <div className={cs.grid}>
           <Paragraph padder bold align="left">
-            Le sodium
+            Le sel
           </Paragraph>
           <List>
             <ListItem>Sel de table</ListItem>
-            <ListItem>Viande, poissons, oeufs</ListItem>
             <ListItem>Charcuterie</ListItem>
             <ListItem>Fromage</ListItem>
             <ListItem>Préparations industrielles</ListItem>

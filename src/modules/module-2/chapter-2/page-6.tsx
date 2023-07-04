@@ -20,7 +20,7 @@ const Page: FC = () => {
           </Paragraph>
           <List>
             <ListItem>Beurre / crème fraiche / fromages</ListItem>
-            <ListItem>Huile de palme</ListItem>
+            <ListItem>Huile de palme / huile de coco</ListItem>
             <ListItem>Charcuterie</ListItem>
             <ListItem>Pâtisseries / Chocolat …</ListItem>
           </List>

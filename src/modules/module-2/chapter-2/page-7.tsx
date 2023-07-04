@@ -19,10 +19,10 @@ const Page: FC = () => {
             Acides gras monoinsaturés (AGMI)
           </Paragraph>
           <List>
-            <ListItem>Huile d’olive et colza</ListItem>
-            <ListItem>Fruits à coques (noisettes, amandes …)</ListItem>
-            <ListItem>Avocat</ListItem>
-            <ListItem>Graisses de volaille …</ListItem>
+            <ListItem>Olives et huile d’olive</ListItem>
+            <ListItem>Noisettes, cacahuètes, amandes, pistaches et leurs huiles</ListItem>
+            <ListItem>Avocat et huile d’avocat</ListItem>
+            <ListItem>Graisses de volaille</ListItem>
           </List>
         </div>
         <div></div>
@@ -31,9 +31,12 @@ const Page: FC = () => {
             Acides gras polyinsaturés (AGPI)
           </Paragraph>
           <List>
-            <ListItem>Oméga-3 : poissons gras, huile de lin</ListItem>
             <ListItem>
-              Oméga 6 : Huile de pépin de raisin, de tournesol, de soja, de noix …
+              Oméga-3 : poissons gras, huile de colza, noix et huile de noix, graines et huiles de
+              lin
+            </ListItem>
+            <ListItem>
+              Oméga-6 : graines et huile de tournesol ou de sésame, huile de pépins de raisin, ...
             </ListItem>
           </List>
         </div>

@@ -7,20 +7,18 @@ import img from "./page-9.png";
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Les 9 repères du PNNS</Title>
+      <Title>Les recommandations pour une alimentation équilibrée</Title>
       <Paragraph padder>
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder bold>
-        Limiter la consommation <br />À consommer surtout au cours des repas et des collations.
+        Au moins 1 fois par jour
       </Paragraph>
+      <Paragraph padder>Pour les personnes de moins de 75 ans :</Paragraph>
+      <Paragraph padder>Viande : limiter à 500 g par semaine</Paragraph>
       <Paragraph padder>
-        - les boissons sucrées (sirops, sodas, boissons sucrées à base de fruits, nectars…) et aux
-        bonbons.
-      </Paragraph>
-      <Paragraph>
-        - les aliments gras et sucrés à la fois (pâtisseries, viennoiseries, crèmes desserts,
-        chocolat, glaces, barres chocolatées…).
+        Poisson : 2 fois par semaine, dont un poisson gras <br /> (sardines, maquereau, hareng,
+        saumon)
       </Paragraph>
     </PageContainer>
   );

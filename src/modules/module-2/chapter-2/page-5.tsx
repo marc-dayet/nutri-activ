@@ -30,8 +30,12 @@ const Page: FC = () => {
             Protéines d’origine animale
           </Paragraph>
           <List>
+            <ListItem>Volaille</ListItem>
+            <ListItem>Poisson et fruits de mer</ListItem>
+            <ListItem>Œufs</ListItem>
             <ListItem>Viande</ListItem>
-            <ListItem>Poisson</ListItem>
+            <ListItem>Abats</ListItem>
+            <ListItem>Produits laitiers</ListItem>
           </List>
         </div>
         <div></div>

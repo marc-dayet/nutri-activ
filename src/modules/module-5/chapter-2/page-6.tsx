@@ -7,16 +7,18 @@ import img from "./page-6.png";
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Les 9 repères du PNNS</Title>
+      <Title>Les recommandations pour une alimentation équilibrée</Title>
       <Paragraph padder>
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder bold>
-        3 à 4 par jour
+        Au moins 2 fois par semaine
       </Paragraph>
       <Paragraph>
-        Privilégier les produits nature, les plus riches en calcium, les moins gras et les moins
-        salés : lait, fromage blanc…
+        Lentilles, haricots, pois chiches, etc. sont naturellement riches en fibres et contiennent
+        des protéines végétales. Les légumineuses peuvent être des alternatives à la viande quand
+        ils sont associés à des féculents (de préférence complets ou semi-complets). Il est
+        préférable de privilégier autant que possible les produits Bio.
       </Paragraph>
     </PageContainer>
   );

@@ -2,7 +2,7 @@ import React, {FC} from "react";
 
 import PageContainer from "../../page";
 import {Title, Paragraph, Img} from "../../page-components";
-import img from "./page-8.png";
+import img from "./page-13.png";
 
 const Page: FC = () => {
   return (
@@ -11,12 +11,12 @@ const Page: FC = () => {
       <Paragraph padder>
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
-      <Paragraph padder>
-        <strong>2 à 3 produits laitiers par jour</strong> (avant 75 ans, 2 par jour)
+      <Paragraph padder bold>
+        En moyenne 1,5 litre par jour
       </Paragraph>
+      <Paragraph>Pendant et en dehors des repas.</Paragraph>
       <Paragraph>
-        Privilégier les produits nature, les plus riches en calcium, les moins gras et les moins
-        salés : lait, fromage blanc…
+        Le café, le thé, la tisane et autres boissons sans sucres sont pris en compte.
       </Paragraph>
     </PageContainer>
   );

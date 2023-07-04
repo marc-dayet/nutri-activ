@@ -9,7 +9,7 @@ const Page: FC = () => {
       layout="quiz"
       title="Quiz n°2"
       img={img}
-      statment="5 g de lipide sont équivalents à combien de cuillères à café d’huile ?"
+      statment="5 g de lipides sont équivalents à combien de cuillères à café d’huile ?"
       choices={[
         {
           label: "1 cuillère",

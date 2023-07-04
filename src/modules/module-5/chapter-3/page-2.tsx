@@ -13,7 +13,7 @@ const Page: FC = () => {
       hasMultipleChoices
       choices={[
         {
-          label: "1 fois par jour",
+          label: "1 fois par semaine",
           isTrue: false,
         },
         {
@@ -21,7 +21,7 @@ const Page: FC = () => {
           isTrue: false,
         },
         {
-          label: "À tous les repas",
+          label: "Tous les jours",
           isTrue: true,
         },
         {
@@ -29,7 +29,7 @@ const Page: FC = () => {
           isTrue: false,
         },
       ]}
-      answer="À tous les repas car ils fournissent de l’énergie à notre corps tout au long de la journée."
+      answer="Tous les jours, de préférence complets, car ils fournissent de l’énergie à notre corps tout au long de la journée."
     />
   );
 };

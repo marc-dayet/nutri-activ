@@ -7,7 +7,7 @@ import img from "./page-14.png";
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Les 9 repères du Programme National Nutrition Santé</Title>
+      <Title>Les recommandations nutritionnelles</Title>
       <Paragraph>
         <Img src={img} mode="fullscreen" />
       </Paragraph>

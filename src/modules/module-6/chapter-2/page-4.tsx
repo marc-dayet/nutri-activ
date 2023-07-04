@@ -8,7 +8,7 @@ const Page: FC = () => {
   return (
     <PageContainer>
       <Title>La lecture des étiquettes</Title>
-      <Subtitle>Le Nutri-score</Subtitle>
+      <Subtitle>Le Nutri-Score</Subtitle>
       <br />
       <Paragraph>
         <Img src={img} mode="halfscreen" />

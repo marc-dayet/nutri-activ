@@ -21,6 +21,10 @@ const Page: FC = () => {
       <br />
       <Paragraph>
         <List padder>
+          <ListItem bold>Bouger par périodes d’au moins 10 minutes</ListItem>
+          <ListItem bold>
+            Écourter le temps passé assis et se lever pour marcher un peu toutes les 2 heures
+          </ListItem>
           <ListItem bold>Toujours adapter l’activité selon ses capacités et ses envies</ListItem>
         </List>
       </Paragraph>

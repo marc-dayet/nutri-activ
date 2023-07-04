@@ -14,8 +14,8 @@ const Page: FC = () => {
       <Grid position="center top">
         <Img src={img1} mode="avatar-lg" />
         <Paragraph>
-          <strong>Pendant les courses</strong> acheter les produits frais en dernier, vérifier
-          l’origine des produits crus (viande, poisson, fruits de mer …).
+          <strong>Pendant les courses</strong> acheter les produits frais ou surgelés en dernier,
+          vérifier l’origine des produits crus (viande, poisson, fruits de mer …).
         </Paragraph>
         <Img src={img2} mode="avatar-lg" />
         <Paragraph>

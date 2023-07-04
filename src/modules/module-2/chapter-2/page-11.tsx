@@ -23,6 +23,8 @@ const Page: FC = () => {
             <ListItem>Produits de la mer</ListItem>
             <ListItem>Œufs</ListItem>
             <ListItem>Légumineuses</ListItem>
+            <ListItem>Volaille</ListItem>
+            <ListItem>Fruits à coque</ListItem>
           </List>
         </div>
         <div></div>
@@ -36,6 +38,7 @@ const Page: FC = () => {
             <ListItem>Fruits frais et secs (banane…)</ListItem>
             <ListItem>Chocolat noir riche en cacao (75%)</ListItem>
             <ListItem>Légumineuses</ListItem>
+            <ListItem>Fruits à coque</ListItem>
           </List>
         </div>
         <div></div>

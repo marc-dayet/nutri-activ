@@ -19,10 +19,7 @@ const Page: FC = () => {
         <Img src={img1} mode="avatar-lg" />
         <Paragraph bold>5 g de sucre = 1 morceau de sucre</Paragraph>
         <Img src={img2} mode="avatar-lg" />
-        <Paragraph bold>
-          5 g de lipide (AGS*) = 1 cuillère à café d’huile <br />
-          <em className={cs.subparagraph}>*Acide Gras Saturé</em>
-        </Paragraph>
+        <Paragraph bold>5 g de lipides = 1 cuillère à café d’huile</Paragraph>
       </Grid>
     </PageContainer>
   );

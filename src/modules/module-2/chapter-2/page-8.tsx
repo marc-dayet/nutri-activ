@@ -16,7 +16,7 @@ const Page: FC = () => {
       <Grid position="left top">
         <div className={cs.grid}>
           <Paragraph padder bold align="left">
-            Simples
+            Simples (sucres)
           </Paragraph>
           <List>
             <ListItem>Glucose (fruits, miel, produits industriels)</ListItem>
@@ -28,7 +28,7 @@ const Page: FC = () => {
         <div></div>
         <div className={cs.grid}>
           <Paragraph padder bold align="left">
-            Complexes
+            Complexes (féculents)
           </Paragraph>
           <List>
             <ListItem>Pommes de terre et patates douces</ListItem>

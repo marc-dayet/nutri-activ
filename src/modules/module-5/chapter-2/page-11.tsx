@@ -7,24 +7,18 @@ import img from "./page-11.png";
 const Page: FC = () => {
   return (
     <PageContainer>
-      <Title>Les 9 repères du PNNS</Title>
+      <Title>Les recommandations pour une alimentation équilibrée</Title>
       <Paragraph padder>
         <Img src={img} mode="avatar-lg" />
       </Paragraph>
       <Paragraph padder bold>
-        Limiter la consommation
-      </Paragraph>
-      <Paragraph>Préférer le sel iodé.</Paragraph>
-      <Paragraph>Saler sans excès, ne pas resaler avant de goûter.</Paragraph>
-      <Paragraph>
-        Réduire l'ajout de sel dans la confection des plats, eau de cuisson comprise.
+        Éviter les consommations excessives
       </Paragraph>
       <Paragraph>
-        Limiter la consommation de produits gras et salés : charcuterie, produits apéritifs salés …
+        Privilégier les matières grasses végétales : l'huile d'olive, de colza, de noix…
       </Paragraph>
-      <Paragraph>
-        Une alimentation sans sel doit être encadrée par une prescription médicale.
-      </Paragraph>
+      <Paragraph>Favoriser la variété</Paragraph>
+      <Paragraph>Limiter les graisses d’origine animale (beurre, crème,…)</Paragraph>
     </PageContainer>
   );
 };
