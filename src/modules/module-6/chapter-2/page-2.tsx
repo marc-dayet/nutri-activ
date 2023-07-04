@@ -5,8 +5,6 @@ import {Title, Subtitle, Paragraph, Grid, Img} from "../../page-components";
 import img1 from "./page-2-1.png";
 import img2 from "./page-2-2.png";
 
-import cs from "./page-2.module.scss";
-
 const Page: FC = () => {
   return (
     <PageContainer>
