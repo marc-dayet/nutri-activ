@@ -48,6 +48,11 @@
   width: 100%;
 }
 
+.img[data-mode="almost-fullscreen"] {
+  max-width: 50rem;
+  width: 100%;
+}
+
 .img[data-mode="fullscreen"] {
   max-width: 56rem;
   width: 100%;

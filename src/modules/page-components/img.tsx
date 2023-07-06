@@ -7,7 +7,7 @@ type ImgProps = {
   className?: string;
   title?: string;
   src: string;
-  mode: "avatar-md" | "avatar-lg" | "avatar-xl" | "halfscreen" | "fullscreen";
+  mode: "avatar-md" | "avatar-lg" | "avatar-xl" | "halfscreen" | "almost-fullscreen" | "fullscreen";
 };
 
 const Img: FC<ImgProps> = (props) => {
