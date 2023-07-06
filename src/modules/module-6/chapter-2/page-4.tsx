@@ -11,7 +11,7 @@ const Page: FC = () => {
       <Subtitle>Le Nutri-Score</Subtitle>
       <br />
       <Paragraph>
-        <Img src={img} mode="halfscreen" />
+        <Img src={img} mode="fullscreen" />
       </Paragraph>
     </PageContainer>
   );
