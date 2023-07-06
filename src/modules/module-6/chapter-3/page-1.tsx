@@ -28,7 +28,7 @@ const Page: FC = () => {
           isTrue: true,
         },
       ]}
-      answer="4 morceaux de sucre. Pour rappel, 5 g de sucres correspondent à un morceau de sucre."
+      answer="4 morceaux de sucre. Pour rappel, 5 g de sucre correspondent à un morceau de sucre."
     />
   );
 };

@@ -16,7 +16,7 @@ const Page: FC = () => {
         <Paragraph>
           <strong>Boissons non sucrées</strong>
           <br />
-          1,5 litre par jour pendant et hors repas.
+          1,5 litre par jour pendant et hors repas
         </Paragraph>
         <Img src={img2} mode="avatar-md" />
         <Paragraph>
@@ -28,7 +28,7 @@ const Page: FC = () => {
           <strong>Alcool</strong>
           <br />
           Maximum 10 verres par semaine, maximum 2 verres par jour, des jours dans la semaine sans
-          consommation.
+          consommation
         </Paragraph>
       </Grid>
     </PageContainer>

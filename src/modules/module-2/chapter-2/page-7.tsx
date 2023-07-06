@@ -32,7 +32,7 @@ const Page: FC = () => {
           </Paragraph>
           <List>
             <ListItem>
-              Oméga-3 : poissons gras, huile de colza, noix et huile de noix, graines et huiles de
+              Oméga-3 : poissons gras, huile de colza, noix et huile de noix, graines et huile de
               lin
             </ListItem>
             <ListItem>

@@ -14,9 +14,9 @@ const Page: FC = () => {
       <Paragraph padder bold>
         Éviter les consommations excessives
       </Paragraph>
-      <Paragraph padder>- Les boissons sucrées font partie des produits sucrés.</Paragraph>
+      <Paragraph padder>Les boissons sucrées font partie des produits sucrés.</Paragraph>
       <Paragraph>
-        - Limiter la consommation d’aliments sucrés et gras à la fois <br /> (pâtisseries, chocolat,
+        Limiter la consommation d’aliments sucrés et gras à la fois <br /> (pâtisseries, chocolat,
         desserts lactés et crèmes glacées).
       </Paragraph>
     </PageContainer>
