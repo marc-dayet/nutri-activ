@@ -11,7 +11,7 @@ import img6 from "./page-2-6.png";
 const Page: FC = () => {
   return (
     <Video
-      id="lat2pA_5Z88"
+      id="HqVvM34XRMM"
       title="Vidéo d'introduction"
       imgs={[img1, img2, img3, img4, img5, img6]}
     />
